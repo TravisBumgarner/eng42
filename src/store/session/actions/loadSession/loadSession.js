@@ -1,4 +1,6 @@
 import { getCategories } from '../../../category/actions/getCategories';
+import { getSkills } from '../../../skill/actions/getSkills';
+import { getProjects } from '../../../project/actions/getProjects';
 
 export const LOAD_SESSION_START = 'LOAD_SESSION_START';
 export const LOAD_SESSION_SUCCESS = 'LOAD_SESSION_SUCCESS';
@@ -23,6 +25,8 @@ export const loadSession = () => { //eslint-disable-line
     return new Promise((resolve, reject) => {
       return Promise.all([
         dispatch(getCategories()),
+        dispatch(getSkills()),
+        dispatch(getProjects()),
       ]).then(() => {
         dispatch(loadSessionSuccess());
         resolve();
