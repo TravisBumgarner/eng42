@@ -18,13 +18,18 @@ export const getProjectsFailure = error => ({
   error,
 });
 
-export const getProjects = () => (dispatch) => {
-  dispatch(getProjectsStart());
-  request('get', '/projects').then((response) => {
-    console.log(response);
-    const { data } = response;
-    dispatch(getProjectsSuccess(data));
-  }).catch((error) => {
-    dispatch(getProjectsFailure(error));
-  });
+export const getProjects = () => {
+  return (dispatch) => {
+    dispatch(getProjectsStart());
+    return new Promise((resolve, reject) => {
+      request('get', '/projects').then((response) => {
+        const { data } = response;
+        dispatch(getProjectsSuccess(data));
+        resolve();
+      }).catch((error) => {
+        dispatch(getProjectsFailure(error));
+        reject();
+      });
+    });
+  };
 };

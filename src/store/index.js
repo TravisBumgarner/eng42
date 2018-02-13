@@ -5,12 +5,14 @@ import ReduxThunk from 'redux-thunk';
 import category from './category/reducers';
 import skill from './skill/reducers';
 import project from './project/reducers';
+import author from './author/reducers';
 
 
 const rootReducer = combineReducers({
+  author,
   category,
-  skill,
   project,
+  skill,
 });
 
 const logger = createLogger({

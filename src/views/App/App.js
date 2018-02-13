@@ -13,7 +13,6 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    console.log('hi');
     this.props.loadSession();
   }
 

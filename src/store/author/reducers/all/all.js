@@ -1,8 +1,8 @@
-import categoryActions from '../../actions';
+import authorActions from '../../actions';
 
 const all = (state = {}, action) => {
   switch (action.type) {
-    case categoryActions.GET_CATEGORIES_SUCCESS:
+    case authorActions.GET_AUTHOR_SUCCESS:
       return {
         ...state,
         ...action.data,

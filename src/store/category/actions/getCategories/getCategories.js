@@ -18,13 +18,19 @@ export const getCategoriesFailure = error => ({
   error,
 });
 
-export const getCategories = () => (dispatch) => {
-  dispatch(getCategoriesStart());
-  request('get', '/categories').then((response) => {
-    console.log(response);
-    const { data } = response;
-    dispatch(getCategoriesSuccess(data));
-  }).catch((error) => {
-    dispatch(getCategoriesFailure(error));
-  });
+export const getCategories = () => {
+  return (dispatch) => {
+    dispatch(getCategoriesStart());
+    return new Promise((resolve, reject) => {
+      request('get', '/categories').then((response) => {
+        const { data } = response;
+        dispatch(getCategoriesSuccess(data));
+        resolve();
+      }).catch((error) => {
+        dispatch(getCategoriesFailure(error));
+        reject();
+      });
+    });
+  };
 };
+

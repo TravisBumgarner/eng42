@@ -18,13 +18,18 @@ export const getSkillsFailure = error => ({
   error,
 });
 
-export const getSkills = () => (dispatch) => {
-  dispatch(getSkillsStart());
-  request('get', '/skills').then((response) => {
-    console.log(response);
-    const { data } = response;
-    dispatch(getSkillsSuccess(data));
-  }).catch((error) => {
-    dispatch(getSkillsFailure(error));
-  });
+export const getSkills = () => {
+  return (dispatch) => {
+    dispatch(getSkillsStart());
+    return new Promise((resolve, reject) => {
+      request('get', '/skills').then((response) => {
+        const { data } = response;
+        dispatch(getSkillsSuccess(data));
+        resolve();
+      }).catch((error) => {
+        dispatch(getSkillsFailure(error));
+        reject();
+      });
+    });
+  };
 };

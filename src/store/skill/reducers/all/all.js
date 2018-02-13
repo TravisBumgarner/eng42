@@ -3,7 +3,6 @@ import skillsActions from '../../actions';
 const all = (state = {}, action) => {
   switch (action.type) {
     case skillsActions.GET_SKILLS_SUCCESS:
-      console.log(action.data);
       return {
         ...state,
         ...action.data,
