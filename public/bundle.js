@@ -11228,7 +11228,7 @@ var setCenterTile = exports.setCenterTile = function setCenterTile(newCenterTile
     console.log('getting for', centerLat, centerLon, centerSrc, radius);
 
     if (typeof centerSrc !== 'undefined') {
-      // If an image is already loaded for a clicked radial apiRequest, don't get a new image.
+      // If an image is already loaded for a clicked radial getCategories, don't get a new image.
       dispatch(setCenterTileSuccess({ lat: centerLat, lon: centerLon, src: centerSrc }));
       getAndSetRadialTiles(dispatch, centerLat, centerLon, radius);
     } else {
@@ -11364,7 +11364,7 @@ module.exports = function xhrAdapter(config) {
 
     request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
 
-    // Set the apiRequest timeout in MS
+    // Set the getCategories timeout in MS
     request.timeout = config.timeout;
 
     // Listen for ready state
@@ -11373,10 +11373,10 @@ module.exports = function xhrAdapter(config) {
         return;
       }
 
-      // The apiRequest errored out and we didn't get a response, this will be
+      // The getCategories errored out and we didn't get a response, this will be
       // handled by onerror instead
-      // With one exception: apiRequest that using file: protocol, most browsers
-      // will return status as 0 even though it's a successful apiRequest
+      // With one exception: getCategories that using file: protocol, most browsers
+      // will return status as 0 even though it's a successful getCategories
       if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
         return;
       }
@@ -11396,7 +11396,7 @@ module.exports = function xhrAdapter(config) {
 
       settle(resolve, reject, response);
 
-      // Clean up apiRequest
+      // Clean up getCategories
       request = null;
     };
 
@@ -11406,7 +11406,7 @@ module.exports = function xhrAdapter(config) {
       // onerror should only fire if it's a network error
       reject(createError('Network Error', config, null, request));
 
-      // Clean up apiRequest
+      // Clean up getCategories
       request = null;
     };
 
@@ -11415,7 +11415,7 @@ module.exports = function xhrAdapter(config) {
       reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
         request));
 
-      // Clean up apiRequest
+      // Clean up getCategories
       request = null;
     };
 
@@ -11435,25 +11435,25 @@ module.exports = function xhrAdapter(config) {
       }
     }
 
-    // Add headers to the apiRequest
+    // Add headers to the getCategories
     if ('setRequestHeader' in request) {
       utils.forEach(requestHeaders, function setRequestHeader(val, key) {
         if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
           // Remove Content-Type if data is undefined
           delete requestHeaders[key];
         } else {
-          // Otherwise add header to the apiRequest
+          // Otherwise add header to the getCategories
           request.setRequestHeader(key, val);
         }
       });
     }
 
-    // Add withCredentials to apiRequest if needed
+    // Add withCredentials to getCategories if needed
     if (config.withCredentials) {
       request.withCredentials = true;
     }
 
-    // Add responseType to apiRequest if needed
+    // Add responseType to getCategories if needed
     if (config.responseType) {
       try {
         request.responseType = config.responseType;
@@ -11485,7 +11485,7 @@ module.exports = function xhrAdapter(config) {
 
         request.abort();
         reject(cancel);
-        // Clean up apiRequest
+        // Clean up getCategories
         request = null;
       });
     }
@@ -11494,7 +11494,7 @@ module.exports = function xhrAdapter(config) {
       requestData = null;
     }
 
-    // Send the apiRequest
+    // Send the getCategories
     request.send(requestData);
   });
 };
@@ -11511,12 +11511,12 @@ module.exports = function xhrAdapter(config) {
 var enhanceError = __webpack_require__(397);
 
 /**
- * Create an Error with the specified message, config, error code, apiRequest and response.
+ * Create an Error with the specified message, config, error code, getCategories and response.
  *
  * @param {string} message The error message.
  * @param {Object} config The config.
  * @param {string} [code] The error code (for example, 'ECONNABORTED').
- * @param {Object} [request] The apiRequest.
+ * @param {Object} [request] The getCategories.
  * @param {Object} [response] The response.
  * @returns {Error} The created error.
  */
@@ -27906,7 +27906,7 @@ var ReactFiberScheduler = function (config) {
         // new one.
         cancelDeferredCallback(callbackID);
       }
-      // The apiRequest callback timer is already running. Don't start a new one.
+      // The getCategories callback timer is already running. Don't start a new one.
     } else {
       startRequestCallbackTimer();
     }
@@ -44314,9 +44314,9 @@ function Axios(instanceConfig) {
 }
 
 /**
- * Dispatch a apiRequest
+ * Dispatch a getCategories
  *
- * @param {Object} config The config specific for this apiRequest (merged with this.defaults)
+ * @param {Object} config The config specific for this getCategories (merged with this.defaults)
  */
 Axios.prototype.request = function request(config) {
   /*eslint no-param-reassign:0*/
@@ -44349,7 +44349,7 @@ Axios.prototype.request = function request(config) {
   return promise;
 };
 
-// Provide aliases for supported apiRequest methods
+// Provide aliases for supported getCategories methods
 utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
   /*eslint func-names:0*/
   Axios.prototype[method] = function(url, config) {
@@ -44439,7 +44439,7 @@ module.exports = function settle(resolve, reject, response) {
  * @param {Error} error The error to update.
  * @param {Object} config The config.
  * @param {string} [code] The error code (for example, 'ECONNABORTED').
- * @param {Object} [request] The apiRequest.
+ * @param {Object} [request] The getCategories.
  * @param {Object} [response] The response.
  * @returns {Error} The error.
  */
@@ -44602,7 +44602,7 @@ module.exports = (
   utils.isStandardBrowserEnv() ?
 
   // Standard browser envs have full support of the APIs needed to test
-  // whether the apiRequest URL is of the same origin as current location.
+  // whether the getCategories URL is of the same origin as current location.
   (function standardBrowserEnv() {
     var msie = /(msie|trident)/i.test(navigator.userAgent);
     var urlParsingNode = document.createElement('a');
@@ -44850,9 +44850,9 @@ function throwIfCancellationRequested(config) {
 }
 
 /**
- * Dispatch a apiRequest to the server using the configured adapter.
+ * Dispatch a getCategories to the server using the configured adapter.
  *
- * @param {object} config The config that is to be used for the apiRequest
+ * @param {object} config The config that is to be used for the getCategories
  * @returns {Promise} The Promise to be fulfilled
  */
 module.exports = function dispatchRequest(config) {
@@ -44866,7 +44866,7 @@ module.exports = function dispatchRequest(config) {
   // Ensure headers exist
   config.headers = config.headers || {};
 
-  // Transform apiRequest data
+  // Transform getCategories data
   config.data = transformData(
     config.data,
     config.headers,
@@ -44929,10 +44929,10 @@ module.exports = function dispatchRequest(config) {
 var utils = __webpack_require__(19);
 
 /**
- * Transform the data for a apiRequest or a response
+ * Transform the data for a getCategories or a response
  *
  * @param {Object|String} data The data to be transformed
- * @param {Array} headers The headers for the apiRequest or response
+ * @param {Array} headers The headers for the getCategories or response
  * @param {Array|Function} fns A single function or Array of functions
  * @returns {*} The resulting transformed data
  */
@@ -44998,7 +44998,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 var Cancel = __webpack_require__(185);
 
 /**
- * A `CancelToken` is an object that can be used to apiRequest cancellation of an operation.
+ * A `CancelToken` is an object that can be used to getCategories cancellation of an operation.
  *
  * @class
  * @param {Function} executor The executor function.
@@ -46076,7 +46076,7 @@ Dialog.propTypes = process.env.NODE_ENV !== "production" ? {
   /**
    * Fired when the `Dialog` is requested to be closed by a click outside the `Dialog` or on the buttons.
    *
-   * @param {bool} buttonClicked Determines whether a button click triggered this apiRequest.
+   * @param {bool} buttonClicked Determines whether a button click triggered this getCategories.
    */
   onRequestClose: _propTypes2.default.func,
   /**
@@ -50485,7 +50485,7 @@ Drawer.propTypes = process.env.NODE_ENV !== "production" ? {
    * Callback function fired when the `open` state of the `Drawer` is requested to be changed.
    *
    * @param {boolean} open If true, the `Drawer` was requested to be opened.
-   * @param {string} reason The reason for the open or close apiRequest. Possible values are
+   * @param {string} reason The reason for the open or close getCategories. Possible values are
    * 'swipe' for open requests; 'clickaway' (on overlay clicks),
    * 'escape' (on escape key press), and 'swipe' for close requests.
    */
@@ -61347,7 +61347,7 @@ var StreetViewPanorama = (exports.StreetViewPanorama = (function(
       },
 
       /**
-       * Returns the status of the panorama on completion of the `setPosition()` or `setPano()` apiRequest.
+       * Returns the status of the panorama on completion of the `setPosition()` or `setPano()` getCategories.
        * @type StreetViewStatussetPosition()setPano()
        * @public
        */

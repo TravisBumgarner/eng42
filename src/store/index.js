@@ -2,7 +2,10 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import ReduxThunk from 'redux-thunk';
 
+import category from './category/reducers';
+
 const rootReducer = combineReducers({
+  category,
 });
 
 const logger = createLogger({

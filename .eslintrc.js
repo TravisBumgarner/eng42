@@ -6,6 +6,7 @@ module.exports = {
     "browser": true,
   },
   rules: {
+    'arrow-body-style': 'off',
     'import/no-extraneous-dependencies': 'off',
     'react/jsx-filename-extension': 'off',
     'import/no-named-as-default': 'off',
