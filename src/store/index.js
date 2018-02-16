@@ -6,6 +6,7 @@ import category from './category/reducers';
 import skill from './skill/reducers';
 import project from './project/reducers';
 import author from './author/reducers';
+import session from './session/reducers';
 
 
 const rootReducer = combineReducers({
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   category,
   project,
   skill,
+  session,
 });
 
 const logger = createLogger({

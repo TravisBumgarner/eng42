@@ -12,22 +12,27 @@ export class App extends Component {
     loadSession: PropTypes.func.isRequired,
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.loadSession();
   }
 
   render() {
-    return (
+    const { loaded } = this.props;
+
+    return loaded ? (
       <div>
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
       </div>
-    );
+    ) : (
+      <div>Loading...</div>
+    )
   }
 }
 
-export default withRouter(connect(() => ({
+export default withRouter(connect((state) => ({
+  loaded: state.session.meta.loaded,
 }), {
   loadSession,
 })(App));

@@ -6,15 +6,19 @@ export class Home extends Component {
 
   render() {
     const {
-      author
+      author,
+      loaded
     } = this.props;
 
-    return <h1>Travis Bumgarner</h1>
+    console.log(author);
+
+    return <h1>{ author.name } </h1>
   }
 }
 
 export default connect((state) => ({
-  author: state.author.all[0]
+  author: state.author.all,
+  loaded: state.session.meta.loaded,
 }), {
 
 })(Home);
