@@ -2,7 +2,6 @@ import { getCategories } from '../../../category/actions/getCategories';
 import { getSkills } from '../../../skill/actions/getSkills';
 import { getProjects } from '../../../project/actions/getProjects';
 import { getAuthors } from '../../../author/actions/getAuthors';
-import { getTools } from '../../../tool/actions/getTools';
 
 
 export const LOAD_SESSION_START = 'LOAD_SESSION_START';
@@ -31,7 +30,6 @@ export const loadSession = () => { //eslint-disable-line
         dispatch(getSkills()),
         dispatch(getProjects()),
         dispatch(getAuthors()),
-        dispatch(getTools()),
       ]).then(() => {
         dispatch(loadSessionSuccess());
         resolve();
