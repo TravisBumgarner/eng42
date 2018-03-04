@@ -29,4 +29,10 @@ const Theme = getMuiTheme({
   },
 });
 
+
+export const FONT_SMALL = '0.8rem';
+export const FONT_NORMAL = '1rem';
+export const FONT_LARGE = '2rem';
+export const FONT_XLARGE = '5rem';
+
 export default Theme;

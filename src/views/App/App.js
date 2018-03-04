@@ -23,18 +23,24 @@ export class App extends Component {
   }
 
   render() {
-    const { loaded } = this.props;
+    const {
+      loaded,
+      location: { pathname }
+    } = this.props;
+
+    const showHeader = pathname !== '/';
+    const showFooter = pathname !== '/';
 
     return loaded ? (
       <div>
-        <Header />
+        { showHeader && <Header /> }
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
         </Switch>
-        <Footer />
+        { showFooter && <Footer /> }
       </div>
 
     ) : (

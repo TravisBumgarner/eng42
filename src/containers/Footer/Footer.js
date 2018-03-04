@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import {
+  FooterWrapper
+} from "./Footer.styles";
+
 export class Footer extends Component {
 
   render() {
 
 
     return (
-      <div>
+      <FooterWrapper>
         My Footer
-      </div>
+      </FooterWrapper>
     )
 
   }
