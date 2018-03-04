@@ -1,8 +1,8 @@
-import authorsActions from '../../actions';
+import projectActions from '../../actions';
 
-const all = (state = {}, action) => {
+const all = (state = [], action) => {
   switch (action.type) {
-    case authorsActions.GET_AUTHORS_SUCCESS:
+    case projectActions.GET_PROJECTS_SUCCESS:
       return {
         ...state,
         ...action.data,

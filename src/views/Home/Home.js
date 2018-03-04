@@ -6,18 +6,30 @@ export class Home extends Component {
 
   render() {
     const {
-      author,
+      projects,
       loaded
     } = this.props;
+    const projectPreviews = Object.values(projects).map(p => {
+      const categories = p.category.map(c => <li>{c}</li>);
 
-    console.log(author);
+      return (<div>
+        <h2>{p.name}</h2>
+          <ul>{categories}</ul>
+          <p>{p.start_date}</p>
+      </div>)
+    });
 
-    return <h1>{ author.name } </h1>
+    return (
+      <div>
+        {projectPreviews}
+      </div>
+    )
+
   }
 }
 
 export default connect((state) => ({
-  author: state.author.all,
+  projects: state.project.all,
   loaded: state.session.meta.loaded,
 }), {
 
