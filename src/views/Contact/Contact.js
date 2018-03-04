@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import ContactForm from '../../containers/ContactForm';
 
-export class Home extends Component {
+export class Contact extends Component {
 
   render() {
 
     return (
       <div>
-        HI!
+        <ContactForm />
       </div>
     )
 
@@ -19,4 +20,4 @@ export default connect((state) => ({
 
 }), {
 
-})(Home);
+})(Contact);

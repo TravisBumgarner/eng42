@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
-export class Home extends Component {
+export class Footer extends Component {
 
   render() {
 
+
     return (
       <div>
-        HI!
+        My Footer
       </div>
     )
 
@@ -16,7 +16,6 @@ export class Home extends Component {
 }
 
 export default connect((state) => ({
-
 }), {
 
-})(Home);
+})(Footer);
