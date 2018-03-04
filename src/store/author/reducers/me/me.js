@@ -1,6 +1,6 @@
 import authorsActions from '../../actions';
 
-const all = (state = {}, action) => {
+const me = (state = {}, action) => {
   switch (action.type) {
     case authorsActions.GET_AUTHORS_SUCCESS:
       return {
@@ -12,4 +12,4 @@ const all = (state = {}, action) => {
   }
 };
 
-export default all;
+export default me;

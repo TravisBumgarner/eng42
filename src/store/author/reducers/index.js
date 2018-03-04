@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 
-import all from './all';
+import me from './me';
 
 
 export default combineReducers({
-  all,
+  me,
 });

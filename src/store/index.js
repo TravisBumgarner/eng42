@@ -5,12 +5,12 @@ import ReduxThunk from 'redux-thunk';
 import category from './category/reducers';
 import skill from './skill/reducers';
 import project from './project/reducers';
-// import author from './author/reducers';
+import author from './author/reducers';
 import session from './session/reducers';
 
 
 const rootReducer = combineReducers({
-  // author,
+  author,
   category,
   project,
   skill,
