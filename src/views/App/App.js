@@ -9,6 +9,7 @@ import Home from '../Home';
 import About from '../About';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
+import Project from '../Project';
 
 import Footer from '../../containers/Footer';
 import Header from '../../containers/Header';
@@ -39,12 +40,13 @@ export class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
+          <Route path="/project/:projectId" component={Project} />
         </Switch>
         { showFooter && <Footer /> }
       </div>
 
     ) : (
-      <div>Loading...</div>
+      <div>Loading...!</div>
     )
   }
 }

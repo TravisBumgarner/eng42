@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom'
 
 export class Portfolio extends Component {
 
@@ -12,11 +12,14 @@ export class Portfolio extends Component {
     const projectPreviews = Object.values(projects).map(p => {
       const categories = p.category.map(c => <li>{c}</li>);
 
-      return (<div>
-        <h2>{p.name}</h2>
+      return (
+        <div>
+          <h2>{p.name}</h2>
           <ul>{categories}</ul>
           <p>{p.start_date}</p>
-      </div>)
+          <Link to={`project/${p.id}`}>Check it out</Link>
+        </div>
+      )
     });
 
     return (
