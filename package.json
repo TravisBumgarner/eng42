@@ -23,6 +23,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "material-ui": "^0.20.0",
+    "polished": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",

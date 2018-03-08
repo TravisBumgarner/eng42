@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { ROUTES } from "../../utilities/constants";
+import Divider from '../../components/Divider';
+import Button from '../../components/Button';
 
 import {
-  RoutesList,
-  ListItem,
-  ItemLink,
   IntroductionWrapper,
-  FirstName,
-  LastName,
-  ContentWrapper,
-  MyPortrait,
-  NameImgWrapper,
+  IntroText,
+  IntroHeader,
+  IntroListItem,
+  IntroList,
 } from './Introduction.styles';
 
 export class Home extends Component {
@@ -35,11 +32,11 @@ export class Home extends Component {
     const {
       selectedSkills,
     } = this.state;
-
+    // TODO could write this as a selector?
     const newSelectedSkills = [...selectedSkills];
 
     let allSkillsKeys = Object.keys(allSkills);
-  
+
     while (allSkillsKeys.length && newSelectedSkills.length < 3) {
       let i = allSkills[Math.floor(Math.random() * allSkillsKeys.length)].name;
       if (!newSelectedSkills.includes(i)) {
@@ -65,8 +62,35 @@ export class Home extends Component {
 
     return (
       <IntroductionWrapper>
-        <p>{`Are you looking for someone who can combine ${selectedSkills[0]}, ${selectedSkills[1]}, and ${selectedSkills[2]} on a project?`}</p>
-        <p>You've come to the right place! Let's meet up, work, or volunteer together!</p>
+        <IntroHeader>
+          Greetings,
+        </IntroHeader>
+
+        <Divider primary/>
+
+        <IntroText>
+          {`Are you looking for someone who can combine ${selectedSkills[0]},
+            ${selectedSkills[1]}, and ${selectedSkills[2]} on a project?`}
+        </IntroText>
+
+        <IntroText>
+          You've come to the right place! Let's grab a beer (or coffee), work, or volunteer together!
+        </IntroText>
+
+        <Divider primary/>
+
+        <IntroText>
+          Where to next?
+        </IntroText>
+
+        <IntroList>
+          <Button>Foo</Button>
+          <Button>View Portfolio</Button>
+          <Button>Get in Touch</Button>
+        </IntroList>
+
+        <Divider primary/>
+
       </IntroductionWrapper>
     )
 

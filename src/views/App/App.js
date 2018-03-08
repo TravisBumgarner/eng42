@@ -14,6 +14,10 @@ import Project from '../Project';
 import Footer from '../../containers/Footer';
 import Header from '../../containers/Header';
 
+import {
+  AppWrapper
+} from './App.styles';
+
 export class App extends Component {
   static propTypes = {
     loadSession: PropTypes.func.isRequired,
@@ -33,7 +37,7 @@ export class App extends Component {
     const showFooter = pathname !== '/';
 
     return loaded ? (
-      <div>
+      <AppWrapper>
         { showHeader && <Header /> }
         <Switch>
           <Route exact path="/" component={Home} />
@@ -43,7 +47,7 @@ export class App extends Component {
           <Route path="/project/:projectId" component={Project} />
         </Switch>
         { showFooter && <Footer /> }
-      </div>
+      </AppWrapper>
 
     ) : (
       <div>Loading...!</div>

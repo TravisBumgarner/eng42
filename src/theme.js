@@ -1,38 +1,26 @@
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {
-  cyan500,
-  pinkA200,
-  grey100, grey300, grey500,
-  white, darkBlack, fullBlack,
-} from 'material-ui/styles/colors';
-import { fade } from 'material-ui/utils/colorManipulator';
-
-const Theme = getMuiTheme({
-  palette: {
-    primary1Color: '#e01f58',
-    primary2Color: '#4de06a',
-    primary3Color: '#e0dc41',
-    accent1Color: pinkA200,
-    accent2Color: grey100,
-    accent3Color: grey500,
-    textColor: '#000000',
-    alternateTextColor: '#000000',
-    canvasColor: white,
-    borderColor: grey300,
-    disabledColor: fade(darkBlack, 0.3),
-    pickerHeaderColor: cyan500,
-    clockCircleColor: fade(darkBlack, 0.07),
-    shadowColor: fullBlack,
-  },
-  appBar: {
-    height: 50,
-  },
-});
-
+export const PRIMARY_COLOR = '#000';
+export const SECONDARY_COLOR = '#FFF';
+export const TERTIARY_COLOR = '#999';
 
 export const FONT_SMALL = '0.8rem';
 export const FONT_NORMAL = '1rem';
-export const FONT_LARGE = '2rem';
-export const FONT_XLARGE = '5rem';
+export const FONT_LARGE = '1.5rem';
+export const FONT_XLARGE = '3rem';
 
-export default Theme;
+export const FONT_HEADER = "font-family: 'Montserrat', sans-serif";
+
+const sizes = {
+  desktop: 992,
+  tablet: 768,
+  phone: 376,
+};
+
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `;
+
+  return acc
+}, {});
