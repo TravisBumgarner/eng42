@@ -10,6 +10,7 @@ import Button from '../../components/Button';
 
 import {
   PortfolioWrapper,
+  ProjectsWrapper,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -47,6 +48,7 @@ export class Portfolio extends Component {
       </DropDownMenu>
     );
 
+    // TODO could be helpful to have Skill (Count) on the dropdown
     const SkillsItems = Object.values(skills).map(c => {
       return <MenuItem value={c.id} key={c.id} primaryText={c.name}/>
     });
@@ -61,15 +63,16 @@ export class Portfolio extends Component {
       console.log(p.category, selectedCategory, p.category.includes(selectedCategory))
       return (p.category.includes(selectedCategory) && p.skill.includes(selectedSkill));
     }).map(p => {
-      console.log(p);
-      return <h1>{p.name}</h1>
+      return <ProjectTile key={p.id} projectId={p.id} />;
     });
 
     return (
       <PortfolioWrapper>
         {CategoryDropdown}
         {SkillsDropdown}
-        {selectedProjects}
+        <ProjectsWrapper>
+          {selectedProjects}
+        </ProjectsWrapper>
       </PortfolioWrapper>
     )
   }

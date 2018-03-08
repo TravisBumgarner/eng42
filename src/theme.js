@@ -9,7 +9,7 @@ export const FONT_NORMAL = '1rem';
 export const FONT_LARGE = '1.5rem';
 export const FONT_XLARGE = '3rem';
 
-export const FONT_HEADER = "font-family: 'Montserrat', sans-serif";
+export const FONT_HEADER = "'Montserrat', sans-serif";
 
 const sizes = {
   desktop: 992,
