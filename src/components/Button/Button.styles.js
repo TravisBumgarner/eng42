@@ -8,7 +8,6 @@ const ButtonWrapper = styled.a`
   padding: 0.5rem 0;
   margin: 0.5rem 1rem;
   width: 11rem;
-  background: transparent;
   color: ${props => props.primary ? PRIMARY_COLOR : SECONDARY_COLOR};
   border: 2px solid ${props => props.primary ? PRIMARY_COLOR : SECONDARY_COLOR};
   background-color: ${props => props.primary ? SECONDARY_COLOR : PRIMARY_COLOR}

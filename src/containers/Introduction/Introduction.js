@@ -12,7 +12,7 @@ import {
   IntroList,
 } from './Introduction.styles';
 
-export class Home extends Component {
+export class Introduction extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -101,4 +101,4 @@ export default connect((state) => ({
   allSkills: state.skill.all,
 }), {
 
-})(Home);
+})(Introduction);

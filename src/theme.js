@@ -1,5 +1,7 @@
-export const PRIMARY_COLOR = '#000';
-export const SECONDARY_COLOR = '#FFF';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+export const PRIMARY_COLOR = '#000000';
+export const SECONDARY_COLOR = '#FFFFFF';
 export const TERTIARY_COLOR = '#999';
 
 export const FONT_SMALL = '0.8rem';
@@ -24,3 +26,9 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
   return acc
 }, {});
+
+export const muiTheme = getMuiTheme({
+  palette: {
+    textColor: `${PRIMARY_COLOR}`,
+  },
+});
