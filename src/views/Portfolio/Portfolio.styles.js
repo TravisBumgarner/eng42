@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-import {SECONDARY_COLOR} from "../../theme";
+import DropDownMenu from 'material-ui/DropDownMenu';
+import Filter from 'react-icons/lib/fa/filter';
+
+import {PRIMARY_COLOR, SECONDARY_COLOR} from "../../theme";
 
 const PortfolioWrapper = styled.div`
   background-color: ${SECONDARY_COLOR};
@@ -11,8 +14,39 @@ const ProjectsWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
+const FilterWrapper = styled.div`
+  color: ${PRIMARY_COLOR};
+  margin: 20px;
+
+`;
+
+const CategoryDropdownMenu = styled(DropDownMenu)`
+  width: 300px;
+`;
+
+const SkillDropdownMenu = CategoryDropdownMenu.extend`
+
+`;
+
+const FilterIcon = styled(Filter)`
+  height: 56px;
+  vertical-align: top !important;
+  fill: ${PRIMARY_COLOR};
+`;
+
+const AlignToDropdown = styled.div`
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 22px;
+`;
+
 export {
+  AlignToDropdown,
+  FilterWrapper,
   PortfolioWrapper,
   ProjectsWrapper,
+  SkillDropdownMenu,
+  CategoryDropdownMenu,
+  FilterIcon,
 }
 

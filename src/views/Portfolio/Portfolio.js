@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
 
-import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
 import ProjectTile from '../../containers/ProjectTile';
-import Button from '../../components/Button';
+
 
 import {
+  AlignToDropdown,
+  FilterIcon,
   PortfolioWrapper,
   ProjectsWrapper,
+  FilterWrapper,
+  SkillDropdownMenu,
+  CategoryDropdownMenu,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -22,8 +25,15 @@ export class Portfolio extends Component {
     }
   }
 
-  handleCategoryChange = (event, index, value) => this.setState({selectedCategory: value});
-  handleSkillChange = (event, index, value) => this.setState({selectedSkill: value});
+  handleCategoryChange = (event, index, value) => this.setState({
+    selectedCategory: value,
+    selectedSkill: 0,
+  });
+
+  handleSkillChange = (event, index, value) => this.setState({
+    selectedSkill: value,
+    selectedCategory: 0
+  });
 
   render() {
     const {
@@ -43,33 +53,37 @@ export class Portfolio extends Component {
     });
 
     const CategoryDropdown = (
-      <DropDownMenu value={this.state.selectedCategory} onChange={this.handleCategoryChange}>
+      <CategoryDropdownMenu autoWidth={false} value={this.state.selectedCategory} onChange={this.handleCategoryChange}>
+        <MenuItem value={0} key={0} primaryText={'Filter by Category'}/>
         {CategoryItems}
-      </DropDownMenu>
+      </CategoryDropdownMenu>
     );
 
     // TODO could be helpful to have Skill (Count) on the dropdown
-    const SkillsItems = Object.values(skills).map(c => {
-      return <MenuItem value={c.id} key={c.id} primaryText={c.name}/>
+    const SkillsItems = Object.values(skills).map(s => {
+      return <MenuItem value={s.id} key={s.id} primaryText={s.name}/>
     });
 
     const SkillsDropdown = (
-      <DropDownMenu value={this.state.selectedSkill} onChange={this.handleSkillChange}>
+      <SkillDropdownMenu autoWidth={false} value={this.state.selectedSkill} onChange={this.handleSkillChange}>
+        <MenuItem value={0} key={0} primaryText={'Filter by Skill'}/>
         {SkillsItems}
-      </DropDownMenu>
+      </SkillDropdownMenu>
     );
 
     const selectedProjects = Object.values(projects).filter(p => {
-      console.log(p.category, selectedCategory, p.category.includes(selectedCategory))
-      return (p.category.includes(selectedCategory) && p.skill.includes(selectedSkill));
+      const isInCategory = selectedCategory !== 0 ? p.category.includes(selectedCategory) : true;
+      const isInSkill = selectedSkill !== 0 ? p.skill.includes(selectedSkill) : true;
+      return (isInCategory && isInSkill)
     }).map(p => {
       return <ProjectTile key={p.id} projectId={p.id} />;
     });
 
     return (
       <PortfolioWrapper>
-        {CategoryDropdown}
-        {SkillsDropdown}
+        <FilterWrapper>
+          <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
+        </FilterWrapper>
         <ProjectsWrapper>
           {selectedProjects}
         </ProjectsWrapper>

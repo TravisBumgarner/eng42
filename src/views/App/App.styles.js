@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+import {FONT_CONTENT} from "../../theme";
+
 const AppWrapper = styled.div`
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-family: ${FONT_CONTENT}:
+  font-size: 60px;
   color: purple;
   background-color: green;
 `;

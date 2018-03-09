@@ -13,8 +13,12 @@ const ProjectTileWrapper = styled.div`
   height: 300px;
   margin: 20px;
   padding: 20px;
-  background-image: url('http://via.placeholder.com/300x300');
+  //background-image: url('http://via.placeholder.com/300x300');
   color: ${PRIMARY_COLOR};
+  background-image: ${props => props.previewImageSrc && `
+    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(${props.previewImageSrc});
+    `};
+  border: 1px solid ${PRIMARY_COLOR};
 `;
 
 const ProjectTitle = styled.h2`
