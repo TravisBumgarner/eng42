@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import requestActions from '../../store/request/actions';
+import notificationActions from '../../store/notification/actions';
+
 
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -16,10 +18,10 @@ export class ContactForm extends Component {
     super(props);
 
     this.state = {
-      name: 'd',
-      website: 'd',
-      message: 'd',
-      email: 'd',
+      name: '',
+      website: '',
+      message: '',
+      email: '',
       isNotification: false,
       notificationMessage: '',
     };
@@ -34,6 +36,7 @@ export class ContactForm extends Component {
   handleSubmit = () => {
     const {
       apiPost,
+      createNotification,
     } = this.props;
 
     const {
@@ -44,10 +47,7 @@ export class ContactForm extends Component {
     } = this.state;
 
     if (!name.length || !message.length || !email.length){
-      this.setState({
-        isNotification: true,
-        notificationMessage: "Your name, email, and a message are required."
-      })
+      createNotification('Your name, email, and a message are required.');
     } else {
       const data = {
         name,
@@ -58,7 +58,6 @@ export class ContactForm extends Component {
 
       apiPost('/contact/', data);
     }
-
   };
 
   render() {
@@ -86,7 +85,7 @@ export class ContactForm extends Component {
           fullWidth
           value={this.state.website}
           onChange={ this.handleChange }
-          hintText='Website'
+          hintText='Website (Optional)'
           id='website'
         />
         <TextField
@@ -112,4 +111,5 @@ export class ContactForm extends Component {
 export default connect((state) => ({
 }), {
   apiPost: requestActions.apiPost,
+  createNotification: notificationActions.createNotification,
 })(ContactForm);
