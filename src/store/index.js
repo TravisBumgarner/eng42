@@ -7,7 +7,7 @@ import skill from './skill/reducers';
 import project from './project/reducers';
 import author from './author/reducers';
 import session from './session/reducers';
-
+import notification from './notification/reducers';
 
 const rootReducer = combineReducers({
   author,
@@ -15,6 +15,7 @@ const rootReducer = combineReducers({
   project,
   skill,
   session,
+  notification,
 });
 
 const logger = createLogger({

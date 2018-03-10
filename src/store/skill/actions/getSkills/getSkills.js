@@ -1,4 +1,4 @@
-import request from '../../../request/actions/apiRequest';
+import apiGet from '../../../request/actions/apiGet';
 
 export const GET_SKILLS_START = 'GET_SKILLS_START';
 export const GET_SKILLS_SUCCESS = 'GET_SKILLS_SUCCESS';
@@ -22,7 +22,7 @@ export const getSkills = () => {
   return (dispatch) => {
     dispatch(getSkillsStart());
     return new Promise((resolve, reject) => {
-      request('get', '/skills').then((response) => {
+      apiGet('/skills').then((response) => {
         const { data } = response;
         dispatch(getSkillsSuccess(data));
         resolve();

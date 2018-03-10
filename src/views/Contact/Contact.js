@@ -3,14 +3,18 @@ import { connect } from 'react-redux';
 
 import ContactForm from '../../containers/ContactForm';
 
+import {
+  ContactWrapper,
+} from './Contact.styles';
+
 export class Contact extends Component {
 
   render() {
 
     return (
-      <div>
+      <ContactWrapper>
         <ContactForm />
-      </div>
+      </ContactWrapper>
     )
 
   }

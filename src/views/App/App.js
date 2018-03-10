@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import Snackbar from 'material-ui/Snackbar';
+
 import { loadSession } from '../../store/session/actions/loadSession';
 
 import Home from '../Home';
@@ -27,10 +29,16 @@ export class App extends Component {
     this.props.loadSession();
   }
 
+  toggleNotification = () => {
+    // this.setState({isNotification: !this.state.isNotification});
+    alert('toogglgging');
+  };
+
   render() {
     const {
       loaded,
-      location: { pathname }
+      location: { pathname },
+      notificationMsg,
     } = this.props;
 
     // const showHeader = pathname !== '/';
@@ -48,6 +56,8 @@ export class App extends Component {
           <Route path="/project/:projectId" component={Project} />
         </Switch>
         { showFooter && <Footer /> }
+        <Snackbar open={ true } onRequestClose={ this.toggleNotification } message={ notificationMsg }/>
+
       </AppWrapper>
 
     ) : (
@@ -58,6 +68,7 @@ export class App extends Component {
 
 export default withRouter(connect((state) => ({
   loaded: state.session.meta.loaded,
+  notificationMsg: state.notification.msg,
 }), {
   loadSession,
 })(App));

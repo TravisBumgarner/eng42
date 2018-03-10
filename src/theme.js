@@ -2,7 +2,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export const PRIMARY_COLOR = '#000000';
 export const SECONDARY_COLOR = '#FFFFFF';
-export const TERTIARY_COLOR = '#28ff00';
+export const TERTIARY_COLOR = '#00faff';
 
 
 export const FONT_SMALL = '0.8rem';
@@ -34,6 +34,7 @@ export const muiTheme = getMuiTheme({
   palette: {
     textColor: `${PRIMARY_COLOR}`,
     fontFamily: `${FONT_CONTENT}`,
+    primary1Color: `${TERTIARY_COLOR}`,
     primary2Color: `${TERTIARY_COLOR}`,
     primary3Color: `${TERTIARY_COLOR}`,
     accent1Color: `${TERTIARY_COLOR}`,

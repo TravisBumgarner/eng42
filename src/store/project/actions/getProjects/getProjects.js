@@ -1,4 +1,4 @@
-import request from '../../../request/actions/apiRequest';
+import apiGet from '../../../request/actions/apiGet';
 
 export const GET_PROJECTS_START = 'GET_PROJECTS_START';
 export const GET_PROJECTS_SUCCESS = 'GET_PROJECTS_SUCCESS';
@@ -22,7 +22,7 @@ export const getProjects = () => {
   return (dispatch) => {
     dispatch(getProjectsStart());
     return new Promise((resolve, reject) => {
-      request('get', '/projects').then((response) => {
+      apiGet('/projects').then((response) => {
         const { data } = response;
         dispatch(getProjectsSuccess(data));
         resolve();

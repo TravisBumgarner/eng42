@@ -1,4 +1,4 @@
-import request from '../../../request/actions/apiRequest';
+import apiGet from '../../../request/actions/apiGet';
 
 export const GET_AUTHORS_START = 'GET_AUTHORS_START';
 export const GET_AUTHORS_SUCCESS = 'GET_AUTHORS_SUCCESS';
@@ -22,7 +22,7 @@ export const getAuthors = () => {
   return (dispatch) => {
     dispatch(getAuthorsStart());
     return new Promise((resolve, reject) => {
-      request('get', '/authors').then((response) => {
+      apiGet('/authors').then((response) => {
         const { data } = response;
         dispatch(getAuthorsSuccess(data));
         resolve();

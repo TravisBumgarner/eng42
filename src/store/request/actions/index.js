@@ -1,5 +1,7 @@
-import apiRequest from './apiRequest';
+import * as apiPost from './apiPost';
+import * as apiGet from './apiGet';
 
 export default {
-  apiRequest,
+  ...apiGet,
+  ...apiPost,
 };

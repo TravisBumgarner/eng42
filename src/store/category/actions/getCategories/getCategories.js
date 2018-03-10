@@ -1,4 +1,4 @@
-import request from '../../../request/actions/apiRequest';
+import apiGet from '../../../request/actions/apiGet';
 
 export const GET_CATEGORIES_START = 'GET_CATEGORIES_START';
 export const GET_CATEGORIES_SUCCESS = 'GET_CATEGORIES_SUCCESS';
@@ -22,7 +22,7 @@ export const getCategories = () => {
   return (dispatch) => {
     dispatch(getCategoriesStart());
     return new Promise((resolve, reject) => {
-      request('get', '/categories').then((response) => {
+      apiGet('/categories').then((response) => {
         const { data } = response;
         dispatch(getCategoriesSuccess(data));
         resolve();
