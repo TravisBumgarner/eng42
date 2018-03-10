@@ -28,7 +28,6 @@ export const apiPost = (endpoint, data = {}) => {
         data,
       }).then((response) => {
         const { data } = response;
-        console.log('response', response);
         if (data.is_submit_error){
           dispatch(apiPostFailure(data.detail));
           reject();

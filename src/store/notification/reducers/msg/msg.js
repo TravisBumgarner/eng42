@@ -1,14 +1,16 @@
 import apiRequestActions from '../../../request/actions';
+import notificationActions from '../../actions';
 
-const all = (state = '', action) => {
+const msg = (state = '', action) => {
   switch (action.type) {
     case apiRequestActions.API_POST_SUCCESS:
     case apiRequestActions.API_POST_FAILURE:
-      console.log('action.detail', action.detail);
       return action.detail;
+    case notificationActions.CLEAR_NOTIFICATION_SUCCESS:
+      return '';
     default:
       return state;
   }
 };
 
-export default all;
+export default msg;

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Snackbar from 'material-ui/Snackbar';
 
 import { loadSession } from '../../store/session/actions/loadSession';
+import { clearNotification } from "../../store/notification/actions/clearNotification/clearNotification";
 
 import Home from '../Home';
 import About from '../About';
@@ -29,16 +30,12 @@ export class App extends Component {
     this.props.loadSession();
   }
 
-  toggleNotification = () => {
-    // this.setState({isNotification: !this.state.isNotification});
-    alert('toogglgging');
-  };
-
   render() {
     const {
       loaded,
       location: { pathname },
       notificationMsg,
+      clearNotification,
     } = this.props;
 
     // const showHeader = pathname !== '/';
@@ -56,7 +53,11 @@ export class App extends Component {
           <Route path="/project/:projectId" component={Project} />
         </Switch>
         { showFooter && <Footer /> }
-        <Snackbar open={ true } onRequestClose={ this.toggleNotification } message={ notificationMsg }/>
+        <Snackbar
+          open={ !!notificationMsg.length }
+          onRequestClose={ clearNotification }
+          message={ notificationMsg }
+        />
 
       </AppWrapper>
 
@@ -71,4 +72,5 @@ export default withRouter(connect((state) => ({
   notificationMsg: state.notification.msg,
 }), {
   loadSession,
+  clearNotification,
 })(App));

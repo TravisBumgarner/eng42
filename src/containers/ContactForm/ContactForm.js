@@ -56,7 +56,7 @@ export class ContactForm extends Component {
         email,
       };
 
-      apiPost('/contact/', data).then(r => console.log('response', r)).catch(e => console.log(e));
+      apiPost('/contact/', data);
     }
 
   };
@@ -66,7 +66,6 @@ export class ContactForm extends Component {
       isNotification,
       notificationMessage,
     } = this.state;
-    console.log(requestActions);
     return (
       <ContactFormWrapper>
         <TextField

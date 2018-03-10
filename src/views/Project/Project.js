@@ -8,8 +8,6 @@ export class Project extends Component {
       project,
       loaded
     } = this.props;
-    console.log(this.props.match.params.projectId);
-    // console.log(project);
     return (
       <div>
         {project && project.name}

@@ -21,7 +21,6 @@ export class ProjectTile extends Component {
     // const projectCategories = project.category.map(c => {
     //   return <li key={c}>{categories[c].name}</li>
     // });
-    console.log(project.category, categories)
     const projectCategories = project.category.map(c => categories[c].name).join(", ");
 
     // const projectSkills = project.skill.map(s => {
