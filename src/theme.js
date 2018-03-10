@@ -4,8 +4,10 @@ export const PRIMARY_COLOR = '#000000';
 export const SECONDARY_COLOR = '#FFFFFF';
 export const TERTIARY_COLOR = '#28ff00';
 
+
 export const FONT_SMALL = '0.8rem';
 export const FONT_NORMAL = '1rem';
+export const FONT_NORMAL_LINE_HEIGHT = '1.4';;
 export const FONT_LARGE = '1.5rem';
 export const FONT_XLARGE = '3rem';
 

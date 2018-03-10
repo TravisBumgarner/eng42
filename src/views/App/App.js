@@ -33,14 +33,15 @@ export class App extends Component {
       location: { pathname }
     } = this.props;
 
-    const showHeader = pathname !== '/';
-    const showFooter = pathname !== '/';
+    // const showHeader = pathname !== '/';
+    // const showFooter = pathname !== '/';
+    const showHeader = true; const showFooter = true;
 
     return loaded ? (
       <AppWrapper>
         { showHeader && <Header /> }
         <Switch>
-          <Route exact path="/" component={Portfolio} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
