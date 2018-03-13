@@ -6,6 +6,7 @@ import Button from '../../components/Button';
 
 import {
   MeWrapper,
+  MeHeader,
   MeDescription,
 } from './Me.styles';
 
@@ -29,9 +30,14 @@ export class Me extends Component {
 
     return (
       <MeWrapper>
-         <h1>{ name }</h1>
+        <MeHeader>{ name }</MeHeader>
+
+        <Divider primary/>
+
         <MeDescription>{ formattedDescription }</MeDescription>
         <ul>{ aboutLinks }</ul>
+
+        <Divider primary/>
       </MeWrapper>
     )
 

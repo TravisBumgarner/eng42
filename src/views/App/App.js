@@ -52,7 +52,6 @@ export class App extends Component {
           <Route exact path="/portfolio" component={Portfolio} />
           <Route path="/project/:projectId" component={Project} />
         </Switch>
-        { showFooter && <Footer /> }
         <Snackbar
           open={ !!notificationMsg.length }
           onRequestClose={ clearNotification }

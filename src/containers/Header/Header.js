@@ -16,10 +16,7 @@ export class Footer extends Component {
 
     return (
       <HeaderWrapper>
-        My Header
-        <ul>
-          <Nav />
-        </ul>
+        <Nav />
       </HeaderWrapper>
     )
 

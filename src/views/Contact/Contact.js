@@ -5,6 +5,7 @@ import ContactForm from '../../containers/ContactForm';
 
 import {
   ContactWrapper,
+  ContactHeader,
 } from './Contact.styles';
 
 export class Contact extends Component {

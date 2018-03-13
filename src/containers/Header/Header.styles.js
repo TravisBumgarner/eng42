@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
+import { PRIMARY_COLOR, SECONDARY_COLOR, HEADER_HEIGHT } from "../../theme";
+
 const HeaderWrapper = styled.div`
-  width: 100%;
-  background-color: purple;
-  padding: 50px;
-  margin-bottom: 20px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: ${ PRIMARY_COLOR };
+  background-color: ${ SECONDARY_COLOR };
+  padding: 20px;
   text-align: center;
 `;
 

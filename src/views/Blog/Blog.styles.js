@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { PRIMARY_COLOR, SECONDARY_COLOR, BODY_HEIGHT, SCREEN_WIDTHS } from "../../theme";
+import { PRIMARY_COLOR, SECONDARY_COLOR } from "../../theme";
 
 
-const HomeWrapper = styled.div`
+const BlogWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -17,6 +17,6 @@ const HomeWrapper = styled.div`
 
 
 export {
-  HomeWrapper,
+  BlogWrapper,
 }
 

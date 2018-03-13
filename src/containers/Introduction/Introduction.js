@@ -78,19 +78,6 @@ export class Introduction extends Component {
         </IntroText>
 
         <Divider primary/>
-
-        <IntroText>
-          Where to next?
-        </IntroText>
-
-        <IntroList>
-          <Button>Foo</Button>
-          <Button>View Portfolio</Button>
-          <Button>Get in Touch</Button>
-        </IntroList>
-
-        <Divider primary/>
-
       </IntroductionWrapper>
     )
 

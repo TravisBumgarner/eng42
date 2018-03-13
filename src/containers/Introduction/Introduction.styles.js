@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { FONT_HEADER, FONT_LARGE, FONT_XLARGE } from '../../theme';
+import { FONT_HEADER, FONT_LARGE, FONT_XLARGE, SCREEN_WIDTHS } from '../../theme';
 
 const IntroductionWrapper = styled.div`
-  width: 80%;
+  max-width: ${SCREEN_WIDTHS.TABLET}px;
 `;
 
 const IntroHeader = styled.h1`

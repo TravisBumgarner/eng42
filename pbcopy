@@ -1,0 +1,25 @@
+Linux raspberrypi 4.9.59-v7+ #1047 SMP Sun Oct 29 12:19:23 GMT 2017 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Mar 10 22:42:56 2018 from 192.168.1.114
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<IP-ADDRESS> 'cat >> .ssh/authorized_keys'^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m ^C
+]0;pi@raspberrypi: ~[01;32mpi@raspberrypi[00m:[01;34m~ $[00m 

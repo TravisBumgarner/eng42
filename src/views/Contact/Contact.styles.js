@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SECONDARY_COLOR } from "../../theme";
+import { SECONDARY_COLOR, FONT_XLARGE, FONT_HEADER } from "../../theme";
 
 const ContactWrapper = styled.div`
   display: flex;

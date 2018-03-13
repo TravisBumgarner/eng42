@@ -1,4 +1,5 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { css } from 'styled-components';
 
 export const PRIMARY_COLOR = '#000000';
 export const SECONDARY_COLOR = '#FFFFFF';
@@ -14,15 +15,19 @@ export const FONT_XLARGE = '3rem';
 export const FONT_HEADER = "'Montserrat', sans-serif";
 export const FONT_CONTENT = "'Helvetica Neue', Helvetica, Arial, sans-serif";
 
-const sizes = {
-  desktop: 992,
-  tablet: 768,
-  phone: 376,
+export const HEADER_HEIGHT = `50px`;
+export const FOOTER_HEIGHT = `50px`;
+export const BODY_HEIGHT = `calc(100vh - (${HEADER_HEIGHT} + ${FOOTER_HEIGHT}))`;
+
+export const SCREEN_WIDTHS = {
+  DESKTOP: 992,
+  TABLET: 768,
+  PHONE: 376,
 };
 
-export const media = Object.keys(sizes).reduce((acc, label) => {
+export const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (max-width: ${sizes[label] / 16}em) {
+    @media (max-width: ${SCREEN_WIDTHS[label] / 16}em) {
       ${css(...args)}
     }
   `;

@@ -8,8 +8,11 @@ import notificationActions from '../../store/notification/actions';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
+import Divider from '../../components/Divider';
+
 import {
-  ContactFormWrapper
+  ContactFormWrapper,
+  ContactHeader,
 } from './ContactForm.styles';
 
 export class ContactForm extends Component {
@@ -67,6 +70,12 @@ export class ContactForm extends Component {
     } = this.state;
     return (
       <ContactFormWrapper>
+        <ContactHeader>
+          Let's Chat
+        </ContactHeader>
+
+        <Divider primary/>
+
         <TextField
           fullWidth
           value={this.state.name}
@@ -103,6 +112,9 @@ export class ContactForm extends Component {
           onClick={ this.handleSubmit }
           primary={ true }
         />
+
+        <Divider primary/>
+
       </ContactFormWrapper >
     );
   }
