@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import MenuItem from 'material-ui/MenuItem';
 
-import Card from '../../containers/Card';
 import ProjectTile from '../../containers/ProjectTile';
 
 import {
@@ -14,6 +13,9 @@ import {
   SkillDropdownMenu,
   CategoryDropdownMenu,
   PortfolioWrapper,
+  SingleProjectWrapper,
+  ScrollingCardRight,
+  ScrollingCardLeft,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -22,6 +24,7 @@ export class Portfolio extends Component {
     this.state = {
       selectedCategory: 0,
       selectedSkill: 0,
+      isProjectOpen: false,
     }
   }
 
@@ -35,6 +38,11 @@ export class Portfolio extends Component {
     selectedCategory: 0
   });
 
+  openProject = () => {
+    this.setState({ isProjectOpen: !this.state.isProjectOpen });
+    console.log('open project');
+  };
+
   render() {
     const {
       projects,
@@ -46,6 +54,7 @@ export class Portfolio extends Component {
     const {
       selectedCategory,
       selectedSkill,
+      isProjectOpen,
     } = this.state;
 
     const CategoryItems = Object.values(categories).map(c => {
@@ -81,14 +90,20 @@ export class Portfolio extends Component {
 
     return (
       <PortfolioWrapper>
-        <Card title="Portfolio">
+        <button onClick={ this.openProject } />
+
+        <ScrollingCardLeft title="Portfolio" isProjectOpen={ isProjectOpen }>
           <FilterWrapper>
             <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
           </FilterWrapper>
           <ProjectsWrapper>
             {selectedProjects}
           </ProjectsWrapper>
-        </Card>
+        </ScrollingCardLeft>
+
+        <ScrollingCardRight title="Portfolio" isProjectOpen={ isProjectOpen }>
+          <p> SOME CONTENT!</p>
+        </ScrollingCardRight>
       </PortfolioWrapper>
     )
   }

@@ -1,15 +1,37 @@
 import styled from 'styled-components';
 
+import Card from '../../containers/Card';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import Filter from 'react-icons/lib/fa/filter';
 
 import {
   PRIMARY_COLOR,
-  SECONDARY_COLOR,
   DEFAULT_PAGE_WRAPPER,
+  SECONDARY_COLOR,
+  FONT_CONTENT,
 } from "../../theme";
 
-const PortfolioWrapper = DEFAULT_PAGE_WRAPPER.extend`
+const ScrollingCardLeft = styled(Card)`
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  transition: left 0.5s, display 2s;
+  left: ${props => props.isProjectOpen ? '-100vw' : '0'};  
+`;
+
+const ScrollingCardRight = ScrollingCardLeft.extend`
+  left: 100vw;
+  ${props => props.isProjectOpen ? 'left: 0' : 'left: 100vw'};    
+`;
+
+const PortfolioWrapper = styled.div`
+  position: relative;
+  width: 75%;
+  max-width: 1024px;
+  margin: 20vh auto 0;
+  color: ${PRIMARY_COLOR};
+  background-color: ${SECONDARY_COLOR};
+  font-family: ${FONT_CONTENT};
 `;
 
 const ProjectsWrapper = styled.div`
@@ -18,10 +40,13 @@ const ProjectsWrapper = styled.div`
   justify-content: space-around;
 `;
 
+const SingleProjectWrapper = styled.div`
+  
+`;
+
 const FilterWrapper = styled.div`
   color: ${PRIMARY_COLOR};
   margin: 20px;
-
 `;
 
 const CategoryDropdownMenu = styled(DropDownMenu)`
@@ -29,7 +54,6 @@ const CategoryDropdownMenu = styled(DropDownMenu)`
 `;
 
 const SkillDropdownMenu = CategoryDropdownMenu.extend`
-
 `;
 
 const FilterIcon = styled(Filter)`
@@ -52,5 +76,8 @@ export {
   CategoryDropdownMenu,
   FilterIcon,
   PortfolioWrapper,
+  SingleProjectWrapper,
+  ScrollingCardLeft,
+  ScrollingCardRight,
 }
 

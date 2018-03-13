@@ -15,10 +15,11 @@ export default class Card extends Component {
     const {
       title,
       children,
+      className,
     } = this.props;
 
     return (
-      <CardWrapper>
+      <CardWrapper className={className}>
 
         <CardTitle>
           { title }
