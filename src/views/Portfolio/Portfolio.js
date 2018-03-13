@@ -3,18 +3,17 @@ import { connect } from 'react-redux';
 
 import MenuItem from 'material-ui/MenuItem';
 
+import Card from '../../containers/Card';
 import ProjectTile from '../../containers/ProjectTile';
-import Divider from '../../components/Divider';
 
 import {
   AlignToDropdown,
   FilterIcon,
-  PortfolioWrapper,
   ProjectsWrapper,
   FilterWrapper,
   SkillDropdownMenu,
   CategoryDropdownMenu,
-  PortfolioHeader,
+  PortfolioWrapper,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -82,21 +81,12 @@ export class Portfolio extends Component {
 
     return (
       <PortfolioWrapper>
-        <PortfolioHeader>
-          Portfolio
-        </PortfolioHeader>
-
-        <Divider primary />
-
         <FilterWrapper>
           <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
         </FilterWrapper>
         <ProjectsWrapper>
           {selectedProjects}
         </ProjectsWrapper>
-
-        <Divider primary />
-
       </PortfolioWrapper>
     )
   }

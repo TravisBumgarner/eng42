@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Divider from '../../components/Divider';
-import Button from '../../components/Button';
+import Card from '../../containers/Card';
 
 import {
-  MeWrapper,
-  MeHeader,
   MeDescription,
 } from './Me.styles';
 
@@ -20,7 +17,11 @@ export class Me extends Component {
 
   render() {
     const {
-      author: {name, link, description},
+      author: {
+        name,
+        link,
+        description
+      },
       loaded
     } = this.props;
 
@@ -29,18 +30,11 @@ export class Me extends Component {
 
 
     return (
-      <MeWrapper>
-        <MeHeader>{ name }</MeHeader>
-
-        <Divider primary/>
-
+      <Card title={ `${name}` }>
         <MeDescription>{ formattedDescription }</MeDescription>
         <ul>{ aboutLinks }</ul>
-
-        <Divider primary/>
-      </MeWrapper>
+      </Card>
     )
-
   }
 }
 

@@ -44,21 +44,13 @@ const AlignToDropdown = styled.div`
   padding-bottom: 22px;
 `;
 
-
-const PortfolioHeader = styled.h1`
-  font-family: ${FONT_HEADER};
-  font-size: ${FONT_XLARGE};
-  margin: 20px 0;
-`;
-
 export {
-  PortfolioHeader,
   AlignToDropdown,
   FilterWrapper,
-  PortfolioWrapper,
   ProjectsWrapper,
   SkillDropdownMenu,
   CategoryDropdownMenu,
   FilterIcon,
+  PortfolioWrapper,
 }
 

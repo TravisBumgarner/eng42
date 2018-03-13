@@ -14,11 +14,11 @@ const ProjectTileWrapper = styled.div`
   flex: 1 1 25%;
   margin: 20px;
   padding: 20px;
-  color: ${PRIMARY_COLOR};
+  color: ${SECONDARY_COLOR};
   background-image: ${props => props.previewImageSrc && `
-    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(${props.previewImageSrc});
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${props.previewImageSrc});
     `};
-  border: 1px solid ${PRIMARY_COLOR};
+  border: 1px solid ${SECONDARY_COLOR};
   
   ${media.TABLET`
   flex: 1 1 33%;

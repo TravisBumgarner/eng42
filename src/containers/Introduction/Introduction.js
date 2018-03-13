@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Divider from '../../components/Divider';
-import Button from '../../components/Button';
+import Card from '../../containers/Card';
 
 import {
-  IntroductionWrapper,
   IntroText,
-  IntroHeader,
-  IntroListItem,
-  IntroList,
 } from './Introduction.styles';
 
 export class Introduction extends Component {
@@ -61,13 +56,7 @@ export class Introduction extends Component {
     });
 
     return (
-      <IntroductionWrapper>
-        <IntroHeader>
-          Greetings,
-        </IntroHeader>
-
-        <Divider primary/>
-
+      <Card title="Greetings,">
         <IntroText>
           {`Are you looking for someone who can combine ${selectedSkills[0]},
             ${selectedSkills[1]}, and ${selectedSkills[2]} on a project?`}
@@ -76,9 +65,7 @@ export class Introduction extends Component {
         <IntroText>
           You've come to the right place! Let's grab a beer (or coffee), work, or volunteer together!
         </IntroText>
-
-        <Divider primary/>
-      </IntroductionWrapper>
+      </Card>
     )
 
   }

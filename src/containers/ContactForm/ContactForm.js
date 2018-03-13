@@ -4,16 +4,10 @@ import { connect } from 'react-redux';
 import requestActions from '../../store/request/actions';
 import notificationActions from '../../store/notification/actions';
 
-
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-import Divider from '../../components/Divider';
-
-import {
-  ContactFormWrapper,
-  ContactHeader,
-} from './ContactForm.styles';
+import Card from '../../containers/Card';
 
 export class ContactForm extends Component {
 
@@ -69,13 +63,7 @@ export class ContactForm extends Component {
       notificationMessage,
     } = this.state;
     return (
-      <ContactFormWrapper>
-        <ContactHeader>
-          Let's Chat
-        </ContactHeader>
-
-        <Divider primary/>
-
+      <Card title = "Let's Chat">
         <TextField
           fullWidth
           value={this.state.name}
@@ -112,10 +100,7 @@ export class ContactForm extends Component {
           onClick={ this.handleSubmit }
           primary={ true }
         />
-
-        <Divider primary/>
-
-      </ContactFormWrapper >
+      </Card>
     );
   }
 }

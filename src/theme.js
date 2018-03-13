@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 
 export const PRIMARY_COLOR = '#000000';
 export const SECONDARY_COLOR = '#FFFFFF';
-export const TERTIARY_COLOR = '#00faff';
+export const TERTIARY_COLOR = '#4acfa0';
 
 
 export const FONT_SMALL = '0.8rem';

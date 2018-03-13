@@ -37,7 +37,7 @@ export class ProjectTile extends Component {
           { project.name }
         </ProjectTitle>
 
-        <Divider primary />
+        <Divider />
 
         <ProjectSubheader>Skills</ProjectSubheader>
         <ProjectText>{projectSkills}</ProjectText>
