@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import FaExternalLink from 'react-icons/lib/fa/external-link';
+import FaCalendar from 'react-icons/lib/fa/calendar';
+import FaPencil from 'react-icons/lib/fa/pencil';
+
 import {
   FONT_HEADER,
   FONT_SMALL,
@@ -9,47 +13,73 @@ import {
   media,
 } from '../../theme';
 
+const ICON_PADDING = '10px';
+
+const CalendarIcon = styled(FaCalendar)`
+  padding-right: ${ICON_PADDING};
+  flex-shrink: 0;
+`;
+
+const PencilIcon = styled(FaPencil)`
+  padding-right: ${ICON_PADDING};
+  flex-shrink: 0;
+`;
+
+const LinkIcon = styled(FaExternalLink)`
+  padding-right: ${ICON_PADDING};
+  flex-shrink: 0;
+`;
+
+
 const ProjectTileWrapper = styled.div`
   box-sizing: border-box;
-  flex: 1 1 25%;
   margin: 20px;
   padding: 20px;
   color: ${SECONDARY_COLOR};
   background-image: ${props => props.previewImageSrc && `
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${props.previewImageSrc});
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${props.previewImageSrc});
     `};
   border: 1px solid ${SECONDARY_COLOR};
+  width: 300px;
+  height: 300px;
+  
+  &:before{
+    content:'';
+    float:left;
+    padding-top:100%;
+  }
   
   ${media.TABLET`
-  flex: 1 1 33%;
   `}
   
   ${media.PHONE`
-  flex: 1 1 50%;
   `}
 `;
 
 const ProjectTitle = styled.h2`
   margin: 0 0 20px 0;
   font-size: ${FONT_NORMAL};
-  font-weight: 700;
   font-family: ${FONT_HEADER};
 `;
 
-const ProjectSubheader = styled.h3`
+const SubSection = styled.p`
   font-size: ${FONT_NORMAL};
-  margin: 15px 0 5px 0;
-  font-family: ${FONT_HEADER};
+  font-weight: 100;
+  margin: 10px 0;
+  display: flex;
 `;
 
-const ProjectText = styled.span`
+const ProjectLink = styled.a`
   font-size: ${FONT_SMALL};
+  color: 
 `;
 
 export {
   ProjectTileWrapper,
   ProjectTitle,
-  ProjectSubheader,
-  ProjectText,
+  SubSection,
+  CalendarIcon,
+  LinkIcon,
+  PencilIcon,
 }
 

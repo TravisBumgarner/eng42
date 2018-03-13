@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import FaExternalLink from 'react-icons/lib/fa/external-link';
+import FaCalendar from 'react-icons/lib/fa/calendar';
+import FaPencil from 'react-icons/lib/fa/pencil';
+
 import Divider from '../../components/Divider';
+import ExternalLink from '../../components/ExternalLink';
 
 import {
   ProjectTileWrapper,
   ProjectTitle,
-  ProjectSubheader,
-  ProjectText,
+  SubSection,
+  CalendarIcon,
+  LinkIcon,
+  PencilIcon,
 } from './ProjectTile.styles';
 
 export class ProjectTile extends Component {
@@ -18,17 +25,15 @@ export class ProjectTile extends Component {
       categories,
     } = this.props;
 
-    // const projectCategories = project.category.map(c => {
-    //   return <li key={c}>{categories[c].name}</li>
-    // });
     const projectCategories = project.category.map(c => categories[c].name).join(", ");
-
-    // const projectSkills = project.skill.map(s => {
-    //   return <li key={s}>{skills[parseInt(s,10)].name}</li>
-    // });
-
-        const projectSkills = project.skill.map(s => skills[s].name).join(", ");
-
+    const projectSkills = project.skill.map(s => skills[s].name).join(", ");
+    const projectLinks = project.link.map((l, idx) => {
+      return (
+        <li><ExternalLink href={ l.src }>
+          { l.name }
+        </ExternalLink></li>
+      )
+    });
 
     return (
       <ProjectTileWrapper previewImageSrc = { project.preview_img && project.preview_img.src } >
@@ -39,14 +44,24 @@ export class ProjectTile extends Component {
 
         <Divider />
 
-        <ProjectSubheader>Skills</ProjectSubheader>
-        <ProjectText>{projectSkills}</ProjectText>
+        <SubSection>
+          <CalendarIcon/>
+          {project.start_date.slice(0, -3)} - {project.end_date.slice(0, -3)} {/* Remove Day of Mont */}
+          </SubSection>
 
-        <ProjectSubheader>Categories</ProjectSubheader>
-        <ProjectText>{projectCategories}</ProjectText>
+        <SubSection>
+          <PencilIcon/>
+          { projectSkills.length < 100 ? projectSkills : `${projectSkills.slice(0,100)}...` }
+        </SubSection>
 
-        <ProjectSubheader>Links</ProjectSubheader>
-        <ProjectText></ProjectText>
+        { !!projectLinks.length &&
+          <SubSection>
+            <LinkIcon/>
+            <ul>{ projectLinks }</ul>
+          </SubSection>
+        }
+
+        <Divider />
 
       </ProjectTileWrapper>
     )
@@ -59,24 +74,3 @@ export default connect((state, ownProps) => ({
   categories: state.category.all,
 }), {
 })(ProjectTile);
-
-
-// "id"
-// 1
-// :
-// "name"
-// 2
-// :
-// "category"
-// 3
-// :
-// "start_date"
-// 4
-// :
-// "end_date"
-// 5
-// :
-// "skill"
-// 6
-// :
-// "link"

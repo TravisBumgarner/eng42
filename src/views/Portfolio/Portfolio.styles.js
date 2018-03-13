@@ -15,6 +15,7 @@ const PortfolioWrapper = DEFAULT_PAGE_WRAPPER.extend`
 const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
 const FilterWrapper = styled.div`
