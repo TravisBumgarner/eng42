@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 
-import { PRIMARY_COLOR, SECONDARY_COLOR, BODY_HEIGHT, SCREEN_WIDTHS } from "../../theme";
+import {
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  DEFAULT_PAGE_WRAPPER,
+} from "../../theme";
 
 
-const HomeWrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: center;
-  color: ${PRIMARY_COLOR};
-  background-color: ${SECONDARY_COLOR};
+const HomeWrapper = DEFAULT_PAGE_WRAPPER.extend`
+  margin-top: 35vh;
+  max-width: 800px;
 `;
-
 
 
 export {

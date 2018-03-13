@@ -1,18 +1,22 @@
 import styled from 'styled-components';
 
-import { PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from "../../theme";
+import { PRIMARY_COLOR, SECONDARY_COLOR, FONT_HEADER, TERTIARY_COLOR } from "../../theme";
 
 import { Link } from 'react-router-dom'
 
 const SiteLink = styled(Link)`
   text-decoration: none;
+  text-transform: uppercase;
   color: ${PRIMARY_COLOR};
-  padding-bottom: 10px;
+  font-family: ${FONT_HEADER};
+  padding: 10px 0;
   border-bottom: 2px solid ${ PRIMARY_COLOR };
+  border-top: 2px solid ${ PRIMARY_COLOR };
     
   &:hover {
     color: ${TERTIARY_COLOR};
     border-bottom: 2px solid ${ TERTIARY_COLOR };
+    border-top: 2px solid ${ TERTIARY_COLOR };
   }
 `;
 

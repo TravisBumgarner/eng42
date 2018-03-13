@@ -81,12 +81,14 @@ export class Portfolio extends Component {
 
     return (
       <PortfolioWrapper>
-        <FilterWrapper>
-          <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
-        </FilterWrapper>
-        <ProjectsWrapper>
-          {selectedProjects}
-        </ProjectsWrapper>
+        <Card title="Portfolio">
+          <FilterWrapper>
+            <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
+          </FilterWrapper>
+          <ProjectsWrapper>
+            {selectedProjects}
+          </ProjectsWrapper>
+        </Card>
       </PortfolioWrapper>
     )
   }

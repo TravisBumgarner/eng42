@@ -16,7 +16,7 @@ export default class Nav extends Component {
       <SiteLinkList>
         <SiteLinkItem><SiteLink to="/">Home</SiteLink></SiteLinkItem>
         <SiteLinkItem><SiteLink to="/about">About</SiteLink></SiteLinkItem>
-        <SiteLinkItem><SiteLink to="/contact">Let's Chat</SiteLink></SiteLinkItem>
+        <SiteLinkItem><SiteLink to="/contact">Contact</SiteLink></SiteLinkItem>
         <SiteLinkItem><SiteLink to="/portfolio">Portfolio</SiteLink></SiteLinkItem>
       </SiteLinkList>
     )

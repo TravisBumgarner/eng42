@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import Filter from 'react-icons/lib/fa/filter';
 
-import {PRIMARY_COLOR, SECONDARY_COLOR, SCREEN_WIDTHS, FONT_XLARGE, FONT_HEADER} from "../../theme";
+import {
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  DEFAULT_PAGE_WRAPPER,
+} from "../../theme";
 
-const PortfolioWrapper = styled.div`
-  background-color: ${SECONDARY_COLOR};
-  top: 50px;
-  max-width: ${SCREEN_WIDTHS.DESKTOP}px;
-  position: relative;
-  margin: 0px auto;
+const PortfolioWrapper = DEFAULT_PAGE_WRAPPER.extend`
 `;
 
 const ProjectsWrapper = styled.div`
