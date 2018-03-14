@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 
 import MenuItem from 'material-ui/MenuItem';
 
+import projectActions from '../../store/project/actions';
+
 import ProjectTile from '../../containers/ProjectTile';
+// import SingleProject from '../../containers/SingleProject';
 
 import {
   AlignToDropdown,
@@ -39,6 +42,12 @@ export class Portfolio extends Component {
   });
 
   openProject = () => {
+    const {
+      setSelectedProject,
+    } = this.props;
+
+    setSelectedProject(3);
+
     this.setState({ isProjectOpen: !this.state.isProjectOpen });
     console.log('open project');
   };
@@ -46,6 +55,7 @@ export class Portfolio extends Component {
   render() {
     const {
       projects,
+      project,
       loaded,
       skills,
       categories,
@@ -101,8 +111,9 @@ export class Portfolio extends Component {
           </ProjectsWrapper>
         </ScrollingCardLeft>
 
-        <ScrollingCardRight title="Portfolio" isProjectOpen={ isProjectOpen }>
-          <p> SOME CONTENT!</p>
+        <ScrollingCardRight title={project.name} isProjectOpen={ isProjectOpen }>
+          <p>{project.start_date}</p>
+          <p>{project.end_date}</p>
         </ScrollingCardRight>
       </PortfolioWrapper>
     )
@@ -111,8 +122,11 @@ export class Portfolio extends Component {
 
 export default connect((state) => ({
   projects: state.project.all,
+  project: state.project.all[state.project.selected],
   categories: state.category.all,
   skills: state.skill.all,
 }), {
+  setSelectedProject: projectActions.setSelectedProject,
+
 
 })(Portfolio);
