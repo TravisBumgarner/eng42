@@ -23,6 +23,7 @@ export class ProjectTile extends Component {
       project,
       skills,
       categories,
+      openProject,
     } = this.props;
 
     const projectCategories = project.category.map(c => categories[c].name).join(", ");
@@ -57,7 +58,10 @@ export class ProjectTile extends Component {
         { !!projectLinks.length &&
           <SubSection>
             <LinkIcon/>
-            <ul>{ projectLinks }</ul>
+            <ul>
+              <li><button onClick={ () => openProject(project.id) }>Click Me</button></li>
+              { projectLinks }
+            </ul>
           </SubSection>
         }
 

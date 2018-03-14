@@ -41,16 +41,20 @@ export class Portfolio extends Component {
     selectedCategory: 0
   });
 
-  openProject = () => {
+  openProject = (id) => {
     const {
       setSelectedProject,
     } = this.props;
 
-    setSelectedProject(3);
+    window.scrollTo(0,0);
 
-    this.setState({ isProjectOpen: !this.state.isProjectOpen });
-    console.log('open project');
+    setSelectedProject(id);
+    this.setState({ isProjectOpen: true });
   };
+
+  closeProject = () => {
+    this.setState({ isProjectOpen: false });
+  }
 
   render() {
     const {
@@ -95,13 +99,24 @@ export class Portfolio extends Component {
       const isInSkill = selectedSkill !== 0 ? p.skill.includes(selectedSkill) : true;
       return (isInCategory && isInSkill)
     }).map(p => {
-      return <ProjectTile key={p.id} projectId={p.id} />;
+      return <ProjectTile
+        key={ p.id }
+        projectId={ p.id }
+        openProject={ this.openProject }
+      />;
     });
+
+    const SingleProjectDetails = Object.keys(project).map(d => {
+      console.log(d);
+      return (
+        <p>
+          <b>{d}</b> {String(project[d])}
+        </p>
+      );
+    })
 
     return (
       <PortfolioWrapper>
-        <button onClick={ this.openProject } />
-
         <ScrollingCardLeft title="Portfolio" isProjectOpen={ isProjectOpen }>
           <FilterWrapper>
             <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
@@ -112,8 +127,8 @@ export class Portfolio extends Component {
         </ScrollingCardLeft>
 
         <ScrollingCardRight title={project.name} isProjectOpen={ isProjectOpen }>
-          <p>{project.start_date}</p>
-          <p>{project.end_date}</p>
+          <button onClick={ this.closeProject }>Close me</button>
+          { SingleProjectDetails }
         </ScrollingCardRight>
       </PortfolioWrapper>
     )

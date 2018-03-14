@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceadb748-e89a-44b5-a0cb-4b0f733078f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/project/actions/index.js" afterPath="$PROJECT_DIR$/src/store/project/actions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/project/reducers/index.js" afterPath="$PROJECT_DIR$/src/store/project/reducers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.js" afterPath="$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/Portfolio/Portfolio.js" afterPath="$PROJECT_DIR$/src/views/Portfolio/Portfolio.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,64 +24,9 @@
       <file leaf-file-name="Portfolio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/Portfolio/Portfolio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="479">
+              <caret line="112" column="40" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setSelectedProject.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/project/actions/setSelectedProject/setSelectedProject.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/project/reducers/selected/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleProject.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/SingleProject.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingleProject.styles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/SingleProject.styles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <marker date="1521053403399" expanded="true" signature="282:283" ph="{...}" />
-                <marker date="1521053403399" expanded="true" signature="282:323" ph="{...}" />
-                <marker date="1521053403399" expanded="true" signature="294:321" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -99,9 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Link</find>
-      <find>&lt;Link</find>
-      <find>Theme</find>
       <find>value</find>
       <find>category</find>
       <find>c.name</find>
@@ -129,6 +70,9 @@
       <find>Onclic</find>
       <find>Left</find>
       <find>openPr</find>
+      <find>openProjectproject</find>
+      <find>projectTile</find>
+      <find>organization</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -146,8 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/store/notification/actions/createNotification/createNotification.js" />
-        <option value="$PROJECT_DIR$/src/store/notification/reducers/msg/msg.js" />
         <option value="$PROJECT_DIR$/src/store/notification/actions/index.js" />
         <option value="$PROJECT_DIR$/src/views/About/Blog/package.json" />
         <option value="$PROJECT_DIR$/src/views/About/Blog/Blog.js" />
@@ -167,7 +109,6 @@
         <option value="$PROJECT_DIR$/src/containers/Introduction/Introduction.js" />
         <option value="$PROJECT_DIR$/src/containers/Me/Me.js" />
         <option value="$PROJECT_DIR$/src/containers/Me/Me.styles.js" />
-        <option value="$PROJECT_DIR$/../eng40-api/api/models.py" />
         <option value="$PROJECT_DIR$/src/views/About/About.styles.js" />
         <option value="$PROJECT_DIR$/src/views/Contact/Contact.styles.js" />
         <option value="$PROJECT_DIR$/src/views/App/App.styles.js" />
@@ -178,11 +119,9 @@
         <option value="$PROJECT_DIR$/src/components/Nav/Nav.js" />
         <option value="$PROJECT_DIR$/src/components/IconLink/IconLink.js" />
         <option value="$PROJECT_DIR$/src/components/IconLink/IconLink.styles.js" />
-        <option value="$PROJECT_DIR$/../eng40-api/api/serializers.py" />
         <option value="$PROJECT_DIR$/src/theme.js" />
         <option value="$PROJECT_DIR$/src/components/ExternalLink/package.json" />
         <option value="$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.styles.js" />
-        <option value="$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.js" />
         <option value="$PROJECT_DIR$/src/components/ExternalLink/ExternalLink.js" />
         <option value="$PROJECT_DIR$/src/components/ExternalLink/ExternalLink.styles.js" />
         <option value="$PROJECT_DIR$/src/containers/Card/Card.js" />
@@ -196,6 +135,11 @@
         <option value="$PROJECT_DIR$/src/store/project/actions/setSelectedProject/setSelectedProject.js" />
         <option value="$PROJECT_DIR$/src/containers/SingleProject/SingleProject.js" />
         <option value="$PROJECT_DIR$/src/store/project/reducers/selected/selected.js" />
+        <option value="$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.js" />
+        <option value="$PROJECT_DIR$/../eng40-api/api/models.py" />
+        <option value="$PROJECT_DIR$/../eng40-api/api/serializers.py" />
+        <option value="$PROJECT_DIR$/../eng40-api/api/urls.py" />
+        <option value="$PROJECT_DIR$/../eng40-api/api/viewsets.py" />
         <option value="$PROJECT_DIR$/src/views/Portfolio/Portfolio.js" />
       </list>
     </option>
@@ -316,53 +260,6 @@
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-              <item name="setSelectedProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eng40" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="eng40" type="b2602c69:ProjectViewProjectNode" />
               <item name="eng40-api" type="462c0819:PsiDirectoryNode" />
@@ -568,24 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/Blog/Blog.styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <marker date="1520899522905" expanded="true" signature="136:330" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/notification/reducers/msg/msg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/notification/actions/createNotification/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -694,14 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eng40-api/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -833,14 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../eng40-api/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ExternalLink/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -868,17 +731,6 @@
         <state relative-caret-position="180">
           <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <caret line="53" column="85" lean-forward="false" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
-          <folding>
-            <marker date="1520971751152" expanded="true" signature="1577:1663" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,23 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/project/reducers/selected/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/project/actions/setSelectedProject/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1033,6 +868,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ProjectTile/ProjectTile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="61" column="65" lean-forward="true" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+          <folding>
+            <marker date="1521054582626" expanded="true" signature="1596:1801" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/project/actions/setSelectedProject/setSelectedProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/project/reducers/selected/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/SingleProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/SingleProject.styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1045,26 +923,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SingleProject/SingleProject.js">
+    <entry file="file://$PROJECT_DIR$/../eng40-api/api/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="53" />
+        <state relative-caret-position="255">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/project/actions/setSelectedProject/setSelectedProject.js">
+    <entry file="file://$PROJECT_DIR$/../eng40-api/api/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
+        <state relative-caret-position="165">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eng40-api/api/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eng40-api/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Portfolio/Portfolio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="479">
+          <caret line="112" column="40" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
           <folding />
         </state>
       </provider>
