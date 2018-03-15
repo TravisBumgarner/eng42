@@ -4,12 +4,11 @@ import Card from '../../containers/Card';
 
 import {
   PRIMARY_COLOR,
-  DEFAULT_PAGE_WRAPPER,
   SECONDARY_COLOR,
   FONT_CONTENT,
 } from "../../theme";
 
-const ScrollingCardLeft = styled(Card)`
+const ProjectsCard = styled(Card)`
   position: absolute;
   top: 10px;
   width: 100%;
@@ -17,7 +16,7 @@ const ScrollingCardLeft = styled(Card)`
   left: ${props => props.isProjectOpen ? '-100vw' : '0'};  
 `;
 
-const ScrollingCardRight = ScrollingCardLeft.extend`
+const ProjectCard = ProjectsCard.extend`
   left: 100vw;
   ${props => props.isProjectOpen ? 'left: 0' : 'left: 100vw'};    
 `;
@@ -32,21 +31,9 @@ const PortfolioWrapper = styled.div`
   font-family: ${FONT_CONTENT};
 `;
 
-const ProjectsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
-
-const SingleProjectWrapper = styled.div`
-  
-`;
-
 export {
-  ProjectsWrapper,
   PortfolioWrapper,
-  SingleProjectWrapper,
-  ScrollingCardLeft,
-  ScrollingCardRight,
+  ProjectsCard,
+  ProjectCard,
 }
 

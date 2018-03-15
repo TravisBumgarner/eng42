@@ -9,10 +9,9 @@ import SingleProject from '../../containers/SingleProject';
 
 
 import {
-  ProjectsWrapper,
   PortfolioWrapper,
-  ScrollingCardRight,
-  ScrollingCardLeft,
+  ProjectCard,
+  ProjectsCard,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -49,17 +48,15 @@ export class Portfolio extends Component {
 
     return (
       <PortfolioWrapper>
-        <ScrollingCardLeft title="Portfolio" isProjectOpen={ isProjectOpen }>
+        <ProjectsCard title="Portfolio" isProjectOpen={ isProjectOpen }>
           <ProjectsFilter />
-          <ProjectsWrapper>
-            <ProjectsGrid openProject={ this.openProject }/>
-          </ProjectsWrapper>
-        </ScrollingCardLeft>
+          <ProjectsGrid openProject={ this.openProject } />
+        </ProjectsCard>
 
-        <ScrollingCardRight title={ project.name } isProjectOpen={ isProjectOpen }>
+        <ProjectCard title={ project.name } isProjectOpen={ isProjectOpen }>
           <button onClick={ this.closeProject }>Close me</button>
           <SingleProject />
-        </ScrollingCardRight>
+        </ProjectCard>
       </PortfolioWrapper>
     )
   }
