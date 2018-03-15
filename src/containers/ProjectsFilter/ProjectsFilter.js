@@ -47,7 +47,7 @@ export class ProjectsFilter extends Component {
       categories,
       skills,
     } = this.props;
-    
+
     const filteredProjectIds = Object.values(projects).filter(p => {
       const isInCategory = selectedCategory !== 0 ? p.category.includes(selectedCategory) : true;
       const isInSkill = selectedSkill !== 0 ? p.skill.includes(selectedSkill) : true;
