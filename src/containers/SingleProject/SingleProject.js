@@ -24,6 +24,7 @@ export class ProjectTile extends Component {
 
     console.log(project);
 
+    const Images = project.image.map(i => <img style={{width:'100px', height:'100px'}} src={i.src} alt={i.name} />);
     const Locations = project.location.map(l => l.name).join(", ");
     const Organizations = project.organization.map(o => o.name).join(", ");
     const Categories = project.category.map(c => categories[c].name).join(", ");
@@ -71,6 +72,10 @@ export class ProjectTile extends Component {
         <SubSection>
           <DescriptionIcon/>
           { project.description }
+        </SubSection>
+
+        <SubSection>
+          { Images }
         </SubSection>
 
       </SingleProjectWrapper>
