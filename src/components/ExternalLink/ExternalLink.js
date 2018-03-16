@@ -11,13 +11,15 @@ export default class ExternalLink extends Component {
       children,
       primary,
       href,
+      onClick,
     } = this.props;
 
     return (
       <ExternalLinkWrapper
         target="_blank"
-        primary={primary}
-        href={href}
+        primary={ primary }
+        href={ href }
+        onClick={ onClick }
       >
         {children}
       </ExternalLinkWrapper>

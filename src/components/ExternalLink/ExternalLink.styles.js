@@ -11,8 +11,8 @@ const ExternalLinkWrapper = styled.a`
   text-decoration: none;
   &:hover{
     color: ${TERTIARY_COLOR};
+    cursor: pointer;
   }
-
 `;
 
 export {

@@ -12,6 +12,7 @@ import {
   PortfolioWrapper,
   ProjectCard,
   ProjectsCard,
+  CloseIcon,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -27,10 +28,9 @@ export class Portfolio extends Component {
       setSelectedProject,
     } = this.props;
 
-    window.scrollTo(0,0);
-
     setSelectedProject(id);
     this.setState({ isProjectOpen: true });
+    window.scrollTo(0,0);
   };
 
   closeProject = () => {
@@ -54,7 +54,7 @@ export class Portfolio extends Component {
         </ProjectsCard>
 
         <ProjectCard title={ project.name } isProjectOpen={ isProjectOpen }>
-          <button onClick={ this.closeProject }>Close me</button>
+          <CloseIcon size={50} onClick={ this.closeProject } />
           <SingleProject />
         </ProjectCard>
       </PortfolioWrapper>

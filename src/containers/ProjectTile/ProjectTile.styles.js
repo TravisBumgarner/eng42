@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import FaExternalLink from 'react-icons/lib/fa/external-link';
 import FaCalendar from 'react-icons/lib/fa/calendar';
 import FaPencil from 'react-icons/lib/fa/pencil';
+import FaArrowRight from 'react-icons/lib/fa/arrow-right';
+import FaHeader from 'react-icons/lib/fa/header';
 
 import {
   FONT_HEADER,
@@ -25,11 +26,15 @@ const PencilIcon = styled(FaPencil)`
   flex-shrink: 0;
 `;
 
-const LinkIcon = styled(FaExternalLink)`
+const LinkIcon = styled(FaArrowRight)`
   padding-right: ${ICON_PADDING};
   flex-shrink: 0;
 `;
 
+const Headline = styled(FaHeader)`
+  padding-right: ${ICON_PADDING};
+  flex-shrink: 0;
+`;
 
 const ProjectTileWrapper = styled.div`
   box-sizing: border-box;
@@ -69,11 +74,6 @@ const SubSection = styled.p`
   display: flex;
 `;
 
-const ProjectLink = styled.a`
-  font-size: ${FONT_SMALL};
-  color: 
-`;
-
 export {
   ProjectTileWrapper,
   ProjectTitle,
@@ -81,5 +81,6 @@ export {
   CalendarIcon,
   LinkIcon,
   PencilIcon,
+  Headline,
 }
 
