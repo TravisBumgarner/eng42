@@ -19,6 +19,9 @@ const CategoryDropdownMenu = styled(DropDownMenu)`
 const SkillDropdownMenu = CategoryDropdownMenu.extend`
 `;
 
+const SortDropdownMenu = CategoryDropdownMenu.extend`
+`;
+
 const FilterIcon = styled(Filter)`
   height: 56px;
   vertical-align: top !important;
@@ -37,5 +40,6 @@ export {
   SkillDropdownMenu,
   CategoryDropdownMenu,
   FilterIcon,
+  SortDropdownMenu,
 }
 

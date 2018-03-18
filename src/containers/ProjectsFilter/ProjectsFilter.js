@@ -5,6 +5,13 @@ import MenuItem from 'material-ui/MenuItem';
 
 import projectActions from '../../store/project/actions';
 
+const sort = (sortMethod, a, b) => {
+  if (sortMethod === 'newToOld'){
+    return Date.parse(b.end_date) - Date.parse(a.end_date);
+  } else if(sortMethod === 'oldToNew') {
+    return Date.parse(a.end_date) - Date.parse(b.end_date);
+  }
+};
 
 import {
   ProjectsFilterWrapper,
@@ -12,6 +19,7 @@ import {
   SkillDropdownMenu,
   CategoryDropdownMenu,
   FilterIcon,
+  SortDropdownMenu,
 } from "./ProjectsFilter.styles";
 
 export class ProjectsFilter extends Component {
@@ -20,7 +28,15 @@ export class ProjectsFilter extends Component {
     this.state = {
       selectedCategory: 0,
       selectedSkill: 0,
+      sortMethod: 'newToOld',
     }
+  }
+  componentWillMount(){
+    this.updateFilteredProjects()
+  }
+
+  componentDidUpdate(){
+    this.updateFilteredProjects()
   }
 
   handleCategoryChange = (event, index, value) => {
@@ -28,40 +44,48 @@ export class ProjectsFilter extends Component {
       selectedCategory: value,
       selectedSkill: 0,
     });
-    this.updateFilteredProjects(0, value);
   };
 
   handleSkillChange = (event, index, value) => {
-    console.log(event, index, value);
     this.setState({
       selectedSkill: value,
       selectedCategory: 0
     });
-    this.updateFilteredProjects(value, 0);
   };
 
-  updateFilteredProjects = (selectedSkill, selectedCategory) => {
+  handleSortChange = (event, index, value) => {
+    this.setState({ sortMethod: value });
+  };
+
+  updateFilteredProjects = () => {
     const {
       projects,
       setFilteredProjects,
-      categories,
-      skills,
     } = this.props;
 
-    const filteredProjectIds = Object.values(projects).filter(p => {
+    const {
+      selectedSkill,
+      selectedCategory,
+      sortMethod,
+    } = this.state;
+
+    const filteredProjects = Object.values(projects).filter(p => {
       const isInCategory = selectedCategory !== 0 ? p.category.includes(selectedCategory) : true;
       const isInSkill = selectedSkill !== 0 ? p.skill.includes(selectedSkill) : true;
       return (isInCategory && isInSkill);
-    }).map(p => p.id);
+    });
 
-    setFilteredProjects(filteredProjectIds);
-  }
+    const sortedProjects = Object.values(filteredProjects).sort((a,b) => {
+      return sort(sortMethod, a, b);
+    });
+
+    const projectIds = sortedProjects.map(p => p.id);
+
+    setFilteredProjects(projectIds);
+  };
 
   render() {
     const {
-      projects,
-      project,
-      loaded,
       skills,
       categories,
     } = this.props;
@@ -89,9 +113,16 @@ export class ProjectsFilter extends Component {
       </SkillDropdownMenu>
     );
 
+    const SortDropdown = (
+      <SortDropdownMenu autoWidth={false} value={this.state.sortMethod} onChange={this.handleSortChange}>
+        <MenuItem value={'newToOld'} key={0} primaryText={'Sort New to Old'}/>
+        <MenuItem value={'oldToNew'} key={1} primaryText={'Sort Old to New'}/>
+      </SortDropdownMenu>
+    );
+
     return (
       <ProjectsFilterWrapper>
-        <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
+        <FilterIcon /> {SortDropdown} <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
       </ProjectsFilterWrapper>
     )
   }
