@@ -22,7 +22,6 @@ const ProjectsCard = styled(Card)`
 
 const ProjectCard = ProjectsCard.extend`
   left: 100vw;
-  top: 10px;
   ${props => props.isProjectOpen ? 'left: 0' : 'left: 100vw'};    
   display: ${props => props.isProjectOpen ? 'initial' : 'hidden'};
 `;

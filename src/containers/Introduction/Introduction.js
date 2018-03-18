@@ -5,57 +5,69 @@ import Card from '../../containers/Card';
 
 import {
   IntroText,
+  SkillText,
 } from './Introduction.styles';
 
 export class Introduction extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       selectedSkills: [],
+      secondsElapsed: 0,
+      unselectedSkills: Object.values(props.allSkills).map(s => s.name),
     };
   }
 
-  componentWillMount(){
-    this.generateIntroMessage()
+  componentDidMount() {
+    this.interval = setInterval(() =>  this.generateIntroMessage(false), 2500);
+    this.generateIntroMessage(true)
   }
 
-  generateIntroMessage = () => {
-    const {
-      allSkills,
-    } = this.props;
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
+  generateIntroMessage = (isInitialLoad) => {
     const {
       selectedSkills,
+      unselectedSkills,
     } = this.state;
-    // TODO could write this as a selector?
+
     const newSelectedSkills = [...selectedSkills];
+    const newUnselectedSkills = [...unselectedSkills];
 
-    let allSkillsKeys = Object.keys(allSkills);
-
-    while (allSkillsKeys.length && newSelectedSkills.length < 3) {
-      let i = allSkills[Math.floor(Math.random() * allSkillsKeys.length)].name;
-      if (!newSelectedSkills.includes(i)) {
-        newSelectedSkills.push(i);
-      }
+    // Remove one of not initial load
+    const randSkillIdx = Math.floor(Math.random() * newSelectedSkills.length);
+    if (!isInitialLoad){
+      newUnselectedSkills.push(newSelectedSkills[randSkillIdx]);
+      newSelectedSkills.splice(randSkillIdx,1);
     }
 
-    this.setState({ selectedSkills: newSelectedSkills })
+    while (newSelectedSkills.length < 3) {
+      const newRandSkillIdx = Math.floor(Math.random() * newUnselectedSkills.length);
+      if (isInitialLoad){
+        newSelectedSkills.push(newUnselectedSkills[newRandSkillIdx]);
+      } else {
+        newSelectedSkills.splice(randSkillIdx, 0, newUnselectedSkills[newRandSkillIdx]);
+      }
+      newUnselectedSkills.splice(randSkillIdx,1);
+    }
+    this.setState({
+      selectedSkills: newSelectedSkills,
+      unselectedSkills: newUnselectedSkills,
+    })
   };
 
   render() {
     const {
       selectedSkills,
     } = this.state;
-
-    let skills = selectedSkills.map(s => {
-      return <h2 key={s}>{s}</h2>
-    });
-
+    console.log(selectedSkills);
     return (
       <Card title="Greetings,">
         <IntroText>
-          {`Are you looking for someone who can combine ${selectedSkills[0]},
-            ${selectedSkills[1]}, and ${selectedSkills[2]} on a project?`}
+          Are you looking for someone who can combine <SkillText>{selectedSkills[0]}</SkillText>, <SkillText>{selectedSkills[1]}</SkillText>, and <SkillText>{selectedSkills[2]}</SkillText> on a project?
         </IntroText>
 
         <IntroText>
