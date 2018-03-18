@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {
   ProjectDetailWrapper,
   IconWrapper,
-  TextWrapper,
+  ContentWrapper,
 } from "./ProjectDetail.styles";
 
 export default class ProjectDetail extends Component {
@@ -11,7 +11,7 @@ export default class ProjectDetail extends Component {
   render() {
     const {
       icon,
-      text,
+      content,
     } = this.props;
 
     return (
@@ -19,9 +19,9 @@ export default class ProjectDetail extends Component {
         <IconWrapper>
           { icon }
         </IconWrapper>
-        <TextWrapper>
-          { text }
-        </TextWrapper>
+        <ContentWrapper>
+          { content }
+        </ContentWrapper>
       </ProjectDetailWrapper>
     )
   }

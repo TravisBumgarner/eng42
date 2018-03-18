@@ -10,27 +10,62 @@ import FaInfo from 'react-icons/lib/fa/info';
 
 import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';
+import Thumbnail from '../../components/Thumbnail';
 
 import {
   SingleProjectWrapper,
 } from './SingleProject.styles';
 
 export class SingleProject extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      activeImage: ''
+    }
+  }
+
+  componentDidMount(){
+    const {
+      project: { image }
+    } = this.props;
+    console.log(image);
+
+    this.setState({ activeImage: image[0].src })
+  }
+
+  setActiveImage = (imageSrc) => {
+    this.setState({ activeImage: imageSrc })
+  };
+
   render() {
     const {
       project,
       skills,
     } = this.props;
 
-    const Images = project.image.map(i => <img key={ i.id } style={{width:'100px', height:'100px'}} src={i.src} alt={i.name} />);
+    const {
+      activeImage,
+    } = this.state;
+
+    const Images = project.image.map(i => {
+      return (
+        <Thumbnail
+          key={ i.id }
+          src={ i.src }
+          alt={ i.name }
+          onClick={ this.setActiveImage }
+        />
+      )
+    });
+
     const Locations = project.location.map(l => l.name).join(", ");
     const Organizations = project.organization.map(o => o.name).join(", ");
     const Skills = project.skill.map(s => skills[s].name).join(", ");
     const Links = project.link.map((l) => {
       return (
-        <li key={l.id}><ExternalLink primary href={ l.src }>
+        <ExternalLink key={ l.id }primary href={ l.src }>
           { l.name }
-        </ExternalLink></li>
+        </ExternalLink>
       )
     });
 
@@ -38,40 +73,42 @@ export class SingleProject extends Component {
       <SingleProjectWrapper previewImageSrc = { project.preview_img && project.preview_img.src } >
         <ProjectDetail
           icon={ <FaCalendar/> }
-          text={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
+          content={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
         />
 
         <ProjectDetail
           icon={ <FaPencil/> }
-          text={ Skills }
+          content={ Skills }
         />
 
         {!!Links.length &&
           <ProjectDetail
             icon={ <FaExternalLink/> }
-            text={ <ul>{ Links }</ul> }
+            content={ <ul>{ Links }</ul> }
           />
         }
 
         <ProjectDetail
           icon={ <FaMapSigns/> }
-          text={ Locations }
+          content={ Locations }
         />
 
         <ProjectDetail
           icon={ <FaBuilding/> }
-          text={ Organizations }
+          content={ Organizations }
         />
 
         <ProjectDetail
           icon={ <FaInfo/> }
-          text={ project.description }
+          content={ project.description }
         />
 
         <ProjectDetail
           icon={ <FaInfo/> }
-          text={ Images }
+          content={ Images }
         />
+
+        <img src={ activeImage } />
 
       </SingleProjectWrapper>
     )

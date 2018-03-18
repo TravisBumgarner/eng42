@@ -11,7 +11,7 @@ const IconWrapper = styled.span`
   padding-right: 10px;
 `;
 
-const TextWrapper = styled.span`
+const ContentWrapper = styled.span`
   font-size: ${ FONT_NORMAL };
   font-weight: 100;
   margin: 10px 0;
@@ -19,7 +19,7 @@ const TextWrapper = styled.span`
 
 export {
   ProjectDetailWrapper,
-  TextWrapper,
+  ContentWrapper,
   IconWrapper,
 }
 
