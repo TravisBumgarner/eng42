@@ -10,7 +10,7 @@ import {
   SubSection,
   CalendarIcon,
   LinkIcon,
-  Headline,
+  HeadlineIcon,
   PencilIcon,
 } from './ProjectTile.styles';
 
@@ -44,7 +44,7 @@ export class ProjectTile extends Component {
         <Divider />
 
         <SubSection>
-          <Headline/>
+          <HeadlineIcon/>
           { project.headline }
         </SubSection>
 

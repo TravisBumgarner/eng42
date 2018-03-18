@@ -15,14 +15,16 @@ const ProjectsCard = styled(Card)`
   position: absolute;
   top: 10px;
   width: 100%;
-  transition: left 0.5s, display 2s;
-  left: ${props => props.isProjectOpen ? '-100vw' : '0'};  
+  transition: left 0.5s, display 0.5s ease 0.5s;
+  left: ${props => props.isProjectOpen ? '-100vw' : '0'};
+  display: ${props => props.isProjectOpen ? 'hidden' : 'initial'};
 `;
 
 const ProjectCard = ProjectsCard.extend`
   left: 100vw;
   top: 10px;
   ${props => props.isProjectOpen ? 'left: 0' : 'left: 100vw'};    
+  display: ${props => props.isProjectOpen ? 'initial' : 'hidden'};
 `;
 
 const PortfolioWrapper = styled.div`

@@ -58,7 +58,7 @@ const ProjectTitle = styled.h2`
   font-family: ${FONT_HEADER};
 `;
 
-const SubSection = styled.p`
+const SubSection = styled.div`
   font-size: ${FONT_NORMAL};
   font-weight: 100;
   margin: 10px 0;
