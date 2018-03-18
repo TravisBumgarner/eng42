@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import Nav from '../../components/Nav'
 
@@ -7,7 +6,7 @@ import {
   HeaderWrapper
 } from "./Header.styles";
 
-export class Footer extends Component {
+export default class Header extends Component {
 
   render() {
     return (
@@ -18,7 +17,3 @@ export class Footer extends Component {
   }
 }
 
-export default connect((state) => ({
-}), {
-
-})(Footer);

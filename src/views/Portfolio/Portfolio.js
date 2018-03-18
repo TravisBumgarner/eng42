@@ -29,6 +29,8 @@ export class Portfolio extends Component {
 
     setSelectedProject(id);
     this.setState({ isProjectOpen: true });
+    window.scrollTo(0,0);
+
   };
 
   closeProject = () => {
