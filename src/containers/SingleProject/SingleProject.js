@@ -15,6 +15,8 @@ import ProjectImage from '../../components/ProjectImage';
 
 import {
   SingleProjectWrapper,
+  Column,
+  ProjectDetailsWrapper,
 } from './SingleProject.styles';
 
 export class SingleProject extends Component {
@@ -29,9 +31,7 @@ export class SingleProject extends Component {
     const {
       project: { image }
     } = this.props;
-    console.log(image);
-
-    this.setState({ activeImage: image[0].src })
+    image[0] && this.setState({ activeImage: image[0].src });
   }
 
   setActiveImage = (imageSrc) => {
@@ -58,54 +58,58 @@ export class SingleProject extends Component {
         />
       )
     });
-
+    const Description = project.description.split('\n').map((d, idx) => <p key={idx}>{d}</p>);
     const Locations = project.location.map(l => l.name).join(", ");
     const Organizations = project.organization.map(o => o.name).join(", ");
     const Skills = project.skill.map(s => skills[s].name).join(", ");
     const Links = project.link.map((l) => {
       return (
-        <ExternalLink key={ l.id }primary href={ l.src }>
+        <li><ExternalLink key={ l.id }primary href={ l.src }>
           { l.name }
-        </ExternalLink>
+        </ExternalLink></li>
       )
     });
 
     return (
       <SingleProjectWrapper previewImageSrc = { project.preview_img && project.preview_img.src } >
-        <ProjectDetail
-          icon={ <FaCalendar/> }
-          content={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
-        />
+        <ProjectDetailsWrapper>
+          <Column>
+            <ProjectDetail
+              icon={ <FaCalendar/> }
+              content={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
+            />
 
-        <ProjectDetail
-          icon={ <FaPencil/> }
-          content={ Skills }
-        />
+            <ProjectDetail
+              icon={ <FaPencil/> }
+              content={ Skills }
+            />
 
-        {!!Links.length &&
-          <ProjectDetail
-            icon={ <FaExternalLink/> }
-            content={ <ul>{ Links }</ul> }
-          />
-        }
+            {!!Links.length &&
+              <ProjectDetail
+                icon={ <FaExternalLink/> }
+                content={ <ul>{ Links }</ul> }
+              />
+            }
+          </Column>
 
-        <ProjectDetail
-          icon={ <FaMapSigns/> }
-          content={ Locations }
-        />
+          <Column>
+            <ProjectDetail
+              icon={ <FaMapSigns/> }
+              content={ Locations }
+            />
 
-        <ProjectDetail
-          icon={ <FaBuilding/> }
-          content={ Organizations }
-        />
+            <ProjectDetail
+              icon={ <FaBuilding/> }
+              content={ Organizations }
+            />
+          </Column>
+        </ProjectDetailsWrapper>
 
-        <ProjectDetail
-          icon={ <FaInfo/> }
-          content={ project.description }
-        />
 
-        <ProjectImage src={ activeImage } />
-        { Thumbnails }
+        { Description }
+
+        { !!activeImage && <ProjectImage src={activeImage}/> }
+        {Thumbnails}
 
       </SingleProjectWrapper>
     )

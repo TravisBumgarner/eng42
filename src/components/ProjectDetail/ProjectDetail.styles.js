@@ -10,6 +10,7 @@ const ProjectDetailWrapper = styled.div`
 
 const IconWrapper = styled.span`
   padding-right: 10px;
+  float: left;
 `;
 
 const ContentWrapper = styled.span`
