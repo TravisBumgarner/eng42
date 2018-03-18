@@ -91,8 +91,6 @@ export class ProjectsFilter extends Component {
       categories,
     } = this.props;
 
-    console.log(skills);
-    console.log(categories);
     const CategoryItems = Object.values(categories).sort((a,b)=>{ return a.name.localeCompare(b.name) }).map(c => {
       return <MenuItem value={c.id} key={c.id} primaryText={c.name}/>
     });

@@ -12,17 +12,9 @@ import {
 } from "../../theme";
 
 const ProjectsCard = styled(Card)`
-  //position: absolute;
-  //top: 10px;
-  //width: 100%;
-  // transition: left 0.5s, opacity 0.5s;
-  // left: ${props => props.isProjectOpen ? '-100vw' : '0'};
-  // opacity: ${props => props.isProjectOpen ? '0' : '1'};
 `;
 
 const ProjectCard = ProjectsCard.extend`
-  // left: ${props => props.isProjectOpen ? ' 0' : '100vw'};    
-  // opacity: ${props => props.isProjectOpen ? '1' : '0'};
 `;
 
 const PortfolioWrapper = styled.div`
@@ -48,16 +40,9 @@ const ProjectsNoScrollWrapper = styled.div`
   box-sizing: border-box;
 `;
 
-const ProjectNoScrollWrapper = styled.div`
-  position: absolute;
-  transition: left 0.5s, opacity 0.5s;
+const ProjectNoScrollWrapper = ProjectsNoScrollWrapper.extend`
   left: ${props => props.isProjectOpen ? ' 0' : '100vw'};    
   opacity: ${props => props.isProjectOpen ? '1' : '0'};
-  width: 100%;
-  margin-top: 10vh;
-  max-height: 90vh;
-  overflow-y: scroll;
-  box-sizing: border-box;
 `;
 
 

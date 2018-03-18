@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const ProjectImageWrapper = styled.div`
   display: flex;
-  width: 100%;
   justify-content: center;
   vertical-align: middle;
   margin: 20px 0;
@@ -12,7 +11,8 @@ const ProjectImageWrapper = styled.div`
 
 const Image = styled.img`
   max-height: 500px;
-  align-self: center
+  align-self: center;
+  max-width: 100%;
 `;
 
 export {

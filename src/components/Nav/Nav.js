@@ -7,7 +7,6 @@ import {
 } from './Nav.styles';
 
 export default class Nav extends Component {
-
   render() {
 
     return (

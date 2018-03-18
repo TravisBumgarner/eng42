@@ -6,9 +6,9 @@ import {
   TERTIARY_COLOR
 } from "../../theme";
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const SiteLink = styled(Link)`
+const SiteLink = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   color: ${PRIMARY_COLOR};
@@ -22,6 +22,13 @@ const SiteLink = styled(Link)`
     border-bottom: 2px solid ${ TERTIARY_COLOR };
     border-top: 2px solid ${ TERTIARY_COLOR };
   }
+  
+  // .active {
+  //   color: ${TERTIARY_COLOR};
+  //   border-bottom: 2px solid ${ TERTIARY_COLOR };
+  //   border-top: 2px solid ${ TERTIARY_COLOR };  
+  // }
+  
 `;
 
 const SiteLinkList = styled.ul`

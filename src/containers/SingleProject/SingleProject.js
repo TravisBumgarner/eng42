@@ -30,7 +30,14 @@ export class SingleProject extends Component {
     const {
       project: { image }
     } = this.props;
-    image[0] && this.setState({ activeImage: image[0].src });
+    this.setState({ activeImage: image.length ? Object.values(image)[0].src : ''});
+  }
+
+  componentWillReceiveProps(nextProps){
+    const {
+      project: { image }
+    } = nextProps;
+    this.setState({ activeImage: image.length ? Object.values(image)[0].src : ''});
   }
 
   setActiveImage = (imageSrc) => {
@@ -63,7 +70,7 @@ export class SingleProject extends Component {
     const Skills = project.skill.map(s => skills[s].name).join(", ");
     const Links = project.link.map((l) => {
       return (
-        <li><ExternalLink key={ l.id }primary href={ l.src }>
+        <li key={ l.id }><ExternalLink primary href={ l.src }>
           { l.name }
         </ExternalLink></li>
       )
