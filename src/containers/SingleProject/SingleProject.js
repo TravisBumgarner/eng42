@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import FaExternalLink from 'react-icons/lib/fa/external-link';
+import FaCalendar from 'react-icons/lib/fa/calendar';
+import FaPencil from 'react-icons/lib/fa/pencil';
+import FaMapSigns from 'react-icons/lib/fa/map-signs';
+import FaBuilding from 'react-icons/lib/fa/building-o';
+import FaInfo from 'react-icons/lib/fa/info';
+
+import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';
 
 import {
   SingleProjectWrapper,
-  SubSection,
-  CalendarIcon,
-  LinkIcon,
-  PencilIcon,
-  LocationIcon,
-  OrganizationIcon,
-  DescriptionIcon,
 } from './SingleProject.styles';
 
 export class SingleProject extends Component {
@@ -35,44 +36,42 @@ export class SingleProject extends Component {
 
     return (
       <SingleProjectWrapper previewImageSrc = { project.preview_img && project.preview_img.src } >
+        <ProjectDetail
+          icon={ <FaCalendar/> }
+          text={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
+        />
 
-        <SubSection>
-          <CalendarIcon/>
-          {project.start_date.slice(0, -3)} - {project.end_date.slice(0, -3)} {/* Remove Day of Mont */}
-          </SubSection>
+        <ProjectDetail
+          icon={ <FaPencil/> }
+          text={ Skills }
+        />
 
-        <SubSection>
-          <PencilIcon/>
-          { Skills }
-        </SubSection>
-
-        { !!Links.length &&
-          <SubSection>
-            <LinkIcon/>
-            <ul>
-              { Links }
-            </ul>
-          </SubSection>
+        {!!Links.length &&
+          <ProjectDetail
+            icon={ <FaExternalLink/> }
+            text={ <ul>{ Links }</ul> }
+          />
         }
 
-        <SubSection>
-          <LocationIcon/>
-          { Locations }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaMapSigns/> }
+          text={ Locations }
+        />
 
-        <SubSection>
-          <OrganizationIcon/>
-          { Organizations }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaBuilding/> }
+          text={ Organizations }
+        />
 
-        <SubSection>
-          <DescriptionIcon/>
-          { project.description }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaInfo/> }
+          text={ project.description }
+        />
 
-        <SubSection>
-          { Images }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaInfo/> }
+          text={ Images }
+        />
 
       </SingleProjectWrapper>
     )
