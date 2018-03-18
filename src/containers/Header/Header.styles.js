@@ -15,6 +15,7 @@ const HeaderWrapper = styled.div`
   padding: 30px;
   text-align: center;
   box-sizing: border-box;
+  z-index: 999;
 `;
 
 export {

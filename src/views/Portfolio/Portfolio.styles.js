@@ -28,8 +28,9 @@ const ProjectCard = ProjectsCard.extend`
 const PortfolioWrapper = styled.div`
   position: relative;
   width: 75%;
+  height: 100vh;
   max-width: 1024px;
-  margin: 10vh auto 0;
+  margin:0 auto;
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_CONTENT};
@@ -41,8 +42,10 @@ const ProjectsNoScrollWrapper = styled.div`
   left: ${props => props.isProjectOpen ? '-100vw' : '0'};
   opacity: ${props => props.isProjectOpen ? '0' : '1'};
   width: 100%;
-  max-height: 70vh;
+  max-height: 90vh;
+  margin-top: 10vh;
   overflow-y: scroll;
+  box-sizing: border-box;
 `;
 
 const ProjectNoScrollWrapper = styled.div`
@@ -51,8 +54,10 @@ const ProjectNoScrollWrapper = styled.div`
   left: ${props => props.isProjectOpen ? ' 0' : '100vw'};    
   opacity: ${props => props.isProjectOpen ? '1' : '0'};
   width: 100%;
-  max-height: 70vh;
+  margin-top: 10vh;
+  max-height: 90vh;
   overflow-y: scroll;
+  box-sizing: border-box;
 `;
 
 
