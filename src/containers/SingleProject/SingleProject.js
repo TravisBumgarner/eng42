@@ -11,6 +11,7 @@ import FaInfo from 'react-icons/lib/fa/info';
 import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';
 import Thumbnail from '../../components/Thumbnail';
+import ProjectImage from '../../components/ProjectImage';
 
 import {
   SingleProjectWrapper,
@@ -47,7 +48,7 @@ export class SingleProject extends Component {
       activeImage,
     } = this.state;
 
-    const Images = project.image.map(i => {
+    const Thumbnails = project.image.map(i => {
       return (
         <Thumbnail
           key={ i.id }
@@ -103,12 +104,8 @@ export class SingleProject extends Component {
           content={ project.description }
         />
 
-        <ProjectDetail
-          icon={ <FaInfo/> }
-          content={ Images }
-        />
-
-        <img src={ activeImage } />
+        <ProjectImage src={ activeImage } />
+        { Thumbnails }
 
       </SingleProjectWrapper>
     )

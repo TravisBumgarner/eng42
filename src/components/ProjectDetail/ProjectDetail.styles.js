@@ -5,6 +5,7 @@ import {
 } from '../../theme';
 
 const ProjectDetailWrapper = styled.div`
+  margin: 5px 0;
 `;
 
 const IconWrapper = styled.span`

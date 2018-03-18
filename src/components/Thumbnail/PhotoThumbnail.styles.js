@@ -11,7 +11,7 @@ const PhotoThumbnailWrapper = styled.a`
 const Image = styled.img`
   max-height: 100px;
   border: 2px solid ${ PRIMARY_COLOR };
-  margin: 10px;  
+  margin: 5px;  
   
   &:hover{
     border-color: ${ TERTIARY_COLOR };
