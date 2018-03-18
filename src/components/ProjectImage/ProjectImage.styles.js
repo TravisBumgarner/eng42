@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-import {
-  PRIMARY_COLOR,
-  TERTIARY_COLOR
-} from "../../theme";
-
 const ProjectImageWrapper = styled.div`
   display: flex;
   width: 100%;

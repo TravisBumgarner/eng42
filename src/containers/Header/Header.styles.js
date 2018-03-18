@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-import { PRIMARY_COLOR, SECONDARY_COLOR, HEADER_HEIGHT } from "../../theme";
+import {
+  PRIMARY_COLOR,
+  SECONDARY_COLOR
+} from "../../theme";
 
 const HeaderWrapper = styled.div`
   width: 100vw;

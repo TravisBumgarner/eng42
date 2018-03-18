@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-import { PRIMARY_COLOR, SECONDARY_COLOR } from "../../theme";
+import {
+  PRIMARY_COLOR,
+  SECONDARY_COLOR
+} from "../../theme";
 
 const DividerWrapper = styled.div`
   width: 100%;

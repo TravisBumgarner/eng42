@@ -6,7 +6,6 @@ export class Project extends Component {
   render() {
     const {
       project,
-      loaded
     } = this.props;
     return (
       <div>

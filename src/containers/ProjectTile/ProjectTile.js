@@ -12,7 +12,6 @@ import FaExternalLink from 'react-icons/lib/fa/external-link';
 import {
   ProjectTileWrapper,
   ProjectTitle,
-  SubSection,
   SmallDivider,
 } from './ProjectTile.styles';
 

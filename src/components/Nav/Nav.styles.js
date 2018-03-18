@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-import { PRIMARY_COLOR, SECONDARY_COLOR, FONT_HEADER, TERTIARY_COLOR } from "../../theme";
+import {
+  PRIMARY_COLOR,
+  FONT_HEADER,
+  TERTIARY_COLOR
+} from "../../theme";
 
 import { Link } from 'react-router-dom'
 
@@ -30,7 +34,6 @@ const SiteLinkItem = styled.li`
   display: inline;
   margin: 15px;
 `;
-
 
 export {
   SiteLink,

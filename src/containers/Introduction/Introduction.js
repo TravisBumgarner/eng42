@@ -44,10 +44,6 @@ export class Introduction extends Component {
 
   render() {
     const {
-      allSkills,
-    } = this.props;
-
-    const {
       selectedSkills,
     } = this.state;
 

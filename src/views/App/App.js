@@ -14,7 +14,6 @@ import Portfolio from '../Portfolio';
 import Contact from '../Contact';
 import Project from '../Project';
 
-import Footer from '../../containers/Footer';
 import Header from '../../containers/Header';
 
 import {
@@ -38,13 +37,9 @@ export class App extends Component {
       clearNotification,
     } = this.props;
 
-    // const showHeader = pathname !== '/';
-    // const showFooter = pathname !== '/';
-    const showHeader = true; const showFooter = true;
-
     return loaded ? (
       <AppWrapper>
-        { showHeader && <Header /> }
+        <Header/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
@@ -57,7 +52,6 @@ export class App extends Component {
           onRequestClose={ clearNotification }
           message={ notificationMsg }
         />
-
       </AppWrapper>
 
     ) : (

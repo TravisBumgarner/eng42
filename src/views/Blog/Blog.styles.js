@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import { PRIMARY_COLOR, SECONDARY_COLOR } from "../../theme";
 
-
 const BlogWrapper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -13,7 +12,6 @@ const BlogWrapper = styled.div`
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
 `;
-
 
 
 export {

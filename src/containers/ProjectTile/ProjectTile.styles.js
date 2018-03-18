@@ -1,19 +1,12 @@
 import styled from 'styled-components';
 
-
-
 import Divider from '../../components/Divider';
 
 import {
   FONT_HEADER,
-  FONT_SMALL,
   FONT_NORMAL,
-  PRIMARY_COLOR,
   SECONDARY_COLOR,
-  media,
 } from '../../theme';
-
-const ICON_PADDING = '10px';
 
 const ProjectTileWrapper = styled.div`
   box-sizing: border-box;
@@ -32,12 +25,6 @@ const ProjectTileWrapper = styled.div`
     float:left;
     padding-top:100%;
   }
-  
-  ${media.TABLET`
-  `}
-  
-  ${media.PHONE`
-  `}
 `;
 
 const ProjectTitle = styled.h2`
@@ -46,21 +33,13 @@ const ProjectTitle = styled.h2`
   font-family: ${FONT_HEADER};
 `;
 
-const SubSection = styled.div`
-  font-size: ${FONT_NORMAL};
-  font-weight: 100;
-  margin: 5px 0;
-  display: flex;
-`;
-
 const SmallDivider = styled(Divider)`
   margin: 10px 0;
-`
+`;
 
 export {
   ProjectTileWrapper,
   ProjectTitle,
-  SubSection,
   SmallDivider,
 }
 

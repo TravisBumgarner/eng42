@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import {
-  PhotoThumbnailWrapper,
+  ThumbnailWrapper,
   Image,
-} from './PhotoThumbnail.styles';
+} from './Thumbnail.styles';
 
-export default class PhotoThumbnail extends Component {
+export default class Thumbnail extends Component {
 
   onClick = () => {
     const {
@@ -23,13 +23,13 @@ export default class PhotoThumbnail extends Component {
     } = this.props;
 
     return (
-      <PhotoThumbnailWrapper>
+      <ThumbnailWrapper>
         <Image
           onClick={ this.onClick }
           src={ src }
           alt={ alt }
         />
-      </PhotoThumbnailWrapper>
+      </ThumbnailWrapper>
     )
   }
 }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { SITE_ROUTES } from "../../utilities/constants";
-
 import {
   SiteLink,
   SiteLinkList,

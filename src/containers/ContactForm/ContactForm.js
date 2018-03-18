@@ -59,8 +59,6 @@ export class ContactForm extends Component {
 
   render() {
     const {
-      isNotification,
-      notificationMessage,
     } = this.state;
     return (
       <Card title = "Let's Chat">

@@ -3,7 +3,6 @@ import { getSkills } from '../../../skill/actions/getSkills';
 import { getProjects } from '../../../project/actions/getProjects';
 import { getAuthors } from '../../../author/actions/getAuthors';
 
-
 export const LOAD_SESSION_START = 'LOAD_SESSION_START';
 export const LOAD_SESSION_SUCCESS = 'LOAD_SESSION_SUCCESS';
 export const LOAD_SESSION_FAILURE = 'LOAD_SESSION_FAILURE';

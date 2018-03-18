@@ -104,7 +104,6 @@ export class SingleProject extends Component {
           </Column>
         </ProjectDetailsWrapper>
 
-
         { Description }
 
         { !!activeImage && <ProjectImage src={activeImage}/> }

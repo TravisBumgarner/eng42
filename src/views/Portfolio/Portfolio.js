@@ -7,7 +7,6 @@ import ProjectsFilter from '../../containers/ProjectsFilter';
 import ProjectsGrid from '../../containers/ProjectsGrid';
 import SingleProject from '../../containers/SingleProject';
 
-
 import {
   PortfolioWrapper,
   ProjectCard,
@@ -66,6 +65,5 @@ export default connect((state) => ({
   project: state.project.all[state.project.selected],
 }), {
   setSelectedProject: projectActions.setSelectedProject,
-
 
 })(Portfolio);

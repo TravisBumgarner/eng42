@@ -25,7 +25,6 @@ export const HEADER_HEIGHT = `50px`;
 export const FOOTER_HEIGHT = `50px`;
 export const BODY_HEIGHT = `calc(100vh - (${HEADER_HEIGHT} + ${FOOTER_HEIGHT}))`;
 
-
 // Misc
 export const SCREEN_WIDTHS = {
   DESKTOP: 992,
@@ -58,7 +57,6 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   font-family: ${FONT_CONTENT};
 `;
 
-
 // ============================================= //
 // == Material UI  ============================= //
 // ============================================= //
@@ -75,5 +73,4 @@ export const muiTheme = getMuiTheme({
     accent3Color: `${TERTIARY_COLOR}`,
   },
 });
-
 

@@ -22,12 +22,10 @@ export class Me extends Component {
         link,
         description
       },
-      loaded
     } = this.props;
 
     const formattedDescription = description.split('\n').map((p, idx) => <MeDescription key={idx}>{p}</MeDescription>);
     const aboutLinks = Object.values(link).map(l => <li key={l.name}><a href={l.src}>{l.name}</a></li>)
-
 
     return (
       <Card title={ `${name}` }>

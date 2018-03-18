@@ -5,7 +5,7 @@ import {
   TERTIARY_COLOR
 } from "../../theme";
 
-const PhotoThumbnailWrapper = styled.a`
+const ThumbnailWrapper = styled.a`
 `;
 
 const Image = styled.img`
@@ -20,7 +20,7 @@ const Image = styled.img`
 `;
 
 export {
-  PhotoThumbnailWrapper,
+  ThumbnailWrapper,
   Image,
 };
 

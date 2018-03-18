@@ -4,7 +4,6 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import FaFilter from 'react-icons/lib/fa/filter';
 import FaSortAmountDesc from 'react-icons/lib/fa/sort-amount-desc';
 
-
 import {
   PRIMARY_COLOR,
 } from "../../theme";
