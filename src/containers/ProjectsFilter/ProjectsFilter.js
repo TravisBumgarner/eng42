@@ -91,19 +91,13 @@ export class ProjectsFilter extends Component {
       categories,
     } = this.props;
 
-    const CategoryItems = Object.values(categories).map(c => {
+    console.log(skills);
+    console.log(categories);
+    const CategoryItems = Object.values(categories).sort((a,b)=>{ return a.name > b.name }).map(c => {
       return <MenuItem value={c.id} key={c.id} primaryText={c.name}/>
     });
 
-    const CategoryDropdown = (
-      <CategoryDropdownMenu autoWidth={false} value={this.state.selectedCategory} onChange={this.handleCategoryChange}>
-        <MenuItem value={0} key={0} primaryText={'Filter by Category'}/>
-        {CategoryItems}
-      </CategoryDropdownMenu>
-    );
-
-    // TODO could be helpful to have Skill (Count) on the dropdown
-    const SkillsItems = Object.values(skills).map(s => {
+    const SkillsItems = Object.values(skills).sort((c,d)=>{ return c.name > d.name }).map(s => {
       return <MenuItem value={s.id} key={s.id} primaryText={s.name}/>
     });
 
@@ -112,6 +106,13 @@ export class ProjectsFilter extends Component {
         <MenuItem value={0} key={0} primaryText={'Filter by Skill'}/>
         {SkillsItems}
       </SkillDropdownMenu>
+    );
+
+    const CategoryDropdown = (
+      <CategoryDropdownMenu autoWidth={false} value={this.state.selectedCategory} onChange={this.handleCategoryChange}>
+        <MenuItem value={0} key={0} primaryText={'Filter by Category'}/>
+        {CategoryItems}
+      </CategoryDropdownMenu>
     );
 
     const SortDropdown = (
