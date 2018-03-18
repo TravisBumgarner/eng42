@@ -12,17 +12,18 @@ import {
 } from "../../theme";
 
 const ProjectsCard = styled(Card)`
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  transition: left 0.5s, opacity 0.5s;
-  left: ${props => props.isProjectOpen ? '-100vw' : '0'};
-  opacity: ${props => props.isProjectOpen ? '0' : '1'};
+  //position: absolute;
+  //top: 10px;
+  //width: 100%;
+  // transition: left 0.5s, opacity 0.5s;
+  // left: ${props => props.isProjectOpen ? '-100vw' : '0'};
+  // opacity: ${props => props.isProjectOpen ? '0' : '1'};
 `;
 
 const ProjectCard = ProjectsCard.extend`
-  left: ${props => props.isProjectOpen ? ' 0' : '100vw'};    
-  opacity: ${props => props.isProjectOpen ? '1' : '0'};`;
+  // left: ${props => props.isProjectOpen ? ' 0' : '100vw'};    
+  // opacity: ${props => props.isProjectOpen ? '1' : '0'};
+`;
 
 const PortfolioWrapper = styled.div`
   position: relative;
@@ -33,6 +34,27 @@ const PortfolioWrapper = styled.div`
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_CONTENT};
 `;
+
+const ProjectsNoScrollWrapper = styled.div`
+  position: absolute;
+  transition: left 0.5s, opacity 0.5s;
+  left: ${props => props.isProjectOpen ? '-100vw' : '0'};
+  opacity: ${props => props.isProjectOpen ? '0' : '1'};
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: scroll;
+`;
+
+const ProjectNoScrollWrapper = styled.div`
+  position: absolute;
+  transition: left 0.5s, opacity 0.5s;
+  left: ${props => props.isProjectOpen ? ' 0' : '100vw'};    
+  opacity: ${props => props.isProjectOpen ? '1' : '0'};
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: scroll;
+`;
+
 
 const CloseIcon = styled(FaClose)`
   position: absolute;
@@ -52,5 +74,7 @@ export {
   PortfolioWrapper,
   ProjectsCard,
   ProjectCard,
+  ProjectsNoScrollWrapper,
+  ProjectNoScrollWrapper
 }
 

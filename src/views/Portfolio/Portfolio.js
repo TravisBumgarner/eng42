@@ -12,6 +12,8 @@ import {
   ProjectCard,
   ProjectsCard,
   CloseIcon,
+  ProjectNoScrollWrapper,
+  ProjectsNoScrollWrapper,
 } from './Portfolio.styles';
 
 export class Portfolio extends Component {
@@ -48,15 +50,19 @@ export class Portfolio extends Component {
 
     return (
       <PortfolioWrapper>
-        <ProjectsCard title="Portfolio" isProjectOpen={ isProjectOpen }>
-          <ProjectsFilter />
-          <ProjectsGrid openProject={ this.openProject } />
-        </ProjectsCard>
+        <ProjectsNoScrollWrapper isProjectOpen={ isProjectOpen }>
+          <ProjectsCard title="Portfolio" >
+            <ProjectsFilter />
+            <ProjectsGrid openProject={ this.openProject } />
+          </ProjectsCard>
+        </ProjectsNoScrollWrapper>
 
-        <ProjectCard title={ project.name } isProjectOpen={ isProjectOpen }>
-          <CloseIcon size={50} onClick={ this.closeProject } />
-          <SingleProject />
-        </ProjectCard>
+        <ProjectNoScrollWrapper isProjectOpen={ isProjectOpen }>
+          <ProjectCard title={ project.name } >
+            <CloseIcon size={50} onClick={ this.closeProject } />
+            <SingleProject />
+          </ProjectCard>
+        </ProjectNoScrollWrapper>
       </PortfolioWrapper>
     )
   }
