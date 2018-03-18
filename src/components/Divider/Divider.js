@@ -8,9 +8,13 @@ export default class Divider extends Component {
 
   render() {
     const {
-      primary
+      primary,
+      className,
     } = this.props;
 
-    return <DividerWrapper primary={ primary } />
+    return <DividerWrapper
+      primary={ primary }
+      className={ className }
+    />
   }
 }

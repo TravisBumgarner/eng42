@@ -6,7 +6,6 @@ import FaCalendar from 'react-icons/lib/fa/calendar';
 import FaPencil from 'react-icons/lib/fa/pencil';
 import FaMapSigns from 'react-icons/lib/fa/map-signs';
 import FaBuilding from 'react-icons/lib/fa/building-o';
-import FaInfo from 'react-icons/lib/fa/info';
 
 import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';

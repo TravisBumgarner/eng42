@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Divider from '../../components/Divider';
 import ExternalLink from '../../components/ExternalLink';
+import ProjectDetail from '../../components/ProjectDetail';
+
+import FaCalendar from 'react-icons/lib/fa/calendar';
+import FaPencil from 'react-icons/lib/fa/pencil';
+import FaHeader from 'react-icons/lib/fa/header';
+import FaExternalLink from 'react-icons/lib/fa/external-link';
 
 import {
   ProjectTileWrapper,
   ProjectTitle,
   SubSection,
-  CalendarIcon,
-  LinkIcon,
-  HeadlineIcon,
-  PencilIcon,
+  SmallDivider,
 } from './ProjectTile.styles';
 
 export class ProjectTile extends Component {
@@ -41,29 +43,29 @@ export class ProjectTile extends Component {
           { project.name }
         </ProjectTitle>
 
-        <Divider />
+        <SmallDivider />
 
-        <SubSection>
-          <HeadlineIcon/>
-          { project.headline }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaHeader/> }
+          content={ project.headline }
+        />
 
-        <SubSection>
-          <CalendarIcon/>
-          { project.start_date.slice(0, -3)} - {project.end_date.slice(0, -3) } { /* Remove Day of Mont */ }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaCalendar/> }
+          content={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
+        />
 
-        <SubSection>
-          <PencilIcon/>
-          { projectSkills.length < 100 ? projectSkills : `${projectSkills.slice(0,100)}...` }
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaPencil/> }
+          content={ projectSkills.length < 100 ? projectSkills : `${projectSkills.slice(0,100)}...` }
+        />
 
-        <Divider />
+        <SmallDivider />
 
-        <SubSection>
-          <LinkIcon/>
-          <ExternalLink onClick={ this.openProject }>View Project</ExternalLink>
-        </SubSection>
+        <ProjectDetail
+          icon={ <FaExternalLink/> }
+          content={ <ExternalLink onClick={ this.openProject }>View Project</ExternalLink> }
+        />
 
       </ProjectTileWrapper>
     )

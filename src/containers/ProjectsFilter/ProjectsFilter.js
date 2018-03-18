@@ -20,6 +20,7 @@ import {
   CategoryDropdownMenu,
   FilterIcon,
   SortDropdownMenu,
+  SortIcon,
 } from "./ProjectsFilter.styles";
 
 export class ProjectsFilter extends Component {
@@ -122,7 +123,7 @@ export class ProjectsFilter extends Component {
 
     return (
       <ProjectsFilterWrapper>
-        <FilterIcon /> {SortDropdown} <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
+        <SortIcon /> {SortDropdown} <FilterIcon /> {CategoryDropdown} <AlignToDropdown>Or</AlignToDropdown> {SkillsDropdown}
       </ProjectsFilterWrapper>
     )
   }

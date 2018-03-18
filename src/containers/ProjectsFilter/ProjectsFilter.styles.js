@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 import DropDownMenu from 'material-ui/DropDownMenu';
-import Filter from 'react-icons/lib/fa/filter';
+import FaFilter from 'react-icons/lib/fa/filter';
+import FaSortAmountDesc from 'react-icons/lib/fa/sort-amount-desc';
+
 
 import {
   PRIMARY_COLOR,
@@ -22,7 +24,13 @@ const SkillDropdownMenu = CategoryDropdownMenu.extend`
 const SortDropdownMenu = CategoryDropdownMenu.extend`
 `;
 
-const FilterIcon = styled(Filter)`
+const FilterIcon = styled(FaFilter)`
+  height: 56px;
+  vertical-align: top !important;
+  fill: ${PRIMARY_COLOR};
+`;
+
+const SortIcon = styled(FaSortAmountDesc)`
   height: 56px;
   vertical-align: top !important;
   fill: ${PRIMARY_COLOR};
@@ -41,5 +49,6 @@ export {
   CategoryDropdownMenu,
   FilterIcon,
   SortDropdownMenu,
+  SortIcon,
 }
 

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-import FaCalendar from 'react-icons/lib/fa/calendar';
-import FaPencil from 'react-icons/lib/fa/pencil';
-import FaArrowRight from 'react-icons/lib/fa/arrow-right';
-import FaHeader from 'react-icons/lib/fa/header';
+
+
+import Divider from '../../components/Divider';
 
 import {
   FONT_HEADER,
@@ -16,30 +15,10 @@ import {
 
 const ICON_PADDING = '10px';
 
-const CalendarIcon = styled(FaCalendar)`
-  padding-right: ${ICON_PADDING};
-  flex-shrink: 0;
-`;
-
-const PencilIcon = styled(FaPencil)`
-  padding-right: ${ICON_PADDING};
-  flex-shrink: 0;
-`;
-
-const LinkIcon = styled(FaArrowRight)`
-  padding-right: ${ICON_PADDING};
-  flex-shrink: 0;
-`;
-
-const HeadlineIcon = styled(FaHeader)`
-  padding-right: ${ICON_PADDING};
-  flex-shrink: 0;
-`;
-
 const ProjectTileWrapper = styled.div`
   box-sizing: border-box;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   color: ${SECONDARY_COLOR};
   background-image: ${props => props.previewImageSrc && `
     linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${props.previewImageSrc});
@@ -62,7 +41,7 @@ const ProjectTileWrapper = styled.div`
 `;
 
 const ProjectTitle = styled.h2`
-  margin: 0 0 20px 0;
+  margin: 0 0 5px 0;
   font-size: ${FONT_NORMAL};
   font-family: ${FONT_HEADER};
 `;
@@ -70,17 +49,18 @@ const ProjectTitle = styled.h2`
 const SubSection = styled.div`
   font-size: ${FONT_NORMAL};
   font-weight: 100;
-  margin: 10px 0;
+  margin: 5px 0;
   display: flex;
 `;
+
+const SmallDivider = styled(Divider)`
+  margin: 10px 0;
+`
 
 export {
   ProjectTileWrapper,
   ProjectTitle,
   SubSection,
-  CalendarIcon,
-  LinkIcon,
-  PencilIcon,
-  HeadlineIcon,
+  SmallDivider,
 }
 
