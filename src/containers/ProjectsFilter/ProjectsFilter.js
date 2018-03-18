@@ -93,11 +93,11 @@ export class ProjectsFilter extends Component {
 
     console.log(skills);
     console.log(categories);
-    const CategoryItems = Object.values(categories).sort((a,b)=>{ return a.name > b.name }).map(c => {
+    const CategoryItems = Object.values(categories).sort((a,b)=>{ return a.name.localeCompare(b.name) }).map(c => {
       return <MenuItem value={c.id} key={c.id} primaryText={c.name}/>
     });
 
-    const SkillsItems = Object.values(skills).sort((c,d)=>{ return c.name > d.name }).map(s => {
+    const SkillsItems = Object.values(skills).sort((a,b)=>{ return a.name.localeCompare(b.name) }).map(s => {
       return <MenuItem value={s.id} key={s.id} primaryText={s.name}/>
     });
 

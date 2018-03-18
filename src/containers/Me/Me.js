@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Card from '../../containers/Card';
+import Card from '../Card';
+import ExternalLink from '../../components/ExternalLink';
 
 import {
   MeDescription,
@@ -25,7 +26,7 @@ export class Me extends Component {
     } = this.props;
 
     const formattedDescription = description.split('\n').map((p, idx) => <MeDescription key={idx}>{p}</MeDescription>);
-    const aboutLinks = Object.values(link).map(l => <li key={l.name}><a href={l.src}>{l.name}</a></li>)
+    const aboutLinks = Object.values(link).map(l => <li key={l.name}><ExternalLink primary href={l.src}>{l.name}</ExternalLink></li>)
 
     return (
       <Card title={ `${name}` }>
