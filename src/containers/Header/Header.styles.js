@@ -14,6 +14,7 @@ const HeaderWrapper = styled.div`
   background-color: ${ SECONDARY_COLOR };
   padding: 30px;
   text-align: center;
+  box-sizing: border-box;
 `;
 
 export {
