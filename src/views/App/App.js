@@ -45,7 +45,7 @@ export class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
-          <Route path="/project/:projectId" component={Project} />
+          <Route exact path="/portfolio/:projectId" component={Project} />
         </Switch>
         <Snackbar
           open={ !!notificationMsg.length }

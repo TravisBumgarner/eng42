@@ -39550,7 +39550,7 @@ var App = exports.App = function (_Component) {
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/contact', component: _Contact2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/portfolio', component: _Portfolio2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/project/:projectId', component: _Project2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/portfolio/:projectId', component: _Project2.default })
         ),
         _react2.default.createElement(_Snackbar2.default, {
           open: !!notificationMsg.length,
@@ -45161,7 +45161,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var MeDescription = _styledComponents2.default.p(_templateObject, _theme.FONT_NORMAL_LINE_HEIGHT);
+var MeDescription = _styledComponents2.default.div(_templateObject, _theme.FONT_NORMAL_LINE_HEIGHT);
 
 exports.MeDescription = MeDescription;
 
@@ -45255,7 +45255,7 @@ var Portfolio = exports.Portfolio = function (_Component) {
     };
 
     _this.state = {
-      isProjectOpen: false
+      isProjectOpen: !!_this.props.match.params.projectId
     };
     return _this;
   }
@@ -53177,7 +53177,7 @@ var Nav = function (_Component) {
           null,
           _react2.default.createElement(
             _Nav.SiteLink,
-            { to: '/' },
+            { exact: true, activeStyle: _Nav.activeSiteLink, to: '/' },
             'Home'
           )
         ),
@@ -53186,7 +53186,7 @@ var Nav = function (_Component) {
           null,
           _react2.default.createElement(
             _Nav.SiteLink,
-            { to: '/about' },
+            { activeStyle: _Nav.activeSiteLink, to: '/about' },
             'About'
           )
         ),
@@ -53195,7 +53195,7 @@ var Nav = function (_Component) {
           null,
           _react2.default.createElement(
             _Nav.SiteLink,
-            { to: '/contact' },
+            { activeStyle: _Nav.activeSiteLink, to: '/contact' },
             'Contact'
           )
         ),
@@ -53204,7 +53204,7 @@ var Nav = function (_Component) {
           null,
           _react2.default.createElement(
             _Nav.SiteLink,
-            { to: '/portfolio' },
+            { activeStyle: _Nav.activeSiteLink, to: '/portfolio' },
             'Portfolio'
           )
         )
@@ -53227,9 +53227,9 @@ exports.default = Nav;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SiteLinkList = exports.SiteLinkItem = exports.SiteLink = undefined;
+exports.SiteLinkList = exports.SiteLinkItem = exports.SiteLink = exports.activeSiteLink = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n  text-decoration: none;\n  text-transform: uppercase;\n  color: ', ';\n  font-family: ', ';\n  padding: 10px 0;\n  border-bottom: 2px solid ', ';\n  border-top: 2px solid ', ';\n    \n  &:hover {\n    color: ', ';\n    border-bottom: 2px solid ', ';\n    border-top: 2px solid ', ';\n  }\n  \n  // .active {\n  //   color: ', ';\n  //   border-bottom: 2px solid ', ';\n  //   border-top: 2px solid ', ';  \n  // }\n  \n'], ['\n  text-decoration: none;\n  text-transform: uppercase;\n  color: ', ';\n  font-family: ', ';\n  padding: 10px 0;\n  border-bottom: 2px solid ', ';\n  border-top: 2px solid ', ';\n    \n  &:hover {\n    color: ', ';\n    border-bottom: 2px solid ', ';\n    border-top: 2px solid ', ';\n  }\n  \n  // .active {\n  //   color: ', ';\n  //   border-bottom: 2px solid ', ';\n  //   border-top: 2px solid ', ';  \n  // }\n  \n']),
+var _templateObject = _taggedTemplateLiteral(['\n  text-decoration: none;\n  text-transform: uppercase;\n  color: ', ';\n  font-family: ', ';\n  padding: 10px 0;\n  border-bottom: 2px solid ', ';\n  border-top: 2px solid ', ';\n    \n  &:hover {\n    color: ', ';\n    border-bottom: 2px solid ', ';\n    border-top: 2px solid ', ';\n  }\n'], ['\n  text-decoration: none;\n  text-transform: uppercase;\n  color: ', ';\n  font-family: ', ';\n  padding: 10px 0;\n  border-bottom: 2px solid ', ';\n  border-top: 2px solid ', ';\n    \n  &:hover {\n    color: ', ';\n    border-bottom: 2px solid ', ';\n    border-top: 2px solid ', ';\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n'], ['\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: inline;\n  margin: 15px;\n'], ['\n  display: inline;\n  margin: 15px;\n']);
 
@@ -53245,12 +53245,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var SiteLink = (0, _styledComponents2.default)(_reactRouterDom.NavLink)(_templateObject, _theme.PRIMARY_COLOR, _theme.FONT_HEADER, _theme.PRIMARY_COLOR, _theme.PRIMARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR);
+var SiteLink = (0, _styledComponents2.default)(_reactRouterDom.NavLink)(_templateObject, _theme.PRIMARY_COLOR, _theme.FONT_HEADER, _theme.PRIMARY_COLOR, _theme.PRIMARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR, _theme.TERTIARY_COLOR);
+
+var activeSiteLink = {
+  color: '' + _theme.TERTIARY_COLOR,
+  borderBottom: '2px solid ' + _theme.TERTIARY_COLOR,
+  borderTop: '2px solid ' + _theme.TERTIARY_COLOR
+};
 
 var SiteLinkList = _styledComponents2.default.ul(_templateObject2);
 
 var SiteLinkItem = _styledComponents2.default.li(_templateObject3);
 
+exports.activeSiteLink = activeSiteLink;
 exports.SiteLink = SiteLink;
 exports.SiteLinkItem = SiteLinkItem;
 exports.SiteLinkList = SiteLinkList;

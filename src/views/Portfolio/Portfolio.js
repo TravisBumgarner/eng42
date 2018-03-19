@@ -20,7 +20,7 @@ export class Portfolio extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isProjectOpen: false,
+      isProjectOpen: !!this.props.match.params.projectId,
     }
   }
 

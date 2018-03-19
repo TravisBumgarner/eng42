@@ -22,14 +22,13 @@ const SiteLink = styled(NavLink)`
     border-bottom: 2px solid ${ TERTIARY_COLOR };
     border-top: 2px solid ${ TERTIARY_COLOR };
   }
-  
-  // .active {
-  //   color: ${TERTIARY_COLOR};
-  //   border-bottom: 2px solid ${ TERTIARY_COLOR };
-  //   border-top: 2px solid ${ TERTIARY_COLOR };  
-  // }
-  
 `;
+
+const activeSiteLink = {
+  color: `${TERTIARY_COLOR}`,
+  borderBottom: `2px solid ${ TERTIARY_COLOR }`,
+  borderTop: `2px solid ${ TERTIARY_COLOR }`,
+};
 
 const SiteLinkList = styled.ul`
   list-style-type: none;
@@ -43,6 +42,7 @@ const SiteLinkItem = styled.li`
 `;
 
 export {
+  activeSiteLink,
   SiteLink,
   SiteLinkItem,
   SiteLinkList,
