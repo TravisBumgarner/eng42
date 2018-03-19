@@ -4,4 +4,6 @@ run/
 etc/
 *.pyc
 views/
+bin/
+run/
 lib/
