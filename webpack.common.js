@@ -22,6 +22,6 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'views')
+    path: path.resolve(__dirname, 'static')
   }
 };
