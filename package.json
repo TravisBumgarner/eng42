@@ -7,8 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --hot --inline --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "NODE_ENV=develop webpack-dev-server --open --hot --inline --config webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",

@@ -3,7 +3,6 @@ node_modules/
 run/
 etc/
 *.pyc
-views/
 bin/
 run/
 lib/

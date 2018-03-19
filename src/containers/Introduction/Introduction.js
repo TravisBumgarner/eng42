@@ -63,7 +63,6 @@ export class Introduction extends Component {
     const {
       selectedSkills,
     } = this.state;
-    console.log(selectedSkills);
     return (
       <Card title="Greetings,">
         <IntroText>
