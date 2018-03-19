@@ -7,7 +7,7 @@ var setupApi = function(){
   console.log(apiHost);
   switch(process.env.NODE_ENV) {
     case 'production':
-      apiHost = '"http://eng40.travisbumgarner.com"';
+      apiHost = '"http://eng40api.travisbumgarner.com"';
       break;
     case 'development':
       apiHost = '"http://localhost:8000"';

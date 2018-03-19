@@ -3242,7 +3242,7 @@ var apiGet = function apiGet(endpoint) {
 
   return _axios2.default.request({
     method: 'GET',
-    url: "http://eng40.travisbumgarner.com" + endpoint,
+    url: "http://eng40api.travisbumgarner.com" + endpoint,
     data: data
   });
 };
