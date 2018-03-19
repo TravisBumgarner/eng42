@@ -3,4 +3,5 @@ node_modules/
 run/
 etc/
 *.pyc
+views/
 lib/
