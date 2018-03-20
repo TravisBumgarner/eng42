@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Snackbar from 'material-ui/Snackbar';
 import CircularProgress from 'material-ui/CircularProgress';
 
 import { loadSession } from '../../store/session/actions/loadSession';
-import { clearNotification } from "../../store/notification/actions/clearNotification/clearNotification";
 
 import Home from '../Home';
 import About from '../About';
@@ -26,6 +24,7 @@ import {
 import {
   AppWrapper,
   LoadingWrapper,
+  Popup,
 } from './App.styles';
 
 export class App extends Component {
@@ -41,7 +40,6 @@ export class App extends Component {
     const {
       loaded,
       notificationMsg,
-      clearNotification,
     } = this.props;
 
     return loaded ? (
@@ -56,9 +54,8 @@ export class App extends Component {
           <Route exact path="/learn_more" component={LearnMore} />
           <Route component={NotFound} />
         </Switch>
-        <Snackbar
+        <Popup
           open={ !!notificationMsg.length }
-          onRequestClose={ clearNotification }
           message={ notificationMsg }
         />
       </AppWrapper>
@@ -80,5 +77,4 @@ export default withRouter(connect((state) => ({
   notificationMsg: state.notification.msg,
 }), {
   loadSession,
-  clearNotification,
 })(App));

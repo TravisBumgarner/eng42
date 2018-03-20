@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import Snackbar from 'material-ui/Snackbar';
 
 const AppWrapper = styled.div`
+`;
+
+const Popup = styled(Snackbar)`
+  z-index:1000;
 `;
 
 const LoadingWrapper = styled.div`
@@ -15,4 +20,5 @@ const LoadingWrapper = styled.div`
 export {
   AppWrapper,
   LoadingWrapper,
+  Popup,
 }
