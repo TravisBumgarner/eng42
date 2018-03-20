@@ -4,7 +4,6 @@ var webpack = require('webpack');
 var apiHost;
 
 var setupApi = function(){
-  console.log(apiHost);
   switch(process.env.NODE_ENV) {
     case 'production':
       apiHost = '"http://eng40api.travisbumgarner.com"';
@@ -38,6 +37,6 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'static/js')
+    path: path.resolve(__dirname, 'dist')
   }
 };

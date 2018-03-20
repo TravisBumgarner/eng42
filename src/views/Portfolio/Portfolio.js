@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import queryString from 'query-string';
 import projectActions from '../../store/project/actions';
 
 import ProjectsFilter from '../../containers/ProjectsFilter';
@@ -20,7 +20,17 @@ export class Portfolio extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isProjectOpen: !!this.props.match.params.projectId,
+      isProjectOpen: false,
+    }
+  }
+
+  componentWillMount(){
+    const {
+      location: { search }
+    } = this.props;
+    const parsed = queryString.parse(search);
+    if (parsed.projectId){
+      this.openProject(parsed.projectId);
     }
   }
 
