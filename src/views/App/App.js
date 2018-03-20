@@ -4,6 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Snackbar from 'material-ui/Snackbar';
+import CircularProgress from 'material-ui/CircularProgress';
 
 import { loadSession } from '../../store/session/actions/loadSession';
 import { clearNotification } from "../../store/notification/actions/clearNotification/clearNotification";
@@ -19,7 +20,12 @@ import NotFound from '../NotFound';
 import Header from '../../containers/Header';
 
 import {
-  AppWrapper
+  TERTIARY_COLOR
+} from "../../theme";
+
+import {
+  AppWrapper,
+  LoadingWrapper,
 } from './App.styles';
 
 export class App extends Component {
@@ -58,7 +64,13 @@ export class App extends Component {
       </AppWrapper>
 
     ) : (
-      <div>Loading...!</div>
+      <LoadingWrapper>
+        <CircularProgress
+          color={`${ TERTIARY_COLOR }`}
+          size={120}
+          thickness={7}
+        />
+      </LoadingWrapper>
     )
   }
 }
