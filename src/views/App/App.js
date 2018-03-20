@@ -10,6 +10,7 @@ import { clearNotification } from "../../store/notification/actions/clearNotific
 
 import Home from '../Home';
 import About from '../About';
+import LearnMore from '../LearnMore';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
 import Project from '../Project';
@@ -46,6 +47,7 @@ export class App extends Component {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
           <Route exact path="/portfolio/:projectId" component={Project} />
+          <Route exact path="/learn_more" component={LearnMore} />
           <Route component={NotFound} />
         </Switch>
         <Snackbar

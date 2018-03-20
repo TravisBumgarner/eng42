@@ -16,6 +16,7 @@ export default class Nav extends Component {
         <SiteLinkItem><SiteLink activeStyle={activeSiteLink} to="/about">About</SiteLink></SiteLinkItem>
         <SiteLinkItem><SiteLink activeStyle={activeSiteLink} to="/contact">Contact</SiteLink></SiteLinkItem>
         <SiteLinkItem><SiteLink activeStyle={activeSiteLink} to="/portfolio">Portfolio</SiteLink></SiteLinkItem>
+        <SiteLinkItem><SiteLink activeStyle={activeSiteLink} to="/learn_more">Learn More</SiteLink></SiteLinkItem>
       </SiteLinkList>
     )
   }
