@@ -11,6 +11,9 @@ var setupApi = function(){
     case 'development':
       apiHost = '"http://localhost:8000"';
       break;
+    default:
+      apiHost = '"http://localhost:8000"';
+      break;
   }
 };
 

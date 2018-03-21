@@ -4,6 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import CircularProgress from 'material-ui/CircularProgress';
+import FaThumbsDown from 'react-icons/lib/fa/thumbs-down';
 
 import { loadSession } from '../../store/session/actions/loadSession';
 
@@ -25,14 +26,24 @@ import {
   AppWrapper,
   LoadingWrapper,
   Popup,
+  ErrorMsg,
 } from './App.styles';
 
 export class App extends Component {
   static propTypes = {
     loadSession: PropTypes.func.isRequired,
+  };
+
+  constructor(props){
+    super(props);
+    this.state = {
+      shouldErrorMsg: false,
+    };
   }
 
   componentWillMount() {
+    // Load error message if page hasn't finished loading in 10 seconds.
+    setTimeout(function() { this.setState({shouldErrorMsg: true}); }.bind(this), 3000);
     this.props.loadSession();
   }
 
@@ -41,6 +52,10 @@ export class App extends Component {
       loaded,
       notificationMsg,
     } = this.props;
+
+    const {
+      shouldErrorMsg,
+    } = this.state;
 
     return loaded ? (
       <AppWrapper>
@@ -62,11 +77,15 @@ export class App extends Component {
 
     ) : (
       <LoadingWrapper>
-        <CircularProgress
-          color={`${ TERTIARY_COLOR }`}
-          size={120}
-          thickness={7}
-        />
+        { shouldErrorMsg ? (
+          <ErrorMsg><FaThumbsDown/><FaThumbsDown/>  Sorry there was an error. Please reload or try again later.</ErrorMsg>
+        ) : (
+          <CircularProgress
+            color={`${ TERTIARY_COLOR }`}
+            size={120}
+            thickness={7}
+          />
+        )}
       </LoadingWrapper>
     )
   }
