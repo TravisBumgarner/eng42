@@ -26,9 +26,11 @@ export class Me extends Component {
     const formattedDescription = description.split('\n').map((p, idx) => <MeDescription key={idx}>{p}</MeDescription>);
 
     return (
-      <Card title={ `${name}` }>
-        <MeDescription>{ formattedDescription }</MeDescription>
-      </Card>
+      <div>
+        <Card title={ `${name}` }>
+          <MeDescription>{ formattedDescription }</MeDescription>
+        </Card>
+      </div>
     )
   }
 }

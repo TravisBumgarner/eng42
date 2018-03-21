@@ -56,6 +56,9 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_CONTENT};
   height: 100vh;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
   
   ${media.TABLET`
     max-width: 95%;

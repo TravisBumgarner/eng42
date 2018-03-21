@@ -6,9 +6,8 @@ import Card from '../../containers/Card';
 
 import {
   PRIMARY_COLOR,
-  SECONDARY_COLOR,
   TERTIARY_COLOR,
-  FONT_CONTENT,
+  DEFAULT_PAGE_WRAPPER,
 } from "../../theme";
 
 const ProjectsCard = styled(Card)`
@@ -17,16 +16,8 @@ const ProjectsCard = styled(Card)`
 const ProjectCard = ProjectsCard.extend`
 `;
 
-const PortfolioWrapper = styled.div`
-  position: relative;
-  width: 75%;
-  height: 100vh;
-  max-width: 1024px;
-  margin:0 auto;
-  color: ${PRIMARY_COLOR};
-  background-color: ${SECONDARY_COLOR};
-  font-family: ${FONT_CONTENT};
-  overflow: hidden;
+const PortfolioWrapper = DEFAULT_PAGE_WRAPPER.extend`
+
 `;
 
 const ProjectsNoScrollWrapper = styled.div`
@@ -36,7 +27,6 @@ const ProjectsNoScrollWrapper = styled.div`
   opacity: ${props => props.isProjectOpen ? '0' : '1'};
   width: 100%;
   max-height: 90vh;
-  margin-top: 10vh;
   overflow-y: scroll;
   box-sizing: border-box;
 `;
