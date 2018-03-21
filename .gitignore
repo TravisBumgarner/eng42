@@ -6,3 +6,4 @@ etc/
 bin/
 run/
 lib/
+dist/app.bundle.js

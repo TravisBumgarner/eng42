@@ -43,7 +43,7 @@ export class App extends Component {
 
   componentWillMount() {
     // Load error message if page hasn't finished loading in 10 seconds.
-    setTimeout(function() { this.setState({shouldErrorMsg: true}); }.bind(this), 3000);
+    setTimeout(function() { this.setState({shouldErrorMsg: true}); }.bind(this), 10000);
     this.props.loadSession();
   }
 
