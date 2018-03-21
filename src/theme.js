@@ -13,17 +13,13 @@ export const TERTIARY_COLOR = '#4acfa0';
 // Font Sizes
 export const FONT_SMALL = '0.8rem';
 export const FONT_NORMAL = '1rem';
-export const FONT_NORMAL_LINE_HEIGHT = '1.4';;
+export const FONT_NORMAL_LINE_HEIGHT = '1.4';
 export const FONT_LARGE = '1.5rem';
 export const FONT_XLARGE = '3rem';
 
 // Font Families
 export const FONT_HEADER = "'Montserrat', sans-serif";
 export const FONT_CONTENT = "'Helvetica Neue', Helvetica, Arial, sans-serif";
-
-export const HEADER_HEIGHT = `50px`;
-export const FOOTER_HEIGHT = `50px`;
-export const BODY_HEIGHT = `calc(100vh - (${HEADER_HEIGHT} + ${FOOTER_HEIGHT}))`;
 
 // Misc
 export const SCREEN_WIDTHS = {
