@@ -5,6 +5,7 @@ import FaFilter from 'react-icons/lib/fa/filter';
 import FaSortAmountDesc from 'react-icons/lib/fa/sort-amount-desc';
 
 import {
+  TERTIARY_COLOR,
   PRIMARY_COLOR,
   media,
 } from "../../theme";
@@ -36,13 +37,13 @@ const Row = styled.div`
 const FilterIcon = styled(FaFilter)`
   height: 56px;
   vertical-align: top !important;
-  fill: ${PRIMARY_COLOR};
+  fill: ${TERTIARY_COLOR};
 `;
 
 const SortIcon = styled(FaSortAmountDesc)`
   height: 56px;
   vertical-align: top !important;
-  fill: ${PRIMARY_COLOR};
+  fill: ${TERTIARY_COLOR};
 `;
 
 const AlignToDropdown = styled.div`

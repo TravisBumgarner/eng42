@@ -5,8 +5,6 @@ import {
 } from "../../theme";
 
 const HomeWrapper = DEFAULT_PAGE_WRAPPER.extend`
-  margin-top: 35vh;
-  max-width: 800px;
 `;
 
 export {

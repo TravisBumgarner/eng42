@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Card from '../Card';
+
 import {
   FONT_NORMAL_LINE_HEIGHT,
   FONT_LARGE,
@@ -11,7 +13,13 @@ const MeDescription = styled.div`
   margin: 20px 0;
 `;
 
+const MeCard = styled(Card)`
+  max-height: 80vh;
+  overflow-y: scroll;
+`;
+
 export {
   MeDescription,
+  MeCard,
 }
 

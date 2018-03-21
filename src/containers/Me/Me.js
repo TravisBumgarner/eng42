@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Card from '../Card';
-
 import {
   MeDescription,
+  MeCard,
 } from './Me.styles';
 
 export class Me extends Component {
@@ -27,9 +26,9 @@ export class Me extends Component {
 
     return (
       <div>
-        <Card title={ `${name}` }>
+        <MeCard title={ `${name}` }>
           <MeDescription>{ formattedDescription }</MeDescription>
-        </Card>
+        </MeCard>
       </div>
     )
   }

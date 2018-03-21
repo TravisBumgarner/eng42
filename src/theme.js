@@ -15,7 +15,7 @@ export const FONT_SMALL = '0.8rem';
 export const FONT_NORMAL = '1rem';
 export const FONT_NORMAL_LINE_HEIGHT = '1.4';
 export const FONT_LARGE = '1.5rem';
-export const FONT_XLARGE = '3rem';
+export const FONT_XLARGE = '2.2rem';
 
 // Font Families
 export const FONT_HEADER = "'Montserrat', sans-serif";
