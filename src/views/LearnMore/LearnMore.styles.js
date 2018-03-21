@@ -4,18 +4,21 @@ import {
   DEFAULT_PAGE_WRAPPER,
   FONT_NORMAL,
   FONT_HEADER,
+  media,
 } from "../../theme";
 
 const LearnMoreWrapper = DEFAULT_PAGE_WRAPPER.extend`
 `;
 
 const GroupLinksWrapper = styled.div`
-  margin: 0px 30px;
+  //margin: 0px 30px;
 `;
 
 const AllLinksWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 750px;
+  margin: 0 auto;
 `;
 
 const LinksListTitle = styled.h2`

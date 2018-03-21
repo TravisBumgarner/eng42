@@ -13,7 +13,6 @@ import About from '../About';
 import LearnMore from '../LearnMore';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
-import Project from '../Project';
 import NotFound from '../NotFound';
 
 import Header from '../../containers/Header';
@@ -65,7 +64,6 @@ export class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
-          <Route exact path="/portfolio/:projectId" component={Project} />
           <Route exact path="/learn_more" component={LearnMore} />
           <Route component={NotFound} />
         </Switch>

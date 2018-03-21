@@ -26,6 +26,7 @@ const PortfolioWrapper = styled.div`
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_CONTENT};
+  overflow: hidden;
 `;
 
 const ProjectsNoScrollWrapper = styled.div`

@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
   left: 0;
   color: ${ PRIMARY_COLOR };
   background-color: ${ SECONDARY_COLOR };
-  padding: 30px;
+  padding: 30px 0;
   text-align: center;
   box-sizing: border-box;
   z-index: 999;

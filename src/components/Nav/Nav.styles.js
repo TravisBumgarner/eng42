@@ -38,7 +38,7 @@ const SiteLinkList = styled.ul`
 
 const SiteLinkItem = styled.li`
   display: inline;
-  margin: 15px;
+  margin: 5px;
 `;
 
 export {

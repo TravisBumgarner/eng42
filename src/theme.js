@@ -55,6 +55,12 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_CONTENT};
+  height: 100vh;
+  
+  ${media.TABLET`
+    max-width: 95%;
+    width: 95%;
+  `}
 `;
 
 // ============================================= //
