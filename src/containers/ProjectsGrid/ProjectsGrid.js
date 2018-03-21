@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import sizeMe from 'react-sizeme'
 
 import ProjectTile from '../../containers/ProjectTile';
 
@@ -13,8 +14,9 @@ export class ProjectsGrid extends Component {
       projects,
       filteredProjectIds,
       openProject,
+      size: { width }
     } = this.props;
-
+    console.log(width);
     const projectIds = filteredProjectIds.length ? filteredProjectIds : Object.keys(projects); //TODO rewrite this last bit
 
     const Projects = projectIds.map(p => {
@@ -22,6 +24,7 @@ export class ProjectsGrid extends Component {
         key={ p }
         projectId={ p }
         openProject={ openProject }
+        gridWidth={ width }
       />;
     });
 
@@ -33,8 +36,8 @@ export class ProjectsGrid extends Component {
   }
 }
 
-export default connect((state, ownProps) => ({
+export default sizeMe()(connect((state, ownProps) => ({
   projects: state.project.all,
   filteredProjectIds: state.project.filtered,
 }), {
-})(ProjectsGrid);
+})(ProjectsGrid));

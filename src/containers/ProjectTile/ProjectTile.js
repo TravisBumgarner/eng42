@@ -30,6 +30,7 @@ export class ProjectTile extends Component {
     const {
       project,
       skills,
+      gridWidth,
     } = this.props;
 
     const projectSkills = project.skill.map(s => skills[s].name).join(", ");
@@ -37,6 +38,7 @@ export class ProjectTile extends Component {
     return (
       <ProjectTileWrapper
         previewImageSrc = { project.preview_img && project.preview_img.src }
+        gridWidth = { gridWidth }
       >
         <ProjectTitle>
           { project.name }

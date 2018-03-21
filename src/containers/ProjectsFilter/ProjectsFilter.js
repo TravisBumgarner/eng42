@@ -115,8 +115,8 @@ export class ProjectsFilter extends Component {
 
     const SortDropdown = (
       <SortDropdownMenu autoWidth={false} value={this.state.sortMethod} onChange={this.handleSortChange}>
-        <MenuItem value={'newToOld'} key={0} primaryText={'Sort New to Old'}/>
-        <MenuItem value={'oldToNew'} key={1} primaryText={'Sort Old to New'}/>
+        <MenuItem value={'newToOld'} key={0} primaryText={'New to Old'}/>
+        <MenuItem value={'oldToNew'} key={1} primaryText={'Old to New'}/>
       </SortDropdownMenu>
     );
 

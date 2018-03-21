@@ -4,9 +4,9 @@ import {
 } from '../../theme';
 
 const ProjectsGridWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  //display: flex;
+  //flex-wrap: wrap;
+  //justify-content: space-around;
 `;
 
 export {

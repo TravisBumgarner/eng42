@@ -60,7 +60,7 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   height: 100vh;
   overflow: hidden;
   
-  ${media.TABLET`
+  ${media.DESKTOP`
     max-width: 95%;
     width: 95%;
   `}

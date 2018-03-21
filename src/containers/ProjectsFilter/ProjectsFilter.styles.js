@@ -10,17 +10,19 @@ import {
 
 const ProjectsFilterWrapper = styled.div`
   color: ${PRIMARY_COLOR};
-  margin: 20px;
+  margin: 20px 0;
 `;
 
 const CategoryDropdownMenu = styled(DropDownMenu)`
-  width: 300px;
+  width: 275px;
 `;
 
-const SkillDropdownMenu = CategoryDropdownMenu.extend`
+const SkillDropdownMenu = styled(DropDownMenu)`
+  width: 250px;
 `;
 
-const SortDropdownMenu = CategoryDropdownMenu.extend`
+const SortDropdownMenu = styled(DropDownMenu)`
+  width: 200px;
 `;
 
 const FilterIcon = styled(FaFilter)`
