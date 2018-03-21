@@ -55,9 +55,8 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_CONTENT};
-  height: 100vh;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   
   ${media.DESKTOP`

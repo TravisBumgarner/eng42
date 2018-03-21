@@ -6,6 +6,7 @@ import FaSortAmountDesc from 'react-icons/lib/fa/sort-amount-desc';
 
 import {
   PRIMARY_COLOR,
+  media,
 } from "../../theme";
 
 const ProjectsFilterWrapper = styled.div`
@@ -23,6 +24,13 @@ const SkillDropdownMenu = styled(DropDownMenu)`
 
 const SortDropdownMenu = styled(DropDownMenu)`
   width: 200px;
+`;
+
+const Row = styled.div`
+  display: inline-block;
+  ${media.TABLET`
+    width: 100%;
+  `};
 `;
 
 const FilterIcon = styled(FaFilter)`
@@ -51,5 +59,6 @@ export {
   FilterIcon,
   SortDropdownMenu,
   SortIcon,
+  Row,
 }
 

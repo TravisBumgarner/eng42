@@ -24,9 +24,9 @@ const ProjectsNoScrollWrapper = styled.div`
   position: absolute;
   transition: left 0.5s, opacity 0.5s;
   left: ${props => props.isProjectOpen ? '-100vw' : '0'};
-  opacity: ${props => props.isProjectOpen ? '0' : '1'};
+  opacity: ${props => props.isProjectOpen ? '  float: left;0' : '1'};
   width: 100%;
-  max-height: 90vh;
+  max-height: 80vh;
   overflow-y: scroll;
   box-sizing: border-box;
 `;

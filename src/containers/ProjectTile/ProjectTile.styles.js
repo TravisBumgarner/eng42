@@ -12,7 +12,7 @@ import {
 const SPACE_BETWEEN = 5;
 
 const ProjectTileWrapper = styled.div`
-float: left;
+  float: left;
   box-sizing: border-box;
   margin: ${SPACE_BETWEEN}px;
   padding: 10px;
@@ -23,12 +23,6 @@ float: left;
   border: 1px solid ${SECONDARY_COLOR};
 
   ${props => `width:${props.gridWidth/3 - SPACE_BETWEEN*2}px; height:${props.gridWidth/3 - SPACE_BETWEEN*2}px;`}
-  
-  &:before{
-    content:'';
-    float:left;
-    padding-top:100%;
-  }
 
   ${media.DESKTOP`
     ${props => `width:${props.gridWidth/2 - SPACE_BETWEEN*2}px; height:${props.gridWidth/2 - SPACE_BETWEEN*2}px;`}
@@ -37,7 +31,6 @@ float: left;
   ${media.TABLET`
     ${props => `width:${props.gridWidth - SPACE_BETWEEN*2}px; height:${props.gridWidth - SPACE_BETWEEN*2}px;`}
   `}
-  
 `;
 
 const ProjectTitle = styled.h2`
