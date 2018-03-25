@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 import {
   ProjectDetailWrapper,
-  IconWrapper,
+  Divider,
   ContentWrapper,
+  Title,
 } from "./ProjectDetail.styles";
 
 export default class ProjectDetail extends Component {
@@ -11,16 +12,18 @@ export default class ProjectDetail extends Component {
   render() {
     const {
       icon,
-      content,
+      children,
+      title,
     } = this.props;
 
     return (
       <ProjectDetailWrapper>
-        <IconWrapper>
-          { icon }
-        </IconWrapper>
+        <Title>
+          { title }
+        </Title>
+        <Divider primary height={ 1 } />
         <ContentWrapper>
-          { content }
+          { children }
         </ContentWrapper>
       </ProjectDetailWrapper>
     )

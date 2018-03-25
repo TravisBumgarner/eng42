@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 import { transparentize } from 'polished';
 
-import Divider from '../../components/Divider';
-
 import {
   FONT_FAMILY_HEADER,
   SECONDARY_COLOR,
@@ -48,13 +46,8 @@ const ProjectDescription = styled.div`
   color: ${SECONDARY_COLOR};
 `;
 
-const SmallDivider = styled(Divider)`
-  margin: 10px 0;
-`;
-
 export {
   ProjectTileWrapper,
   ProjectDescription,
-  SmallDivider,
 }
 

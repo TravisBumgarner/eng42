@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-import Divider from '../../components/Divider';
-
 import {
+  Divider,
   CardTitle,
   CardContent,
   CardWrapper,

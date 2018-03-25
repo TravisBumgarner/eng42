@@ -16,6 +16,13 @@ const CardWrapper = styled.div`
   margin: 0px auto;
 `;
 
+const Divider = styled.div`
+  width: 100%;
+  height: 2px;
+  background-color: ${PRIMARY_COLOR};
+  margin: 20px 0;
+`;
+
 const CardTitle = styled.h2`
   font-family: ${ FONT_FAMILY_HEADER };
   font-size: ${ FONT_SIZE_XLARGE };
@@ -43,6 +50,7 @@ const BackButton = styled(FaArrowLeft)`
 `;
 
 export {
+  Divider,
   BackButton,
   CardWrapper,
   CardTitle,

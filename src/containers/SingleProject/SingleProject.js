@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import FaExternalLink from 'react-icons/lib/fa/external-link';
-import FaCalendar from 'react-icons/lib/fa/calendar';
-import FaPencil from 'react-icons/lib/fa/pencil';
-import FaMapSigns from 'react-icons/lib/fa/map-signs';
-import FaBuilding from 'react-icons/lib/fa/building-o';
-
 import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';
 import Thumbnail from '../../components/Thumbnail';
@@ -14,8 +8,9 @@ import ProjectImage from '../../components/ProjectImage';
 
 import {
   SingleProjectWrapper,
-  Column,
-  ProjectDetailsWrapper,
+  Content,
+  Sidebar,
+  Row,
 } from './SingleProject.styles';
 
 export class SingleProject extends Component {
@@ -54,7 +49,7 @@ export class SingleProject extends Component {
       activeImage,
     } = this.state;
 
-    const Thumbnails = project.image.map(i => {
+    const Thumbnails = (project.image.length > 1) && project.image.map(i => {
       return (
         <Thumbnail
           key={ i.id }
@@ -78,43 +73,48 @@ export class SingleProject extends Component {
 
     return (
       <SingleProjectWrapper previewImageSrc = { project.preview_img && project.preview_img.src } >
-        <ProjectDetailsWrapper>
-          <Column>
-            <ProjectDetail
-              icon={ <FaCalendar/> }
-              content={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
-            />
+        <Row>
+          <Content>
+            <ProjectDetail title="Description">
+              { Description }
+            </ProjectDetail>
+          </Content>
 
-            <ProjectDetail
-              icon={ <FaPencil/> }
-              content={ Skills }
-            />
-
+          <Sidebar>
             {!!Links.length &&
-              <ProjectDetail
-                icon={ <FaExternalLink/> }
-                content={ <ul>{ Links }</ul> }
-              />
+              <ProjectDetail title="Links">
+                <ul>{Links}</ul>
+              </ProjectDetail>
             }
-          </Column>
+           <ProjectDetail title="Duration">
+             {`${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}`}
+           </ProjectDetail>
 
-          <Column>
-            <ProjectDetail
-              icon={ <FaMapSigns/> }
-              content={ Locations }
-            />
+            <ProjectDetail title="Skills">
+              { Skills }
+            </ProjectDetail>
 
-            <ProjectDetail
-              icon={ <FaBuilding/> }
-              content={ Organizations }
-            />
-          </Column>
-        </ProjectDetailsWrapper>
+            <ProjectDetail title="Location">
+              { Locations }
+            </ProjectDetail>
 
-        { Description }
+            <ProjectDetail title="Organization">
+              { Organizations }
+            </ProjectDetail>
+          </Sidebar>
+        </Row>
+        <Row>
+          {!!activeImage &&
+            <ProjectDetail title="Photos">
+              {Thumbnails}
+              <ProjectImage src={activeImage}/>
+            </ProjectDetail>
+          }
+        </Row>
 
-        { !!activeImage && <ProjectImage src={activeImage}/> }
-        {Thumbnails}
+
+
+
 
       </SingleProjectWrapper>
     )

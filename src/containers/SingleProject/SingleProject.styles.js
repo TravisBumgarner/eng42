@@ -6,18 +6,24 @@ import {
 const SingleProjectWrapper = styled.div`
 `;
 
-const ProjectDetailsWrapper = styled.div`
+const Row = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;
 
-const Column= styled.div`
-  width: 50%;
-  box-sizing: border-box;
+const Content= styled.div`
+  width: 68%;
+`;
+
+const Sidebar = styled.div`
+  width: 30%;
 `;
 
 export {
   SingleProjectWrapper,
-  Column,
-  ProjectDetailsWrapper,
+  Content,
+  Sidebar,
+  Row,
 }
 
