@@ -24,7 +24,7 @@ export const apiPost = (endpoint, data = {}) => {
     return new Promise((resolve, reject) => {
       axios.request({
         method: 'POST',
-        url: __API__ + endpoint,
+        url: `http://eng40api.travisbumgarner.com${endpoint}`,
         data,
       }).then((response) => {
         const { data } = response;

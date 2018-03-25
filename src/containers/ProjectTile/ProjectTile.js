@@ -11,7 +11,7 @@ import FaExternalLink from 'react-icons/lib/fa/external-link';
 
 import {
   ProjectTileWrapper,
-  ProjectTitle,
+  ProjectDescription,
   SmallDivider,
 } from './ProjectTile.styles';
 
@@ -29,45 +29,18 @@ export class ProjectTile extends Component {
   render() {
     const {
       project,
-      skills,
       gridWidth,
     } = this.props;
-
-    const projectSkills = project.skill.map(s => skills[s].name).join(", ");
 
     return (
       <ProjectTileWrapper
         previewImageSrc = { project.preview_img && project.preview_img.src }
         gridWidth = { gridWidth }
+        onClick = { this.openProject }
       >
-        <ProjectTitle>
+        <ProjectDescription>
           { project.name }
-        </ProjectTitle>
-
-        <SmallDivider />
-
-        <ProjectDetail
-          icon={ <FaHeader/> }
-          content={ project.headline }
-        />
-
-        <ProjectDetail
-          icon={ <FaCalendar/> }
-          content={ `${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}` /* Remove Day of Mont */ }
-        />
-
-        <ProjectDetail
-          icon={ <FaPencil/> }
-          content={ projectSkills.length < 100 ? projectSkills : `${projectSkills.slice(0,100)}...` }
-        />
-
-        <SmallDivider />
-
-        <ProjectDetail
-          icon={ <FaExternalLink/> }
-          content={ <ExternalLink onClick={ this.openProject }>View Project</ExternalLink> }
-        />
-
+        </ProjectDescription>
       </ProjectTileWrapper>
     )
   }

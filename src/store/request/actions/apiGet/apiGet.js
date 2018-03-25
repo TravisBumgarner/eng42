@@ -3,7 +3,7 @@ import axios from 'axios';
 const apiGet = (endpoint, data = {}) => {
   return axios.request({
     method: 'GET',
-    url: __API__ + endpoint,
+    url: `http://eng40api.travisbumgarner.com${endpoint}`,
     data,
   })
 };
