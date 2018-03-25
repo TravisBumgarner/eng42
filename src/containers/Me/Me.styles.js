@@ -12,7 +12,7 @@ const MeDescription = styled.div`
 `;
 
 const MeCard = styled(Card)`
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: scroll;
 `;
 

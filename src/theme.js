@@ -48,7 +48,7 @@ export const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
 export const DEFAULT_PAGE_WRAPPER = styled.div`
   width: 75%;
   max-width: 1024px;
-  margin: 20vh auto 0;
+  margin: 10vh auto 0;
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
   font-family: ${FONT_FAMILY_CONTENT};
@@ -56,7 +56,7 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   font-weight: ${FONT_WEIGHT_CONTENT};
   line-height: ${FONT_NORMAL_LINE_HEIGHT};
   position: relative;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   
   ${media.DESKTOP`

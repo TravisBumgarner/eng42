@@ -26,7 +26,7 @@ const ProjectsNoScrollWrapper = styled.div`
   left: ${props => props.isProjectOpen ? '-100vw' : '0'};
   opacity: ${props => props.isProjectOpen ? '  float: left;0' : '1'};
   width: 100%;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: scroll;
   box-sizing: border-box;
 `;
@@ -43,10 +43,10 @@ const BackIcon = styled(FaArrowLeft)`
   left: 0;
   margin: 20px 0;
   padding: 5px 0;
-  fill: ${PRIMARY_COLOR};
+  fill: ${TERTIARY_COLOR};
   
   &:hover {
-    fill: ${TERTIARY_COLOR};
+    fill: ${PRIMARY_COLOR};
     cursor: pointer;
   }
   }
