@@ -22,7 +22,7 @@ const CarouselWrapper = styled.div`
 
 const PrevButton = styled(FaAngleLeft)`
   position: absolute;
-  top:50%;
+  top:calc(50% - ${ICON_SIZE/2}px);
   left: -50px;
   z-index: 999;
   
@@ -38,7 +38,7 @@ const PrevButton = styled(FaAngleLeft)`
 
 const NextButton = styled(FaAngleRight)`
   position: absolute;
-  top:50%;
+  top:calc(50% - ${ICON_SIZE/2}px);
   right: -50px;
   z-index: 999;
     
