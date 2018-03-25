@@ -12,9 +12,9 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-      activeIdx: -1,
+      activeIdx: 0,
       images: [],
-      maxIdx: -1,
+      maxIdx: 0,
     }
   }
 
@@ -25,19 +25,6 @@ export default class Carousel extends Component {
 
     this.setState({
       images: Object.values(images),
-      activeIdx: 0,
-      maxIdx: Object.values(images).length,
-    });
-  }
-
-  componentWillReceiveProps(nextProps){
-    const {
-      images,
-    } = nextProps;
-
-    this.setState({
-      images: Object.values(images),
-      activeIdx: 0,
       maxIdx: Object.values(images).length - 1,
     });
   }
@@ -47,9 +34,8 @@ export default class Carousel extends Component {
       activeIdx,
       maxIdx,
     } = this.state;
-
+    
     const newActiveIdx = activeIdx === 0 ? maxIdx : activeIdx - 1;
-
     this.setState({ activeIdx: newActiveIdx })
   };
 
@@ -60,7 +46,6 @@ export default class Carousel extends Component {
     } = this.state;
 
     const newActiveIdx = activeIdx === maxIdx ? 0 : activeIdx + 1;
-
     this.setState({ activeIdx: newActiveIdx })
   };
 
@@ -68,29 +53,27 @@ export default class Carousel extends Component {
     const {
       images,
       activeIdx,
-      isNextDisabled,
       maxIdx,
-      isPrevDisabled,
     } = this.state;
 
     return (
       <CarouselWrapper>
+        <ActiveImage
+          src={ images[activeIdx].src }
+          alt={ images[activeIdx].alt }
+        />
         {(maxIdx > 0) &&
           <PrevButton
-            onClick={isPrevDisabled ? null : this.prevImage}
+            onClick={ this.prevImage }
             size={ICON_SIZE}
           />
         }
         {(maxIdx > 0) &&
           < NextButton
             size={ICON_SIZE}
-            onClick={isNextDisabled ? null : this.nextImage}
+            onClick={ this.nextImage }
           />
         }
-        <ActiveImage
-          src={ images[activeIdx].src }
-          alt={ images[activeIdx].alt }
-        />
       </CarouselWrapper>
     )
   }

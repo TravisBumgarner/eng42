@@ -57,7 +57,7 @@ export class Portfolio extends Component {
 
         <ProjectNoScrollWrapper isProjectOpen={ isProjectOpen }>
           <ProjectCard onClick = { this.closeProject } shiftHeaderRight title={ project.name } >
-            <SingleProject />
+            { isProjectOpen && <SingleProject /> }
           </ProjectCard>
         </ProjectNoScrollWrapper>
       </PortfolioWrapper>
