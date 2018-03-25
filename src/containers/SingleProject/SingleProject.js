@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 
 import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';
-import Thumbnail from '../../components/Thumbnail';
-import ProjectImage from '../../components/ProjectImage';
+import Carousel from '../../components/Carousel';
 
 import {
   SingleProjectWrapper,
@@ -14,51 +13,12 @@ import {
 } from './SingleProject.styles';
 
 export class SingleProject extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      activeImage: ''
-    }
-  }
-
-  componentDidMount(){
-    const {
-      project: { image }
-    } = this.props;
-    this.setState({ activeImage: image.length ? Object.values(image)[0].src : ''});
-  }
-
-  componentWillReceiveProps(nextProps){
-    const {
-      project: { image }
-    } = nextProps;
-    this.setState({ activeImage: image.length ? Object.values(image)[0].src : ''});
-  }
-
-  setActiveImage = (imageSrc) => {
-    this.setState({ activeImage: imageSrc })
-  };
-
   render() {
     const {
       project,
       skills,
     } = this.props;
 
-    const {
-      activeImage,
-    } = this.state;
-
-    const Thumbnails = (project.image.length > 1) && project.image.map(i => {
-      return (
-        <Thumbnail
-          key={ i.id }
-          src={ i.src }
-          alt={ i.name }
-          onClick={ this.setActiveImage }
-        />
-      )
-    });
     const Description = project.description.split('\n').map((d, idx) => <p key={idx}>{d}</p>);
     const Locations = project.location.map(l => l.name).join(", ");
     const Organizations = project.organization.map(o => o.name).join(", ");
@@ -104,10 +64,9 @@ export class SingleProject extends Component {
           </Sidebar>
         </Row>
         <Row>
-          {!!activeImage &&
+          {!!project.image.length &&
             <ProjectDetail title="Photos">
-              {Thumbnails}
-              <ProjectImage src={activeImage}/>
+              <Carousel images={ project.image }/>
             </ProjectDetail>
           }
         </Row>
