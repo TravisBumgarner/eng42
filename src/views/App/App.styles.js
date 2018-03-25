@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import Snackbar from 'material-ui/Snackbar';
 
 import {
-  FONT_NORMAL,
-  FONT_HEADER
+  FONT_FAMILY_HEADER,
 } from "../../theme";
 
 const AppWrapper = styled.div`
@@ -15,8 +14,7 @@ const Popup = styled(Snackbar)`
 
 const ErrorMsg = styled.h2`
   margin: 0 0 5px 0;
-  font-size: ${FONT_NORMAL};
-  font-family: ${FONT_HEADER};
+  font-family: ${FONT_FAMILY_HEADER};
 `;
 
 const LoadingWrapper = styled.div`

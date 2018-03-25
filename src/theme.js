@@ -10,16 +10,17 @@ export const PRIMARY_COLOR = '#000000';
 export const SECONDARY_COLOR = '#FFFFFF';
 export const TERTIARY_COLOR = '#4acfa0';
 
-// Font Sizes
-export const FONT_SMALL = '0.8rem';
-export const FONT_NORMAL = '1rem';
+// Fonts
+export const FONT_SIZE_SMALL = '0.8rem';
+export const FONT_SIZE_NORMAL = '0.9rem';
 export const FONT_NORMAL_LINE_HEIGHT = '1.4';
-export const FONT_LARGE = '1.5rem';
-export const FONT_XLARGE = '2.2rem';
+export const FONT_SIZE_LARGE = '1.5rem';
+export const FONT_SIZE_XLARGE = '1.8rem';
+export const FONT_FAMILY_HEADER = "'Montserrat', sans-serif";
+export const FONT_FAMILY_CONTENT = "'Comic Sans', Helvetica, Arial, sans-serif";
+export const FONT_WEIGHT_HEADER = 700;
+export const FONT_WEIGHT_CONTENT = 400;
 
-// Font Families
-export const FONT_HEADER = "'Montserrat', sans-serif";
-export const FONT_CONTENT = "'Helvetica Neue', Helvetica, Arial, sans-serif";
 
 // Misc
 export const SCREEN_WIDTHS = {
@@ -50,7 +51,10 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   margin: 20vh auto 0;
   color: ${PRIMARY_COLOR};
   background-color: ${SECONDARY_COLOR};
-  font-family: ${FONT_CONTENT};
+  font-family: ${FONT_FAMILY_CONTENT};
+  font-size: ${FONT_SIZE_NORMAL};
+  font-weight: ${FONT_WEIGHT_CONTENT};
+  line-height: ${FONT_NORMAL_LINE_HEIGHT};
   position: relative;
   height: 80vh;
   overflow: hidden;
@@ -68,7 +72,7 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
 export const muiTheme = getMuiTheme({
   palette: {
     textColor: `${PRIMARY_COLOR}`,
-    fontFamily: `${FONT_CONTENT}`,
+    fontFamily: `${FONT_FAMILY_CONTENT}`,
     primary1Color: `${TERTIARY_COLOR}`,
     primary2Color: `${TERTIARY_COLOR}`,
     primary3Color: `${TERTIARY_COLOR}`,

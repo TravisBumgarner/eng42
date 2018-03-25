@@ -2,16 +2,13 @@ import styled from 'styled-components';
 
 import {
   DEFAULT_PAGE_WRAPPER,
-  FONT_NORMAL,
-  FONT_HEADER,
-  media,
+  FONT_FAMILY_HEADER,
 } from "../../theme";
 
 const LearnMoreWrapper = DEFAULT_PAGE_WRAPPER.extend`
 `;
 
 const GroupLinksWrapper = styled.div`
-  //margin: 0px 30px;
 `;
 
 const AllLinksWrapper = styled.div`
@@ -24,8 +21,7 @@ const AllLinksWrapper = styled.div`
 const LinksListTitle = styled.h2`
   margin: 0 0 5px 0;
   font-weight: 500;
-  font-size: ${FONT_NORMAL};
-  font-family: ${FONT_HEADER};
+  font-family: ${FONT_FAMILY_HEADER};
 `;
 
 export {

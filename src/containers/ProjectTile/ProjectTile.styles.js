@@ -5,10 +5,10 @@ import { transparentize } from 'polished';
 import Divider from '../../components/Divider';
 
 import {
-  FONT_HEADER,
-  FONT_NORMAL,
+  FONT_FAMILY_HEADER,
   SECONDARY_COLOR,
-  media, PRIMARY_COLOR,
+  media,
+  PRIMARY_COLOR,
 } from '../../theme';
 
 const SPACE_BETWEEN = 5;
@@ -42,8 +42,7 @@ const ProjectTileWrapper = styled.div`
 
 const ProjectDescription = styled.div`
   background-color: ${transparentize(0.3, PRIMARY_COLOR)};
-  font-size: ${FONT_NORMAL};
-  font-family: ${FONT_HEADER};
+  font-family: ${FONT_FAMILY_HEADER};
   padding: 10px;
   width: 100%;
   color: ${SECONDARY_COLOR};

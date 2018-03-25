@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import ExternalLink from '../../components/ExternalLink';
-import ProjectDetail from '../../components/ProjectDetail';
-
-import FaCalendar from 'react-icons/lib/fa/calendar';
-import FaPencil from 'react-icons/lib/fa/pencil';
-import FaHeader from 'react-icons/lib/fa/header';
-import FaExternalLink from 'react-icons/lib/fa/external-link';
-
 import {
   ProjectTileWrapper,
   ProjectDescription,
-  SmallDivider,
 } from './ProjectTile.styles';
 
 export class ProjectTile extends Component {
@@ -28,18 +19,18 @@ export class ProjectTile extends Component {
 
   render() {
     const {
-      project,
+      project: { preview_img, name},
       gridWidth,
     } = this.props;
 
     return (
       <ProjectTileWrapper
-        previewImageSrc = { project.preview_img && project.preview_img.src }
+        previewImageSrc = { preview_img && preview_img.src }
         gridWidth = { gridWidth }
         onClick = { this.openProject }
       >
         <ProjectDescription>
-          { project.name }
+          { name }
         </ProjectDescription>
       </ProjectTileWrapper>
     )
@@ -48,6 +39,5 @@ export class ProjectTile extends Component {
 
 export default connect((state, ownProps) => ({
   project: state.project.all[ownProps.projectId],
-  skills: state.skill.all,
 }), {
 })(ProjectTile);
