@@ -16,7 +16,7 @@ export class ProjectsGrid extends Component {
       openProject,
       size: { width }
     } = this.props;
-    const projectIds = filteredProjectIds.length ? filteredProjectIds : Object.keys(projects); //TODO rewrite this last bit
+    const projectIds = filteredProjectIds.length ? filteredProjectIds : Object.keys(projects);
 
     const Projects = projectIds.map(p => {
       return <ProjectTile

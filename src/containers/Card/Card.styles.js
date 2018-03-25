@@ -8,12 +8,18 @@ import {
   PRIMARY_COLOR,
   FONT_SIZE_XLARGE,
   FONT_WEIGHT_HEADER,
+  media,
 } from "../../theme";
 
 const CardWrapper = styled.div`
   max-width: 1024px;  
   width: 75%;
   margin: 0px auto;
+  
+  ${media.DESKTOP`
+    max-width: 95%;
+    width: 95%;
+  `}
 `;
 
 const Divider = styled.div`

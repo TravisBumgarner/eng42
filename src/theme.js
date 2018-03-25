@@ -56,11 +56,6 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   position: relative;
   height: 90vh;
   overflow-y: hidden;
-  
-  ${media.DESKTOP`
-    max-width: 95%;
-    width: 95%;
-  `}
 `;
 
 // ============================================= //

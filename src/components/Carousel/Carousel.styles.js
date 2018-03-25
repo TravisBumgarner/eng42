@@ -5,10 +5,9 @@ import FaAngleRight from 'react-icons/lib/fa/angle-right';
 
 import {
   TERTIARY_COLOR,
-  media,
 } from '../../theme'
 
-const ICON_SIZE = 50;
+const ICON_SIZE = 30;
 
 const CarouselWrapper = styled.div`
   display: flex;
@@ -23,12 +22,8 @@ const CarouselWrapper = styled.div`
 const PrevButton = styled(FaAngleLeft)`
   position: absolute;
   top:calc(50% - ${ICON_SIZE/2}px);
-  left: -50px;
+  left: 0px;
   z-index: 999;
-  
-  ${media.TABLET`
-    left: 0px;
-  `}
   
   &:hover{
     fill: ${TERTIARY_COLOR};
@@ -39,12 +34,8 @@ const PrevButton = styled(FaAngleLeft)`
 const NextButton = styled(FaAngleRight)`
   position: absolute;
   top:calc(50% - ${ICON_SIZE/2}px);
-  right: -50px;
+  right: 0px;
   z-index: 999;
-    
-  ${media.TABLET`
-    right: 0px;
-  `}
   
   &:hover{
     fill: ${TERTIARY_COLOR};

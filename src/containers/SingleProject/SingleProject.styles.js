@@ -13,11 +13,11 @@ const Row = styled.div`
 `;
 
 const Content= styled.div`
-  width: 68%;
+  width: 60%;
 `;
 
 const Sidebar = styled.div`
-  width: 30%;
+  width: 38%;
 `;
 
 export {
