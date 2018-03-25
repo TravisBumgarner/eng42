@@ -55,7 +55,7 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
   line-height: ${FONT_NORMAL_LINE_HEIGHT};
   position: relative;
   height: 90vh;
-  overflow-y: hidden;
+  overflow: hidden;
 `;
 
 // ============================================= //
