@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import FaClose from 'react-icons/lib/fa/close';
+import FaArrowLeft from 'react-icons/lib/fa/arrow-left';
 
 import Card from '../../containers/Card';
 
@@ -37,10 +37,12 @@ const ProjectNoScrollWrapper = ProjectsNoScrollWrapper.extend`
 `;
 
 
-const CloseIcon = styled(FaClose)`
+const BackIcon = styled(FaArrowLeft)`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  left: 0;
+  margin: 20px 0;
+  padding: 5px 0;
   fill: ${PRIMARY_COLOR};
   
   &:hover {
@@ -51,7 +53,7 @@ const CloseIcon = styled(FaClose)`
 `;
 
 export {
-  CloseIcon,
+  BackIcon,
   PortfolioWrapper,
   ProjectsCard,
   ProjectCard,

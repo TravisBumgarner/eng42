@@ -15,12 +15,13 @@ export default class Card extends Component {
       title,
       children,
       className,
+      shiftHeaderRight,
     } = this.props;
 
     return (
       <CardWrapper className={className}>
 
-        <CardTitle>
+        <CardTitle shiftHeaderRight={ shiftHeaderRight }>
           { title }
         </CardTitle>
 

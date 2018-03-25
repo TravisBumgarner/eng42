@@ -14,6 +14,10 @@ const CardTitle = styled.h2`
   font-size: ${ FONT_SIZE_XLARGE };
   font-weight: ${ FONT_WEIGHT_HEADER };
   margin: 20px 0;
+  ${props => props.shiftHeaderRight && `
+    position: relative;
+    left: 50px;
+  `}
 `;
 
 const CardContent = styled.div`
