@@ -40,7 +40,7 @@ export default class LearnMore extends Component {
               <LinksListTitle>Community</LinksListTitle>
               <ul>
                 <li><ExternalLink primary href="http://www.cambridgehackspace.com/">Cambridge Hackspace</ExternalLink></li>
-                <li><ExternalLink primary href="hhttps://sandbox.mit.edu/">MIT Sandbox</ExternalLink></li>
+                <li><ExternalLink primary href="https://sandbox.mit.edu/">MIT Sandbox</ExternalLink></li>
                 <li><ExternalLink primary href="https://d-lab.mit.edu/">MIT D-Lab</ExternalLink></li>
               </ul>
             </GroupLinksWrapper>
