@@ -12,12 +12,18 @@ const MeDescription = styled.div`
 `;
 
 const MeCard = styled(Card)`
+`;
+
+const MeNoScrollWrapper = styled.div`
+  width: 100%;
   max-height: 90vh;
   overflow-y: scroll;
+  box-sizing: border-box;
 `;
 
 export {
   MeDescription,
   MeCard,
+  MeNoScrollWrapper,
 }
 

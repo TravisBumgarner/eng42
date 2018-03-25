@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {
   MeDescription,
   MeCard,
+  MeNoScrollWrapper,
 } from './Me.styles';
 
 export class Me extends Component {
@@ -26,9 +27,11 @@ export class Me extends Component {
 
     return (
       <div>
-        <MeCard title={ `${name}` }>
-          <MeDescription>{ formattedDescription }</MeDescription>
-        </MeCard>
+        <MeNoScrollWrapper>
+          <MeCard title={ `${name}` }>
+            <MeDescription>{ formattedDescription }</MeDescription>
+          </MeCard>
+        </MeNoScrollWrapper>
       </div>
     )
   }

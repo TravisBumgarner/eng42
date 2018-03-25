@@ -7,6 +7,9 @@ import {
 } from "../../theme";
 
 const CardWrapper = styled.div`
+  max-width: 1024px;  
+  width: 75%;
+  margin: 0px auto;
 `;
 
 const CardTitle = styled.h2`
@@ -14,6 +17,7 @@ const CardTitle = styled.h2`
   font-size: ${ FONT_SIZE_XLARGE };
   font-weight: ${ FONT_WEIGHT_HEADER };
   margin: 20px 0;
+  
   ${props => props.shiftHeaderRight && `
     position: relative;
     left: 50px;
