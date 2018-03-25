@@ -10,7 +10,6 @@ import {
   PortfolioWrapper,
   ProjectCard,
   ProjectsCard,
-  BackIcon,
   ProjectNoScrollWrapper,
   ProjectsNoScrollWrapper,
 } from './Portfolio.styles';
@@ -57,8 +56,7 @@ export class Portfolio extends Component {
         </ProjectsNoScrollWrapper>
 
         <ProjectNoScrollWrapper isProjectOpen={ isProjectOpen }>
-          <ProjectCard shiftHeaderRight title={ project.name } >
-            <BackIcon size={28} onClick={ this.closeProject } />
+          <ProjectCard onClick = { this.closeProject } shiftHeaderRight title={ project.name } >
             <SingleProject />
           </ProjectCard>
         </ProjectNoScrollWrapper>

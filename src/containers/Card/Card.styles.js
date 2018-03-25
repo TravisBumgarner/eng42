@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
+import FaArrowLeft from 'react-icons/lib/fa/arrow-left';
+
 import {
   FONT_FAMILY_HEADER,
+  TERTIARY_COLOR,
+  PRIMARY_COLOR,
   FONT_SIZE_XLARGE,
   FONT_WEIGHT_HEADER,
 } from "../../theme";
@@ -28,7 +32,18 @@ const CardContent = styled.div`
   font-weight: 100;
 `;
 
+const BackButton = styled(FaArrowLeft)`
+  fill: ${TERTIARY_COLOR};
+  padding-right: 10px;
+  
+  &:hover {
+    fill: ${PRIMARY_COLOR};
+    cursor: pointer;
+  }
+`;
+
 export {
+  BackButton,
   CardWrapper,
   CardTitle,
   CardContent,

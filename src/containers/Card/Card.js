@@ -6,6 +6,7 @@ import {
   CardTitle,
   CardContent,
   CardWrapper,
+  BackButton,
 } from "./Card.styles";
 
 export default class Card extends Component {
@@ -15,13 +16,14 @@ export default class Card extends Component {
       title,
       children,
       className,
-      shiftHeaderRight,
+      onClick,
     } = this.props;
 
     return (
       <CardWrapper className={className}>
 
-        <CardTitle shiftHeaderRight={ shiftHeaderRight }>
+        <CardTitle>
+          { onClick && <BackButton size={ 29 } onClick={ onClick }/> }
           { title }
         </CardTitle>
 

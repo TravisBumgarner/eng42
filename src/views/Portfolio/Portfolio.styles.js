@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-import FaArrowLeft from 'react-icons/lib/fa/arrow-left';
-
 import Card from '../../containers/Card';
 
 import {
-  PRIMARY_COLOR,
-  TERTIARY_COLOR,
   DEFAULT_PAGE_WRAPPER,
 } from "../../theme";
 
@@ -37,23 +33,7 @@ const ProjectNoScrollWrapper = ProjectsNoScrollWrapper.extend`
 `;
 
 
-const BackIcon = styled(FaArrowLeft)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 20px 0;
-  padding: 5px 0;
-  fill: ${TERTIARY_COLOR};
-  
-  &:hover {
-    fill: ${PRIMARY_COLOR};
-    cursor: pointer;
-  }
-  }
-`;
-
 export {
-  BackIcon,
   PortfolioWrapper,
   ProjectsCard,
   ProjectCard,
