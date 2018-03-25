@@ -6,11 +6,6 @@ import {
   FONT_SIZE_LARGE,
 } from '../../theme';
 
-const MeDescription = styled.div`
-  font-size: ${FONT_SIZE_LARGE};
-  margin: 20px 0;
-`;
-
 const MeCard = styled(Card)`
 `;
 
@@ -22,7 +17,6 @@ const MeNoScrollWrapper = styled.div`
 `;
 
 export {
-  MeDescription,
   MeCard,
   MeNoScrollWrapper,
 }

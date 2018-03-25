@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 
 import ProjectDetail from '../../components/ProjectDetail';
 import ExternalLink from '../../components/ExternalLink';
-import Carousel from '../../components/Carousel';
+import Paragraph from '../../components/Paragraph';
+import Carousel from '../Carousel';
 
 import {
   SingleProjectWrapper,
@@ -19,7 +20,7 @@ export class SingleProject extends Component {
       skills,
     } = this.props;
 
-    const Description = project.description.split('\n').map((d, idx) => <p key={idx}>{d}</p>);
+    const Description = project.description.split('\n').map((d, idx) => <Paragraph key={idx}>{d}</Paragraph>);
     const Locations = project.location.map(l => l.name).join(", ");
     const Organizations = project.organization.map(o => o.name).join(", ");
     const Skills = project.skill.map(s => skills[s].name).join(", ");
@@ -35,17 +36,17 @@ export class SingleProject extends Component {
       <SingleProjectWrapper previewImageSrc = { project.preview_img && project.preview_img.src } >
         <Row>
           <Content>
+            {!!Links.length &&
+              <ProjectDetail title="Links">
+                <ul>{Links}</ul>
+              </ProjectDetail>
+            }
             <ProjectDetail title="Description">
               { Description }
             </ProjectDetail>
           </Content>
 
           <Sidebar>
-            {!!Links.length &&
-              <ProjectDetail title="Links">
-                <ul>{Links}</ul>
-              </ProjectDetail>
-            }
            <ProjectDetail title="Duration">
              {`${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}`}
            </ProjectDetail>

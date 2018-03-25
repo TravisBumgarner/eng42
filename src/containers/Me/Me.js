@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Paragraph from '../../components/Paragraph';
+
 import {
-  MeDescription,
   MeCard,
   MeNoScrollWrapper,
 } from './Me.styles';
@@ -23,13 +24,13 @@ export class Me extends Component {
       },
     } = this.props;
 
-    const formattedDescription = description.split('\n').map((p, idx) => <MeDescription key={idx}>{p}</MeDescription>);
+    const formattedDescription = description.split('\n').map((p, idx) => <Paragraph key={idx}>{p}</Paragraph>);
 
     return (
       <div>
         <MeNoScrollWrapper>
           <MeCard title={ `${name}` }>
-            <MeDescription>{ formattedDescription }</MeDescription>
+            { formattedDescription }
           </MeCard>
         </MeNoScrollWrapper>
       </div>
