@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as Sentry from '@sentry/browser';
 
+import Error500 from './views/Error500/Error500'
 import App from './views/App/App';
 import store from './store';
 import { muiTheme } from "./theme";
