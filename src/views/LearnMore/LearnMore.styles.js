@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import {
   DEFAULT_PAGE_WRAPPER,
   FONT_FAMILY_HEADER,
+  media
 } from "../../theme";
 
 const LearnMoreWrapper = DEFAULT_PAGE_WRAPPER.extend`
 `;
 
 const GroupLinksWrapper = styled.div`
+  ${media.PHONE`
+    margin-bottom: 15px;
+  `};
 `;
 
 const AllLinksWrapper = styled.div`
@@ -16,6 +20,10 @@ const AllLinksWrapper = styled.div`
   justify-content: space-between;
   max-width: 750px;
   margin: 0 auto;
+
+  ${media.PHONE`
+    flex-direction: column;
+  `};	
 `;
 
 const LinksListTitle = styled.h2`

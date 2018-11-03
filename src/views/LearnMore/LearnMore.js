@@ -31,11 +31,10 @@ export default class LearnMore extends Component {
             <GroupLinksWrapper>
               <LinksListTitle>Photography</LinksListTitle>
               <ul>
-                <li><ExternalLink primary href="http://photography.travisbumgarner.com/">Portfolio</ExternalLink></li>
+                <li><ExternalLink primary href="https://travisbumgarner.photography/">Portfolio</ExternalLink></li>
                 <li><ExternalLink primary href="https://www.instagram.com/esafoto/">Instagram</ExternalLink></li>
               </ul>
             </GroupLinksWrapper>
-
             <GroupLinksWrapper>
               <LinksListTitle>Community</LinksListTitle>
               <ul>
@@ -45,7 +44,15 @@ export default class LearnMore extends Component {
               </ul>
             </GroupLinksWrapper>
 
+            <GroupLinksWrapper>
+              <LinksListTitle>Travel</LinksListTitle>
+              <ul>
+                <li><ExternalLink primary href="http://mytravelsin.blogspot.com">Blog</ExternalLink></li>
+              </ul>
+            </GroupLinksWrapper>
+          
           </AllLinksWrapper>
+
         </Card>
       </LearnMoreWrapper>
     )
