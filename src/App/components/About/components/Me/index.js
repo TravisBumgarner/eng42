@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Paragraph from 'SharedComponents'
+import { Paragraph } from 'SharedComponents'
 
 import { MeCard, MeNoScrollWrapper } from './Me.styles'
 
 export class Me extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            selectedSkills: []
-        }
     }
 
     render() {
