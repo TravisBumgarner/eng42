@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Snackbar from 'material-ui/Snackbar'
 
-import { FONT_FAMILY_HEADER } from '../theme'
+import { FONT_FAMILY_HEADER } from 'Theme'
 
 const AppWrapper = styled.div``
 

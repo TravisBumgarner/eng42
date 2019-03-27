@@ -1,5 +1,5 @@
-import * as getCategories from './getCategories';
+import * as getCategories from './getCategories'
 
 export default {
-  ...getCategories,
-};
+    ...getCategories
+}

@@ -1,5 +1,3 @@
 import Introduction from './Introduction'
 
-export {
-    Introduction
-}
+export { Introduction }

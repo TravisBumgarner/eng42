@@ -1,5 +1,5 @@
-import * as getSkills from './getSkills';
+import * as getSkills from './getSkills'
 
 export default {
-  ...getSkills,
-};
+    ...getSkills
+}

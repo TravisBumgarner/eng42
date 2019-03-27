@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import { Card } from '../sharedComponents'
-import ExternalLink from '../../components/ExternalLink'
+import { Card, ExternalLink } from 'SharedComponents'
 
 import {
     LearnMoreWrapper,

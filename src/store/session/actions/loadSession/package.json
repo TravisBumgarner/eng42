@@ -1,4 +1,4 @@
 {
-  "name": "loadSession",
-  "main": "loadSession.js"
+    "name": "loadSession",
+    "main": "loadSession.js"
 }

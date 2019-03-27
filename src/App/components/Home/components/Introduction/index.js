@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { Card } from '../sharedComponents'
+import { Card } from 'SharedComponents'
 import { IntroText, SkillText } from './Introduction.styles'
 
 export class Introduction extends Component {

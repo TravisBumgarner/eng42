@@ -8,9 +8,9 @@ import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
 
 import { loadSession } from '../store/session/actions/loadSession'
 
-// import { Home, About, LearnMore, Portfolio, Contact, NotFound, Header } from './components'
+import { Home, About, LearnMore, Portfolio, Contact, NotFound, Header } from './components'
 
-import { TERTIARY_COLOR } from '../theme'
+import { TERTIARY_COLOR } from 'Theme'
 
 import { AppWrapper, LoadingWrapper, Popup, ErrorMsg } from './App.styles'
 

@@ -1,21 +1,14 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import {
-  PRIMARY_COLOR,
-  TERTIARY_COLOR,
-  SECONDARY_COLOR,
-} from "../../theme";
+import { PRIMARY_COLOR, TERTIARY_COLOR, SECONDARY_COLOR } from 'Theme'
 
 const ExternalLinkWrapper = styled.a`
-  color: ${props => props.primary ? PRIMARY_COLOR : SECONDARY_COLOR};
-  text-decoration: none;
-  &:hover{
-    color: ${TERTIARY_COLOR};
-    cursor: pointer;
-  }
-`;
+    color: ${props => (props.primary ? PRIMARY_COLOR : SECONDARY_COLOR)};
+    text-decoration: none;
+    &:hover {
+        color: ${TERTIARY_COLOR};
+        cursor: pointer;
+    }
+`
 
-export {
-  ExternalLinkWrapper,
-};
-
+export { ExternalLinkWrapper }

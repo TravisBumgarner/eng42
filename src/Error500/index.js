@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Card } from '../sharedComponents'
+import { Card } from 'SharedComponents'
 
 import { Error500Wrapper } from './Error500.styles'
 

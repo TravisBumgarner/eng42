@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import requestActions from '../../store/request/actions'
-import notificationActions from '../../store/notification/actions'
+import requestActions from '../../../../../store/request/actions'
+import notificationActions from '../../../../../store/notification/actions'
 
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 
-import { Card } from '../sharedComponents'
+import { Card } from 'SharedComponents'
 
 export class ContactForm extends Component {
     constructor(props) {

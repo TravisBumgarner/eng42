@@ -1,5 +1,5 @@
-import * as createNotification from './createNotification';
+import * as createNotification from './createNotification'
 
 export default {
-  ...createNotification,
-};
+    ...createNotification
+}

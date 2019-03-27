@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import msg from './msg';
+import msg from './msg'
 
 export default combineReducers({
-  msg,
-});
+    msg
+})

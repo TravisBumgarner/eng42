@@ -1,26 +1,18 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import {
-  PRIMARY_COLOR,
-  TERTIARY_COLOR
-} from "../../theme";
+import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
 
-const ThumbnailWrapper = styled.a`
-`;
+const ThumbnailWrapper = styled.a``
 
 const Image = styled.img`
-  max-height: 100px;
-  border: 2px solid ${ PRIMARY_COLOR };
-  margin: 5px;  
-  
-  &:hover{
-    border-color: ${ TERTIARY_COLOR };
-    cursor: pointer;
-  }
-`;
+    max-height: 100px;
+    border: 2px solid ${PRIMARY_COLOR};
+    margin: 5px;
 
-export {
-  ThumbnailWrapper,
-  Image,
-};
+    &:hover {
+        border-color: ${TERTIARY_COLOR};
+        cursor: pointer;
+    }
+`
 
+export { ThumbnailWrapper, Image }

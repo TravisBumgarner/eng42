@@ -1,4 +1,4 @@
 {
-  "name": "createNotification",
-  "main": "createNotification.js"
+    "name": "createNotification",
+    "main": "createNotification.js"
 }

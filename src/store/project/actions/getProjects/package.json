@@ -1,4 +1,4 @@
 {
-  "name": "getProjects",
-  "main": "getProjects.js"
+    "name": "getProjects",
+    "main": "getProjects.js"
 }

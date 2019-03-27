@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import Introduction from '../../containers/Introduction';
+import { Introduction } from './components'
 
-import {
-  HomeWrapper,
-} from './Home.styles'
+import { HomeWrapper } from './Home.styles'
 
 export class Home extends Component {
-  render() {
-
-    return (
-      <HomeWrapper>
-        <Introduction />
-      </HomeWrapper>
-    )
-
-  }
+    render() {
+        return (
+            <HomeWrapper>
+                <Introduction />
+            </HomeWrapper>
+        )
+    }
 }
 
-export default connect((state) => ({
-
-}), {
-
-})(Home);
+export default connect(
+    state => ({}),
+    {}
+)(Home)

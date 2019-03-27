@@ -1,15 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { transparentize } from 'polished';
+import { transparentize } from 'polished'
 
-import {
-  FONT_FAMILY_HEADER,
-  SECONDARY_COLOR,
-  media,
-  PRIMARY_COLOR,
-} from '../../theme';
+import { FONT_FAMILY_HEADER, SECONDARY_COLOR, media, PRIMARY_COLOR } from 'Theme'
 
-const SPACE_BETWEEN = 5;
+const SPACE_BETWEEN = 5
 
 const ProjectTileWrapper = styled.div`
   float: left;
@@ -23,31 +18,33 @@ const ProjectTileWrapper = styled.div`
   
   border: 1px solid ${PRIMARY_COLOR};
 
-  ${props => `width:${props.gridWidth/4 - SPACE_BETWEEN*2}px; height:${props.gridWidth/4 - SPACE_BETWEEN*2}px;`}
+  ${props =>
+      `width:${props.gridWidth / 4 - SPACE_BETWEEN * 2}px; height:${props.gridWidth / 4 -
+          SPACE_BETWEEN * 2}px;`}
 
   ${media.DESKTOP`
-    ${props => `width:${props.gridWidth/3 - SPACE_BETWEEN*2}px; height:${props.gridWidth/3 - SPACE_BETWEEN*2}px;`}
+    ${props =>
+        `width:${props.gridWidth / 3 - SPACE_BETWEEN * 2}px; height:${props.gridWidth / 3 -
+            SPACE_BETWEEN * 2}px;`}
   `}
 
   ${media.TABLET`
-    ${props => `width:${props.gridWidth/2 - SPACE_BETWEEN*2}px; height:${props.gridWidth/2 - SPACE_BETWEEN*2}px;`}
+    ${props =>
+        `width:${props.gridWidth / 2 - SPACE_BETWEEN * 2}px; height:${props.gridWidth / 2 -
+            SPACE_BETWEEN * 2}px;`}
   `}
   
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 const ProjectDescription = styled.div`
-  background-color: ${transparentize(0.3, PRIMARY_COLOR)};
-  font-family: ${FONT_FAMILY_HEADER};
-  padding: 10px;
-  width: 100%;
-  color: ${SECONDARY_COLOR};
-`;
+    background-color: ${transparentize(0.3, PRIMARY_COLOR)};
+    font-family: ${FONT_FAMILY_HEADER};
+    padding: 10px;
+    width: 100%;
+    color: ${SECONDARY_COLOR};
+`
 
-export {
-  ProjectTileWrapper,
-  ProjectDescription,
-}
-
+export { ProjectTileWrapper, ProjectDescription }

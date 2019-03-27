@@ -1,4 +1,4 @@
 {
-  "name": "apiGet",
-  "main": "apiGet.js"
+    "name": "apiGet",
+    "main": "apiGet.js"
 }

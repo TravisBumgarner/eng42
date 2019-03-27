@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { Card } from '../sharedComponents'
+import { Card } from 'SharedComponents'
 
-import { DEFAULT_PAGE_WRAPPER } from '../../theme'
+import { DEFAULT_PAGE_WRAPPER } from 'Theme'
 
 const ProjectsCard = styled(Card)``
 

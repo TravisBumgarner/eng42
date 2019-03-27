@@ -1,4 +1,4 @@
 {
-  "name": "getAuthors",
-  "main": "getAuthors.js"
+    "name": "getAuthors",
+    "main": "getAuthors.js"
 }

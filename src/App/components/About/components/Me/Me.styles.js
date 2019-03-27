@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { Card } from '../sharedComponents'
+import { Card } from 'SharedComponents'
 
-import { FONT_SIZE_LARGE } from '../../theme'
+import { FONT_SIZE_LARGE } from 'Theme'
 
 const MeCard = styled(Card)``
 

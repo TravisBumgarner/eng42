@@ -1,5 +1,5 @@
-import * as getAuthors from './getAuthors';
+import * as getAuthors from './getAuthors'
 
 export default {
-  ...getAuthors,
-};
+    ...getAuthors
+}
