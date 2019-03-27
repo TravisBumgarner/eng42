@@ -18,14 +18,10 @@ export class ProjectTile extends Component {
             project: { preview_img, name },
             gridWidth
         } = this.props
-
+        // TODO: Move onClick to anchor tag
         return (
-            <ProjectTileWrapper
-                previewImageSrc={preview_img && preview_img.src}
-                gridWidth={gridWidth}
-                onClick={this.openProject}
-            >
-                <ProjectDescription>{name}</ProjectDescription>
+            <ProjectTileWrapper onClick={this.openProject}>
+                {preview_img && <img src={preview_img.src} />}
             </ProjectTileWrapper>
         )
     }

@@ -7,36 +7,17 @@ import { FONT_FAMILY_HEADER, SECONDARY_COLOR, media, PRIMARY_COLOR } from 'Theme
 const SPACE_BETWEEN = 5
 
 const ProjectTileWrapper = styled.div`
-  float: left;
-  box-sizing: border-box;
-  margin: ${SPACE_BETWEEN}px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: ${props => props.previewImageSrc && `url("${props.previewImageSrc}")`} no-repeat;
-  background-size: cover;  
-  
-  border: 1px solid ${PRIMARY_COLOR};
+    float: left;
+    box-sizing: border-box;
+    margin: ${SPACE_BETWEEN}px;
+    align-items: flex-end;
+    justify-content: center;
 
-  ${props =>
-      `width:${props.gridWidth / 4 - SPACE_BETWEEN * 2}px; height:${props.gridWidth / 4 -
-          SPACE_BETWEEN * 2}px;`}
+    border: 1px solid ${PRIMARY_COLOR};
 
-  ${media.DESKTOP`
-    ${props =>
-        `width:${props.gridWidth / 3 - SPACE_BETWEEN * 2}px; height:${props.gridWidth / 3 -
-            SPACE_BETWEEN * 2}px;`}
-  `}
-
-  ${media.TABLET`
-    ${props =>
-        `width:${props.gridWidth / 2 - SPACE_BETWEEN * 2}px; height:${props.gridWidth / 2 -
-            SPACE_BETWEEN * 2}px;`}
-  `}
-  
-  &:hover {
-    cursor: pointer;
-  }
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 const ProjectDescription = styled.div`
