@@ -53,8 +53,6 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
     font-weight: ${FONT_WEIGHT_CONTENT};
     line-height: ${FONT_NORMAL_LINE_HEIGHT};
     position: relative;
-    height: 90vh;
-    overflow: hidden;
 `
 
 // ============================================= //

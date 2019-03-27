@@ -2,15 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import projectActions from '../../../store/project/actions'
 
-import { ProjectsFilter, ProjectsGrid, SingleProject } from './components'
+import { ProjectsFilter, ProjectsGrid } from './components'
 
-import {
-    PortfolioWrapper,
-    ProjectCard,
-    ProjectsCard,
-    ProjectNoScrollWrapper,
-    ProjectsNoScrollWrapper
-} from './Portfolio.styles'
+import { PortfolioWrapper, ProjectsCard } from './Portfolio.styles'
 
 export class Portfolio extends Component {
     constructor(props) {
@@ -39,18 +33,10 @@ export class Portfolio extends Component {
 
         return (
             <PortfolioWrapper>
-                <ProjectsNoScrollWrapper isProjectOpen={isProjectOpen}>
-                    <ProjectsCard title="Portfolio">
-                        <ProjectsFilter />
-                        <ProjectsGrid openProject={this.openProject} />
-                    </ProjectsCard>
-                </ProjectsNoScrollWrapper>
-
-                <ProjectNoScrollWrapper isProjectOpen={isProjectOpen}>
-                    <ProjectCard onClick={this.closeProject} shiftHeaderRight title={project.name}>
-                        {isProjectOpen && <SingleProject />}
-                    </ProjectCard>
-                </ProjectNoScrollWrapper>
+                <ProjectsCard title="Portfolio">
+                    <ProjectsFilter />
+                    <ProjectsGrid openProject={this.openProject} />
+                </ProjectsCard>
             </PortfolioWrapper>
         )
     }

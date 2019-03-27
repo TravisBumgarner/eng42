@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { ProjectTileWrapper, ProjectDescription } from './ProjectTile.styles'
+import { ProjectTileWrapper, SiteLink } from './ProjectTile.styles'
 
 export class ProjectTile extends Component {
     openProject = () => {
@@ -15,14 +15,17 @@ export class ProjectTile extends Component {
 
     render() {
         const {
-            project: { preview_img, name },
+            project: { preview_img, name, id },
             gridWidth
         } = this.props
         // TODO: Move onClick to anchor tag
         return (
-            <ProjectTileWrapper onClick={this.openProject}>
-                {preview_img && <img src={preview_img.src} />}
-            </ProjectTileWrapper>
+            <SiteLink to={`/portfolio/${id}`}>
+                <ProjectTileWrapper onClick={this.openProject}>
+                    {preview_img && <img src={preview_img.src} />}
+                    <h5>{name}</h5>
+                </ProjectTileWrapper>
+            </SiteLink>
         )
     }
 }
