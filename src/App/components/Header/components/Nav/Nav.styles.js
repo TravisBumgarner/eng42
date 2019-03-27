@@ -26,15 +26,15 @@ const activeSiteLink = {
     borderTop: `2px solid ${TERTIARY_COLOR}`
 }
 
-const SiteLinkList = styled.ul`
+const List = styled.ul`
     list-style-type: none;
     margin: 0;
     padding: 0;
 `
 
-const SiteLinkItem = styled.li`
+const Item = styled.li`
     display: inline;
     margin: 5px;
 `
 
-export { activeSiteLink, SiteLink, SiteLinkItem, SiteLinkList }
+export { activeSiteLink, SiteLink, Item, List }
