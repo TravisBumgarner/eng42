@@ -39,12 +39,13 @@
     "redux-thunk": "^2.2.0",
     "styled-components": "^2.4.0",
     "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^3.10.0",
+    "webpack": "^4.29.6",
     "webpack-dev-server": "^3.1.11",
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.1.1"
+    "babel-eslint": "^8.1.1",
+    "webpack-cli": "^3.3.0"
   },
   "proxy": "http://localhost:24971"
 }
