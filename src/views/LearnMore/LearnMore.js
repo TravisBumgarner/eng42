@@ -22,7 +22,7 @@ export default class LearnMore extends Component {
             <GroupLinksWrapper>
               <LinksListTitle>Engineering</LinksListTitle>
               <ul>
-                <li><ExternalLink primary href="https://www.instagram.com/painlessprototyping/">Instagram</ExternalLink></li>
+                <li><ExternalLink primary href="https://www.instagram.com/travis_the_maker/">Instagram</ExternalLink></li>
                 <li><ExternalLink primary href="https://github.com/TravisBumgarner/">Github</ExternalLink></li>
                 <li><ExternalLink primary href="http://painlessprototyping.com/">Startup</ExternalLink></li>
               </ul>
