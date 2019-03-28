@@ -8,7 +8,7 @@ import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
 
 import { loadSession } from '../store/session/actions/loadSession'
 
-import { Home, About, LearnMore, Portfolio, NotFound, Header } from './components'
+import { Home, About, LearnMore, Portfolio, NotFound, Header, SingleProject } from './components'
 
 import { TERTIARY_COLOR } from 'Theme'
 
@@ -48,6 +48,7 @@ export class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/portfolio" component={Portfolio} />
+                    <Route path="/portfolio/:id" component={SingleProject} />
                     <Route exact path="/learn_more" component={LearnMore} />
                     <Route component={NotFound} />
                 </Switch>
