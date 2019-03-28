@@ -1,13 +1,8 @@
 import styled from 'styled-components'
-import Snackbar from 'material-ui/Snackbar'
 
 import { FONT_FAMILY_HEADER } from 'Theme'
 
 const AppWrapper = styled.div``
-
-const Popup = styled(Snackbar)`
-    z-index: 1000;
-`
 
 const ErrorMsg = styled.h2`
     margin: 0 0 5px 0;
@@ -23,4 +18,4 @@ const LoadingWrapper = styled.div`
     align-items: center;
 `
 
-export { AppWrapper, LoadingWrapper, Popup, ErrorMsg }
+export { AppWrapper, LoadingWrapper, ErrorMsg }

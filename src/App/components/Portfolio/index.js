@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import projectActions from '../../../store/project/actions'
 
-import { ProjectsFilter, ProjectsGrid } from './components'
+import { ProjectsGrid } from './components'
 
 import { PortfolioWrapper, ProjectsCard } from './Portfolio.styles'
 
@@ -27,14 +27,9 @@ export class Portfolio extends Component {
     }
 
     render() {
-        const { project } = this.props
-
-        const { isProjectOpen } = this.state
-
         return (
             <PortfolioWrapper>
                 <ProjectsCard title="Portfolio">
-                    <ProjectsFilter />
                     <ProjectsGrid openProject={this.openProject} />
                 </ProjectsCard>
             </PortfolioWrapper>

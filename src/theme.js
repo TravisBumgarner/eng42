@@ -1,4 +1,3 @@
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import styled, { css } from 'styled-components'
 
 // ============================================= //
@@ -54,20 +53,3 @@ export const DEFAULT_PAGE_WRAPPER = styled.div`
     line-height: ${FONT_NORMAL_LINE_HEIGHT};
     position: relative;
 `
-
-// ============================================= //
-// == Material UI  ============================= //
-// ============================================= //
-
-export const muiTheme = getMuiTheme({
-    palette: {
-        textColor: `${PRIMARY_COLOR}`,
-        fontFamily: `${FONT_FAMILY_CONTENT}`,
-        primary1Color: `${TERTIARY_COLOR}`,
-        primary2Color: `${TERTIARY_COLOR}`,
-        primary3Color: `${TERTIARY_COLOR}`,
-        accent1Color: `${TERTIARY_COLOR}`,
-        accent2Color: `${TERTIARY_COLOR}`,
-        accent3Color: `${TERTIARY_COLOR}`
-    }
-})

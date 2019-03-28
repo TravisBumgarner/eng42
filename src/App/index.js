@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import CircularProgress from 'material-ui/CircularProgress'
 import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
 
 import { loadSession } from '../store/session/actions/loadSession'
@@ -12,7 +11,7 @@ import { Home, LearnMore, Portfolio, NotFound, Header, SingleProject } from './c
 
 import { TERTIARY_COLOR } from 'Theme'
 
-import { AppWrapper, LoadingWrapper, Popup, ErrorMsg } from './App.styles'
+import { AppWrapper, LoadingWrapper, ErrorMsg } from './App.styles'
 
 export class App extends Component {
     static propTypes = {
@@ -51,7 +50,6 @@ export class App extends Component {
                     <Route exact path="/learn_more" component={LearnMore} />
                     <Route component={NotFound} />
                 </Switch>
-                <Popup open={!!notificationMsg.length} message={notificationMsg} />
             </AppWrapper>
         ) : (
             <LoadingWrapper>
@@ -61,7 +59,7 @@ export class App extends Component {
                         <FaThumbsDown /> Sorry there was an error. Please reload or try again later.
                     </ErrorMsg>
                 ) : (
-                    <CircularProgress color={`${TERTIARY_COLOR}`} size={120} thickness={7} />
+                    <div>Loading</div>
                 )}
             </LoadingWrapper>
         )
