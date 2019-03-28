@@ -1,9 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import { Text, ExternalLink, Title } from 'SharedComponents'
-import { Carousel, Section } from './components'
+import { DetailsWrapper, Content, Sidebar, Row, Image } from './Details.styles'
 
-import { DetailsWrapper, Content, Sidebar, Row } from './Details.styles'
+const SectionWrapper = styled.div`
+    width: 100%;
+`
+
+const Section = ({ children, title }) => {
+    return (
+        <SectionWrapper>
+            <Title size="small">{title}</Title>
+            <div>{children}</div>
+        </SectionWrapper>
+    )
+}
 
 const Details = ({
     project: {
@@ -33,6 +45,7 @@ const Details = ({
             </li>
         )
     })
+    const Images = image.map(i => <Image src={i.src} />)
     return (
         <DetailsWrapper previewImageSrc={preview_img && preview_img.src}>
             <Row>
@@ -69,13 +82,7 @@ const Details = ({
                 </Sidebar>
             </Row>
             <Row>
-                <Content>
-                    {!!image.length && (
-                        <Section title="Photos">
-                            <Carousel images={image} />
-                        </Section>
-                    )}
-                </Content>
+                <Content>{!!image.length && <Section title="Photos">{Images}</Section>}</Content>
             </Row>
         </DetailsWrapper>
     )

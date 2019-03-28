@@ -22,4 +22,11 @@ const Sidebar = styled.div`
     margin: 10px;
 `
 
-export { DetailsWrapper, Content, Sidebar, Row }
+const Image = styled.img`
+    padding: 10px;
+    border: 2px solid black;
+    display: block;
+    margin: 10px;
+`
+
+export { DetailsWrapper, Content, Sidebar, Row, Image }
