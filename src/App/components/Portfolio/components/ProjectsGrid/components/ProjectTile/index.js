@@ -15,8 +15,7 @@ export class ProjectTile extends Component {
 
     render() {
         const {
-            project: { preview_img, name, id },
-            gridWidth
+            project: { preview_img, name, id }
         } = this.props
         // TODO: Move onClick to anchor tag
         return (

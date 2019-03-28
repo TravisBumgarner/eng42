@@ -14,10 +14,6 @@ const INTERNAL_LINKS = [
     {
         text: 'Portfolio',
         to: '/portfolio'
-    },
-    {
-        text: 'About',
-        to: '/about'
     }
 ]
 const EXTERNAL_LINKS = [
