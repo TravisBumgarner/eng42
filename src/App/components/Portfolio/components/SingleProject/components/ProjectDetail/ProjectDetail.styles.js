@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FONT_FAMILY_HEADER, FONT_WEIGHT_HEADER, PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
+import { FONT_FAMILY_HEADER, FONT_WEIGHT_HEADER, TERTIARY_COLOR } from 'Theme'
 
 const ProjectDetailWrapper = styled.div`
     margin: 10px 0;

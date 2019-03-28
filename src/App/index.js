@@ -44,10 +44,9 @@ export class App extends Component {
             <AppWrapper>
                 <Header />
                 <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/portfolio" component={Portfolio} />
-                    <Route path="/portfolio/:id" component={SingleProject} />
-                    <Route exact path="/learn_more" component={LearnMore} />
+                    {/* <Route exact path="/" component={Home} /> */}
+                    <Route exact path="/" component={Portfolio} />
+                    <Route path="/:id" component={SingleProject} />
                     <Route component={NotFound} />
                 </Switch>
             </AppWrapper>

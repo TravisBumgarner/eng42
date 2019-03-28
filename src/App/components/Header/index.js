@@ -8,6 +8,7 @@ export default class Header extends Component {
     render() {
         return (
             <HeaderWrapper>
+                <h1>Travis Bumgarner</h1>
                 <Nav />
             </HeaderWrapper>
         )
