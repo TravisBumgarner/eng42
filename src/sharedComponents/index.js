@@ -1,6 +1,7 @@
 import Card from './Card'
-import Paragraph from './Paragraph'
+import Text from './Text'
+import Title from './Title'
 import ExternalLink from './ExternalLink'
 import Error from './Error'
 
-export { ExternalLink, Paragraph, Card, Error }
+export { ExternalLink, Text, Card, Error, Title }

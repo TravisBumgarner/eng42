@@ -4,8 +4,9 @@ import { transparentize } from 'polished'
 import FaAngleLeft from 'react-icons/lib/fa/angle-left'
 import FaAngleRight from 'react-icons/lib/fa/angle-right'
 
-import { PRIMARY_COLOR, TERTIARY_COLOR, SECONDARY_COLOR } from 'Theme'
-
+const PRIMARY_COLOR = '#000000'
+const SECONDARY_COLOR = '#FFFFFF'
+const TERTIARY_COLOR = '#4acfa0'
 const ICON_SIZE = 30
 
 const CarouselWrapper = styled.div`

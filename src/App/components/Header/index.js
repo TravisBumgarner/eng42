@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 import { Nav } from './components'
 
-import { PRIMARY_COLOR, SECONDARY_COLOR } from 'Theme'
+const PRIMARY_COLOR = '#000000'
+const SECONDARY_COLOR = '#FFFFFF'
 
 const HeaderWrapper = styled.div`
     width: 100vw;

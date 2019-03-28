@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { Paragraph, ExternalLink } from 'SharedComponents'
+import { Text, ExternalLink } from 'SharedComponents'
 import { Carousel, ProjectDetail } from './components'
 
 import { RenameMeWrapper, Content, Sidebar, Row } from './RenameMe.styles'
@@ -12,7 +12,7 @@ export class RenameMe extends Component {
 
         const Description = project.description
             .split('\n')
-            .map((d, idx) => <Paragraph key={idx}>{d}</Paragraph>)
+            .map((d, idx) => <Text key={idx}>{d}</Text>)
         const Locations = project.location.map(l => l.name).join(', ')
         const Organizations = project.organization.map(o => o.name).join(', ')
         const Skills = project.skill.map(s => skills[s].name).join(', ')

@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { transparentize } from 'polished'
 
-import { FONT_FAMILY_HEADER, SECONDARY_COLOR, media, PRIMARY_COLOR } from 'Theme'
+const PRIMARY_COLOR = '#000000'
+const SECONDARY_COLOR = '#FFFFFF'
 
 const ProjectTileWrapper = styled.div``
 
