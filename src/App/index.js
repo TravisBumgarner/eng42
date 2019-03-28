@@ -1,72 +1,56 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
-import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
-
-import { loadSession } from '../store/session/actions/loadSession'
+import axios from 'axios'
 
 import { Portfolio, NotFound, Header, SingleProject, Navigation } from './components'
 
-import { AppWrapper, LoadingWrapper, ErrorMsg } from './App.styles'
+import { AppWrapper, LoadingWrapper } from './App.styles'
 
-export class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            shouldErrorMsg: false
+            isLoading: true,
+            projects: {}
         }
     }
 
+    fetchData = () => {
+        axios
+            .request({
+                method: 'GET',
+                url: 'https://eng40api.travisbumgarner.com/projects'
+            })
+            .then(({ data }) => this.setState({ projects: data, isLoading: false }))
+            .catch(() => this.setState({ isLoading: false }))
+    }
+
     componentWillMount() {
-        // Load error message if page hasn't finished loading in 10 seconds.
-        setTimeout(
-            function() {
-                this.setState({ shouldErrorMsg: true })
-            }.bind(this),
-            10000
-        )
-        this.props.loadSession()
+        this.fetchData()
     }
 
     render() {
-        const { loaded, notificationMsg } = this.props
-
-        const { shouldErrorMsg } = this.state
-        return loaded ? (
+        const { isLoading, projects } = this.state
+        return isLoading ? (
+            <LoadingWrapper>Loading</LoadingWrapper>
+        ) : (
             <AppWrapper>
                 <Header />
                 <Navigation />
                 <Switch>
-                    {/* <Route exact path="/" component={Home} /> */}
-                    <Route exact path="/" component={Portfolio} />
-                    <Route path="/:id" component={SingleProject} />
+                    <Route
+                        exact
+                        path="/"
+                        render={props => <Portfolio {...props} projects={projects} />}
+                    />
+                    <Route
+                        path="/:id"
+                        render={props => <SingleProject {...props} projects={projects} />}
+                    />
                     <Route component={NotFound} />
                 </Switch>
             </AppWrapper>
-        ) : (
-            <LoadingWrapper>
-                {shouldErrorMsg ? (
-                    <ErrorMsg>
-                        <FaThumbsDown />
-                        <FaThumbsDown /> Sorry there was an error. Please reload or try again later.
-                    </ErrorMsg>
-                ) : (
-                    <div>Loading</div>
-                )}
-            </LoadingWrapper>
         )
     }
 }
-
-export default withRouter(
-    connect(
-        state => ({
-            loaded: state.session.meta.loaded,
-            notificationMsg: state.notification.msg
-        }),
-        {
-            loadSession
-        }
-    )(App)
-)

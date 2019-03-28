@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 import { Text, ExternalLink, Title } from 'SharedComponents'
 import { Carousel, Section } from './components'
@@ -18,13 +17,13 @@ const Details = ({
         start_date,
         end_date,
         image
-    },
-    skills
+    }
+    // skills
 }) => {
     const Description = description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
     const Locations = location.map(l => l.name).join(', ')
     const Organizations = organization.map(o => o.name).join(', ')
-    const Skills = skill.map(s => skills[s].name).join(', ')
+    // const Skills = skill.map(s => skills[s].name).join(', ')
     const Links = link.map(l => {
         return (
             <li key={l.id}>
@@ -56,9 +55,9 @@ const Details = ({
                         <Text>{`${start_date.slice(0, -3)} - ${end_date.slice(0, -3)}`}</Text>
                     </Section>
 
-                    <Section title="Skills">
+                    {/* <Section title="Skills">
                         <Text>{Skills}</Text>
-                    </Section>
+                    </Section> */}
 
                     <Section title="Location">
                         <Text>{Locations}</Text>
@@ -82,11 +81,4 @@ const Details = ({
     )
 }
 
-export default connect(
-    (state, ownProps) => ({
-        project: state.project.all[state.project.selected],
-        skills: state.skill.all,
-        categories: state.category.all
-    }),
-    {}
-)(Details)
+export default Details

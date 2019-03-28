@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import * as Sentry from '@sentry/browser'
 
 import { Error } from './sharedComponents'
 import App from './App'
-import store from './store'
 
 Sentry.init({
     dsn: 'https://96b0481bcf204abfaec06fb7ffc59ed8@sentry.io/1315175'
@@ -41,11 +39,9 @@ class SentryWrapper extends Component {
 
 ReactDOM.render(
     <SentryWrapper>
-        <Provider store={store}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </Provider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </SentryWrapper>,
     document.getElementById('root')
 )

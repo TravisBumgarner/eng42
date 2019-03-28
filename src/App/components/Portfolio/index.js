@@ -4,10 +4,10 @@ import { Card } from 'SharedComponents'
 
 import { Grid } from './components'
 
-const Portfolio = () => {
+const Portfolio = ({ projects }) => {
     return (
         <Card>
-            <Grid />
+            <Grid projects={projects} />
         </Card>
     )
 }

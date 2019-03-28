@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 import { Card } from 'SharedComponents'
 import { IntroText, SkillText } from './Introduction.styles'
 
-export class Introduction extends Component {
+class Introduction extends Component {
     constructor(props) {
         super(props)
 
@@ -72,9 +71,4 @@ export class Introduction extends Component {
     }
 }
 
-export default connect(
-    state => ({
-        allSkills: state.skill.all
-    }),
-    {}
-)(Introduction)
+export default Introduction

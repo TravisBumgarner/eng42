@@ -1,32 +1,20 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
-import projectActions from '../../../store/project/actions'
+import React from 'react'
 
 import { Details } from './components'
 
 import { SingleProjectWrapper } from './SingleProject.styles'
 
 const SingleProject = ({
-    project,
+    projects,
     match: {
         params: { id }
-    },
-    setSelectedProject
+    }
 }) => {
-    setSelectedProject(id)
     return (
         <SingleProjectWrapper>
-            <Details />
+            <Details project={Object.values(projects).filter(project => (project.id = id))[0]} />
         </SingleProjectWrapper>
     )
 }
 
-export default connect(
-    state => ({
-        project: state.project.all[state.project.selected]
-    }),
-    {
-        setSelectedProject: projectActions.setSelectedProject
-    }
-)(SingleProject)
+export default SingleProject

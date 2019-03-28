@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 import { Introduction } from './components'
 
@@ -13,7 +12,4 @@ const Home = () => {
     )
 }
 
-export default connect(
-    state => ({}),
-    {}
-)(Home)
+export default Home
