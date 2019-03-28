@@ -7,7 +7,7 @@ const Section = ({ children, title }) => {
     return (
         <SectionWrapper>
             <Title size="small">{title}</Title>
-            <Text>{children}</Text>
+            <div>{children}</div>
         </SectionWrapper>
     )
 }

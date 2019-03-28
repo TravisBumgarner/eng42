@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import { Text, ExternalLink } from 'SharedComponents'
@@ -15,7 +15,7 @@ const Details = ({ project, skills }) => {
         return (
             <li key={l.id}>
                 <ExternalLink primary href={l.src}>
-                    {l.name}
+                    <Text>{l.name}</Text>
                 </ExternalLink>
             </li>
         )
@@ -35,14 +35,23 @@ const Details = ({ project, skills }) => {
 
                 <Sidebar>
                     <Section title="Duration">
-                        {`${project.start_date.slice(0, -3)} - ${project.end_date.slice(0, -3)}`}
+                        <Text>{`${project.start_date.slice(0, -3)} - ${project.end_date.slice(
+                            0,
+                            -3
+                        )}`}</Text>
                     </Section>
 
-                    <Section title="Skills">{Skills}</Section>
+                    <Section title="Skills">
+                        <Text>{Skills}</Text>
+                    </Section>
 
-                    <Section title="Location">{Locations}</Section>
+                    <Section title="Location">
+                        <Text>{Locations}</Text>
+                    </Section>
 
-                    <Section title="Organization">{Organizations}</Section>
+                    <Section title="Organization">
+                        <Text>{Organizations}</Text>
+                    </Section>
                 </Sidebar>
             </Row>
             <Row>
