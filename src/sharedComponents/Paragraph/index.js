@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 
 import { ParagraphWrapper } from './Paragraph.styles'
 
-export default class Paragraph extends Component {
-    render() {
-        const { children } = this.props
-
-        return <ParagraphWrapper>{children}</ParagraphWrapper>
-    }
+const Paragraph = ({ children }) => {
+    return <ParagraphWrapper>{children}</ParagraphWrapper>
 }
+
+export default Paragraph
