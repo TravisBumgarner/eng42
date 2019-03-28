@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import axios from 'axios'
@@ -7,50 +7,47 @@ import { Portfolio, NotFound, Header, SingleProject, Navigation } from './compon
 
 import { AppWrapper, LoadingWrapper } from './App.styles'
 
-export default class App extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isLoading: true,
-            projects: {}
-        }
-    }
+const App = () => {
+    const [isLoading, setIsLoading] = useState(false)
+    const [projects, setProjects] = useState({})
+    useEffect(() => fetchData(), [])
 
-    fetchData = () => {
+    const fetchData = () => {
         axios
             .request({
                 method: 'GET',
                 url: 'https://eng40api.travisbumgarner.com/projects'
             })
-            .then(({ data }) => this.setState({ projects: data, isLoading: false }))
-            .catch(() => this.setState({ isLoading: false }))
+            .then(({ data }) => {
+                console.log(data)
+                setProjects(data)
+                setIsLoading(false)
+            })
+            .catch(() => {
+                setIsLoading(false)
+            })
     }
 
-    componentWillMount() {
-        this.fetchData()
-    }
-
-    render() {
-        const { isLoading, projects } = this.state
-        return isLoading ? (
-            <LoadingWrapper>Loading</LoadingWrapper>
-        ) : (
-            <AppWrapper>
-                <Header />
-                <Navigation />
-                <Switch>
-                    <Route
-                        exact
-                        path="/"
-                        render={props => <Portfolio {...props} projects={projects} />}
-                    />
-                    <Route
-                        path="/:id"
-                        render={props => <SingleProject {...props} projects={projects} />}
-                    />
-                    <Route component={NotFound} />
-                </Switch>
-            </AppWrapper>
-        )
-    }
+    return isLoading ? (
+        <LoadingWrapper>Loading</LoadingWrapper>
+    ) : (
+        <AppWrapper>
+            <Header />
+            <Navigation />
+            <Switch>
+                <Route
+                    exact
+                    path="/"
+                    render={props => <Portfolio {...props} projects={projects} />}
+                />
+                <Route
+                    path="/:id"
+                    render={props => <SingleProject {...props} projects={projects} />}
+                />
+                <Route component={NotFound} />
+            </Switch>
+        </AppWrapper>
+    )
 }
+
+export default App
