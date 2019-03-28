@@ -6,7 +6,7 @@ import { TileWrapper } from './Tile.styles'
 
 const Tile = ({ project: { id, preview_img, name } }) => {
     return (
-        <NavLink to={`/portfolio/${id}`}>
+        <NavLink to={`/${id}`}>
             <TileWrapper>
                 {preview_img && <img src={preview_img.src} />}
                 {/* <h5>{name}</h5> */}
