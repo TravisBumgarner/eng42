@@ -9,12 +9,4 @@ const ProjectTileWrapper = styled.div``
 
 const SiteLink = styled(NavLink)``
 
-const ProjectDescription = styled.div`
-    background-color: ${transparentize(0.3, PRIMARY_COLOR)};
-    font-family: ${FONT_FAMILY_HEADER};
-    padding: 10px;
-    width: 100%;
-    color: ${SECONDARY_COLOR};
-`
-
-export { ProjectTileWrapper, ProjectDescription, SiteLink }
+export { ProjectTileWrapper, SiteLink }
