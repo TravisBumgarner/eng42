@@ -4,7 +4,18 @@ import LinkedIn from 'react-icons/lib/fa/linkedin'
 import Instagram from 'react-icons/lib/fa/instagram'
 
 import { ExternalLink } from 'SharedComponents'
-import { List, Item } from './Nav.styles'
+import styled from 'styled-components'
+
+const List = styled.ul`
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+`
+
+const Item = styled.li`
+    display: inline;
+    margin: 5px;
+`
 
 const EXTERNAL_LINKS = [
     {
@@ -31,7 +42,7 @@ const EXTERNAL_LINKS = [
 
 const Nav = () => {
     const ExternalLinks = EXTERNAL_LINKS.map(l => (
-        <Item key={l.text}>
+        <Item key={l.href}>
             <ExternalLink href={l.href}>{l.content}</ExternalLink>
         </Item>
     ))
