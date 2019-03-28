@@ -7,7 +7,14 @@ import { Details } from './components'
 
 import { SingleProjectWrapper } from './SingleProject.styles'
 
-const SingleProject = ({ project }) => {
+const SingleProject = ({
+    project,
+    match: {
+        params: { id }
+    },
+    setSelectedProject
+}) => {
+    setSelectedProject(id)
     return (
         <SingleProjectWrapper>
             <Details />
