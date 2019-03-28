@@ -46,11 +46,13 @@ const RenameMe = ({ project, skills }) => {
                 </Sidebar>
             </Row>
             <Row>
-                {!!project.image.length && (
-                    <Section title="Photos">
-                        <Carousel images={project.image} />
-                    </Section>
-                )}
+                <Content>
+                    {!!project.image.length && (
+                        <Section title="Photos">
+                            <Carousel images={project.image} />
+                        </Section>
+                    )}
+                </Content>
             </Row>
         </RenameMeWrapper>
     )

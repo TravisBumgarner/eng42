@@ -10,9 +10,7 @@ import { SingleProjectWrapper, ProjectCard } from './SingleProject.styles'
 const SingleProject = ({ project }) => {
     return (
         <SingleProjectWrapper>
-            <ProjectCard title={project.name}>
-                <RenameMe />
-            </ProjectCard>
+            <RenameMe />
         </SingleProjectWrapper>
     )
 }

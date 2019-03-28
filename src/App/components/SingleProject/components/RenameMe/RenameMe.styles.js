@@ -9,11 +9,17 @@ const Row = styled.div`
 `
 
 const Content = styled.div`
-    width: 60%;
+    flex-grow: 1;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
 `
 
 const Sidebar = styled.div`
     width: 38%;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
 `
 
 export { RenameMeWrapper, Content, Sidebar, Row }

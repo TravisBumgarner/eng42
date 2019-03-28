@@ -21,4 +21,4 @@ const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
     return acc
 }, {})
 
-export { PRIMARY_COLOR, SECONDARY_COLOR }
+export { PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR }

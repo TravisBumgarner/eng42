@@ -20,8 +20,8 @@ const MediumTitle = styled.h2`
 const SmallTitle = styled.h3`
     display: inline-block;
     font-size: 1rem;
-    margin: 10px 0;
-    font-weight: 400;
+    margin: 5px 0;
+    font-weight: 700;
     font-family: Raleway, sans-serif;
 `
 

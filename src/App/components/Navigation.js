@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Twitter from 'react-icons/lib/fa/twitter'
 import LinkedIn from 'react-icons/lib/fa/linkedin'
 import Instagram from 'react-icons/lib/fa/instagram'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
+import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
 import { ExternalLink, Title } from 'SharedComponents'
 
 const List = styled.ul`
@@ -15,6 +17,15 @@ const List = styled.ul`
 const Item = styled.li`
     display: inline;
     margin: 5px;
+`
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${PRIMARY_COLOR};
+
+    &:hover {
+        color: ${TERTIARY_COLOR};
+    }
 `
 
 const NavigationWrapper = styled.div`
@@ -59,7 +70,14 @@ const Navigation = () => {
 
     return (
         <NavigationWrapper>
-            <List>{ExternalLinks}</List>
+            <List>
+                <Item>
+                    <Title size="medium">
+                        <StyledLink to="/">Portfolio</StyledLink>
+                    </Title>
+                </Item>
+                {ExternalLinks}
+            </List>
         </NavigationWrapper>
     )
 }
