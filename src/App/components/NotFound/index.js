@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
 import { Card } from 'SharedComponents'
 
-import { NotFoundWrapper } from './NotFound.styles'
+import { DEFAULT_PAGE_WRAPPER } from 'Theme'
 
-export default class NotFound extends Component {
-    render() {
-        return (
-            <NotFoundWrapper>
-                <Card title="404 Error">
-                    <p>Sorry, the page you were looking for was not found.</p>
-                </Card>
-            </NotFoundWrapper>
-        )
-    }
+const NotFoundWrapper = styled(DEFAULT_PAGE_WRAPPER)``
+
+export { NotFoundWrapper }
+
+const NotFound = () => {
+    return (
+        <NotFoundWrapper>
+            <Card title="404 Error">
+                <p>Sorry, the page you were looking for was not found.</p>
+            </Card>
+        </NotFoundWrapper>
+    )
 }
+
+export default NotFound
