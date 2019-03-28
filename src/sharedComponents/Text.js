@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const TextWrapper = styled.p`
@@ -6,4 +7,8 @@ const TextWrapper = styled.p`
     line-height: 1.5;
 `
 
-export { TextWrapper }
+const Text = ({ children }) => {
+    return <TextWrapper>{children}</TextWrapper>
+}
+
+export default Text

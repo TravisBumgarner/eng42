@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 
 import { Card } from 'SharedComponents'
 
-import { ErrorWrapper } from './Error.styles'
+const ErrorWrapper = styled.div``
 
 const Error = () => {
     return (
