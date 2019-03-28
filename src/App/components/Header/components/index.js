@@ -1,3 +1,3 @@
-import Nav from './Nav'
+import Nav from '../../Navigation'
 
 export { Nav }

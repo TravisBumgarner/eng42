@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-import {} from 'Theme'
-
-const ProjectsGridWrapper = styled.div`
+const GridWrapper = styled.div`
     float: left;
     margin-top: 20px;
     width: 100%;
@@ -11,4 +9,4 @@ const ProjectsGridWrapper = styled.div`
     justify-content: space-between;
 `
 
-export { ProjectsGridWrapper }
+export { GridWrapper }

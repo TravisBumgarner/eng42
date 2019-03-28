@@ -1,3 +1,3 @@
-import ProjectsGrid from './ProjectsGrid'
+import Grid from './Grid'
 
-export { ProjectsGrid }
+export { Grid }

@@ -2,12 +2,12 @@ import React from 'react'
 
 import { Card } from 'SharedComponents'
 
-import { ProjectsGrid } from './components'
+import { Grid } from './components'
 
 const Portfolio = () => {
     return (
         <Card>
-            <ProjectsGrid />
+            <Grid />
         </Card>
     )
 }

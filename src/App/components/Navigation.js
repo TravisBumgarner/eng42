@@ -17,6 +17,14 @@ const Item = styled.li`
     margin: 5px;
 `
 
+const NavigationWrapper = styled.div`
+    width: 100vw;
+    margin: 15px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+`
+
 const EXTERNAL_LINKS = [
     {
         href: 'https://blog.travisbumgarner.com',
@@ -40,14 +48,18 @@ const EXTERNAL_LINKS = [
     }
 ]
 
-const Nav = () => {
+const Navigation = () => {
     const ExternalLinks = EXTERNAL_LINKS.map(l => (
         <Item key={l.href}>
             <ExternalLink href={l.href}>{l.content}</ExternalLink>
         </Item>
     ))
 
-    return <List>{ExternalLinks}</List>
+    return (
+        <NavigationWrapper>
+            <List>{ExternalLinks}</List>
+        </NavigationWrapper>
+    )
 }
 
-export default Nav
+export default Navigation

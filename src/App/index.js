@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Switch, Route, withRouter } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
 import FaThumbsDown from 'react-icons/lib/fa/thumbs-down'
 
 import { loadSession } from '../store/session/actions/loadSession'
 
-import { Portfolio, NotFound, Header, SingleProject } from './components'
+import { Portfolio, NotFound, Header, SingleProject, Navigation } from './components'
 
 import { AppWrapper, LoadingWrapper, ErrorMsg } from './App.styles'
 
@@ -37,6 +36,7 @@ export class App extends Component {
         return loaded ? (
             <AppWrapper>
                 <Header />
+                <Navigation />
                 <Switch>
                     {/* <Route exact path="/" component={Home} /> */}
                     <Route exact path="/" component={Portfolio} />

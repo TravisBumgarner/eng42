@@ -1,13 +1,16 @@
 import styled, { css } from 'styled-components'
 
+const PRIMARY_COLOR = '#000000'
+const SECONDARY_COLOR = '#FFFFFF'
+
 // Media Queries
-export const SCREEN_WIDTHS = {
+const SCREEN_WIDTHS = {
     DESKTOP: 992,
     TABLET: 768,
     PHONE: 376
 }
 
-export const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
+const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
     acc[label] = (...args) => css`
         @media (max-width: ${SCREEN_WIDTHS[label] / 16}em) {
             ${css(...args)}
@@ -16,3 +19,5 @@ export const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
 
     return acc
 }, {})
+
+export { PRIMARY_COLOR, SECONDARY_COLOR }

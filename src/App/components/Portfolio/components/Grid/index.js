@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { ProjectTile } from './components'
+import { Tile } from './components'
 
-import { ProjectsGridWrapper } from './ProjectsGrid.styles'
+import { GridWrapper } from './Grid.styles'
 
-const ProjectsGrid = ({ projects, filteredProjectIds }) => {
+const Grid = ({ projects, filteredProjectIds }) => {
     const projectIds = filteredProjectIds.length ? filteredProjectIds : Object.keys(projects)
 
     const Projects = projectIds.map(p => {
-        return <ProjectTile key={p} projectId={p} />
+        return <Tile key={p} projectId={p} />
     })
 
-    return <ProjectsGridWrapper>{Projects}</ProjectsGridWrapper>
+    return <GridWrapper>{Projects}</GridWrapper>
 }
 
 export default connect(
@@ -21,4 +21,4 @@ export default connect(
         filteredProjectIds: state.project.filtered
     }),
     {}
-)(ProjectsGrid)
+)(Grid)
