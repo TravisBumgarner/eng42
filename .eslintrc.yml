@@ -36,3 +36,4 @@ overrides:
         max-len: off
         quotes: off
         prop-types: off
+        'react/prop-types': 0`
