@@ -1,21 +1,28 @@
 import styled from 'styled-components'
 
-import { FONT_FAMILY_HEADER } from 'Theme'
-
-const PRIMARY_COLOR = '#000000'
-const SECONDARY_COLOR = '#FFFFFF'
-const TERTIARY_COLOR = '#4acfa0'
-const FONT_WEIGHT_HEADER = 700
-const FONT_SIZE_NORMAL = '0.9rem'
-const FONT_SIZE_SMALL = '0.8rem'
-const FONT_NORMAL_LINE_HEIGHT = '1.4'
-const FONT_SIZE_LARGE = '1.5rem'
-const FONT_SIZE_XLARGE = '2.5rem'
-
-const TitleWrapper = styled.h1`
-    font-size: ${FONT_SIZE_LARGE};
+const LargeTitle = styled.h1`
+    display: inline-block;
+    font-size: 2.5rem;
     margin: 10px;
-    font-family: ${FONT_FAMILY_HEADER};
+    font-weight: 700;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
 `
 
-export { TitleWrapper }
+const MediumTitle = styled.h2`
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 10px;
+    font-weight: 700;
+    font-family: Raleway, sans-serif;
+`
+
+const SmallTitle = styled.h3`
+    display: inline-block;
+    font-size: 1rem;
+    margin: 10px;
+    font-weight: 400;
+    font-family: Raleway, sans-serif;
+`
+
+export { LargeTitle, MediumTitle, SmallTitle }

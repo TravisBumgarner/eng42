@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Twitter from 'react-icons/lib/fa/twitter'
 import LinkedIn from 'react-icons/lib/fa/linkedin'
 import Instagram from 'react-icons/lib/fa/instagram'
-
-import { ExternalLink } from 'SharedComponents'
 import styled from 'styled-components'
+
+import { ExternalLink, Title } from 'SharedComponents'
 
 const List = styled.ul`
     list-style-type: none;
@@ -51,7 +51,9 @@ const EXTERNAL_LINKS = [
 const Navigation = () => {
     const ExternalLinks = EXTERNAL_LINKS.map(l => (
         <Item key={l.href}>
-            <ExternalLink href={l.href}>{l.content}</ExternalLink>
+            <ExternalLink href={l.href}>
+                <Title size="medium">{l.content}</Title>
+            </ExternalLink>
         </Item>
     ))
 

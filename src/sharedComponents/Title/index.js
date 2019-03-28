@@ -1,9 +1,16 @@
 import React from 'react'
 
-import { TitleWrapper } from './Title.styles'
+import { LargeTitle, MediumTitle, SmallTitle } from './Title.styles'
 
 const Title = ({ children, size }) => {
-    return <TitleWrapper size={size}>{children}</TitleWrapper>
+    switch (size) {
+        case 'large':
+            return <LargeTitle size={size}>{children}</LargeTitle>
+        case 'medium':
+            return <MediumTitle size={size}>{children}</MediumTitle>
+        case 'small':
+            return <SmallTitle size={size}>{children}</SmallTitle>
+    }
 }
 
 export default Title
