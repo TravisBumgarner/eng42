@@ -27,6 +27,15 @@ const Image = styled.img`
     border: 2px solid black;
     display: block;
     margin: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
 `
 
-export { DetailsWrapper, Content, Sidebar, Row, Image }
+const ImagesWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+export { DetailsWrapper, Content, Sidebar, Row, Image, ImagesWrapper }

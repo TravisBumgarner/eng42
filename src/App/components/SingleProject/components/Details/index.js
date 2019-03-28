@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Text, ExternalLink, Title } from 'SharedComponents'
-import { DetailsWrapper, Content, Sidebar, Row, Image } from './Details.styles'
+import { DetailsWrapper, Content, Sidebar, Row, Image, ImagesWrapper } from './Details.styles'
 
 const SectionWrapper = styled.div`
     width: 100%;
@@ -82,7 +82,13 @@ const Details = ({
                 </Sidebar>
             </Row>
             <Row>
-                <Content>{!!image.length && <Section title="Photos">{Images}</Section>}</Content>
+                <Content>
+                    {!!image.length && (
+                        <Section title="Photos">
+                            <ImagesWrapper>{Images}</ImagesWrapper>
+                        </Section>
+                    )}
+                </Content>
             </Row>
         </DetailsWrapper>
     )
