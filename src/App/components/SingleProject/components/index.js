@@ -1,3 +1,3 @@
-import SingleProject from './SingleProject'
+import RenameMe from './RenameMe'
 
-export { SingleProject }
+export { RenameMe }

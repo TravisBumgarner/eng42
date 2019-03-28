@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-import {} from 'Theme'
-
-const SingleProjectWrapper = styled.div``
+const RenameMeWrapper = styled.div``
 
 const Row = styled.div`
     display: flex;
@@ -18,4 +16,4 @@ const Sidebar = styled.div`
     width: 38%;
 `
 
-export { SingleProjectWrapper, Content, Sidebar, Row }
+export { RenameMeWrapper, Content, Sidebar, Row }

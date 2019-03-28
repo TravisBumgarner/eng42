@@ -3,20 +3,20 @@ import { connect } from 'react-redux'
 
 import projectActions from '../../../store/project/actions'
 
-import { SingleProject } from './components'
+import { RenameMe } from './components' //TODO Rename RenameMe
 
-import { PortfolioWrapper, ProjectCard } from './SingleProject.styles'
+import { SingleProjectWrapper, ProjectCard } from './SingleProject.styles'
 
-export class Portfolio extends Component {
+export class SingleProject extends Component {
     render() {
         const { project } = this.props
 
         return (
-            <PortfolioWrapper>
+            <SingleProjectWrapper>
                 <ProjectCard title={project.name}>
-                    <SingleProject />
+                    <RenameMe />
                 </ProjectCard>
-            </PortfolioWrapper>
+            </SingleProjectWrapper>
         )
     }
 }
@@ -28,4 +28,4 @@ export default connect(
     {
         setSelectedProject: projectActions.setSelectedProject
     }
-)(Portfolio)
+)(SingleProject)

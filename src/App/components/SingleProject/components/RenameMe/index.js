@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import { Paragraph, ExternalLink } from 'SharedComponents'
 import { Carousel, ProjectDetail } from './components'
 
-import { SingleProjectWrapper, Content, Sidebar, Row } from './SingleProject.styles'
+import { RenameMeWrapper, Content, Sidebar, Row } from './RenameMe.styles'
 
-export class SingleProject extends Component {
+export class RenameMe extends Component {
     render() {
         const { project, skills } = this.props
 
@@ -27,7 +27,7 @@ export class SingleProject extends Component {
         })
 
         return (
-            <SingleProjectWrapper previewImageSrc={project.preview_img && project.preview_img.src}>
+            <RenameMeWrapper previewImageSrc={project.preview_img && project.preview_img.src}>
                 <Row>
                     <Content>
                         {!!Links.length && (
@@ -60,7 +60,7 @@ export class SingleProject extends Component {
                         </ProjectDetail>
                     )}
                 </Row>
-            </SingleProjectWrapper>
+            </RenameMeWrapper>
         )
     }
 }
@@ -72,4 +72,4 @@ export default connect(
         categories: state.category.all
     }),
     {}
-)(SingleProject)
+)(RenameMe)
