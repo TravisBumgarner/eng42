@@ -14,10 +14,6 @@ import { TERTIARY_COLOR } from 'Theme'
 import { AppWrapper, LoadingWrapper, ErrorMsg } from './App.styles'
 
 export class App extends Component {
-    static propTypes = {
-        loadSession: PropTypes.func.isRequired
-    }
-
     constructor(props) {
         super(props)
         this.state = {

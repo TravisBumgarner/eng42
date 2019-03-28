@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React from 'react'
 
 import { Card } from 'SharedComponents'
 import { DEFAULT_PAGE_WRAPPER } from 'Theme'

@@ -3,30 +3,15 @@ import { connect } from 'react-redux'
 
 import { ProjectTileWrapper, SiteLink } from './ProjectTile.styles'
 
-export class ProjectTile extends Component {
-    openProject = () => {
-        const {
-            openProject,
-            project: { id }
-        } = this.props
-
-        openProject(id)
-    }
-
-    render() {
-        const {
-            project: { preview_img, name, id }
-        } = this.props
-        // TODO: Move onClick to anchor tag
-        return (
-            <SiteLink to={`/portfolio/${id}`}>
-                <ProjectTileWrapper onClick={this.openProject}>
-                    {preview_img && <img src={preview_img.src} />}
-                    <h5>{name}</h5>
-                </ProjectTileWrapper>
-            </SiteLink>
-        )
-    }
+const ProjectTile = ({ project: { id, preview_img, name } }) => {
+    return (
+        <SiteLink to={`/portfolio/${id}`}>
+            <ProjectTileWrapper>
+                {preview_img && <img src={preview_img.src} />}
+                <h5>{name}</h5>
+            </ProjectTileWrapper>
+        </SiteLink>
+    )
 }
 
 export default connect(
