@@ -7,18 +7,14 @@ import { RenameMe } from './components' //TODO Rename RenameMe
 
 import { SingleProjectWrapper, ProjectCard } from './SingleProject.styles'
 
-export class SingleProject extends Component {
-    render() {
-        const { project } = this.props
-
-        return (
-            <SingleProjectWrapper>
-                <ProjectCard title={project.name}>
-                    <RenameMe />
-                </ProjectCard>
-            </SingleProjectWrapper>
-        )
-    }
+const SingleProject = ({ project }) => {
+    return (
+        <SingleProjectWrapper>
+            <ProjectCard title={project.name}>
+                <RenameMe />
+            </ProjectCard>
+        </SingleProjectWrapper>
+    )
 }
 
 export default connect(

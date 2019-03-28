@@ -5,14 +5,12 @@ import { Introduction } from './components'
 
 import { HomeWrapper } from './Home.styles'
 
-export class Home extends Component {
-    render() {
-        return (
-            <HomeWrapper>
-                <Introduction />
-            </HomeWrapper>
-        )
-    }
+const Home = () => {
+    return (
+        <HomeWrapper>
+            <Introduction />
+        </HomeWrapper>
+    )
 }
 
 export default connect(
