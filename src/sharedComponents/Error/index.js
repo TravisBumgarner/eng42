@@ -2,16 +2,16 @@ import React, { Component } from 'react'
 
 import { Card } from 'SharedComponents'
 
-import { Error500Wrapper } from './Error500.styles'
+import { ErrorWrapper } from './Error.styles'
 
-export default class Error500 extends Component {
+export default class Error extends Component {
     render() {
         return (
-            <Error500Wrapper>
-                <Card title="500 Error">
+            <ErrorWrapper>
+                <Card title="Error">
                     <p>Sorry, there was an error, please try again later.</p>
                 </Card>
-            </Error500Wrapper>
+            </ErrorWrapper>
         )
     }
 }
