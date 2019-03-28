@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
-const PRIMARY_COLOR = '#000000'
-const TERTIARY_COLOR = '#4acfa0'
+import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
 
 const ExternalLinkWrapper = styled.a`
     color: ${PRIMARY_COLOR};

@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 const PRIMARY_COLOR = '#000000'
 const SECONDARY_COLOR = '#FFFFFF'
+const TERTIARY_COLOR = '#4acfa0'
 
 // Media Queries
 const SCREEN_WIDTHS = {

@@ -1,4 +1,4 @@
 import Carousel from './Carousel'
-import ProjectDetail from './ProjectDetail'
+import Section from './Section'
 
-export { Carousel, ProjectDetail }
+export { Carousel, Section }
