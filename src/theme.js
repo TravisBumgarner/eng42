@@ -15,8 +15,8 @@ export const FONT_SIZE_NORMAL = '0.9rem'
 export const FONT_NORMAL_LINE_HEIGHT = '1.4'
 export const FONT_SIZE_LARGE = '1.5rem'
 export const FONT_SIZE_XLARGE = '1.8rem'
-export const FONT_FAMILY_HEADER = '\'Montserrat\', sans-serif'
-export const FONT_FAMILY_CONTENT = '\'Comic Sans\', Helvetica, Arial, sans-serif'
+export const FONT_FAMILY_HEADER = "'Montserrat', sans-serif"
+export const FONT_FAMILY_CONTENT = "'Comic Sans', Helvetica, Arial, sans-serif"
 export const FONT_WEIGHT_HEADER = 700
 export const FONT_WEIGHT_CONTENT = 400
 
@@ -44,7 +44,7 @@ export const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
 
 // Shared Styles
 export const DEFAULT_PAGE_WRAPPER = styled.div`
-    margin: 10vh 0 0 0;
+    margin: 100px 0 0 0;
     color: ${PRIMARY_COLOR};
     background-color: ${SECONDARY_COLOR};
     font-family: ${FONT_FAMILY_CONTENT};

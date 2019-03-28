@@ -7,19 +7,13 @@ import {
     TERTIARY_COLOR,
     PRIMARY_COLOR,
     FONT_SIZE_XLARGE,
-    FONT_WEIGHT_HEADER,
-    media
+    FONT_WEIGHT_HEADER
 } from 'Theme'
 
 const CardWrapper = styled.div`
     max-width: 1400px;
     width: 75%;
     margin: 0px auto;
-
-    ${media.DESKTOP`
-    max-width: 95%;
-    width: 95%;
-  `}
 `
 
 const Divider = styled.div`
@@ -47,14 +41,4 @@ const CardContent = styled.div`
     font-weight: 100;
 `
 
-const BackButton = styled(FaArrowLeft)`
-    fill: ${TERTIARY_COLOR};
-    padding-right: 10px;
-
-    &:hover {
-        fill: ${PRIMARY_COLOR};
-        cursor: pointer;
-    }
-`
-
-export { Divider, BackButton, CardWrapper, CardTitle, CardContent }
+export { Divider, CardWrapper, CardTitle, CardContent }

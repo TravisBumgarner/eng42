@@ -32,7 +32,7 @@ class SentryWrapper extends Component {
 
     render() {
         if (this.state.error) {
-            return <Error500 />
+            return <Error />
         } else {
             return this.props.children
         }

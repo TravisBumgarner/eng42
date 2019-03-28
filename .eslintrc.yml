@@ -29,10 +29,10 @@ rules:
         - error
         - never
 overrides:
+    files: '*.js'
     rules:
         no-undefined: off
         no-unused-expressions: off
         max-len: off
         quotes: off
         prop-types: off
-        'react/prop-types': off

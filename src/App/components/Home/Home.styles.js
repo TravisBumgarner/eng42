@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { DEFAULT_PAGE_WRAPPER, media } from 'Theme'
 
-const HomeWrapper = DEFAULT_PAGE_WRAPPER.extend`
+const HomeWrapper = styled(DEFAULT_PAGE_WRAPPER)`
     margin: 30vh auto 0;
     height: 70vh;
 

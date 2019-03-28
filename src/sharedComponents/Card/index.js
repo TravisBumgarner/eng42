@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
 
-import { Divider, CardTitle, CardContent, CardWrapper, BackButton } from './Card.styles'
+import { Divider, CardTitle, CardContent, CardWrapper } from './Card.styles'
 
 export default class Card extends Component {
     render() {
-        const { title, children, className, onClick } = this.props
+        const { title, children, className } = this.props
 
         return (
             <CardWrapper className={className}>
-                <CardTitle>
-                    {onClick && <BackButton size={29} onClick={onClick} />}
-                    {title}
-                </CardTitle>
+                <CardTitle>{title}</CardTitle>
 
                 <Divider primary />
 

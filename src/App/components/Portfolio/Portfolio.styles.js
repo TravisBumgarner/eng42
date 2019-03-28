@@ -6,6 +6,6 @@ import { DEFAULT_PAGE_WRAPPER } from 'Theme'
 
 const ProjectsCard = styled(Card)``
 
-const PortfolioWrapper = DEFAULT_PAGE_WRAPPER.extend``
+const PortfolioWrapper = styled(DEFAULT_PAGE_WRAPPER)``
 
 export { PortfolioWrapper, ProjectsCard }

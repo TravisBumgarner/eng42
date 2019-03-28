@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { DEFAULT_PAGE_WRAPPER, FONT_FAMILY_HEADER, media } from 'Theme'
 
-const LearnMoreWrapper = DEFAULT_PAGE_WRAPPER.extend``
+const LearnMoreWrapper = styled(DEFAULT_PAGE_WRAPPER)``
 
 const GroupLinksWrapper = styled.div`
     ${media.PHONE`
