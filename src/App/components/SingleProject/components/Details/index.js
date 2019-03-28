@@ -1,17 +1,31 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { Text, ExternalLink } from 'SharedComponents'
+import { Text, ExternalLink, Title } from 'SharedComponents'
 import { Carousel, Section } from './components'
 
 import { DetailsWrapper, Content, Sidebar, Row } from './Details.styles'
 
-const Details = ({ project, skills }) => {
-    const Description = project.description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
-    const Locations = project.location.map(l => l.name).join(', ')
-    const Organizations = project.organization.map(o => o.name).join(', ')
-    const Skills = project.skill.map(s => skills[s].name).join(', ')
-    const Links = project.link.map(l => {
+const Details = ({
+    project: {
+        description,
+        location,
+        organization,
+        skill,
+        link,
+        preview_img,
+        name,
+        start_date,
+        end_date,
+        image
+    },
+    skills
+}) => {
+    const Description = description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
+    const Locations = location.map(l => l.name).join(', ')
+    const Organizations = organization.map(o => o.name).join(', ')
+    const Skills = skill.map(s => skills[s].name).join(', ')
+    const Links = link.map(l => {
         return (
             <li key={l.id}>
                 <ExternalLink primary href={l.src}>
@@ -20,9 +34,13 @@ const Details = ({ project, skills }) => {
             </li>
         )
     })
-
     return (
-        <DetailsWrapper previewImageSrc={project.preview_img && project.preview_img.src}>
+        <DetailsWrapper previewImageSrc={preview_img && preview_img.src}>
+            <Row>
+                <Content>
+                    <Title size="medium">{name}</Title>
+                </Content>
+            </Row>
             <Row>
                 <Content>
                     {!!Links.length && (
@@ -35,10 +53,7 @@ const Details = ({ project, skills }) => {
 
                 <Sidebar>
                     <Section title="Duration">
-                        <Text>{`${project.start_date.slice(0, -3)} - ${project.end_date.slice(
-                            0,
-                            -3
-                        )}`}</Text>
+                        <Text>{`${start_date.slice(0, -3)} - ${end_date.slice(0, -3)}`}</Text>
                     </Section>
 
                     <Section title="Skills">
@@ -56,9 +71,9 @@ const Details = ({ project, skills }) => {
             </Row>
             <Row>
                 <Content>
-                    {!!project.image.length && (
+                    {!!image.length && (
                         <Section title="Photos">
-                            <Carousel images={project.image} />
+                            <Carousel images={image} />
                         </Section>
                     )}
                 </Content>
