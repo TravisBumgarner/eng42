@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 
 import projectActions from '../../../store/project/actions'
 
-import { RenameMe } from './components' //TODO Rename RenameMe
+import { Details } from './components'
 
-import { SingleProjectWrapper, ProjectCard } from './SingleProject.styles'
+import { SingleProjectWrapper } from './SingleProject.styles'
 
 const SingleProject = ({ project }) => {
     return (
         <SingleProjectWrapper>
-            <RenameMe />
+            <Details />
         </SingleProjectWrapper>
     )
 }

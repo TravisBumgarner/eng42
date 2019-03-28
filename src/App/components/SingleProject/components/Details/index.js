@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import { Text, ExternalLink } from 'SharedComponents'
 import { Carousel, Section } from './components'
 
-import { RenameMeWrapper, Content, Sidebar, Row } from './RenameMe.styles'
+import { DetailsWrapper, Content, Sidebar, Row } from './Details.styles'
 
-const RenameMe = ({ project, skills }) => {
+const Details = ({ project, skills }) => {
     const Description = project.description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
     const Locations = project.location.map(l => l.name).join(', ')
     const Organizations = project.organization.map(o => o.name).join(', ')
@@ -22,7 +22,7 @@ const RenameMe = ({ project, skills }) => {
     })
 
     return (
-        <RenameMeWrapper previewImageSrc={project.preview_img && project.preview_img.src}>
+        <DetailsWrapper previewImageSrc={project.preview_img && project.preview_img.src}>
             <Row>
                 <Content>
                     {!!Links.length && (
@@ -54,7 +54,7 @@ const RenameMe = ({ project, skills }) => {
                     )}
                 </Content>
             </Row>
-        </RenameMeWrapper>
+        </DetailsWrapper>
     )
 }
 
@@ -65,4 +65,4 @@ export default connect(
         categories: state.category.all
     }),
     {}
-)(RenameMe)
+)(Details)

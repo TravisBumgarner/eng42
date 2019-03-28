@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const RenameMeWrapper = styled.div``
+const DetailsWrapper = styled.div``
 
 const Row = styled.div`
     display: flex;
@@ -22,4 +22,4 @@ const Sidebar = styled.div`
     margin: 10px;
 `
 
-export { RenameMeWrapper, Content, Sidebar, Row }
+export { DetailsWrapper, Content, Sidebar, Row }

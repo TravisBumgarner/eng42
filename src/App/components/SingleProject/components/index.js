@@ -1,3 +1,3 @@
-import RenameMe from './RenameMe'
+import Details from './Details'
 
-export { RenameMe }
+export { Details }
