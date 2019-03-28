@@ -19,15 +19,13 @@ const App = () => {
                 url: 'https://eng40api.travisbumgarner.com/projects'
             })
             .then(({ data }) => {
-                console.log(data)
                 setProjects(data)
                 setIsLoading(false)
             })
-            .catch(() => {
+            .catch(e => {
                 setIsLoading(false)
             })
     }
-
     return isLoading ? (
         <LoadingWrapper>Loading</LoadingWrapper>
     ) : (

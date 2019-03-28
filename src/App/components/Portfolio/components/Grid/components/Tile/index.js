@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { TileWrapper } from './Tile.styles'
 
 const Tile = ({ project: { id, preview_img, name } }) => {
+    console.log(id)
     return (
         <NavLink to={`/${id}`}>
             <TileWrapper>
