@@ -87,7 +87,6 @@ const Details = ({
                         <Section title="Photos">
                             <ImagesWrapper>{Images}</ImagesWrapper>
                         </Section>
-                        )}
                     </Content>
                 </Row>
             ) : null}
