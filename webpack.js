@@ -12,7 +12,8 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015', 'react', 'stage-2']
+                    presets: ['@babel/preset-env', '@babel/preset-react'],
+                    plugins: [require('babel-plugin-transform-class-properties')]
                 }
             }
         ]
@@ -27,5 +28,20 @@ module.exports = {
             Theme: path.resolve(__dirname, 'src/theme.js'),
             Store: path.resolve(__dirname, 'src/store')
         }
-    }
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        publicPath: '/',
+        contentBase: './dist',
+        port: 3000,
+        historyApiFallback: true
+    },
+    devtool: 'source-map',
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        })
+    ]
 }

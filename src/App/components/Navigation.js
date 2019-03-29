@@ -1,7 +1,9 @@
 import React from 'react'
-import Twitter from 'react-icons/lib/fa/twitter'
-import LinkedIn from 'react-icons/lib/fa/linkedin'
-import Instagram from 'react-icons/lib/fa/instagram'
+import {
+    FaTwitter as Twitter,
+    FaLinkedinIn as LinkedIn,
+    FaInstagram as Instagram
+} from 'react-icons/fa'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
