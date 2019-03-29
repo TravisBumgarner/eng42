@@ -10,14 +10,12 @@ import { Link } from 'react-router-dom'
 import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
 import { ExternalLink, Title } from 'SharedComponents'
 
-const List = styled.ul`
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+const List = styled.div`
+    display: flex;
+    align-items: center;
 `
 
-const Item = styled.li`
-    display: inline;
+const Item = styled.div`
     margin: 5px;
 `
 
