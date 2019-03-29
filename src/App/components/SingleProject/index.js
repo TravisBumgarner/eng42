@@ -13,7 +13,7 @@ const SingleProject = ({
     if (!Object.keys(projects).length) {
         return null
     }
-    const project = Object.values(projects).filter(project => project.id == id)[0]
+    const project = projects.filter(project => project.id == id)[0]
     console.log(project.name)
     return (
         <SingleProjectWrapper>

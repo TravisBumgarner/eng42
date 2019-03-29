@@ -81,15 +81,16 @@ const Details = ({
                     </Section>
                 </Sidebar>
             </Row>
-            <Row>
-                <Content>
-                    {!!image.length && (
+            {image.length ? (
+                <Row>
+                    <Content>
                         <Section title="Photos">
                             <ImagesWrapper>{Images}</ImagesWrapper>
                         </Section>
-                    )}
-                </Content>
-            </Row>
+                        )}
+                    </Content>
+                </Row>
+            ) : null}
         </DetailsWrapper>
     )
 }
