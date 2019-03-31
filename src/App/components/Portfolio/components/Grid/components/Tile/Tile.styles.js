@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-import { TERTIARY_COLOR, media } from 'Theme'
-import { PRIMARY_COLOR } from '../../../../../../../theme'
+import { TERTIARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
 const TileWrapper = styled.div`
+    background-image: url('${props => props.src}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover{
+        background: #fff;
+        color: ${TERTIARY_COLOR};
+    }
     max-width: 400px;
     max-height: 400px;
     width: calc(100vw / 3);
@@ -25,14 +31,6 @@ const StyledLink = styled(NavLink)`
 
 const HoverContent = styled.div`
     &:hover {
-        background: linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.7) 25%,
-            rgba(255, 255, 255, 0.9) 50%,
-            rgba(255, 255, 255, 0.7) 75%,
-            rgba(255, 255, 255, 0) 100%
-        );
         opacity: 1;
     }
     padding: 25px;
@@ -52,9 +50,6 @@ const HoverContent = styled.div`
 `
 
 const Image = styled.img`
-    &:hover {
-        opacity: 0.5;
-    }
     width: 100%;
     height: 100%;
 `
