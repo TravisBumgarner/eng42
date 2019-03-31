@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components'
 
 const PRIMARY_COLOR = '#000000'
 const SECONDARY_COLOR = '#FFFFFF'
@@ -6,9 +6,9 @@ const TERTIARY_COLOR = '#4acfa0'
 
 // Media Queries
 const SCREEN_WIDTHS = {
-    DESKTOP: 992,
-    TABLET: 768,
-    PHONE: 376
+    desktop: 992,
+    tablet: 768,
+    phone: 376
 }
 
 const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
@@ -21,4 +21,12 @@ const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
     return acc
 }, {})
 
-export { PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR }
+const GlobalStyle = createGlobalStyle`
+    html {
+        font-size: 18px;
+        ${media.desktop`font-size: 16px;`}
+        ${media.tablet`font-size: 14px;`}
+    }
+`
+
+export { media, PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR, GlobalStyle }

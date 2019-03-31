@@ -47,15 +47,15 @@ const EXTERNAL_LINKS = [
     },
     {
         href: 'https://twitter.com/travis_the_makr',
-        content: <Twitter size="2em" />
+        content: <Twitter size="1em" />
     },
     {
         href: 'https://instagram.com/travis_the_maker',
-        content: <Instagram size="2em" />
+        content: <Instagram size="1em" />
     },
     {
         href: 'https://www.linkedin.com/in/travisbumgarner/',
-        content: <LinkedIn size="2em" />
+        content: <LinkedIn size="1em" />
     }
 ]
 

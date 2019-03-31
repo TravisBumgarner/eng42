@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const LargeTitle = styled.h1`
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin: 10px 0;
     font-weight: 700;
     font-family: Raleway, sans-serif;
@@ -11,7 +11,7 @@ const LargeTitle = styled.h1`
 
 const MediumTitle = styled.h2`
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 10px 0;
     font-weight: 700;
     font-family: Raleway, sans-serif;

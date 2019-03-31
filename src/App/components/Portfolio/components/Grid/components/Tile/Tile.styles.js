@@ -1,13 +1,18 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-import { TERTIARY_COLOR } from 'Theme'
+import { TERTIARY_COLOR, media } from 'Theme'
 import { PRIMARY_COLOR } from '../../../../../../../theme'
 
 const TileWrapper = styled.div`
-    width: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    width: 33vw;
     position: relative;
-    /* padding: 10px; */
+
+    ${media.tablet`
+        width: 50vw;
+    `} /* padding: 10px; */
     /* border: 2px solid black; */
 `
 
@@ -31,8 +36,8 @@ const HoverContent = styled.div`
     padding: 25px;
     box-sizing: border-box;
     z-index: 999;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     position: absolute;
     left: 0;
@@ -48,6 +53,8 @@ const Image = styled.img`
     &:hover {
         opacity: 0.5;
     }
+    width: 100%;
+    height: 100%;
 `
 
 export { TileWrapper, HoverContent, Image, StyledLink }
