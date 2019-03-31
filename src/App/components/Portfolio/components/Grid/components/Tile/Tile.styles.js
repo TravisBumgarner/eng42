@@ -7,11 +7,13 @@ import { PRIMARY_COLOR } from '../../../../../../../theme'
 const TileWrapper = styled.div`
     max-width: 400px;
     max-height: 400px;
-    width: 33vw;
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
     position: relative;
 
     ${media.tablet`
-        width: 50vw;
+        width: calc(100vw/2);
+        height: calc(100vw/2);
     `} /* padding: 10px; */
     /* border: 2px solid black; */
 `
