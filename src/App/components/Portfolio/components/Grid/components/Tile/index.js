@@ -1,17 +1,26 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import { TileWrapper } from './Tile.styles'
+import { TileWrapper, HoverContent, Image, StyledLink } from './Tile.styles'
+import { categories } from 'Content'
+import { Title, Text } from 'SharedComponents'
 
-const Tile = ({ project: { id, preview_img, name } }) => {
-    console.log(id)
+const Tile = ({ project: { id, preview_img, name, category } }) => {
+    const CategoryList = category.map(c => (
+        <>
+            <span>{categories[c].name}</span>
+            <br />
+        </>
+    ))
     return (
-        <NavLink to={`/${id}`}>
+        <StyledLink to={`/${id}`}>
             <TileWrapper>
-                {preview_img && <img src={preview_img.src} />}
-                {/* <h5>{name}</h5> */}
+                <HoverContent>
+                    <Title> {name}</Title>
+                    <Text size="small">{CategoryList}</Text>
+                </HoverContent>
+                {preview_img && <Image src={preview_img.src} />}
             </TileWrapper>
-        </NavLink>
+        </StyledLink>
     )
 }
 

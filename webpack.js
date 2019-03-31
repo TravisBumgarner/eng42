@@ -26,7 +26,7 @@ module.exports = {
         alias: {
             SharedComponents: path.resolve(__dirname, 'src/sharedComponents/'),
             Theme: path.resolve(__dirname, 'src/theme.js'),
-            Store: path.resolve(__dirname, 'src/store')
+            Content: path.resolve(__dirname, 'src/content')
         }
     },
     devtool: 'inline-source-map',

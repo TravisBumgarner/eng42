@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import projects from './content'
+import projects from 'Content'
 
 import { Portfolio, NotFound, Header, SingleProject, Navigation } from './components'
 
