@@ -32,7 +32,6 @@ const SubContent = styled.div`
 const Sidebar = styled.div`
     width: 38%;
     margin-right: 20px;
-    /* border: 2px solid black; */
 
     ${media.desktop`
         display: none;
@@ -40,22 +39,12 @@ const Sidebar = styled.div`
 `
 
 const Image = styled.img`
-    /* border: 2px solid black; */
     display: block;
     margin: 20px 0;
     max-width: 100%;
     max-height: 100vh;
     box-sizing: border-box;
     align-self: center;
-    /* border-left: 10px solid black; */
-    /* padding-left: 10px; */
 `
 
-const ImagesWrapper = styled.div`
-    /* display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left; */
-`
-
-export { DetailsWrapper, Content, Sidebar, Row, Image, ImagesWrapper, SubContent }
+export { DetailsWrapper, Content, Sidebar, Row, Image, SubContent }

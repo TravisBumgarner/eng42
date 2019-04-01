@@ -9,7 +9,6 @@ import {
     Sidebar,
     Row,
     Image,
-    ImagesWrapper,
     SubContent
 } from './Details.styles'
 
@@ -90,11 +89,7 @@ const Details = ({
                             <Text>Who: {Organizations}</Text>
                         </Section>
                     </SubContent>
-                    {image.length ? (
-                        <Section title="Photos">
-                            <ImagesWrapper>{Images}</ImagesWrapper>
-                        </Section>
-                    ) : null}
+                    {image.length ? <Section title="Photos">{Images}</Section> : null}
                 </Content>
             </Row>
         </DetailsWrapper>
