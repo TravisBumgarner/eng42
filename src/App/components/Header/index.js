@@ -20,6 +20,10 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
     display: flex;
 
+    ${media.desktop`
+        margin: 20px 4vw;
+    `}
+
     ${media.tablet`
         flex-direction: column;
         align-items: center;

@@ -17,11 +17,15 @@ const TileWrapper = styled.div`
     height: calc(100vw / 3);
     position: relative;
 
+    ${media.desktop`
+        width: calc(100vw / 3 - 2.5vw);
+        height: calc(100vw / 3 - 2.5vw);
+    `}
+
     ${media.tablet`
-        width: calc(100vw/2);
-        height: calc(100vw/2);
-    `} /* padding: 10px; */
-    /* border: 2px solid black; */
+        width: calc(100vw/2 - 2.5vw);
+        height: calc(100vw/2 - 2.5vw);
+    `}
 `
 
 const StyledLink = styled(NavLink)`

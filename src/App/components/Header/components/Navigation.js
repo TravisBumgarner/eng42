@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fa'
 import styled from 'styled-components'
 
+import { media } from 'Theme'
 import { ExternalLink } from 'SharedComponents'
 
 const List = styled.div`
@@ -14,7 +15,11 @@ const List = styled.div`
 `
 
 const Item = styled.div`
+    margin-left: 10px;
+
+    ${media.tablet`
     margin: 0 10px;
+    `}
 `
 
 const NavigationWrapper = styled.div`
