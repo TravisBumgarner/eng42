@@ -12,28 +12,27 @@ const Row = styled.div`
 
 const Content = styled.div`
     flex-grow: 1;
-    /* border: 2px solid black; */
-    padding: 10px;
-    margin: 10px;
-
-    ${media.desktop`
-        margin: 10px 0;
-        padding: 10px 0;
-    `}
 `
 
 const SubContent = styled.div`
     display: flex;
+    justify-content: space-between;
+
     & div {
-        width: 50%;
+        width: 48%;
     }
+    ${media.tablet`
+        flex-direction: column;
+        & div {
+            width: 100%;
+        }
+    `}
 `
 
 const Sidebar = styled.div`
     width: 38%;
+    margin-right: 20px;
     /* border: 2px solid black; */
-    padding: 10px;
-    margin: 10px;
 
     ${media.desktop`
         display: none;

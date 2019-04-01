@@ -19,6 +19,7 @@ const HeaderWrapper = styled.div`
     justify-content: center;
     justify-content: space-between;
     display: flex;
+    margin-bottom: 40px;
 
     ${media.desktop`
         margin: 20px 4vw;
@@ -27,6 +28,7 @@ const HeaderWrapper = styled.div`
     ${media.tablet`
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
     `}
 `
 
