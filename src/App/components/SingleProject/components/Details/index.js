@@ -3,14 +3,7 @@ import styled from 'styled-components'
 
 import { skills } from 'Content'
 import { Text, ExternalLink, Title } from 'SharedComponents'
-import {
-    DetailsWrapper,
-    Content,
-    Sidebar,
-    Row,
-    Image,
-    SubContent
-} from './Details.styles'
+import { DetailsWrapper, Content, Sidebar, Row, Image, SubContent } from './Details.styles'
 
 const SectionWrapper = styled.div`
     width: 100%;
@@ -46,7 +39,6 @@ const Details = ({
     const Skills = skill
         .map(s => skills[s].name)
         .sort((a, b) => {
-            console.log(a, b)
             a - b
         })
         .join(', ')
