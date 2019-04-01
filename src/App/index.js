@@ -22,7 +22,7 @@ const App = () => {
                         render={props => <Portfolio {...props} projects={sortedProjects} />}
                     />
                     <Route
-                        path="/:id"
+                        path="/project/:id"
                         render={props => <SingleProject {...props} projects={sortedProjects} />}
                     />
                     <Route component={NotFound} />

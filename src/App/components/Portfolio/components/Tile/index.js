@@ -12,7 +12,7 @@ const Tile = ({ project: { id, preview_img, name, category } }) => {
         </>
     ))
     return (
-        <StyledLink to={`/${id}`}>
+        <StyledLink to={`/project/${id}`}>
             <TileWrapper src={preview_img && preview_img.src}>
                 <HoverContent>
                     <Title> {name}</Title>

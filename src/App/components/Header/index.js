@@ -16,13 +16,9 @@ const StyledLink = styled(Link)`
 `
 
 const HeaderWrapper = styled.div`
-    width: 100vw;
-    box-sizing: border-box;
     justify-content: center;
     justify-content: space-between;
     display: flex;
-    max-width: 1200px;
-    margin: 15px auto 30px;
 `
 
 const Header = () => {

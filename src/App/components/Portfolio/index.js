@@ -1,14 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import { Card } from 'SharedComponents'
-import { Grid } from './components'
+import { Tile } from './components'
+
+const GridWrapper = styled.div`
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
 
 const Portfolio = ({ projects }) => {
-    return (
-        <Card>
-            <Grid projects={projects} />
-        </Card>
-    )
+    const Projects = Object.values(projects).map(project => {
+        return <Tile key={project.id} project={project} />
+    })
+
+    return <GridWrapper>{Projects}</GridWrapper>
 }
 
 export default Portfolio

@@ -1,16 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Card } from 'SharedComponents'
+import { Title, Text } from 'SharedComponents'
 
-const ErrorWrapper = styled.div``
+const ErrorWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+`
 
 const Error = () => {
     return (
         <ErrorWrapper>
-            <Card title="Error">
-                <p>Sorry, there was an error, please try again later.</p>
-            </Card>
+            <Title size="medium">Whoops!</Title>
+            <Text>Sorry, there was an error, please try again later.</Text>
         </ErrorWrapper>
     )
 }
