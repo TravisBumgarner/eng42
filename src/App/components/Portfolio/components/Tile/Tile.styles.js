@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { TERTIARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
 const TileWrapper = styled.div`
+    box-sizing: border-box;
     background-image: url('${props => props.src}');
     background-repeat: no-repeat;
     background-size: cover;

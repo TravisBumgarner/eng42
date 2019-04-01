@@ -23,6 +23,7 @@ const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
 
 const GlobalStyle = createGlobalStyle`
     html {
+        background-color: rgb(250,250,250);
         font-size: 16px;
         ${media.tablet`font-size: 14px;`}
     }
