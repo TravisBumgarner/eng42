@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { media } from 'Theme'
+
 const DetailsWrapper = styled.div``
 
 const Row = styled.div`
@@ -13,6 +15,11 @@ const Content = styled.div`
     /* border: 2px solid black; */
     padding: 10px;
     margin: 10px;
+
+    ${media.desktop`
+        margin: 10px 0;
+        padding: 10px 0;
+    `}
 `
 
 const SubContent = styled.div`
@@ -27,6 +34,10 @@ const Sidebar = styled.div`
     /* border: 2px solid black; */
     padding: 10px;
     margin: 10px;
+
+    ${media.desktop`
+        display: none;
+    `}
 `
 
 const Image = styled.img`
