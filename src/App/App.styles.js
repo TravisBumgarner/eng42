@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { media } from 'Theme'
+
 const AppWrapper = styled.div`
     max-width: 1200px;
     margin: 15px auto 30px;

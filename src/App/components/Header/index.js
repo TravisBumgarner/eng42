@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
+import { PRIMARY_COLOR, TERTIARY_COLOR, media } from 'Theme'
 import { Title } from 'SharedComponents'
 import { Navigation } from './components'
 
@@ -19,6 +19,11 @@ const HeaderWrapper = styled.div`
     justify-content: center;
     justify-content: space-between;
     display: flex;
+
+    ${media.tablet`
+        flex-direction: column;
+        align-items: center;
+    `}
 `
 
 const Header = () => {

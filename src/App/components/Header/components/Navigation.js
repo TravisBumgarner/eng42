@@ -13,7 +13,9 @@ const List = styled.div`
     align-items: center;
 `
 
-const Item = styled.div``
+const Item = styled.div`
+    margin: 0 10px;
+`
 
 const NavigationWrapper = styled.div`
     box-sizing: border-box;

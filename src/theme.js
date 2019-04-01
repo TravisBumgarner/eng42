@@ -6,7 +6,7 @@ const TERTIARY_COLOR = '#4acfa0'
 
 // Media Queries
 const SCREEN_WIDTHS = {
-    desktop: 992,
+    desktop: 1200,
     tablet: 768,
     phone: 376
 }
