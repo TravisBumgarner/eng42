@@ -23,8 +23,7 @@ const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
 
 const GlobalStyle = createGlobalStyle`
     html {
-        font-size: 18px;
-        ${media.desktop`font-size: 16px;`}
+        font-size: 16px;
         ${media.tablet`font-size: 14px;`}
     }
 `

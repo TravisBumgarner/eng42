@@ -3,7 +3,15 @@ import styled from 'styled-components'
 
 import { skills } from 'Content'
 import { Text, ExternalLink, Title } from 'SharedComponents'
-import { DetailsWrapper, Content, Sidebar, Row, Image, ImagesWrapper } from './Details.styles'
+import {
+    DetailsWrapper,
+    Content,
+    Sidebar,
+    Row,
+    Image,
+    ImagesWrapper,
+    SubContent
+} from './Details.styles'
 
 const SectionWrapper = styled.div`
     width: 100%;
@@ -13,7 +21,7 @@ const Section = ({ children, title }) => {
     return (
         <SectionWrapper>
             <Title size="small">{title}</Title>
-            <div>{children}</div>
+            <Text size="small">{children}</Text>
         </SectionWrapper>
     )
 }
@@ -35,7 +43,13 @@ const Details = ({
     const Description = description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
     const Locations = location.map(l => l.name).join(', ')
     const Organizations = organization.map(o => o.name).join(', ')
-    const Skills = skill.map(s => skills[s].name).join(', ')
+    const Skills = skill
+        .map(s => skills[s].name)
+        .sort((a, b) => {
+            console.log(a, b)
+            a - b
+        })
+        .join(', ')
     const Links = link.map(l => {
         return (
             <li key={l.id}>
@@ -49,47 +63,39 @@ const Details = ({
     return (
         <DetailsWrapper previewImageSrc={preview_img && preview_img.src}>
             <Row>
+                <Sidebar>
+                    <img src={preview_img.src} />
+                </Sidebar>
+
                 <Content>
                     <Title size="medium">{name}</Title>
-                </Content>
-            </Row>
-            <Row>
-                <Content>
                     {!!Links.length && (
                         <Section title="Links">
                             <ul>{Links}</ul>
                         </Section>
                     )}
                     <Section title="Description">{Description}</Section>
-                </Content>
 
-                <Sidebar>
-                    <Section title="Duration">
-                        <Text>{`${start_date.slice(0, -3)} - ${end_date.slice(0, -3)}`}</Text>
-                    </Section>
+                    <SubContent>
+                        <Section title="Skills">
+                            <Text>{Skills}</Text>
+                        </Section>
 
-                    <Section title="Skills">
-                        <Text>{Skills}</Text>
-                    </Section>
-
-                    <Section title="Location">
-                        <Text>{Locations}</Text>
-                    </Section>
-
-                    <Section title="Organization">
-                        <Text>{Organizations}</Text>
-                    </Section>
-                </Sidebar>
-            </Row>
-            {image.length ? (
-                <Row>
-                    <Content>
+                        <Section title="Meta">
+                            <Text>
+                                When: {`${start_date.slice(0, -3)} - ${end_date.slice(0, -3)}`}
+                            </Text>
+                            <Text>Where: {Locations}</Text>
+                            <Text>Who: {Organizations}</Text>
+                        </Section>
+                    </SubContent>
+                    {image.length ? (
                         <Section title="Photos">
                             <ImagesWrapper>{Images}</ImagesWrapper>
                         </Section>
-                    </Content>
-                </Row>
-            ) : null}
+                    ) : null}
+                </Content>
+            </Row>
         </DetailsWrapper>
     )
 }

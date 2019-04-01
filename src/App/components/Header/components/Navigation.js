@@ -5,10 +5,8 @@ import {
     FaInstagram as Instagram
 } from 'react-icons/fa'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
-import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
-import { ExternalLink, Title } from 'SharedComponents'
+import { ExternalLink } from 'SharedComponents'
 
 const List = styled.div`
     display: flex;
@@ -16,21 +14,10 @@ const List = styled.div`
 `
 
 const Item = styled.div`
-    margin: 5px;
-`
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${PRIMARY_COLOR};
-
-    &:hover {
-        color: ${TERTIARY_COLOR};
-    }
+    margin: 10px;
 `
 
 const NavigationWrapper = styled.div`
-    width: 100vw;
-    margin: 15px 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -39,11 +26,11 @@ const NavigationWrapper = styled.div`
 const EXTERNAL_LINKS = [
     {
         href: 'https://blog.travisbumgarner.com',
-        content: <span>Blog</span>
+        content: 'Blog'
     },
     {
         href: 'https://travisbumgarner.photography',
-        content: <span>Photography</span>
+        content: 'Photography'
     },
     {
         href: 'https://twitter.com/travis_the_makr',
@@ -62,22 +49,13 @@ const EXTERNAL_LINKS = [
 const Navigation = () => {
     const ExternalLinks = EXTERNAL_LINKS.map(l => (
         <Item key={l.href}>
-            <ExternalLink href={l.href}>
-                <Title size="medium">{l.content}</Title>
-            </ExternalLink>
+            <ExternalLink href={l.href}>{l.content}</ExternalLink>
         </Item>
     ))
 
     return (
         <NavigationWrapper>
-            <List>
-                <Item>
-                    <Title size="medium">
-                        <StyledLink to="/">Portfolio</StyledLink>
-                    </Title>
-                </Item>
-                {ExternalLinks}
-            </List>
+            <List>{ExternalLinks}</List>
         </NavigationWrapper>
     )
 }

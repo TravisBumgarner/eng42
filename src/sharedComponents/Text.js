@@ -6,7 +6,7 @@ const DefaultTextWrapper = styled.p`
     font-family: Montserrat, sans-serif;
     line-height: 1.5;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.2rem;
 `
 
 const SmallTextWrapper = styled.p`
@@ -14,7 +14,7 @@ const SmallTextWrapper = styled.p`
     font-family: Montserrat, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 1rem;
 `
 
 const LargeTextWrapper = styled.p`

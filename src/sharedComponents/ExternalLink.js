@@ -10,6 +10,9 @@ const ExternalLinkWrapper = styled.a`
         color: ${TERTIARY_COLOR};
         cursor: pointer;
     }
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: Raleway, sans-serif;
 `
 
 const ExternalLink = ({ children, primary, href, onClick }) => {

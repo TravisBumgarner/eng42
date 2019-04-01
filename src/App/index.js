@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import projects from 'Content'
 
-import { Portfolio, NotFound, Header, SingleProject, Navigation } from './components'
+import { Portfolio, NotFound, Header, SingleProject } from './components'
 import { GlobalStyle } from 'Theme'
 
 import { AppWrapper } from './App.styles'
@@ -15,7 +15,6 @@ const App = () => {
             <GlobalStyle />
             <AppWrapper>
                 <Header />
-                <Navigation />
                 <Switch>
                     <Route
                         exact

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
 import { Title } from 'SharedComponents'
+import { Navigation } from './components'
 
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -16,10 +17,12 @@ const StyledLink = styled(Link)`
 
 const HeaderWrapper = styled.div`
     width: 100vw;
-    margin: 15px 0;
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
+    justify-content: space-between;
+    display: flex;
+    max-width: 1200px;
+    margin: 15px auto 30px;
 `
 
 const Header = () => {
@@ -28,6 +31,7 @@ const Header = () => {
             <StyledLink to="/">
                 <Title size="large">Travis Bumgarner</Title>
             </StyledLink>
+            <Navigation />
         </HeaderWrapper>
     )
 }
