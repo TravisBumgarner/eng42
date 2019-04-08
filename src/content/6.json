@@ -13,7 +13,7 @@
         {
             "id": 82,
             "name": "eng10.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/eng10_6BnHZtG.jpg"
+            "src": "eng10_6BnHZtG.jpg"
         }
     ],
     "link": [
@@ -23,6 +23,6 @@
     "preview_img": {
         "id": 8,
         "name": "engineering version 1.0 preview",
-        "src": "https://eng40api.travisbumgarner.com/media/eng10.jpg"
+        "src": "eng10.jpg"
     }
 }

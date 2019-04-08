@@ -13,33 +13,33 @@
         {
             "id": 202,
             "name": "DSC03929.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03929.jpg"
+            "src": "DSC03929.jpg"
         },
         {
             "id": 203,
             "name": "0510162250.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0510162250.jpg"
+            "src": "0510162250.jpg"
         },
         {
             "id": 204,
             "name": "DSC03930.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03930_LIdsTci.jpg"
+            "src": "DSC03930_LIdsTci.jpg"
         },
         {
             "id": 205,
             "name": "DSC03926.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03926.jpg"
+            "src": "DSC03926.jpg"
         },
         {
             "id": 206,
             "name": "DSC03927.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03927.jpg"
+            "src": "DSC03927.jpg"
         }
     ],
     "link": [],
     "preview_img": {
         "id": 38,
         "name": "nightstand preview",
-        "src": "https://eng40api.travisbumgarner.com/media/DSC03930.jpg"
+        "src": "DSC03930.jpg"
     }
 }

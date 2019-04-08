@@ -13,18 +13,18 @@
         {
             "id": 181,
             "name": "IMG_20170321_202457_953.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170321_202457_953.jpg"
+            "src": "IMG_20170321_202457_953.jpg"
         },
         {
             "id": 182,
             "name": "IMG_20170320_225104_294.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170320_225104_294.jpg"
+            "src": "IMG_20170320_225104_294.jpg"
         }
     ],
     "link": [{ "id": 53, "name": "Website", "src": "http://old-meet.travisbumgarner.com/" }],
     "preview_img": {
         "id": 26,
         "name": "meet travis preview",
-        "src": "https://eng40api.travisbumgarner.com/media/meetme.png"
+        "src": "meetme.png"
     }
 }

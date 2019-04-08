@@ -13,28 +13,28 @@
         {
             "id": 68,
             "name": "kinematic-mount-3.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/kinematic-mount-3.jpg"
+            "src": "kinematic-mount-3.jpg"
         },
         {
             "id": 69,
             "name": "kinematic-mount.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/kinematic-mount.jpg"
+            "src": "kinematic-mount.jpg"
         },
         {
             "id": 70,
             "name": "kinematic-mount.png",
-            "src": "https://eng40api.travisbumgarner.com/media/kinematic-mount_uX5mKbe.png"
+            "src": "kinematic-mount_uX5mKbe.png"
         },
         {
             "id": 71,
             "name": "kinematic-mount-2-1.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/kinematic-mount-2-1.jpg"
+            "src": "kinematic-mount-2-1.jpg"
         }
     ],
     "link": [],
     "preview_img": {
         "id": 4,
         "name": "kinematic mount preview image",
-        "src": "https://eng40api.travisbumgarner.com/media/kinematic-mount.png"
+        "src": "kinematic-mount.png"
     }
 }

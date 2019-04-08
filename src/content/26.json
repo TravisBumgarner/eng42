@@ -13,17 +13,17 @@
         {
             "id": 183,
             "name": "DSC02147.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02147.jpg"
+            "src": "DSC02147.jpg"
         },
         {
             "id": 184,
             "name": "DSC02126.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02126_kZe4A36.jpg"
+            "src": "DSC02126_kZe4A36.jpg"
         },
         {
             "id": 185,
             "name": "DSC02125.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02125.jpg"
+            "src": "DSC02125.jpg"
         }
     ],
     "link": [
@@ -32,6 +32,6 @@
     "preview_img": {
         "id": 28,
         "name": "etsy store preview",
-        "src": "https://eng40api.travisbumgarner.com/media/DSC02126.jpg"
+        "src": "DSC02126.jpg"
     }
 }

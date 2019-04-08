@@ -17,72 +17,72 @@
         {
             "id": 84,
             "name": "_MG_7050.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/_MG_7050.jpg"
+            "src": "_MG_7050.jpg"
         },
         {
             "id": 85,
             "name": "CAM00143.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/CAM00143.jpg"
+            "src": "CAM00143.jpg"
         },
         {
             "id": 86,
             "name": "DSC00015.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00015.jpg"
+            "src": "DSC00015.jpg"
         },
         {
             "id": 87,
             "name": "_MG_6728.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/_MG_6728.jpg"
+            "src": "_MG_6728.jpg"
         },
         {
             "id": 88,
             "name": "CAM00155.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/CAM00155.jpg"
+            "src": "CAM00155.jpg"
         },
         {
             "id": 89,
             "name": "DSCN5474.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSCN5474.jpg"
+            "src": "DSCN5474.jpg"
         },
         {
             "id": 90,
             "name": "DSC00576.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00576.jpg"
+            "src": "DSC00576.jpg"
         },
         {
             "id": 91,
             "name": "DSC00563.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00563.jpg"
+            "src": "DSC00563.jpg"
         },
         {
             "id": 92,
             "name": "_MG_7035.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/_MG_7035.jpg"
+            "src": "_MG_7035.jpg"
         },
         {
             "id": 93,
             "name": "DSC00026.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00026.jpg"
+            "src": "DSC00026.jpg"
         },
         {
             "id": 94,
             "name": "DSC00350.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00350.jpg"
+            "src": "DSC00350.jpg"
         },
         {
             "id": 95,
             "name": "_MG_6634.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/_MG_6634.jpg"
+            "src": "_MG_6634.jpg"
         },
         {
             "id": 96,
             "name": "DSC00336.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00336.jpg"
+            "src": "DSC00336.jpg"
         },
         {
             "id": 97,
             "name": "DSC00326.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00326.jpg"
+            "src": "DSC00326.jpg"
         }
     ],
     "link": [
@@ -96,6 +96,6 @@
     "preview_img": {
         "id": 10,
         "name": "zero waste preview",
-        "src": "https://eng40api.travisbumgarner.com/media/colombia.jpg"
+        "src": "colombia.jpg"
     }
 }

@@ -13,32 +13,32 @@
         {
             "id": 175,
             "name": "IMG_20170319_180759.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170319_180759.jpg"
+            "src": "IMG_20170319_180759.jpg"
         },
         {
             "id": 176,
             "name": "Screen Shot 2018-03-16 at 4.00.00 PM.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-16_at_4.00.00_PM.jpg"
+            "src": "Screen_Shot_2018-03-16_at_4.00.00_PM.jpg"
         },
         {
             "id": 177,
             "name": "IMG_20170209_193557.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170209_193557_XnWRtty.jpg"
+            "src": "IMG_20170209_193557_XnWRtty.jpg"
         },
         {
             "id": 178,
             "name": "IMG_20170502_212456_776.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170502_212456_776.jpg"
+            "src": "IMG_20170502_212456_776.jpg"
         },
         {
             "id": 179,
             "name": "IMG_20170319_191530_356.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170319_191530_356.jpg"
+            "src": "IMG_20170319_191530_356.jpg"
         },
         {
             "id": 180,
             "name": "Screen Shot 2018-03-16 at 4.00.16 PM.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-16_at_4.00.16_PM.jpg"
+            "src": "Screen_Shot_2018-03-16_at_4.00.16_PM.jpg"
         }
     ],
     "link": [
@@ -56,6 +56,6 @@
     "preview_img": {
         "id": 25,
         "name": "security camera preview",
-        "src": "https://eng40api.travisbumgarner.com/media/IMG_20170209_193557.jpg"
+        "src": "IMG_20170209_193557.jpg"
     }
 }

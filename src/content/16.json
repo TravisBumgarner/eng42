@@ -13,13 +13,13 @@
         {
             "id": 137,
             "name": "dr-lb.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/dr-lb.jpg"
+            "src": "dr-lb.jpg"
         }
     ],
     "link": [{ "id": 16, "name": "Website", "src": "http://drlaurenbecker.com/" }],
     "preview_img": {
         "id": 18,
         "name": "dr. becker preview",
-        "src": "https://eng40api.travisbumgarner.com/media/lb.jpg"
+        "src": "lb.jpg"
     }
 }

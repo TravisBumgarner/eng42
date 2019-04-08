@@ -13,27 +13,27 @@
         {
             "id": 187,
             "name": "IMG_20180130_202458.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20180130_202458.jpg"
+            "src": "IMG_20180130_202458.jpg"
         },
         {
             "id": 188,
             "name": "20130409_202136.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/20130409_202136.jpg"
+            "src": "20130409_202136.jpg"
         },
         {
             "id": 189,
             "name": "IMG_20161219_190837.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161219_190837.jpg"
+            "src": "IMG_20161219_190837.jpg"
         },
         {
             "id": 215,
             "name": "hey.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/pp1.jpgSpacing-10__Dots-6_3_1.5_0.75_0___Lum-50_90_130_170_220.jpg"
+            "src": "pp1.jpgSpacing-10__Dots-6_3_1.5_0.75_0___Lum-50_90_130_170_220.jpg"
         },
         {
             "id": 216,
             "name": "test_cats.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/test_cats.jpg"
+            "src": "test_cats.jpg"
         }
     ],
     "link": [
@@ -61,6 +61,6 @@
     "preview_img": {
         "id": 30,
         "name": "2d plotter previews",
-        "src": "https://eng40api.travisbumgarner.com/media/Untitled-1.jpg"
+        "src": "Untitled-1.jpg"
     }
 }

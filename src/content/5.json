@@ -13,22 +13,22 @@
         {
             "id": 77,
             "name": "senior-design-2.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/senior-design-2.jpg"
+            "src": "senior-design-2.jpg"
         },
         {
             "id": 78,
             "name": "senior-design-5.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/senior-design-5.jpg"
+            "src": "senior-design-5.jpg"
         },
         {
             "id": 79,
             "name": "senior-design-01.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/senior-design-01.jpg"
+            "src": "senior-design-01.jpg"
         },
         {
             "id": 80,
             "name": "20130409_222413.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/20130409_222413.jpg"
+            "src": "20130409_222413.jpg"
         }
     ],
     "link": [
@@ -41,6 +41,6 @@
     "preview_img": {
         "id": 7,
         "name": "solar energy storage system preview image",
-        "src": "https://eng40api.travisbumgarner.com/media/sd.jpg"
+        "src": "sd.jpg"
     }
 }

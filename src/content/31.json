@@ -13,48 +13,48 @@
         {
             "id": 190,
             "name": "IMG_20170311_132614.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170311_132614.jpg"
+            "src": "IMG_20170311_132614.jpg"
         },
         {
             "id": 191,
             "name": "IMG_20170325_142002.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170325_142002.jpg"
+            "src": "IMG_20170325_142002.jpg"
         },
         {
             "id": 192,
             "name": "IMG_20170311_132650.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170311_132650.jpg"
+            "src": "IMG_20170311_132650.jpg"
         },
         {
             "id": 193,
             "name": "IMG_20170311_165533.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170311_165533.jpg"
+            "src": "IMG_20170311_165533.jpg"
         },
         {
             "id": 194,
             "name": "IMG_20170311_162945.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170311_162945.jpg"
+            "src": "IMG_20170311_162945.jpg"
         },
         {
             "id": 195,
             "name": "IMG-20170311-WA0000.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG-20170311-WA0000.jpg"
+            "src": "IMG-20170311-WA0000.jpg"
         },
         {
             "id": 196,
             "name": "IMG_20170502_192143.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170502_192143.jpg"
+            "src": "IMG_20170502_192143.jpg"
         },
         {
             "id": 197,
             "name": "IMG_20170502_192154.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170502_192154.jpg"
+            "src": "IMG_20170502_192154.jpg"
         }
     ],
     "link": [],
     "preview_img": {
         "id": 36,
         "name": "woodworking preview",
-        "src": "https://eng40api.travisbumgarner.com/media/IMG_20170502_194545_028.jpg"
+        "src": "IMG_20170502_194545_028.jpg"
     }
 }

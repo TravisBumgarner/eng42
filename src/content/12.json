@@ -13,47 +13,47 @@
         {
             "id": 105,
             "name": "IMG_20170516_142438_709.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170516_142438_709.jpg"
+            "src": "IMG_20170516_142438_709.jpg"
         },
         {
             "id": 106,
             "name": "IMG_20170514_152642.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170514_152642.jpg"
+            "src": "IMG_20170514_152642.jpg"
         },
         {
             "id": 107,
             "name": "DSC03858.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03858.jpg"
+            "src": "DSC03858.jpg"
         },
         {
             "id": 108,
             "name": "DSC03859.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03859.jpg"
+            "src": "DSC03859.jpg"
         },
         {
             "id": 109,
             "name": "IMG_20170514_152632.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170514_152632.jpg"
+            "src": "IMG_20170514_152632.jpg"
         },
         {
             "id": 110,
             "name": "DSC03886.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03886.jpg"
+            "src": "DSC03886.jpg"
         },
         {
             "id": 111,
             "name": "DSC03856.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03856.jpg"
+            "src": "DSC03856.jpg"
         },
         {
             "id": 112,
             "name": "DSC03897.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC03897.jpg"
+            "src": "DSC03897.jpg"
         },
         {
             "id": 113,
             "name": "IMG_20170513_182356.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170513_182356.jpg"
+            "src": "IMG_20170513_182356.jpg"
         }
     ],
     "link": [
@@ -62,6 +62,6 @@
     "preview_img": {
         "id": 14,
         "name": "hacking medicine preview",
-        "src": "https://eng40api.travisbumgarner.com/media/hackingmedicine.jpg"
+        "src": "hackingmedicine.jpg"
     }
 }

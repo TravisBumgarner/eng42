@@ -13,47 +13,47 @@
         {
             "id": 166,
             "name": "SAM_1920.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/SAM_1920.jpg"
+            "src": "SAM_1920.jpg"
         },
         {
             "id": 167,
             "name": "SAM_1918.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/SAM_1918.jpg"
+            "src": "SAM_1918.jpg"
         },
         {
             "id": 168,
             "name": "DSC04014.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC04014.jpg"
+            "src": "DSC04014.jpg"
         },
         {
             "id": 169,
             "name": "DSC08016.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC08016.jpg"
+            "src": "DSC08016.jpg"
         },
         {
             "id": 170,
             "name": "SAM_1932.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/SAM_1932.jpg"
+            "src": "SAM_1932.jpg"
         },
         {
             "id": 171,
             "name": "SAM_2043.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/SAM_2043.jpg"
+            "src": "SAM_2043.jpg"
         },
         {
             "id": 172,
             "name": "IMG_20170223_180839.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170223_180839_LtZBg7r.jpg"
+            "src": "IMG_20170223_180839_LtZBg7r.jpg"
         },
         {
             "id": 173,
             "name": "SAM_1929.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/SAM_1929.jpg"
+            "src": "SAM_1929.jpg"
         },
         {
             "id": 174,
             "name": "SAM_1939.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/SAM_1939.jpg"
+            "src": "SAM_1939.jpg"
         }
     ],
     "link": [
@@ -76,6 +76,6 @@
     "preview_img": {
         "id": 24,
         "name": "intro to arduino workshop preview",
-        "src": "https://eng40api.travisbumgarner.com/media/IMG_20170223_180839.jpg"
+        "src": "IMG_20170223_180839.jpg"
     }
 }

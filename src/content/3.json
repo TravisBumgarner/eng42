@@ -13,13 +13,13 @@
         {
             "id": 72,
             "name": "laser-case.png",
-            "src": "https://eng40api.travisbumgarner.com/media/laser-case_3HfbIBP.png"
+            "src": "laser-case_3HfbIBP.png"
         }
     ],
     "link": [],
     "preview_img": {
         "id": 5,
         "name": "laser system housing preview image",
-        "src": "https://eng40api.travisbumgarner.com/media/laser-case.png"
+        "src": "laser-case.png"
     }
 }

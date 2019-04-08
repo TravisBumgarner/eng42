@@ -8,7 +8,7 @@
     },
     "scripts": {
         "start": "NODE_ENV=develop webpack-dev-server  --mode=development --open --hot --inline --config webpack.js",
-        "build": "NODE_ENV=production webpack --config webpack.js"
+        "build": "NODE_ENV=production webpack --config webpack.js --mode=production"
     },
     "author": "",
     "license": "ISC",

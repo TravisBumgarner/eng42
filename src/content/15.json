@@ -13,42 +13,42 @@
         {
             "id": 129,
             "name": "DSC02517.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02517.jpg"
+            "src": "DSC02517.jpg"
         },
         {
             "id": 130,
             "name": "0302161638.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0302161638.jpg"
+            "src": "0302161638.jpg"
         },
         {
             "id": 131,
             "name": "DSC02514.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02514.jpg"
+            "src": "DSC02514.jpg"
         },
         {
             "id": 132,
             "name": "finalImage0.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/finalImage0.jpg"
+            "src": "finalImage0.jpg"
         },
         {
             "id": 133,
             "name": "DSC02409.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02409.jpg"
+            "src": "DSC02409.jpg"
         },
         {
             "id": 134,
             "name": "DSC02544.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02544.jpg"
+            "src": "DSC02544.jpg"
         },
         {
             "id": 135,
             "name": "DSC02520.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02520.jpg"
+            "src": "DSC02520.jpg"
         },
         {
             "id": 136,
             "name": "DSC02496.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02496.jpg"
+            "src": "DSC02496.jpg"
         }
     ],
     "link": [
@@ -76,6 +76,6 @@
     "preview_img": {
         "id": 17,
         "name": "timelapse camera preview",
-        "src": "https://eng40api.travisbumgarner.com/media/camera.jpg"
+        "src": "camera.jpg"
     }
 }

@@ -13,32 +13,32 @@
         {
             "id": 123,
             "name": "DSC08258.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC08258.jpg"
+            "src": "DSC08258.jpg"
         },
         {
             "id": 124,
             "name": "DSC08264.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC08264.jpg"
+            "src": "DSC08264.jpg"
         },
         {
             "id": 125,
             "name": "DSC08278.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC08278.jpg"
+            "src": "DSC08278.jpg"
         },
         {
             "id": 126,
             "name": "DSC08268.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC08268.jpg"
+            "src": "DSC08268.jpg"
         },
         {
             "id": 127,
             "name": "0610162137a.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0610162137a.jpg"
+            "src": "0610162137a.jpg"
         },
         {
             "id": 128,
             "name": "0611161250.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0611161250.jpg"
+            "src": "0611161250.jpg"
         }
     ],
     "link": [
@@ -48,6 +48,6 @@
     "preview_img": {
         "id": 16,
         "name": "pan & tilt preview image",
-        "src": "https://eng40api.travisbumgarner.com/media/pantilt.jpg"
+        "src": "pantilt.jpg"
     }
 }

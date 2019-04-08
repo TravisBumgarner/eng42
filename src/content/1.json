@@ -13,22 +13,22 @@
         {
             "id": 59,
             "name": "ewb0.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/ewb0.jpg"
+            "src": "ewb0.jpg"
         },
         {
             "id": 61,
             "name": "ewb1.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/ewb1.jpg"
+            "src": "ewb1.jpg"
         },
         {
             "id": 62,
             "name": "ewb3.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/ewb3.jpg"
+            "src": "ewb3.jpg"
         },
         {
             "id": 63,
             "name": "ewb2.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/ewb2.jpg"
+            "src": "ewb2.jpg"
         }
     ],
     "link": [
@@ -38,6 +38,6 @@
     "preview_img": {
         "id": 3,
         "name": "water system preview image",
-        "src": "https://eng40api.travisbumgarner.com/media/ewb.jpg"
+        "src": "ewb.jpg"
     }
 }

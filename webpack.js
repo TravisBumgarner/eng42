@@ -28,14 +28,13 @@ module.exports = {
             Content: path.resolve(__dirname, 'src/content')
         }
     },
-    devtool: 'inline-source-map',
     devServer: {
         publicPath: '/',
         contentBase: './dist',
         port: 3000,
         historyApiFallback: true
     },
-    devtool: 'source-map',
+    devtool: '',
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {

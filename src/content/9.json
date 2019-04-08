@@ -13,13 +13,13 @@
         {
             "id": 98,
             "name": "Screen Shot 2018-03-16 at 4.55.15 PM.png",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-16_at_4.55.15_PM.png"
+            "src": "Screen_Shot_2018-03-16_at_4.55.15_PM.png"
         }
     ],
     "link": [{ "id": 44, "name": "Website", "src": "http://photography.travisbumgarner.com" }],
     "preview_img": {
         "id": 11,
         "name": "photography portfolio v1.0",
-        "src": "https://eng40api.travisbumgarner.com/media/photography.jpg"
+        "src": "photography.jpg"
     }
 }

@@ -13,52 +13,52 @@
         {
             "id": 156,
             "name": "image-20161205_172515.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/image-20161205_172515.jpg"
+            "src": "image-20161205_172515.jpg"
         },
         {
             "id": 157,
             "name": "DSC09917.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC09917.jpg"
+            "src": "DSC09917.jpg"
         },
         {
             "id": 158,
             "name": "IMG_20170117_162451_472.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170117_162451_472.jpg"
+            "src": "IMG_20170117_162451_472.jpg"
         },
         {
             "id": 159,
             "name": "IMG_20170113_163132.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170113_163132.jpg"
+            "src": "IMG_20170113_163132.jpg"
         },
         {
             "id": 160,
             "name": "DSC09952.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC09952.jpg"
+            "src": "DSC09952.jpg"
         },
         {
             "id": 161,
             "name": "IMG_9931.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_9931.jpg"
+            "src": "IMG_9931.jpg"
         },
         {
             "id": 162,
             "name": "IMG_20161205_174353.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161205_174353.jpg"
+            "src": "IMG_20161205_174353.jpg"
         },
         {
             "id": 163,
             "name": "IMG_9937.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_9937.jpg"
+            "src": "IMG_9937.jpg"
         },
         {
             "id": 164,
             "name": "DSC00109.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC00109.jpg"
+            "src": "DSC00109.jpg"
         },
         {
             "id": 165,
             "name": "IMG_20170111_120824.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170111_120824.jpg"
+            "src": "IMG_20170111_120824.jpg"
         }
     ],
     "link": [
@@ -77,6 +77,6 @@
     "preview_img": {
         "id": 23,
         "name": "development class preview",
-        "src": "https://eng40api.travisbumgarner.com/media/cinnova.png"
+        "src": "cinnova.png"
     }
 }

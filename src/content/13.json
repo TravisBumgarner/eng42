@@ -13,47 +13,47 @@
         {
             "id": 114,
             "name": "IMG_20161202_120253.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161202_120253.jpg"
+            "src": "IMG_20161202_120253.jpg"
         },
         {
             "id": 115,
             "name": "IMG_20161113_180016.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161113_180016.jpg"
+            "src": "IMG_20161113_180016.jpg"
         },
         {
             "id": 116,
             "name": "IMG_20161108_191142.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161108_191142.jpg"
+            "src": "IMG_20161108_191142.jpg"
         },
         {
             "id": 117,
             "name": "IMG_20161102_204848.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161102_204848.jpg"
+            "src": "IMG_20161102_204848.jpg"
         },
         {
             "id": 118,
             "name": "IMG_20170401_210917_675.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170401_210917_675.jpg"
+            "src": "IMG_20170401_210917_675.jpg"
         },
         {
             "id": 119,
             "name": "IMG_20160915_203226.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20160915_203226.jpg"
+            "src": "IMG_20160915_203226.jpg"
         },
         {
             "id": 120,
             "name": "IMG_20170406_143907_046.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170406_143907_046.jpg"
+            "src": "IMG_20170406_143907_046.jpg"
         },
         {
             "id": 121,
             "name": "IMG_20161105_151718.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161105_151718.jpg"
+            "src": "IMG_20161105_151718.jpg"
         },
         {
             "id": 122,
             "name": "IMG_20170329_184425_671.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20170329_184425_671.jpg"
+            "src": "IMG_20170329_184425_671.jpg"
         }
     ],
     "link": [
@@ -72,6 +72,6 @@
     "preview_img": {
         "id": 15,
         "name": "painless prototyping preview",
-        "src": "https://eng40api.travisbumgarner.com/media/pp.jpg"
+        "src": "pp.jpg"
     }
 }

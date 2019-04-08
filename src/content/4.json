@@ -16,28 +16,28 @@
         {
             "id": 73,
             "name": "DSC05230.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC05230.jpg"
+            "src": "DSC05230.jpg"
         },
         {
             "id": 74,
             "name": "DSC05370.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC05370.jpg"
+            "src": "DSC05370.jpg"
         },
         {
             "id": 75,
             "name": "CAM00011.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/CAM00011.jpg"
+            "src": "CAM00011.jpg"
         },
         {
             "id": 76,
             "name": "IMG_1061.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_1061.jpg"
+            "src": "IMG_1061.jpg"
         }
     ],
     "link": [{ "id": 43, "name": "Blog", "src": "https://tbumgarner.wordpress.com/" }],
     "preview_img": {
         "id": 6,
         "name": "peace corps preview image",
-        "src": "https://eng40api.travisbumgarner.com/media/pc.jpg"
+        "src": "pc.jpg"
     }
 }

@@ -13,32 +13,32 @@
         {
             "id": 99,
             "name": "DSC02841.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02841.jpg"
+            "src": "DSC02841.jpg"
         },
         {
             "id": 100,
             "name": "0424160039.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0424160039.jpg"
+            "src": "0424160039.jpg"
         },
         {
             "id": 101,
             "name": "IMG_20160423_144244.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20160423_144244.jpg"
+            "src": "IMG_20160423_144244.jpg"
         },
         {
             "id": 102,
             "name": "DSC02609.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/DSC02609.jpg"
+            "src": "DSC02609.jpg"
         },
         {
             "id": 103,
             "name": "0520162344.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0520162344.jpg"
+            "src": "0520162344.jpg"
         },
         {
             "id": 104,
             "name": "0520162342.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/0520162342.jpg"
+            "src": "0520162342.jpg"
         }
     ],
     "link": [
@@ -57,6 +57,6 @@
     "preview_img": {
         "id": 13,
         "name": "Automated film scanner preview",
-        "src": "https://eng40api.travisbumgarner.com/media/scanner.jpg"
+        "src": "scanner.jpg"
     }
 }

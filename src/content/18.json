@@ -13,12 +13,12 @@
         {
             "id": 141,
             "name": "a2a_1_60sO6ZO.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/a2a_1_60sO6ZO.jpg"
+            "src": "a2a_1_60sO6ZO.jpg"
         },
         {
             "id": 142,
             "name": "a2a_2_mw7Bk2R.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/a2a_2_mw7Bk2R.jpg"
+            "src": "a2a_2_mw7Bk2R.jpg"
         }
     ],
     "link": [
@@ -37,6 +37,6 @@
     "preview_img": {
         "id": 20,
         "name": "assessment to action preview",
-        "src": "https://eng40api.travisbumgarner.com/media/AssessmentToAction.png"
+        "src": "AssessmentToAction.png"
     }
 }

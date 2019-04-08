@@ -13,23 +13,23 @@
         {
             "id": 138,
             "name": "IMG_20161103_180829.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161103_180829.jpg"
+            "src": "IMG_20161103_180829.jpg"
         },
         {
             "id": 139,
             "name": "IMG_20161103_181053.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161103_181053.jpg"
+            "src": "IMG_20161103_181053.jpg"
         },
         {
             "id": 140,
             "name": "IMG_20161103_181008.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/IMG_20161103_181008.jpg"
+            "src": "IMG_20161103_181008.jpg"
         }
     ],
     "link": [],
     "preview_img": {
         "id": 19,
         "name": "baby gym preview",
-        "src": "https://eng40api.travisbumgarner.com/media/babygym.jpg"
+        "src": "babygym.jpg"
     }
 }

@@ -13,13 +13,13 @@
         {
             "id": 83,
             "name": "eng20.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/eng20.jpg"
+            "src": "eng20.jpg"
         }
     ],
     "link": [],
     "preview_img": {
         "id": 9,
         "name": "engineering portfolio v2.0 preview",
-        "src": "https://eng40api.travisbumgarner.com/media/portfolio2.jpg"
+        "src": "portfolio2.jpg"
     }
 }

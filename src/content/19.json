@@ -13,7 +13,7 @@
         {
             "id": 143,
             "name": "eng30.jpg",
-            "src": "https://eng40api.travisbumgarner.com/media/eng30.jpg"
+            "src": "eng30.jpg"
         }
     ],
     "link": [
@@ -26,6 +26,6 @@
     "preview_img": {
         "id": 21,
         "name": "engineering portfolio v3.0 preview",
-        "src": "https://eng40api.travisbumgarner.com/media/eng30.png"
+        "src": "eng30.png"
     }
 }

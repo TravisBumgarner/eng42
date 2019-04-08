@@ -13,22 +13,22 @@
         {
             "id": 218,
             "name": "site image 1",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-09_at_4.41.37_PM.png"
+            "src": "Screen_Shot_2018-03-09_at_4.41.37_PM.png"
         },
         {
             "id": 219,
             "name": "site image 2",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-13_at_4.12.18_PM.png"
+            "src": "Screen_Shot_2018-03-13_at_4.12.18_PM.png"
         },
         {
             "id": 220,
             "name": "site image 3",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-18_at_3.22.18_PM_7WRSmtc.png"
+            "src": "Screen_Shot_2018-03-18_at_3.22.18_PM_7WRSmtc.png"
         },
         {
             "id": 221,
             "name": "site image 4",
-            "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-24_at_10.24.06_PM.png"
+            "src": "Screen_Shot_2018-03-24_at_10.24.06_PM.png"
         }
     ],
     "link": [
@@ -42,6 +42,6 @@
     "preview_img": {
         "id": 217,
         "name": "eng40 preview",
-        "src": "https://eng40api.travisbumgarner.com/media/Screen_Shot_2018-03-18_at_3.22.18_PM.png"
+        "src": "Screen_Shot_2018-03-18_at_3.22.18_PM.png"
     }
 }
