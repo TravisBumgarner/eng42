@@ -51,12 +51,12 @@ const Details = ({
             </li>
         )
     })
-    const Images = image.map(i => <Image src={i.src} />)
+    const Images = image.map(i => <Image src={__API__ + i.src} />)
     return (
         <DetailsWrapper previewImageSrc={preview_img && preview_img.src}>
             <Row>
                 <Sidebar>
-                    <img src={preview_img.src} />
+                    <img src={__API__ + preview_img.src} />
                 </Sidebar>
 
                 <Content>
