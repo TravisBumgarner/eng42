@@ -8,7 +8,7 @@
     "description": "A year ago I created version 4.0 of my portfolio. Instead of doing what I've always done and rewrite it from scratch, I decided to refactor it. Technically speaking, I stripped out about ten frontend dependencies, removed several hundred lines of code including the entire Django backend, converted class components to functions, and cleaned up other code smells.",
     "start_date": "2019-03-25",
     "end_date": "2019-04-10",
-    "skill": [20, 35, 37, 11, 12],
+    "skill": [20, 35, 37, 11, 12, 44, 45],
     "image": [],
     "link": [
         { "id": 60, "name": "Github", "src": "https://github.com/TravisBumgarner/eng41" },

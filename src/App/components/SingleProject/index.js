@@ -14,7 +14,6 @@ const SingleProject = ({
         return null
     }
     const project = projects.filter(project => project.id == id)[0]
-    console.log(project.name)
     return (
         <SingleProjectWrapper>
             <Details project={project} />

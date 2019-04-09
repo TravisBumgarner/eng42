@@ -17,13 +17,6 @@ class App extends Component {
 
     render() {
         const sortedProjects = projects.sort((a, b) => {
-            console.log(a, b)
-            if (a.end_date === 'Ongoing') {
-                return -1
-            }
-            if (b.end_date === 'Ongoing') {
-                return 1
-            }
             return Date.parse(b.end_date) - Date.parse(a.end_date)
         })
         return (
