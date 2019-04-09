@@ -38,9 +38,7 @@ const Details = ({
     const Organizations = organization.map(o => o.name).join(', ')
     const Skills = skill
         .map(s => skills[s].name)
-        .sort((a, b) => {
-            a - b
-        })
+        .sort()
         .join(', ')
     const Links = link.map(l => {
         return (
