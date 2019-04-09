@@ -39,5 +39,8 @@
     "38": { "id": 38, "name": "Redux", "category": "Software Engineering" },
     "40": { "id": 40, "name": "Sketch", "category": "UX & UI Design" },
     "41": { "id": 41, "name": "Sqlite", "category": "Software Engineering" },
-    "42": { "id": 42, "name": "MySql", "category": "Software Engineering" }
+    "42": { "id": 42, "name": "MySql", "category": "Software Engineering" },
+    "43": { "id": 43, "name": "Hugo", "category": "Software Engineering" },
+    "44": { "id": 44, "name": "Node", "category": "Software Engineering" },
+    "45": { "id": 45, "name": "Express", "category": "Software Engineering" }
 }
