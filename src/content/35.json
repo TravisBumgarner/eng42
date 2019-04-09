@@ -5,7 +5,7 @@
     "organization": [{ "id": 5, "name": "Personal" }],
     "location": [{ "id": 5, "name": "Massachusetts" }],
     "headline": ".",
-    "description": "It seems to be a continuing trend that as I learn new technologies, I have to rebuild my portfolio with them. This is the 4th iteration of my portfolio built with React and Django Rest Framework. I focused on improving my skills in those two libraries, and CSS. I also took time to learn Sketch to design the site.",
+    "description": "(Note: The website does not exist anymore.)\r\n\r\nIt seems to be a continuing trend that as I learn new technologies, I have to rebuild my portfolio with them. This is the 4th iteration of my portfolio built with React and Django Rest Framework. I focused on improving my skills in those two libraries, and CSS. I also took time to learn Sketch to design the site.",
     "start_date": "2018-02-01",
     "end_date": "2018-04-01",
     "skill": [11, 12, 13, 15, 19, 20, 22, 28, 34, 35, 37, 38, 40, 41],

@@ -5,7 +5,7 @@
     "organization": [{ "id": 5, "name": "Personal" }],
     "location": [{ "id": 5, "name": "Massachusetts" }],
     "headline": "WordPress portfolio for my photography",
-    "description": "My Photography Portfolio needed a place to live on the internet so I designed and developed a WordPress website with a custom theme.",
+    "description": "(Note: The website does not exist anymore.)\r\n\r\nMy Photography Portfolio needed a place to live on the internet so I designed and developed a WordPress website with a custom theme.",
     "start_date": "2015-11-01",
     "end_date": "2016-01-01",
     "skill": [11, 12, 13, 14, 15, 16, 17, 18, 19, 42],
@@ -16,7 +16,7 @@
             "src": "Screen_Shot_2018-03-16_at_4.55.15_PM.png"
         }
     ],
-    "link": [{ "id": 44, "name": "Website", "src": "http://photography.travisbumgarner.com" }],
+    "link": [],
     "preview_img": {
         "id": 11,
         "name": "photography portfolio v1.0",

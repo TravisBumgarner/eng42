@@ -47,12 +47,7 @@
             "name": "GitHub Repo",
             "src": "https://github.com/TravisBumgarner/Automatic-Film-Scanner/tree/master/film_scanner_arduino"
         },
-        { "id": 45, "name": "Video", "src": "https://www.youtube.com/watch?v=vDLHhMvcVL0" },
-        {
-            "id": 46,
-            "name": "Scanned Photos",
-            "src": "http://photography.travisbumgarner.com/938-2/"
-        }
+        { "id": 45, "name": "Video", "src": "https://www.youtube.com/watch?v=vDLHhMvcVL0" }
     ],
     "preview_img": {
         "id": 13,
