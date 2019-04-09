@@ -24,7 +24,7 @@
     "23": { "id": 23, "name": "Soldering", "category": "Electrical Engineering" },
     "24": { "id": 24, "name": "PCB Design", "category": "Electrical Engineering" },
     "25": { "id": 25, "name": "Video Editing", "category": "Photography" },
-    "26": { "id": 26, "name": "Laser Cuttering", "category": "Mechanical Engineering & Design" },
+    "26": { "id": 26, "name": "Laser Cutting", "category": "Mechanical Engineering & Design" },
     "27": { "id": 27, "name": "Woodworking Tools", "category": "Woodworking" },
     "28": { "id": 28, "name": "Django", "category": "Software Engineering" },
     "29": { "id": 29, "name": "Less", "category": "Software Engineering" },
