@@ -35,6 +35,7 @@ import file_35 from './35.json'
 import file_36 from './36.json'
 import file_37 from './37.json'
 import file_38 from './38.json'
+import file_39 from './39.json'
 
 import skills from './skills.json'
 import categories from './categories.json'
@@ -77,5 +78,6 @@ export default [
     file_35,
     file_36,
     file_37,
-    file_38
+    file_38,
+    file_39
 ]

@@ -73,7 +73,10 @@ const Details = ({
 
                         <Section title="Meta">
                             <Text>
-                                When: {`${start_date.slice(0, -3)} - ${end_date.slice(0, -3)}`}
+                                When:{' '}
+                                {`${start_date.slice(0, -3)} - ${
+                                    end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
+                                }`}
                             </Text>
                             <Text>Where: {Locations}</Text>
                             <Text>Who: {Organizations}</Text>
