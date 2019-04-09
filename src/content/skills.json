@@ -43,5 +43,7 @@
     "43": { "id": 43, "name": "Hugo", "category": "Software Engineering" },
     "44": { "id": 44, "name": "Node", "category": "Software Engineering" },
     "45": { "id": 45, "name": "Express", "category": "Software Engineering" },
-    "46": { "id": 46, "name": "Elasticsearch", "category": "Software Engineering" }
+    "46": { "id": 46, "name": "Elasticsearch", "category": "Software Engineering" },
+    "47": { "id": 47, "name": "Slack API", "category": "Software Engineering" },
+    "48": { "id": 48, "name": "Amazon SQS", "category": "Software Engineering" }
 }
