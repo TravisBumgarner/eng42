@@ -11,7 +11,7 @@ setupEnv = () => {
             publicPath = '/'
             break
         default:
-            mediaPath = "'https://travisbumgarner.com/media/'"
+            mediaPath = "'./media/'"
             publicPath = '/static'
     }
 }
