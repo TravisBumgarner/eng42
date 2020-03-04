@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import * as Sentry from '@sentry/browser'
 
 import { Error } from './sharedComponents'
@@ -39,9 +39,9 @@ class SentryWrapper extends Component {
 
 ReactDOM.render(
     <SentryWrapper>
-        <HashRouter>
+        <BrowserRouter>
             <App />
-        </HashRouter>
+        </BrowserRouter>
     </SentryWrapper>,
     document.getElementById('root')
 )

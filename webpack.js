@@ -11,7 +11,7 @@ setupEnv = () => {
             publicPath = '/'
             break
         default:
-            mediaPath = "'./media/'"
+            mediaPath = "'/media/'"
             publicPath = '/static'
     }
 }
