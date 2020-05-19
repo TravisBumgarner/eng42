@@ -1,8 +1,8 @@
 import { css, createGlobalStyle } from 'styled-components'
 
-const PRIMARY_COLOR = '#000000'
-const SECONDARY_COLOR = '#FFFFFF'
-const TERTIARY_COLOR = '#4acfa0'
+const PRIMARY_COLOR = '#FFFFFF'
+const SECONDARY_COLOR = '#32394c'
+const TERTIARY_COLOR = '#b9ccff'
 
 // Media Queries
 const SCREEN_WIDTHS = {
@@ -23,7 +23,7 @@ const media = Object.keys(SCREEN_WIDTHS).reduce((acc, label) => {
 
 const GlobalStyle = createGlobalStyle`
     html {
-        background-color: rgb(240,240,240);
+        background-color: ${SECONDARY_COLOR};
         font-size: 16px;
         ${media.tablet`font-size: 14px;`}
     }

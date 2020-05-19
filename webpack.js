@@ -19,8 +19,9 @@ module.exports = {
         ]
     },
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'public')
+        filename: '[name]-[hash].bundle.js',
+        path: path.resolve(__dirname, 'public'),
+        publicPath: '/'
     },
     resolve: {
         alias: {
