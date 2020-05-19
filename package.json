@@ -7,9 +7,10 @@
         "lib": "lib"
     },
     "scripts": {
-        "start:ui": "NODE_ENV=development webpack-dev-server  --mode=development --open --hot --inline --config webpack.js",
-        "start:api": "nodemon server.js",
-        "build": "NODE_ENV=production webpack --config webpack.js --mode=production"
+        "start-dev": "NODE_ENV=development webpack-dev-server --mode=development --config webpack.js",
+        "bundle": "NODE_ENV=production; rm -rf ./public; mkdir ./public; webpack --mode=production --config webpack.js --verobose",
+        "precommit": "tsc --noEmit --skipLibCheck",
+        "deploy": "gcloud builds submit --tag gcr.io/eng40-277714/frontend && gcloud run deploy frontend --image gcr.io/eng40-277714/frontend --platform managed --region us-east1"
     },
     "author": "",
     "license": "ISC",
@@ -30,8 +31,8 @@
         "babel-loader": "^8.0.0",
         "html-webpack-plugin": "^3.2.0",
         "webpack": "^4.17.1",
-        "webpack-cli": "^3.1.0",
-        "webpack-dev-server": "^3.1.11"
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0"
     },
     "proxy": "http://localhost:24971"
 }

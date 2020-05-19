@@ -1,21 +1,6 @@
 const path = require('path')
 var webpack = require('webpack')
-
-let mediaPath
-let publicPath
-setupEnv = () => {
-    console.log(process.env.NODE_ENV)
-    switch (process.env.NODE_ENV) {
-        case 'development':
-            mediaPath = "'http://localhost:3002/media/'"
-            publicPath = '/'
-            break
-        default:
-            mediaPath = "'/media/'"
-            publicPath = '/static'
-    }
-}
-setupEnv()
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -35,7 +20,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'public')
     },
     resolve: {
         alias: {
@@ -45,18 +30,22 @@ module.exports = {
         }
     },
     devServer: {
-        publicPath: '/',
-        contentBase: './dist',
+        contentBase: './public',
         port: 3000,
-        historyApiFallback: true
+        historyApiFallback: true,
+        publicPath: '/'
     },
-    devtool: '',
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-        new webpack.DefinePlugin({ __API__: mediaPath })
+        new webpack.DefinePlugin({ __API__: '"https://storage.googleapis.com/eng40/media/"' }),
+        new HtmlWebpackPlugin({
+            template: './src/index.template.ejs',
+            favicon: "./src/favicon.png",
+            inject: 'body'
+        })
     ]
 }
