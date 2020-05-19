@@ -1,14 +1,37 @@
 {
     "id": 24,
     "name": "meet.TravisBumgarner",
-    "category": [6, 7],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        6,
+        7
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "Single page web app for getting freelance work",
     "description": "Single page web app for getting freelance work.",
     "start_date": "2017-03-01",
     "end_date": "2017-04-01",
-    "skill": [11, 12, 13, 14, 15, 16, 29, 31, 41],
+    "skill": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        29,
+        31,
+        41
+    ],
     "image": [
         {
             "id": 181,
@@ -21,7 +44,7 @@
             "src": "IMG_20170320_225104_294.jpg"
         }
     ],
-    "link": [{ "id": 53, "name": "Website", "src": "http://old-meet.travisbumgarner.com/" }],
+    "link": [],
     "preview_img": {
         "id": 26,
         "name": "meet travis preview",

@@ -1,14 +1,30 @@
 {
     "id": 37,
     "name": "Okemo Mountain Puzzle",
-    "category": [7, 10],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        7,
+        10
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "",
-    "description": "My girlfriend's parents love skiing at Okemo and solving puzzles. As a thank you for hosting me in their home, I made this puzzle.",
+    "description": "My friend's parents love skiing at Okemo and solving puzzles. As a thank you for hosting me in their home, I made this puzzle.",
     "start_date": "2019-02-19",
     "end_date": "2019-03-22",
-    "skill": [15, 26],
+    "skill": [
+        15,
+        26
+    ],
     "image": [
         {
             "id": 198,

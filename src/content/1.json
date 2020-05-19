@@ -54,11 +54,6 @@
     ],
     "link": [
         {
-            "id": 7,
-            "name": "Project Website",
-            "src": "http://ewb.rutgers.edu/projects/kenya.html"
-        },
-        {
             "id": 8,
             "name": "Engineers Without Borders Website",
             "src": "https://www.ewb-usa.org/"
