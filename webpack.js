@@ -36,11 +36,6 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('production')
-            }
-        }),
         new webpack.DefinePlugin({ __API__: '"https://storage.googleapis.com/eng40/media/"' }),
         new HtmlWebpackPlugin({
             template: './src/index.template.ejs',
