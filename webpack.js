@@ -23,9 +23,10 @@ module.exports = {
     resolve: {
         alias: {
             SharedComponents: path.resolve(__dirname, 'src/sharedComponents/'),
-            Theme: path.resolve(__dirname, 'src/theme.js'),
+            Theme: path.resolve(__dirname, 'src/theme.ts'),
             Content: path.resolve(__dirname, 'src/content')
-        }
+        },
+        extensions: ['.ts', '.tsx', '.js']
     },
     devServer: {
         contentBase: './public',

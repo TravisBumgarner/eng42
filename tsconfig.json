@@ -13,7 +13,7 @@
                 "src/sharedTypes/index.ts"
             ],
             "theme": [
-                "src/theme.js"
+                "src/theme.ts"
             ],
             "utilities": [
                 "src/utilities"

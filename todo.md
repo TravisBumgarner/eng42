@@ -1,0 +1,3 @@
+- [x] Convert minimally to TS
+- [ ] Add types
+- [ ] Further refactorings
