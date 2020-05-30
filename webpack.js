@@ -4,17 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        app: './src/index.js'
+        app: './src/index.tsx'
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.[jt]s[x]$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
-                    presets: ['@babel/preset-env', '@babel/preset-react']
-                }
             }
         ]
     },
