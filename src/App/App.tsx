@@ -6,7 +6,14 @@ import projects from 'Content'
 import { Portfolio, NotFound, Header, SingleProject } from './components'
 import { GlobalStyle } from 'Theme'
 
-import { AppWrapper } from './App.styles'
+import styled from 'styled-components'
+
+const AppWrapper = styled.div`
+    max-width: 1200px;
+    margin: 15px auto 30px;
+    width: 100vw;
+    box-sizing: border-box;
+`
 
 class App extends Component {
     componentDidUpdate(prevProps) {

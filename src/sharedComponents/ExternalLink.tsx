@@ -15,9 +15,14 @@ const ExternalLinkWrapper = styled.a`
     font-family: Raleway, sans-serif;
 `
 
-const ExternalLink = ({ children, primary, href, onClick }) => {
+type ExternalLinkProps = {
+    children: React.ReactNode
+    href: string
+}
+
+const ExternalLink = ({ children, href }: ExternalLinkProps) => {
     return (
-        <ExternalLinkWrapper target="_blank" primary={primary} href={href} onClick={onClick}>
+        <ExternalLinkWrapper target="_blank" href={href}>
             {children}
         </ExternalLinkWrapper>
     )

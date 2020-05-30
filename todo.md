@@ -1,3 +1,6 @@
 - [x] Convert minimally to TS
 - [ ] Add types
 - [ ] Further refactorings
+- [ ] Get rid of classes
+- [ ] Media queries and styled components
+- [ ] use React router hooks

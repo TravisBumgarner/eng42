@@ -39,11 +39,63 @@ import file_39 from './39.json'
 import file_40 from './40.json'
 import file_41 from './41.json'
 
-import skills from './skills.json'
-import categories from './categories.json'
+import skills_json from './skills.json'
+import categories_json from './categories.json'
 
-export { skills, categories }
-export default [
+type Organization = {
+    id: number,
+    name: string
+}
+
+type Location = {
+    id: number,
+    name: string
+}
+
+type Image = {
+    id: number,
+    name: string,
+    src: string
+}
+
+type Link = {
+    id: number,
+    name: string,
+    src: string
+}
+
+type Project = {
+    "id": number,
+    "name": string,
+    "category": number[],
+    "organization": Organization[],
+    "location": Location[],
+    "headline": string,
+    "description": string,
+    "start_date": string,
+    "end_date": string,
+    "skill": number[],
+    "image": Image[],
+    "link": Link[],
+    "preview_img": Image
+}
+
+type Skills = {
+    [key: string]: {
+        id: number,
+        name: string,
+        category: string
+    }
+}
+
+type Categories = {
+    [key: string]: {
+        id: number,
+        name: string,
+    }
+}
+
+const projects: Project[] = [
     file_1,
     file_2,
     file_3,
@@ -85,3 +137,9 @@ export default [
     file_40,
     file_41
 ]
+
+const skills: Skills = skills_json
+const categories: Categories = categories_json
+
+export { skills, categories, Project, Skills, Categories }
+export default projects

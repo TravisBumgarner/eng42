@@ -10,7 +10,8 @@
         "start-dev": "NODE_ENV=development webpack-dev-server --mode=development --config webpack.js",
         "bundle": "NODE_ENV=production; rm -rf ./public; mkdir ./public; webpack --mode=production --config webpack.js --verobose",
         "precommit": "tsc --noEmit --skipLibCheck",
-        "deploy": "gcloud builds submit --tag gcr.io/eng40-277714/frontend && gcloud run deploy frontend --image gcr.io/eng40-277714/frontend --platform managed --region us-east1"
+        "deploy": "gcloud builds submit --tag gcr.io/eng40-277714/frontend && gcloud run deploy frontend --image gcr.io/eng40-277714/frontend --platform managed --region us-east1",
+        "typecheck": "tsc --noEmit"
     },
     "author": "",
     "license": "ISC",
@@ -29,6 +30,7 @@
         "@babel/preset-react": "^7.10.1",
         "@babel/preset-typescript": "^7.10.1",
         "@types/react": "^16.9.35",
+        "@types/react-dom": "^16.9.8",
         "@types/react-router-dom": "^5.1.5",
         "@types/styled-components": "^5.1.0",
         "babel-loader": "^8.1.0",

@@ -6,17 +6,14 @@
             "*": [
                 "src/types/*"
             ],
-            "sharedComponents": [
+            "SharedComponents": [
                 "src/sharedComponents"
             ],
-            "sharedTypes": [
-                "src/sharedTypes/index.ts"
-            ],
-            "theme": [
+            "Theme": [
                 "src/theme.ts"
             ],
-            "utilities": [
-                "src/utilities"
+            "Content": [
+                "src/content"
             ]
         },
         "module": "commonjs",

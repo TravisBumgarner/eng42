@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { Tile } from './components'
+import { Project } from '../../../content'
 
 const GridWrapper = styled.div`
     margin-top: 20px;
@@ -11,7 +11,11 @@ const GridWrapper = styled.div`
     justify-content: center;
 `
 
-const Portfolio = ({ projects }) => {
+type PortfolioProps = {
+    projects: Project[]
+}
+
+const Portfolio = ({ projects }: PortfolioProps) => {
     const Projects = Object.values(projects).map(project => {
         return <Tile key={project.id} project={project} />
     })

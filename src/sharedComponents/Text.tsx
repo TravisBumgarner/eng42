@@ -29,7 +29,12 @@ const LargeTextWrapper = styled.p`
     color: ${PRIMARY_COLOR};
 `
 
-const Text = ({ children, size }) => {
+type TextProps = {
+    size?: 'small' | 'large'
+    children: React.ReactNode
+}
+
+const Text = ({ children, size }: TextProps) => {
     let TextWrapper
 
     if (size === 'small') {

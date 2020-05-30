@@ -1,3 +1,5 @@
+import React from 'react'
+
 import styled from 'styled-components'
 
 import { PRIMARY_COLOR } from 'Theme'
@@ -31,3 +33,22 @@ const SmallTitle = styled.h3`
 `
 
 export { LargeTitle, MediumTitle, SmallTitle }
+
+type TitleProps = {
+    size: 'small' | 'large' | 'medium'
+    children: React.ReactNode
+}
+
+const Title = ({ children, size }: TitleProps) => {
+    switch (size) {
+        case 'large':
+            return <LargeTitle size={size}>{children}</LargeTitle>
+        case 'small':
+            return <SmallTitle size={size}>{children}</SmallTitle>
+        case 'medium':
+        default:
+            return <MediumTitle size={size}>{children}</MediumTitle>
+    }
+}
+
+export default Title
