@@ -24,21 +24,21 @@ const SubContent = styled.div`
     & div {
         width: 48%;
     }
-    ${media.tablet`
+    ${media.tablet} {
         flex-direction: column;
         & div {
             width: 100%;
         }
-    `}
+    }
 `
 
 const Sidebar = styled.div`
     width: 38%;
     margin-right: 20px;
 
-    ${media.desktop`
+    ${media.desktop} {
         display: none;
-    `}
+    }
 `
 
 const Image = styled.img`

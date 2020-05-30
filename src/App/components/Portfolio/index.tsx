@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tile } from './components'
-import { Project } from '../../../content'
+import { Project } from 'Content'
 
 const GridWrapper = styled.div`
     margin-top: 20px;

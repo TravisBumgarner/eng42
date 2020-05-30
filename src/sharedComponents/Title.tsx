@@ -35,7 +35,7 @@ const SmallTitle = styled.h3`
 export { LargeTitle, MediumTitle, SmallTitle }
 
 type TitleProps = {
-    size: 'small' | 'large' | 'medium'
+    size?: 'small' | 'large' | 'medium'
     children: React.ReactNode
 }
 

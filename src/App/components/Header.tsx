@@ -18,15 +18,15 @@ const List = styled.div`
 const Item = styled.div`
     margin-left: 10px;
 
-    ${media.tablet`
-    margin: 0 10px;
-    `}
+    ${media.tablet} {
+        margin: 0 10px;
+    }
 `
 
 const NavigationWrapper = styled.div`
-    box-sizing: border-box;
+    box - sizing: border - box;
     display: flex;
-    justify-content: center;
+    justify - content: center;
 `
 
 const EXTERNAL_LINKS = [
@@ -67,28 +67,28 @@ const Navigation = () => {
 }
 
 const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: ${PRIMARY_COLOR};
+text - decoration: none;
+color: ${ PRIMARY_COLOR};
 
-    &:hover {
-        color: ${TERTIARY_COLOR};
-    }
+    &: hover {
+    color: ${ TERTIARY_COLOR};
+}
 `
 
 const HeaderWrapper = styled.div`
-    justify-content: center;
-    justify-content: space-between;
-    display: flex;
-    margin-bottom: 40px;
-    ${media.desktop`
+justify - content: center;
+justify - content: space - between;
+display: flex;
+margin - bottom: 40px;
+${media.desktop} {
         margin: 20px 4vw;
-    `}
+    }
 
-    ${media.tablet`
+${media.tablet} {
         flex-direction: column;
         align-items: center;
         margin-bottom: 30px;
-    `}
+    }
 `
 
 const Header = () => {

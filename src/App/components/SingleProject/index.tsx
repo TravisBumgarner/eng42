@@ -13,9 +13,9 @@ const SingleProjectWrapper = styled.div`
     justify-content: space-between;
     display: flex;
 
-    ${media.desktop`
+    ${media.desktop} {
         margin: 20px 4vw;
-    `}
+    }
 `
 
 const SingleProject = ({

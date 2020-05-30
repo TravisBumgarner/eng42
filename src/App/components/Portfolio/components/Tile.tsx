@@ -1,7 +1,10 @@
+import React from 'react'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
 
-import { TERTIARY_COLOR, SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
+import { categories, Project } from 'Content'
+import { Title, Text } from 'SharedComponents'
+import { NavLink } from 'react-router-dom'
+import { SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
 const TileWrapper = styled.div`
     box-sizing: border-box;
@@ -15,15 +18,15 @@ const TileWrapper = styled.div`
     height: calc(100vw / 3);
     position: relative;
 
-    ${media.desktop`
+    ${media.desktop} {
         width: calc(100vw / 3 - 2.5vw);
         height: calc(100vw / 3 - 2.5vw);
-    `}
+    }
 
-    ${media.tablet`
+    ${media.tablet} {
         width: calc(100vw/2 - 2.5vw);
         height: calc(100vw/2 - 2.5vw);
-    `}
+    }
 `
 
 const StyledLink = styled(NavLink)`
@@ -60,4 +63,27 @@ const Image = styled.img`
     height: 100%;
 `
 
-export { TileWrapper, HoverContent, Image, StyledLink }
+type TileProps = {
+    project: Project
+}
+
+const Tile = ({ project: { id, preview_img, name, category } }: TileProps) => {
+    const CategoryList = category.map(c => (
+        <>
+            <span>{categories[c].name}</span>
+            <br />
+        </>
+    ))
+    return (
+        <StyledLink to={`/project/${id}`}>
+            <TileWrapper src={preview_img && __API__ + preview_img.src}>
+                <HoverContent>
+                    <Title> {name}</Title>
+                    <Text size="small">{CategoryList}</Text>
+                </HoverContent>
+            </TileWrapper>
+        </StyledLink>
+    )
+}
+
+export default Tile
