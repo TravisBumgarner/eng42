@@ -1,14 +1,39 @@
 {
-    "id": 14,
+    "id": "pan-tilt-camera-rig",
     "name": "Pan & Tilt Camera Rig",
-    "category": [2, 5, 6, 8],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        2,
+        5,
+        6,
+        8
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "DIY rig for taking timelapse photos",
     "description": "Why buy a camera pan and tilt tool when you can build one yourself with laser cut parts, some motors, and an Arduino?\r\nThis project began on a breadboard where I created a user interface to control panning, tilting, direction, and number of photos. Three servos total controlled panning, tilting, and taking photos. Once I knew what had to be housed, I created the case and arm to mount the camera in SolidWorks. These parts were then laser cut and glued together.",
     "start_date": "2016-06-01",
     "end_date": "2016-07-01",
-    "skill": [3, 8, 9, 10, 21, 22, 23, 24, 26],
+    "skill": [
+        3,
+        8,
+        9,
+        10,
+        21,
+        22,
+        23,
+        24,
+        26
+    ],
     "image": [
         {
             "id": 123,
@@ -42,8 +67,16 @@
         }
     ],
     "link": [
-        { "id": 14, "name": "GitHub Repo", "src": "https://github.com/TravisBumgarner/PanTilt/" },
-        { "id": 47, "name": "Video", "src": "https://www.youtube.com/watch?v=E8Qu_i_7nHc" }
+        {
+            "id": 14,
+            "name": "GitHub Repo",
+            "src": "https://github.com/TravisBumgarner/PanTilt/"
+        },
+        {
+            "id": 47,
+            "name": "Video",
+            "src": "https://www.youtube.com/watch?v=E8Qu_i_7nHc"
+        }
     ],
     "preview_img": {
         "id": 16,

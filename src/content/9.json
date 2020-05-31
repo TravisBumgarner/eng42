@@ -1,14 +1,39 @@
 {
-    "id": 9,
+    "id": "photography-portfolio-v1-0",
     "name": "Photography Portfolio V1.0",
-    "category": [6, 7, 8],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        6,
+        7,
+        8
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "WordPress portfolio for my photography",
     "description": "(Note: The website does not exist anymore.)\r\n\r\nMy Photography Portfolio needed a place to live on the internet so I designed and developed a WordPress website with a custom theme.",
     "start_date": "2015-11-01",
     "end_date": "2016-01-01",
-    "skill": [11, 12, 13, 14, 15, 16, 17, 18, 19, 42],
+    "skill": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        42
+    ],
     "image": [
         {
             "id": 98,

@@ -1,14 +1,36 @@
 {
-    "id": 38,
+    "id": "i-make-things-blog",
     "name": "I Make Things Blog",
-    "category": [6, 7, 9],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        6,
+        7,
+        9
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "",
     "description": "I've always loved to write, teach, and share. I decided to design and code myself a platform via which to do all of three.",
     "start_date": "2018-12-15",
     "end_date": "2019-01-01",
-    "skill": [11, 12, 13, 19, 32, 40, 43],
+    "skill": [
+        11,
+        12,
+        13,
+        19,
+        32,
+        40,
+        43
+    ],
     "image": [],
     "link": [
         {

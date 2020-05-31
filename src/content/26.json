@@ -1,14 +1,36 @@
 {
-    "id": 26,
+    "id": "etsy-photography-store",
     "name": "Etsy Photography Store",
-    "category": [7, 8, 9],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 3, "name": "New Jersey" }, { "id": 5, "name": "Massachusetts" }],
+    "category": [
+        7,
+        8,
+        9
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 3,
+            "name": "New Jersey"
+        },
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "First venture into launching my own business",
     "description": "While job searching after returning from the Peace Corps, I decided to attempt a side gig selling photography posters and postcards on Etsy. It failed miserably but served as a great prerequisite to starting Painless Prototyping.",
     "start_date": "2015-11-01",
     "end_date": "2016-02-01",
-    "skill": [15, 22, 33],
+    "skill": [
+        15,
+        22,
+        33
+    ],
     "image": [
         {
             "id": 183,
@@ -27,7 +49,11 @@
         }
     ],
     "link": [
-        { "id": 30, "name": "Etsy Store (Closed)", "src": "https://www.etsy.com/shop/EsaFoto" }
+        {
+            "id": 30,
+            "name": "Etsy Store (Closed)",
+            "src": "https://www.etsy.com/shop/EsaFoto"
+        }
     ],
     "preview_img": {
         "id": 28,

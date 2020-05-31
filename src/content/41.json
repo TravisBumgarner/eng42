@@ -1,14 +1,41 @@
 {
-    "id": 41,
+    "id": "strangerer-things-lights",
     "name": "Strangerer Things Lights",
-    "category": [5, 6, 7, 10],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        5,
+        6,
+        7,
+        10
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "",
     "description": "I decided to do a fun little electronics project with my coworkers in the office. This is what we created.",
     "start_date": "2018-12-01",
     "end_date": "2018-12-23",
-    "skill": [3, 13, 20, 30, 47, 44, 45, 41, 26, 32, 48],
+    "skill": [
+        3,
+        13,
+        20,
+        30,
+        47,
+        44,
+        45,
+        41,
+        26,
+        32,
+        48
+    ],
     "image": [
         {
             "id": 300,

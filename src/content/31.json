@@ -1,14 +1,31 @@
 {
-    "id": 31,
+    "id": "cribbage-board",
     "name": "Cribbage Board",
-    "category": [10],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        10
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "Handmade board game",
     "description": "I was talking about woodworking with a friend's father and I showed him a cribbage board from Nick Offerman's woodworking book and he requested I build him one similar. After a bit of design, with a focus on bringing the price down (the original was quite expensive for materials alone!) this is what I created.",
     "start_date": "2017-02-01",
     "end_date": "2017-04-01",
-    "skill": [3, 15, 26, 27],
+    "skill": [
+        3,
+        15,
+        26,
+        27
+    ],
     "image": [
         {
             "id": 190,

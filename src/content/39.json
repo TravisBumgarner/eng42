@@ -1,14 +1,35 @@
 {
-    "id": 39,
+    "id": "search-engine",
     "name": "Search Engine",
-    "category": [6],
-    "organization": [{ "id": 5, "name": "Personal" }],
-    "location": [{ "id": 5, "name": "Massachusetts" }],
+    "category": [
+        6
+    ],
+    "organization": [
+        {
+            "id": 5,
+            "name": "Personal"
+        }
+    ],
+    "location": [
+        {
+            "id": 5,
+            "name": "Massachusetts"
+        }
+    ],
     "headline": "",
     "description": "Search engine powering Pluralsight.",
     "start_date": "2018-06-01",
     "end_date": "Ongoing",
-    "skill": [11, 12, 13, 35, 36, 44, 45, 46],
+    "skill": [
+        11,
+        12,
+        13,
+        35,
+        36,
+        44,
+        45,
+        46
+    ],
     "image": [],
     "link": [
         {

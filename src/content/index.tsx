@@ -65,7 +65,7 @@ type Link = {
 }
 
 type Project = {
-    "id": number,
+    "id": string,
     "name": string,
     "category": number[],
     "organization": Organization[],
