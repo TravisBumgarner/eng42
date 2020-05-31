@@ -11,4 +11,5 @@
 - [x] Addede Twitch Icon
 - [ ] Update content
 - [ ] Get media into folders
-- [ ] Human readable urls
+- [x] Human readable urls (aka slugs)
+- [ ] Deleted unused images in buckets
