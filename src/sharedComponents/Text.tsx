@@ -2,16 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { PRIMARY_COLOR } from 'Theme'
 
-const DefaultTextWrapper = styled.p`
-    margin: 5px 0;
-    font-family: Montserrat, sans-serif;
-    line-height: 1.5;
-    font-weight: 100;
-    font-size: 1.2rem;
-    color: ${PRIMARY_COLOR};
-`
-
-const SmallTextWrapper = styled.p`
+const TextWrapper = styled.p`
     margin: 5px 0;
     font-family: Montserrat, sans-serif;
     line-height: 1.5;
@@ -20,31 +11,11 @@ const SmallTextWrapper = styled.p`
     color: ${PRIMARY_COLOR};
 `
 
-const LargeTextWrapper = styled.p`
-    margin: 5px 0;
-    font-family: Montserrat, sans-serif;
-    line-height: 1.5;
-    font-weight: 100;
-    font-size: 1.2rem;
-    color: ${PRIMARY_COLOR};
-`
-
 type TextProps = {
-    size?: 'small' | 'large'
     children: React.ReactNode
 }
 
-const Text = ({ children, size }: TextProps) => {
-    let TextWrapper
-
-    if (size === 'small') {
-        TextWrapper = SmallTextWrapper
-    } else if (size === 'large') {
-        TextWrapper = LargeTextWrapper
-    } else {
-        TextWrapper = LargeTextWrapper
-    }
-
+const Text = ({ children }: TextProps) => {
     return <TextWrapper>{children}</TextWrapper>
 }
 

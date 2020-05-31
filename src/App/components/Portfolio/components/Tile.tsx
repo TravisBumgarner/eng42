@@ -81,8 +81,8 @@ const Tile = ({ project: { id, preview_img, name, category } }: TileProps) => {
         <StyledLink to={`/project/${id}`}>
             <TileWrapper src={preview_img && __API__ + preview_img.src}>
                 <HoverContent>
-                    <Title> {name}</Title>
-                    <Text size="small">{CategoryList}</Text>
+                    <Title size="medium"> {name}</Title>
+                    <Text>{CategoryList}</Text>
                 </HoverContent>
             </TileWrapper>
         </StyledLink>

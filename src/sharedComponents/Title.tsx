@@ -6,7 +6,7 @@ import { PRIMARY_COLOR } from 'Theme'
 
 const LargeTitle = styled.h1`
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 10px 0;
     font-weight: 700;
     font-family: Raleway, sans-serif;
@@ -16,7 +16,7 @@ const LargeTitle = styled.h1`
 
 const MediumTitle = styled.h2`
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0 0 10px 0;
     font-weight: 700;
     font-family: Raleway, sans-serif;
@@ -25,7 +25,7 @@ const MediumTitle = styled.h2`
 
 const SmallTitle = styled.h3`
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 5px 0;
     font-weight: 700;
     font-family: Raleway, sans-serif;
@@ -33,7 +33,7 @@ const SmallTitle = styled.h3`
 `
 
 type TitleProps = {
-    size?: 'small' | 'large' | 'medium'
+    size: 'small' | 'large' | 'medium'
     children: React.ReactNode
 }
 
@@ -41,11 +41,11 @@ const Title = ({ children, size }: TitleProps) => {
     switch (size) {
         case 'large':
             return <LargeTitle>{children}</LargeTitle>
+        case 'medium':
+            return <MediumTitle>{children}</MediumTitle>
         case 'small':
             return <SmallTitle>{children}</SmallTitle>
-        case 'medium':
-        default:
-            return <MediumTitle>{children}</MediumTitle>
+
     }
 }
 

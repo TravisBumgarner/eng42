@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import {
     FaTwitter as Twitter,
-    FaLinkedinIn as LinkedIn,
-    FaInstagram as Instagram
+    FaLinkedin as LinkedIn,
+    FaInstagram as Instagram,
+    FaTwitch as Twitch
 } from 'react-icons/fa'
 
 import { PRIMARY_COLOR, TERTIARY_COLOR, media } from 'Theme'
@@ -31,12 +32,8 @@ const NavigationWrapper = styled.div`
 
 const EXTERNAL_LINKS = [
     {
-        href: 'https://blog.travisbumgarner.com',
-        content: 'Blog'
-    },
-    {
-        href: 'https://travisbumgarner.photography',
-        content: 'Photography'
+        href: 'https://www.twitch.tv/travis_the_maker',
+        content: <Twitch size="1em" />
     },
     {
         href: 'https://twitter.com/travis_the_makr',
@@ -49,6 +46,14 @@ const EXTERNAL_LINKS = [
     {
         href: 'https://www.linkedin.com/in/travisbumgarner/',
         content: <LinkedIn size="1em" />
+    },
+    {
+        href: 'https://blog.travisbumgarner.com',
+        content: 'Blog'
+    },
+    {
+        href: 'https://travisbumgarner.photography',
+        content: 'Photography'
     }
 ]
 
@@ -76,10 +81,10 @@ color: ${ PRIMARY_COLOR};
 `
 
 const HeaderWrapper = styled.div`
-justify - content: center;
-justify - content: space - between;
+justify-content: center;
+justify-content: space-between;
 display: flex;
-margin - bottom: 40px;
+margin-bottom: 40px;
 ${media.desktop} {
         margin: 20px 4vw;
     }

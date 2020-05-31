@@ -17,11 +17,11 @@
     "license": "ISC",
     "dependencies": {
         "@sentry/browser": "^4.1.1",
-        "react": "^16.4.2",
-        "react-dom": "^16.4.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "react-icons": "^3.1.0",
         "react-router-dom": "^5.2.0",
-        "styled-components": "^4.2.0",
+        "styled-components": "^5.1.1",
         "typescript": "^3.9.3"
     },
     "devDependencies": {

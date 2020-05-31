@@ -64,7 +64,7 @@ const Section = ({ children, title }: SectionProps) => {
     return (
         <SectionWrapper>
             <Title size="small">{title}</Title>
-            <Text size="small">{children}</Text>
+            <Text>{children}</Text>
         </SectionWrapper>
     )
 }

@@ -5,3 +5,7 @@
 - [x] Media queries and styled components
 - [x] use React router hooks
 - [ ] Further refactorings
+- [ ] ~~All the hooks!~~
+- [ ] What's new in styled-components?
+- [ ] Sentry not firing
+- [x] Addede Twitch Icon
