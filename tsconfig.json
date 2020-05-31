@@ -23,9 +23,10 @@
         "sourceMap": true,
         "strictNullChecks": true,
         "esModuleInterop": true,
-        "jsx": "react"
+        "jsx": "react",
+        "skipLibCheck": true
     },
     "exclude": [
-        "node_modules"
+        "./node_modules/*"
     ],
 }
