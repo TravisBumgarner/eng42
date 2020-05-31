@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 
 import { media } from 'Theme'
-import { skills, Project, Skills } from 'Content'
+import { allSkills, Project, Skills } from 'Content'
 import { Text, ExternalLink, Title } from 'SharedComponents'
 
 const DetailsWrapper = styled.div``
@@ -77,34 +77,34 @@ type DetailsProps = {
 const Details = ({
     project: {
         description,
-        location,
-        organization,
-        skill,
-        link,
+        locations,
+        organizations,
+        skills,
+        links,
         preview_img,
         name,
         start_date,
         end_date,
-        image
+        images
     }
 }: DetailsProps) => {
     const Description = description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
-    const Locations = location.join(', ')
-    const Organizations = organization.join(', ')
-    const Skills = skill
-        .map(s => skills[s].name)
+    const Locations = locations.join(', ')
+    const Organizations = organizations.join(', ')
+    const Skills = skills
+        .map(s => allSkills[s].name)
         .sort()
         .join(', ')
-    const Links = link.map(l => {
+    const Links = links.map(l => {
         return (
-            <li key={l.id}>
+            <li key={l.name + l.src}>
                 <ExternalLink href={l.src}>
                     <Text>{l.name}</Text>
                 </ExternalLink>
             </li>
         )
     })
-    const Images = image.map(i => <Image src={__API__ + i.src} />)
+    const Images = images.map(i => <Image src={__API__ + i.src} />)
     return (
         <DetailsWrapper>
             <Row>
@@ -137,7 +137,7 @@ const Details = ({
                             <Text>Who: {Organizations}</Text>
                         </Section>
                     </SubContent>
-                    {image.length ? <Section title="Photos">{Images}</Section> : null}
+                    {images.length ? <Section title="Photos">{Images}</Section> : null}
                 </Content>
             </Row>
         </DetailsWrapper>

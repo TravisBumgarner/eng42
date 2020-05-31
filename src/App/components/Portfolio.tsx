@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-import { categories, Project } from 'Content'
+import { allCategories, Project } from 'Content'
 import { Title, Text } from 'SharedComponents'
 import { SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
@@ -66,10 +66,10 @@ type TileProps = {
     project: Project
 }
 
-const Tile = ({ project: { id, preview_img, name, category } }: TileProps) => {
-    const CategoryList = category.map(c => (
+const Tile = ({ project: { id, preview_img, name, categories } }: TileProps) => {
+    const CategoryList = categories.map(id => (
         <>
-            <span>{categories[c].name}</span>
+            <span>{allCategories[id].name}</span>
             <br />
         </>
     ))

@@ -42,24 +42,12 @@ import file_41 from './41.json'
 import skills_json from './skills.json'
 import categories_json from './categories.json'
 
-type Organization = {
-    id: number,
-    name: string
-}
-
-type Location = {
-    id: number,
-    name: string
-}
-
 type Image = {
-    id: number,
     name: string,
     src: string
 }
 
 type Link = {
-    id: number,
     name: string,
     src: string
 }
@@ -67,16 +55,16 @@ type Link = {
 type Project = {
     "id": string,
     "name": string,
-    "category": number[],
-    "organization": Organization[],
-    "location": Location[],
+    "categories": number[],
+    "organizations": string[],
+    "locations": string[],
     "headline": string,
     "description": string,
     "start_date": string,
     "end_date": string,
-    "skill": number[],
-    "image": Image[],
-    "link": Link[],
+    "skills": number[],
+    "images": Image[],
+    "links": Link[],
     "preview_img": Image
 }
 
@@ -138,8 +126,8 @@ const projects: Project[] = [
     file_41
 ]
 
-const skills: Skills = skills_json
-const categories: Categories = categories_json
+const allSkills: Skills = skills_json
+const allCategories: Categories = categories_json
 
-export { skills, categories, Project, Skills, Categories }
+export { allSkills, allCategories, Project, Skills, Categories }
 export default projects
