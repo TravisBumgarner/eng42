@@ -105,7 +105,7 @@ const Details = ({
     })
     const Images = image.map(i => <Image src={__API__ + i.src} />)
     return (
-        <DetailsWrapper previewImageSrc={preview_img && preview_img.src}>
+        <DetailsWrapper>
             <Row>
                 <Sidebar>
                     <img src={__API__ + preview_img.src} />

@@ -32,8 +32,6 @@ const SmallTitle = styled.h3`
     color: ${PRIMARY_COLOR};
 `
 
-export { LargeTitle, MediumTitle, SmallTitle }
-
 type TitleProps = {
     size?: 'small' | 'large' | 'medium'
     children: React.ReactNode
@@ -42,12 +40,12 @@ type TitleProps = {
 const Title = ({ children, size }: TitleProps) => {
     switch (size) {
         case 'large':
-            return <LargeTitle size={size}>{children}</LargeTitle>
+            return <LargeTitle>{children}</LargeTitle>
         case 'small':
-            return <SmallTitle size={size}>{children}</SmallTitle>
+            return <SmallTitle>{children}</SmallTitle>
         case 'medium':
         default:
-            return <MediumTitle size={size}>{children}</MediumTitle>
+            return <MediumTitle>{children}</MediumTitle>
     }
 }
 

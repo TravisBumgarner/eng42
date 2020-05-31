@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
 
 import { Details } from './components'
 import { media } from 'Theme'
@@ -19,14 +20,12 @@ const SingleProjectWrapper = styled.div`
 `
 
 const SingleProject = ({
-    projects,
-    match: {
-        params: { id }
-    }
+    projects
 }: SingleProjectProps) => {
     if (!Object.keys(projects).length) {
         return null
     }
+    const { id } = useParams()
     const project = projects.filter(project => project.id == id)[0]
     return (
         <SingleProjectWrapper>

@@ -6,10 +6,13 @@ import { Title, Text } from 'SharedComponents'
 import { NavLink } from 'react-router-dom'
 import { SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
+type TileWrapperProps = {
+    src: string
+}
 const TileWrapper = styled.div`
     box-sizing: border-box;
     border: 5px solid transparent;
-    background-image: url('${props => props.src}');
+    background-image: url('${(props: TileWrapperProps) => props.src}');
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 400px;
