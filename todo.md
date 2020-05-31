@@ -6,10 +6,12 @@
 - [x] use React router hooks
 - [x] Further refactorings
 - [ ] ~~All the hooks!~~
-- [ ] What's new in styled-components?
+- [ ] ~~What's new in styled-components?~~
 - [ ] Sentry not firing
-- [x] Addede Twitch Icon
+- [x] Add Twitch Icon
+- [ ] Finish writing script for generating new content
 - [ ] Update content
-- [ ] Get media into folders
+- [x] Get media into folders
 - [x] Human readable urls (aka slugs)
+- [ ] Go to prod
 - [ ] Deleted unused images in buckets

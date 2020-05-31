@@ -9,14 +9,6 @@ for filename in os.listdir(content_dir):
     if '.json' not in filename or filename in ['skills.json', 'categories.json']:
         continue
 
-    # if filename != '10.json':
-    #     continue
-    
-    # grab all images
-    # rename all image srcs to use id so {src: 'foo.png', id: 'fizz'} => {src: fizz/foo.png}
-    # move all the images to their new folders
-    # update the json
-
     abs_path = os.path.join(content_dir, filename)
     with open(abs_path, 'r') as f:
         json_data = json.load(f)
