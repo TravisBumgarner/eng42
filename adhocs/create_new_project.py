@@ -15,17 +15,17 @@ class Project:
         self.data = {}
         self.data["name"] = input("Name: ")
         self.data["id"] = slugify(self.data["name"])
-        self.data["category"] = self.get_categories()
-        self.data["organization"] = self.get_organization()
-        self.data["location"] = self.get_location()
+        self.data["categories"] = self.get_categories()
+        self.data["organizations"] = self.get_organization()
+        self.data["locations"] = self.get_location()
         self.data["headline"] = ""
         self.data["description"] = ""
         self.data["start_date"] = self.get_date(is_end_date=False)
         self.data["end_date"] = self.get_date(is_end_date=True)
-        self.data["skill"] = self.get_skills()
-        self.data["image"] = self.get_images()
-        self.data["link"] = self.get_links()
-        self.data["preview_img"] = self.get_preview_img()
+        self.data["skills"] = self.get_skills()
+        self.data["images"] = self.get_images(self.data["id"])
+        self.data["links"] = self.get_links()
+        self.data["preview_img"] = self.get_preview_img(self.data["id"])
 
     def get_date(self, is_end_date):
         while True:
@@ -53,22 +53,25 @@ class Project:
         return []
 
     def get_location(self):
-        return "foo"
+        return []
 
     def get_organization(self):
-        return "foo"
+        return []
 
     def get_skills(self):
-        return "foo"
+        return []
 
-    def get_preview_img(self):
-        return "foo"
+    def get_preview_img(self, media_dir):
+        return {"name": "placeholder", "src": f"{media_dir}/placeholder"}
 
-    def get_images(self):
-        return "foo"
+    def get_images(self, media_dir):
+        return [
+            {"name": "placeholder", "src": f"{media_dir}/placeholder"},
+            {"name": "placeholder", "src": f"{media_dir}/placeholder"},
+        ]
 
     def get_links(self):
-        return "foo"
+        return [{"name": "placeholder", "src": f"/placeholder"}]
 
     def save_to_json(self):
         max_filename = -1
