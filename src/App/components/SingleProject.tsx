@@ -89,8 +89,8 @@ const Details = ({
     }
 }: DetailsProps) => {
     const Description = description.split('\n').map((d, idx) => <Text key={idx}>{d}</Text>)
-    const Locations = location.map(l => l.name).join(', ')
-    const Organizations = organization.map(o => o.name).join(', ')
+    const Locations = location.join(', ')
+    const Organizations = organization.join(', ')
     const Skills = skill
         .map(s => skills[s].name)
         .sort()
