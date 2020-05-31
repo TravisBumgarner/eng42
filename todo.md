@@ -9,3 +9,6 @@
 - [ ] What's new in styled-components?
 - [ ] Sentry not firing
 - [x] Addede Twitch Icon
+- [ ] Update content
+- [ ] Get media into folders
+- [ ] Human readable urls

@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
 
+import { media } from 'Theme'
 import { skills, Project, Skills } from 'Content'
 import { Text, ExternalLink, Title } from 'SharedComponents'
-import { media } from 'Theme'
 
 const DetailsWrapper = styled.div``
 
@@ -143,4 +144,32 @@ const Details = ({
     )
 }
 
-export default Details
+type SingleProjectProps = {
+    projects: Project[]
+}
+
+const SingleProjectWrapper = styled.div`
+    justify-content: space-between;
+    display: flex;
+
+    ${media.desktop} {
+        margin: 20px 4vw;
+    }
+`
+
+const SingleProject = ({
+    projects
+}: SingleProjectProps) => {
+    if (!Object.keys(projects).length) {
+        return null
+    }
+    const { id } = useParams()
+    const project = projects.filter(project => project.id == id)[0]
+    return (
+        <SingleProjectWrapper>
+            <Details project={project} />
+        </SingleProjectWrapper>
+    )
+}
+
+export default SingleProject

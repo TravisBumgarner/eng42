@@ -72,24 +72,25 @@ const Navigation = () => {
 }
 
 const StyledLink = styled(Link)`
-text - decoration: none;
-color: ${ PRIMARY_COLOR};
+    text - decoration: none;
+    color: ${ PRIMARY_COLOR};
 
     &: hover {
-    color: ${ TERTIARY_COLOR};
-}
+        color: ${ TERTIARY_COLOR};
+    }
 `
 
 const HeaderWrapper = styled.div`
-justify-content: center;
-justify-content: space-between;
-display: flex;
-margin-bottom: 40px;
-${media.desktop} {
+    justify-content: center;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 40px;
+
+    ${media.desktop} {
         margin: 20px 4vw;
     }
 
-${media.tablet} {
+    ${media.tablet} {
         flex-direction: column;
         align-items: center;
         margin-bottom: 30px;

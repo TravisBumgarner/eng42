@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 import { categories, Project } from 'Content'
 import { Title, Text } from 'SharedComponents'
-import { NavLink } from 'react-router-dom'
 import { SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
 type TileWrapperProps = {
     src: string
 }
+
 const TileWrapper = styled.div`
     box-sizing: border-box;
     border: 5px solid transparent;
@@ -61,11 +62,6 @@ const HoverContent = styled.div`
     }
 `
 
-const Image = styled.img`
-    width: 100%;
-    height: 100%;
-`
-
 type TileProps = {
     project: Project
 }
@@ -89,4 +85,24 @@ const Tile = ({ project: { id, preview_img, name, category } }: TileProps) => {
     )
 }
 
-export default Tile
+const GridWrapper = styled.div`
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
+type PortfolioProps = {
+    projects: Project[]
+}
+
+const Portfolio = ({ projects }: PortfolioProps) => {
+    const Projects = Object.values(projects).map(project => {
+        return <Tile key={project.id} project={project} />
+    })
+
+    return <GridWrapper>{Projects}</GridWrapper>
+}
+
+export default Portfolio
