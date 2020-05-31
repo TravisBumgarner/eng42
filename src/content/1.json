@@ -1,15 +1,15 @@
 {
     "id": "water-system",
     "name": "Water System",
-    "category": [
+    "categories": [
         1,
         2,
         3
     ],
-    "organization": [
+    "organizations": [
         "Engineers Without Borders"
     ],
-    "location": [
+    "locations": [
         "New Jersey",
         "Kenya"
     ],
@@ -17,11 +17,11 @@
     "description": "The community of Kolunje, Kenya was in need of a water system and reached out to Engineers Without Borders for assistance and the Rutgers University Chapter accepted the proposal. During my year with the team, I helped prepare technical drawings of the system layout and finalized documents required to get approval to travel to Kenya to begin construction.",
     "start_date": "2012-06-01",
     "end_date": "2013-05-01",
-    "skill": [
+    "skills": [
         1,
         2
     ],
-    "image": [
+    "images": [
         {
             "name": "ewb0.jpg",
             "src": "water-system/ewb0.jpg"
@@ -39,7 +39,7 @@
             "src": "water-system/ewb2.jpg"
         }
     ],
-    "link": [
+    "links": [
         {
             "name": "Engineers Without Borders Website",
             "src": "https://www.ewb-usa.org/"
