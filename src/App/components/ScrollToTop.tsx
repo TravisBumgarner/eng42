@@ -1,7 +1,9 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
-const ScrollToTop = ({ location }: any) => {
+const ScrollToTop = () => {
+    let location = useLocation()
+
     React.useEffect(() => {
         window.scrollTo(0, 0)
 
@@ -10,4 +12,4 @@ const ScrollToTop = ({ location }: any) => {
     return <div />
 }
 
-export default withRouter(ScrollToTop)
+export default ScrollToTop

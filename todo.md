@@ -1,7 +1,7 @@
 - [x] Convert minimally to TS
 - [x] Add types
 - [x] Set Sentry to only run in prod
-- [ ] Further refactorings
 - [x] Get rid of classes
-- [ ] Media queries and styled components
-- [ ] use React router hooks
+- [x] Media queries and styled components
+- [x] use React router hooks
+- [ ] Further refactorings
