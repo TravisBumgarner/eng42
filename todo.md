@@ -7,11 +7,11 @@
 - [x] Further refactorings
 - [ ] ~~All the hooks!~~
 - [ ] ~~What's new in styled-components?~~
-- [ ] Sentry not firing
+- [ ] ~~Sentry not firing~~
 - [x] Add Twitch Icon
-- [ ] Finish writing script for generating new content
-- [ ] Update content
+- [x] Finish writing script for generating new content
 - [x] Get media into folders
 - [x] Human readable urls (aka slugs)
+- [ ] Update content
 - [ ] Go to prod
 - [ ] Deleted unused images in buckets

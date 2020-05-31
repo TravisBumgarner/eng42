@@ -12,8 +12,8 @@ if (__IS_PRODUCTION__) {
     })
 }
 
-class SentryWrapper extends Component {
-    constructor(props) {
+class SentryWrapper extends Component<{}, { error: null | string }> {
+    constructor(props: any) {
         super(props)
         this.state = {
             error: null
