@@ -5,7 +5,8 @@ import {
     FaTwitter as Twitter,
     FaLinkedin as LinkedIn,
     FaInstagram as Instagram,
-    FaTwitch as Twitch
+    FaTwitch as Twitch,
+    FaYoutube as YouTube
 } from 'react-icons/fa'
 
 import { PRIMARY_COLOR, TERTIARY_COLOR, media } from 'Theme'
@@ -34,6 +35,10 @@ const EXTERNAL_LINKS = [
     {
         href: 'https://www.twitch.tv/travis_the_maker',
         content: <Twitch size="1em" />
+    },
+    {
+        href: 'https://www.youtube.com/channel/UCFgIg95KzVg97KAeXdWbeXg',
+        content: <YouTube size="1em" />
     },
     {
         href: 'https://twitter.com/travis_the_makr',
