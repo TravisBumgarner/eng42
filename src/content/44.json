@@ -1,0 +1,27 @@
+{
+    "name": "Jewelry",
+    "id": "jewelry",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2019-03-01",
+    "end_date": "2019-04-01",
+    "skills": [],
+    "images": [
+        {
+            "name": "Laser Cut and ready to paint",
+            "src": "jewelry/1.jpg"
+        },
+        {
+            "name": "All done",
+            "src": "jewelry/2.jpg"
+        }
+    ],
+    "links": [],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "jewelry/thumbnail.jpg"
+    }
+}

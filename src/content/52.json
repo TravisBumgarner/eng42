@@ -1,0 +1,32 @@
+{
+    "name": "Digital Physical Pong",
+    "id": "digital-physical-pong",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2019-11-25",
+    "end_date": "2019-11-28",
+    "skills": [],
+    "images": [
+        {
+            "name": "placeholder",
+            "src": "digital-physical-pong/placeholder"
+        },
+        {
+            "name": "placeholder",
+            "src": "digital-physical-pong/placeholder"
+        }
+    ],
+    "links": [
+        {
+            "name": "placeholder",
+            "src": "/placeholder"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "digital-physical-pong/placeholder"
+    }
+}

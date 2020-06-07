@@ -1,0 +1,32 @@
+{
+    "name": "Stitch It: Image to CSS Converter",
+    "id": "stitch-it-image-to-css-converter",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2020-02-25",
+    "end_date": "2020-03-16",
+    "skills": [],
+    "images": [
+        {
+            "name": "Screenshot of website",
+            "src": "stitch-it-image-to-css-converter/1.jpg"
+        },
+        {
+            "name": "Example output",
+            "src": "stitch-it-image-to-css-converter/2.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "Live Website",
+            "src": "https://stitchit.travisbumgarner.com/"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "stitch-it-image-to-css-converter/thumbnail.jpg"
+    }
+}

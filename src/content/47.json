@@ -1,0 +1,44 @@
+{
+    "name": "Nightstand V2",
+    "id": "nightstand-v2",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2019-09-15",
+    "end_date": "2019-11-09",
+    "skills": [],
+    "images": [
+        {
+            "name": "Sketching out my ideas",
+            "src": "nightstand-v2/1.jpg"
+        },
+        {
+            "name": "Gluing it all up",
+            "src": "nightstand-v2/2.jpg"
+        },
+        {
+            "name": "Sanding",
+            "src": "nightstand-v2/3.jpg"
+        },
+        {
+            "name": "First version versus second",
+            "src": "nightstand-v2/4.jpg"
+        },
+        {
+            "name": "Finally home",
+            "src": "nightstand-v2/5.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "placeholder",
+            "src": "/placeholder"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "nightstand-v2/thumbnail.jpg"
+    }
+}

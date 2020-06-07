@@ -1,0 +1,40 @@
+{
+    "name": "DIY Camera",
+    "id": "diy-camera",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2019-07-19",
+    "end_date": "Ongoing",
+    "skills": [],
+    "images": [
+        {
+            "name": "Camera is all wired up on the breadboard",
+            "src": "diy-camera/1.jpg"
+        },
+        {
+            "name": "First batch of PCBs arrived",
+            "src": "diy-camera/2.jpg"
+        },
+        {
+            "name": "Everything assembled and ready for testing on the second PCB",
+            "src": "diy-camera/3.jpg"
+        },
+        {
+            "name": "Lights!",
+            "src": "diy-camera/4.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "placeholder",
+            "src": "/placeholder"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "diy-camera/thumbnail.jpg"
+    }
+}

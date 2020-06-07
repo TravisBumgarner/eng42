@@ -1,0 +1,42 @@
+{
+    "name": "Hawkeye Beer",
+    "id": "hawkeye-beer",
+    "categories": [],
+    "organizations": [
+        "Pluralsight"
+    ],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2019-03-27",
+    "end_date": "2019-04-22",
+    "skills": [],
+    "images": [
+        {
+            "name": "placeholder",
+            "src": "hawkeye-beer/1.jpg"
+        },
+        {
+            "name": "placeholder",
+            "src": "hawkeye-beer/2.jpg"
+        },
+        {
+            "name": "placeholder",
+            "src": "hawkeye-beer/3.jpg"
+        },
+        {
+            "name": "placeholder",
+            "src": "hawkeye-beer/4.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "placeholder",
+            "src": "/placeholder"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "hawkeye-beer/thumbnail.jpg"
+    }
+}

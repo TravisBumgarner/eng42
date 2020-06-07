@@ -1,0 +1,32 @@
+{
+    "name": "Charlie Brown Arduino Christmas",
+    "id": "charlie-brown-arduino-christmas",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2019-12-01",
+    "end_date": "2019-12-25",
+    "skills": [],
+    "images": [
+        {
+            "name": "Sketching design for laser cutting",
+            "src": "charlie-brown-arduino-christmas/1.jpg"
+        },
+        {
+            "name": "Finished Tree",
+            "src": "charlie-brown-arduino-christmas/2.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "placeholder",
+            "src": "/placeholder"
+        }
+    ],
+    "preview_img": {
+        "name": "Charlie Brown Arduino Christmas",
+        "src": "charlie-brown-arduino-christmas/thumbnail.jpg"
+    }
+}

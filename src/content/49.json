@@ -1,0 +1,32 @@
+{
+    "name": "Twitch Stream",
+    "id": "twitch-stream",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2020-04-04",
+    "end_date": "Ongoing",
+    "skills": [],
+    "images": [
+        {
+            "name": "Fun art for the stream",
+            "src": "twitch-stream/1.jpg"
+        },
+        {
+            "name": "Fun art for the stream",
+            "src": "twitch-stream/2.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "Twitch Stream",
+            "src": "https://www.twitch.tv/travis_the_maker"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "twitch-stream/thumbnail.jpg"
+    }
+}

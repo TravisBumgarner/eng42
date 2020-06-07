@@ -1,0 +1,28 @@
+{
+    "name": "Phone Stand",
+    "id": "phone-stand",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2020-05-20",
+    "end_date": "2020-05-25",
+    "skills": [],
+    "images": [
+        {
+            "name": "Finished phone stand",
+            "src": "phone-stand/1.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "placeholder",
+            "src": "/placeholder"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "phone-stand/placeholder"
+    }
+}
