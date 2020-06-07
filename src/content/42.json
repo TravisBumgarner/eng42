@@ -53,6 +53,14 @@
         {
             "name": "GitHub",
             "src": "https://github.com/TravisBumgarner/smart_display"
+        },
+        {
+            "name": "Hackaday Project",
+            "src": "https://hackaday.io/project/172099-raspberry-pi-smart-display"
+        },
+        {
+            "name": "YouTube Project Recordings",
+            "src": "https://www.youtube.com/watch?v=LbvioXXcNqk&list=PL58d_qyxyaOGaACvm6FVX_9Y3hvzr_30M"
         }
     ],
     "preview_img": {

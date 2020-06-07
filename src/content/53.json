@@ -1,0 +1,48 @@
+{
+    "name": "2D Plotter: The Final Attempts",
+    "id": "2d-plotter-the-final-attempts",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2020-04-30",
+    "end_date": "Ongoing",
+    "skills": [],
+    "images": [
+        {
+            "name": "placeholder",
+            "src": "2d-plotter-the-final-attempts/placeholder"
+        },
+        {
+            "name": "placeholder",
+            "src": "2d-plotter-the-final-attempts/placeholder"
+        }
+    ],
+    "links": [
+        {
+            "name": "Thingiverse CAD Files",
+            "src": "https://www.thingiverse.com/thing:4332311"
+        },
+        {
+            "name": "Hackaday 3D Printer to 2D Plotter Project",
+            "src": "https://hackaday.io/project/171388-3d-printer-to-2d-plotter-with-custom-g-code"
+        },
+        {
+            "name": "Hackaday 2D Plotter Project",
+            "src": "https://hackaday.io/project/171536-diy-2d-plotter"
+        },
+        {
+            "name": "YouTube 3D Printer to 2D Plotter Project Recordings",
+            "src": "https://www.youtube.com/watch?v=eNIFybCENtE&list=PL58d_qyxyaOF-66-4kabZ9wtJEJlURT8i"
+        },
+        {
+            "name": "YouTube 2D Plotter Project Recordings",
+            "src": "https://www.youtube.com/watch?v=lJApWtDMxLM&list=PL58d_qyxyaOGu1aUYKD9BjNBRsrKP4v3W"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "2d-plotter-the-final-attempts/placeholder"
+    }
+}

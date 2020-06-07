@@ -1,1 +1,32 @@
-{"name": "Monitor Stand", "id": "monitor-stand", "categories": [], "organizations": [], "locations": [], "headline": "", "description": "", "start_date": "2020-04-13", "end_date": "2020-04-15", "skills": [], "images": [{"name": "placeholder", "src": "monitor-stand/placeholder"}, {"name": "placeholder", "src": "monitor-stand/placeholder"}], "links": [{"name": "placeholder", "src": "/placeholder"}], "preview_img": {"name": "placeholder", "src": "monitor-stand/placeholder"}}
+{
+    "name": "Monitor Stand",
+    "id": "monitor-stand",
+    "categories": [],
+    "organizations": [],
+    "locations": [],
+    "headline": "",
+    "description": "",
+    "start_date": "2020-04-13",
+    "end_date": "2020-04-15",
+    "skills": [],
+    "images": [
+        {
+            "name": "placeholder",
+            "src": "monitor-stand/placeholder"
+        },
+        {
+            "name": "placeholder",
+            "src": "monitor-stand/placeholder"
+        }
+    ],
+    "links": [
+        {
+            "name": "Thingiverse CAD Files",
+            "src": "https://www.thingiverse.com/thing:4287300"
+        }
+    ],
+    "preview_img": {
+        "name": "placeholder",
+        "src": "monitor-stand/placeholder"
+    }
+}
