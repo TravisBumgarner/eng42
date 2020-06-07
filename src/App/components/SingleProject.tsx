@@ -129,7 +129,7 @@ const Details = ({
                         <Section title="Meta">
                             <Text>
                                 When:{' '}
-                                {`${start_date.slice(0, -3)} - ${
+                                {`${start_date.slice(0, -3)} to ${
                                     end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
                                     }`}
                             </Text>

@@ -66,7 +66,7 @@ type TileProps = {
     project: Project
 }
 
-const Tile = ({ project: { id, preview_img, name, categories } }: TileProps) => {
+const Tile = ({ project: { id, preview_img, name, categories, start_date, end_date } }: TileProps) => {
     const CategoryList = categories.map(id => (
         <>
             <span>{allCategories[id].name}</span>
@@ -78,6 +78,10 @@ const Tile = ({ project: { id, preview_img, name, categories } }: TileProps) => 
             <TileWrapper src={preview_img && __API__ + preview_img.src}>
                 <HoverContent>
                     <Title size="medium"> {name}</Title>
+                    <Title size="small"> {`${start_date.slice(0, -3)} to ${
+                        end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
+                        }`}
+                    </Title>
                     <Text>{CategoryList}</Text>
                 </HoverContent>
             </TileWrapper>
