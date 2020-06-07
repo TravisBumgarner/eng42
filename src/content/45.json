@@ -1,11 +1,15 @@
 {
     "name": "Hawkeye Beer",
     "id": "hawkeye-beer",
-    "categories": [],
+    "categories": [
+        4
+    ],
     "organizations": [
         "Pluralsight"
     ],
-    "locations": [],
+    "locations": [
+        "Massachusetts"
+    ],
     "headline": "",
     "description": "",
     "start_date": "2019-03-27",

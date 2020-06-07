@@ -1,14 +1,24 @@
 {
     "name": "Monitor Stand",
     "id": "monitor-stand",
-    "categories": [],
-    "organizations": [],
-    "locations": [],
+    "categories": [
+        2,
+        7
+    ],
+    "organizations": [
+        "Personal"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
     "headline": "",
     "description": "",
     "start_date": "2020-04-13",
     "end_date": "2020-04-15",
-    "skills": [],
+    "skills": [
+        1,
+        10
+    ],
     "images": [
         {
             "name": "placeholder",

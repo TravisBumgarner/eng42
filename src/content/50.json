@@ -1,14 +1,24 @@
 {
     "name": "Phone Stand",
     "id": "phone-stand",
-    "categories": [],
-    "organizations": [],
-    "locations": [],
+    "categories": [
+        2,
+        7
+    ],
+    "organizations": [
+        "Personal"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
     "headline": "",
     "description": "",
     "start_date": "2020-05-20",
     "end_date": "2020-05-25",
-    "skills": [],
+    "skills": [
+        1,
+        10
+    ],
     "images": [
         {
             "name": "Finished phone stand",

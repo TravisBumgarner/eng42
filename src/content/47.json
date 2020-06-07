@@ -1,14 +1,22 @@
 {
     "name": "Nightstand V2",
     "id": "nightstand-v2",
-    "categories": [],
-    "organizations": [],
-    "locations": [],
+    "categories": [
+        10
+    ],
+    "organizations": [
+        "Personal"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
     "headline": "",
     "description": "",
     "start_date": "2019-09-15",
     "end_date": "2019-11-09",
-    "skills": [],
+    "skills": [
+        3
+    ],
     "images": [
         {
             "name": "Sketching out my ideas",
