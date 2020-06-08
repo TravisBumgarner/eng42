@@ -67,7 +67,7 @@ type TileProps = {
 }
 
 const Tile = ({ project: { id, preview_img, name, categories, start_date, end_date } }: TileProps) => {
-    const CategoryList = categories.map(id => (
+        const CategoryList = categories.map(id => (
         <>
             <span>{allCategories[id].name}</span>
             <br />

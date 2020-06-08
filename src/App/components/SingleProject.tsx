@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 
-import { media } from 'Theme'
+import { media, PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from 'Theme'
 import { allSkills, Project, Skills } from 'Content'
 import { Text, ExternalLink, Title } from 'SharedComponents'
 
@@ -35,6 +35,7 @@ const SubContent = styled.div`
 
 const Sidebar = styled.div`
     width: 38%;
+    min-width: 400px;
     margin-right: 20px;
 
     ${media.desktop} {
@@ -49,6 +50,11 @@ const Image = styled.img`
     max-height: 100vh;
     box-sizing: border-box;
     align-self: center;
+`
+
+const SidebarImage = styled.img`
+    height: auto;
+    width: 100%;
 `
 
 const SectionWrapper = styled.div`
@@ -109,7 +115,7 @@ const Details = ({
         <DetailsWrapper>
             <Row>
                 <Sidebar>
-                    <img src={__API__ + preview_img.src} />
+                    <SidebarImage src={__API__ + preview_img.src} />
                 </Sidebar>
 
                 <Content>
@@ -151,10 +157,32 @@ type SingleProjectProps = {
 const SingleProjectWrapper = styled.div`
     justify-content: space-between;
     display: flex;
+    align-items: top;
 
     ${media.desktop} {
         margin: 20px 4vw;
     }
+`
+
+const ChangeProjectButton = styled.button`
+    margin: 2em;
+    background-color: ${PRIMARY_COLOR};
+    color: ${SECONDARY_COLOR};
+    border: 0;
+    padding: 1em;
+    cursor: pointer;
+    position: relative;
+    top: 30vh;
+    border-radius: 1em;
+    font-weight: 700;
+    font-size: 1em;
+
+    &:hover {
+        background-color: ${TERTIARY_COLOR};
+    }
+`
+
+const ChangeProjectButtonWrapper = styled.div`
 `
 
 const SingleProject = ({
@@ -164,11 +192,24 @@ const SingleProject = ({
         return null
     }
     const { id } = useParams()
-    const project = projects.filter(project => project.id == id)[0]
+    const history = useHistory();
+
+    const projectId = projects.findIndex(project => project.id == id)
+    const previousId = projectId > 0 ? projectId - 1 : projects.length - 1
+    const nextId = projectId < projects.length - 1 ? projectId + 1 : 0
+
     return (
-        <SingleProjectWrapper>
-            <Details project={project} />
-        </SingleProjectWrapper>
+        <>
+            <SingleProjectWrapper>
+                <ChangeProjectButtonWrapper>
+                    <ChangeProjectButton onClick={() => history.push(`/project/${projects[previousId]['id']}`)}>Prev</ChangeProjectButton>
+                </ChangeProjectButtonWrapper>
+                <Details project={projects[projectId]} />
+                <ChangeProjectButtonWrapper>
+                    <ChangeProjectButton onClick={() => history.push(`/project/${projects[nextId]['id']}`)}>Next</ChangeProjectButton>
+                </ChangeProjectButtonWrapper>
+            </SingleProjectWrapper>
+        </>
     )
 }
 

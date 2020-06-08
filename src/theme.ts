@@ -13,6 +13,7 @@ const media = {
 }
 
 const GlobalStyle = createGlobalStyle`
+
     html {
         background-color: ${SECONDARY_COLOR};
         font-size: 16px;
