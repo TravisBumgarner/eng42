@@ -3,4 +3,5 @@
     - [ ] Finish project descriptions
     - [ ] Add links
     - [ ] Proofread all projects
+- [ ] Merge next and previous buttons in
 - [ ] Ship it & the images
