@@ -79,10 +79,6 @@ const Navigation = () => {
 const StyledLink = styled(Link)`
     text - decoration: none;
     color: ${ PRIMARY_COLOR};
-
-    &: hover {
-        color: ${ TERTIARY_COLOR};
-    }
 `
 
 const HeaderWrapper = styled.div`
@@ -105,9 +101,9 @@ const HeaderWrapper = styled.div`
 const Header = () => {
     return (
         <HeaderWrapper>
-            <StyledLink to="/">
-                <Title size="large">Travis Bumgarner</Title>
-            </StyledLink>
+            <Title size="large">
+                <StyledLink to="/">Travis Bumgarner</StyledLink>
+            </Title>
             <Navigation />
         </HeaderWrapper>
     )

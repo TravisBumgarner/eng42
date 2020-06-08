@@ -13,7 +13,15 @@ const media = {
 }
 
 const GlobalStyle = createGlobalStyle`
+    a {
+        text-decoration: none;
+        &: hover {
+            color: ${ TERTIARY_COLOR};
+        }
+    }
     html {
+        overflow: -moz-scrollbars-vertical; 
+        overflow-y: scroll;
         background-color: ${SECONDARY_COLOR};
         font-size: 16px;
         ${media.tablet} {
