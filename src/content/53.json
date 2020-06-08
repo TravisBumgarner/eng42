@@ -39,6 +39,14 @@
     ],
     "links": [
         {
+            "name": "GitHub 2D Plotter Project",
+            "src": "https://github.com/TravisBumgarner/2d_plotter_from_scratch"
+        },
+        {
+            "name": "GitHub 3D Printer to 2D Plotter Project",
+            "src": "https://github.com/TravisBumgarner/2d_plotting_is_here_finally"
+        },
+        {
             "name": "Thingiverse CAD Files",
             "src": "https://www.thingiverse.com/thing:4332311"
         },

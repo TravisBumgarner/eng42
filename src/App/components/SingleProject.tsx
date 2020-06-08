@@ -183,6 +183,9 @@ const ChangeProjectButton = styled.button`
 `
 
 const ChangeProjectButtonWrapper = styled.div`
+    ${media.desktop} {
+        display: none;
+    }
 `
 
 const SingleProject = ({

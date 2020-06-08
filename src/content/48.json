@@ -41,6 +41,10 @@
         {
             "name": "Live Website",
             "src": "https://stitchit.travisbumgarner.com/"
+        },
+        {
+            "name": "GitHub",
+            "src": "https://github.com/TravisBumgarner/stitch_it"
         }
     ],
     "preview_img": {
