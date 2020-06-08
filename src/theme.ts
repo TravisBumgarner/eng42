@@ -13,7 +13,12 @@ const media = {
 }
 
 const GlobalStyle = createGlobalStyle`
-
+    a {
+        text-decoration: none;
+        &: hover {
+            color: ${ TERTIARY_COLOR};
+        }
+    }
     html {
         background-color: ${SECONDARY_COLOR};
         font-size: 16px;
