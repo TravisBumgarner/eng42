@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
         }
     }
     html {
+        overflow: -moz-scrollbars-vertical; 
+        overflow-y: scroll;
         background-color: ${SECONDARY_COLOR};
         font-size: 16px;
         ${media.tablet} {
