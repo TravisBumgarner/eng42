@@ -45,6 +45,11 @@ import file_45 from './45.json'
 import file_46 from './46.json'
 import file_47 from './47.json'
 import file_48 from './48.json'
+import file_49 from './49.json'
+import file_50 from './50.json'
+import file_51 from './51.json'
+import file_52 from './52.json'
+import file_53 from './53.json'
 
 import skills_json from './skills.json'
 import categories_json from './categories.json'
@@ -138,6 +143,11 @@ const projects: Project[] = [
     file_46,
     file_47,
     file_48,
+    file_49,
+    file_50,
+    file_51,
+    file_52,
+    file_53,
 ]
 
 const allSkills: Skills = skills_json
