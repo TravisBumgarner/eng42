@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useParams, useHistory } from 'react-router-dom'
+import {
+    FaArrowCircleRight,
+    FaArrowCircleLeft,
+    FaArrowAltCircleRight
+} from 'react-icons/fa'
 
 import { media, PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from 'Theme'
 import { allSkills, Project, Skills } from 'Content'
@@ -164,28 +169,32 @@ const SingleProjectWrapper = styled.div`
     }
 `
 
-const ChangeProjectButton = styled.button`
+const ChangeProjectButtonWrapper = styled.div`
     margin: 2em;
-    background-color: ${PRIMARY_COLOR};
-    color: ${SECONDARY_COLOR};
     border: 0;
-    padding: 1em;
     cursor: pointer;
     position: relative;
     top: 30vh;
-    border-radius: 1em;
-    font-weight: 700;
-    font-size: 1em;
 
-    &:hover {
-        background-color: ${TERTIARY_COLOR};
-    }
-`
-
-const ChangeProjectButtonWrapper = styled.div`
     ${media.desktop} {
         display: none;
     }
+`
+
+const PrevProject = styled(FaArrowCircleLeft)`
+    fill: ${PRIMARY_COLOR};
+
+    &:hover{
+        fill: ${TERTIARY_COLOR};
+    }
+`
+
+const NextProject = styled(FaArrowAltCircleRight)`
+fill: ${PRIMARY_COLOR};
+
+&:hover{
+    fill: ${TERTIARY_COLOR};
+}
 `
 
 const SingleProject = ({
@@ -205,13 +214,13 @@ const SingleProject = ({
         <>
             <SingleProjectWrapper>
                 <ChangeProjectButtonWrapper>
-                    <ChangeProjectButton onClick={() => history.push(`/project/${projects[previousId]['id']}`)}>Prev</ChangeProjectButton>
+                    <PrevProject size="2em" onClick={() => history.push(`/project/${projects[previousId]['id']}`)} />
                 </ChangeProjectButtonWrapper>
                 <Details project={projects[projectId]} />
                 <ChangeProjectButtonWrapper>
-                    <ChangeProjectButton onClick={() => history.push(`/project/${projects[nextId]['id']}`)}>Next</ChangeProjectButton>
+                    <NextProject onClick={() => history.push(`/project/${projects[nextId]['id']}`)} size="2em" />
                 </ChangeProjectButtonWrapper>
-            </SingleProjectWrapper>
+            </SingleProjectWrapper >
         </>
     )
 }

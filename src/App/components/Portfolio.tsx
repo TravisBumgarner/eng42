@@ -40,7 +40,7 @@ const StyledLink = styled(NavLink)`
 
 const HoverContent = styled.div`
     &:hover {
-        opacity: 1;
+        opacity: 0.9;
     }
     padding: 25px;
     box-sizing: border-box;
@@ -67,7 +67,7 @@ type TileProps = {
 }
 
 const Tile = ({ project: { id, preview_img, name, categories, start_date, end_date } }: TileProps) => {
-        const CategoryList = categories.map(id => (
+    const CategoryList = categories.map(id => (
         <>
             <span>{allCategories[id].name}</span>
             <br />
