@@ -62,12 +62,12 @@ class Project:
         return []
 
     def get_preview_img(self, media_dir):
-        return {"name": "placeholder", "src": f"{media_dir}/placeholder"}
+        return {"name": "placeholder", "src": f"{media_dir}/thumbnail.png"}
 
     def get_images(self, media_dir):
         return [
-            {"name": "placeholder", "src": f"{media_dir}/placeholder"},
-            {"name": "placeholder", "src": f"{media_dir}/placeholder"},
+            {"name": "placeholder", "src": f"{media_dir}/1.jpg"},
+            {"name": "placeholder", "src": f"{media_dir}/2.jpg"},
         ]
 
     def get_links(self):

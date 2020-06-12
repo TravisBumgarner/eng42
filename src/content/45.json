@@ -17,30 +17,26 @@
     "skills": [],
     "images": [
         {
-            "name": "placeholder",
+            "name": "Brewing things part 1",
             "src": "hawkeye-beer/1.jpg"
         },
         {
-            "name": "placeholder",
+            "name": "Brewing things part 2",
             "src": "hawkeye-beer/2.jpg"
         },
         {
-            "name": "placeholder",
+            "name": "Brewing things part 3",
             "src": "hawkeye-beer/3.jpg"
         },
         {
-            "name": "placeholder",
+            "name": "Finished beer",
             "src": "hawkeye-beer/4.jpg"
         }
     ],
     "links": [
-        {
-            "name": "placeholder",
-            "src": "/placeholder"
-        }
     ],
     "preview_img": {
-        "name": "placeholder",
+        "name": "Hawkeye beer",
         "src": "hawkeye-beer/thumbnail.jpg"
     }
 }

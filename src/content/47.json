@@ -40,13 +40,9 @@
         }
     ],
     "links": [
-        {
-            "name": "placeholder",
-            "src": "/placeholder"
-        }
     ],
     "preview_img": {
-        "name": "placeholder",
+        "name": "Final Design",
         "src": "nightstand-v2/thumbnail.jpg"
     }
 }

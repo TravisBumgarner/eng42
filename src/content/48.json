@@ -48,7 +48,7 @@
         }
     ],
     "preview_img": {
-        "name": "placeholder",
+        "name": "Sample output",
         "src": "stitch-it-image-to-css-converter/thumbnail.jpg"
     }
 }

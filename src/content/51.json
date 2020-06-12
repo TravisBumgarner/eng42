@@ -21,12 +21,16 @@
     ],
     "images": [
         {
-            "name": "placeholder",
-            "src": "monitor-stand/placeholder"
+            "name": "Assembling one side",
+            "src": "monitor-stand/1.jpg"
         },
         {
-            "name": "placeholder",
-            "src": "monitor-stand/placeholder"
+            "name": "Prints done",
+            "src": "monitor-stand/2.jpg"
+        },
+        {
+            "name": "Monitor stand in use",
+            "src": "monitor-stand/3.jpg"
         }
     ],
     "links": [
@@ -36,7 +40,7 @@
         }
     ],
     "preview_img": {
-        "name": "placeholder",
-        "src": "monitor-stand/placeholder"
+        "name": "Monitor stand",
+        "src": "monitor-stand/thumbnail.jpg"
     }
 }

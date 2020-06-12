@@ -19,23 +19,19 @@
         20
     ],
     "images": [
-        {
-            "name": "placeholder",
-            "src": "digital-physical-pong/placeholder"
-        },
-        {
-            "name": "placeholder",
-            "src": "digital-physical-pong/placeholder"
-        }
     ],
     "links": [
         {
             "name": "GitHub",
             "src": "https://github.com/TravisBumgarner/digi-physi"
+        },
+        {
+            "name": "Instagram Video",
+            "src": "https://www.instagram.com/p/B5bSfbdlIhx"
         }
     ],
     "preview_img": {
-        "name": "placeholder",
-        "src": "digital-physical-pong/placeholder"
+        "name": "Screenshot of playing pong",
+        "src": "digital-physical-pong/thumbnail.jpg"
     }
 }
