@@ -110,7 +110,7 @@ const Details = ({
         return (
             <li key={l.name + l.src}>
                 <ExternalLink href={l.src}>
-                    <Text>{l.name}</Text>
+                    {l.name}
                 </ExternalLink>
             </li>
         )
@@ -127,7 +127,7 @@ const Details = ({
                     <Title size="medium">{name}</Title>
                     {!!Links.length && (
                         <Section title="Links">
-                            <ul>{Links}</ul>
+                            <ul style={{ listStyle: 'disc', marginLeft: '1em' }}>{Links}</ul>
                         </Section>
                     )}
                     <Section title="Description">{Description}</Section>
@@ -192,9 +192,9 @@ const PrevProject = styled(FaArrowCircleLeft)`
 const NextProject = styled(FaArrowAltCircleRight)`
 fill: ${PRIMARY_COLOR};
 
-&:hover{
-    fill: ${TERTIARY_COLOR};
-}
+    &:hover{
+        fill: ${TERTIARY_COLOR};
+    }
 `
 
 const SingleProject = ({
