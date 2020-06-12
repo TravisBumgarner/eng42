@@ -29,12 +29,24 @@
     ],
     "images": [
         {
-            "name": "placeholder",
-            "src": "2d-plotter-the-final-attempts/placeholder"
+            "name": "Pen holder attached to 3d Printer",
+            "src": "2d-plotter-the-final-attempts/1.jpg"
         },
         {
-            "name": "placeholder",
-            "src": "2d-plotter-the-final-attempts/placeholder"
+            "name": "All prototypes",
+            "src": "2d-plotter-the-final-attempts/2.jpg"
+        },
+        {
+            "name": "Successful print",
+            "src": "2d-plotter-the-final-attempts/3.jpg"
+        },
+        {
+            "name": "Playing around with circuits",
+            "src": "2d-plotter-the-final-attempts/4.jpg"
+        },
+        {
+            "name": "Parts ready for print",
+            "src": "2d-plotter-the-final-attempts/5.jpg"
         }
     ],
     "links": [
