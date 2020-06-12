@@ -50,6 +50,7 @@ import file_50 from './50.json'
 import file_51 from './51.json'
 import file_52 from './52.json'
 import file_53 from './53.json'
+import file_54 from './54.json'
 
 import skills_json from './skills.json'
 import categories_json from './categories.json'
@@ -148,6 +149,7 @@ const projects: Project[] = [
     file_51,
     file_52,
     file_53,
+    file_54
 ]
 
 const allSkills: Skills = skills_json

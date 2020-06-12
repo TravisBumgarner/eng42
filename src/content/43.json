@@ -31,12 +31,7 @@
             "src": "charlie-brown-arduino-christmas/2.jpg"
         }
     ],
-    "links": [
-        {
-            "name": "placeholder",
-            "src": "/placeholder"
-        }
-    ],
+    "links": [],
     "preview_img": {
         "name": "Charlie Brown Arduino Christmas",
         "src": "charlie-brown-arduino-christmas/thumbnail.jpg"

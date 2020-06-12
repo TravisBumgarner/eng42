@@ -3,8 +3,8 @@ import os
 import json
 
 # Update these values if switching local development machines
-root_media_dir = "/mnt/c/Users/Travis/Programming/eng41/media"
-content_dir = "/mnt/c/Users/Travis/Programming/eng41/src/content"
+root_media_dir = "/mnt/c/Users/Travis/Documents/Programming/eng40/media"
+content_dir = "/mnt/c/Users/Travis/Documents/Programming/eng40/src/content"
 
 
 class Project:
