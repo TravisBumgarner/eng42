@@ -26,9 +26,13 @@ const Item = styled.div`
 `
 
 const NavigationWrapper = styled.div`
-    box - sizing: border - box;
+    box-sizing: border-box;
     display: flex;
-    justify - content: center;
+    justify-content: center;
+    
+    font-size: 1.5rem;
+    font-weight: 700;
+
 `
 
 const EXTERNAL_LINKS = [

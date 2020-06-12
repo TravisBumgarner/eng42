@@ -1,0 +1,51 @@
+{
+    "name": "Twitch Stream",
+    "id": "twitch-stream",
+    "categories": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "organizations": [
+        "Personal"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
+    "headline": "",
+    "description": "After years of exploring, I have found that streaming the things I build on Twitch is a great way to share what I know with others.",
+    "start_date": "2020-04-04",
+    "end_date": "Ongoing",
+    "skills": [
+        25,
+        22,
+        55
+    ],
+    "images": [
+        {
+            "name": "Fun art for the stream",
+            "src": "twitch-stream/1.jpg"
+        },
+        {
+            "name": "Fun art for the stream",
+            "src": "twitch-stream/2.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "Twitch Stream",
+            "src": "https://www.twitch.tv/travis_the_maker"
+        },
+        {
+            "name": "YouTube Recordings",
+            "src": "https://www.youtube.com/channel/UCFgIg95KzVg97KAeXdWbeXg"
+        }
+    ],
+    "preview_img": {
+        "name": "Fun art for the stream",
+        "src": "twitch-stream/thumbnail.jpg"
+    }
+}

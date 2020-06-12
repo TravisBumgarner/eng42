@@ -1,0 +1,37 @@
+{
+    "name": "Digital Physical Pong",
+    "id": "digital-physical-pong",
+    "categories": [
+        6
+    ],
+    "organizations": [
+        "Personal"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
+    "headline": "",
+    "description": "This was an exploration into using a webcam to play computer games.",
+    "start_date": "2019-11-25",
+    "end_date": "2019-11-28",
+    "skills": [
+        30,
+        20
+    ],
+    "images": [
+    ],
+    "links": [
+        {
+            "name": "GitHub",
+            "src": "https://github.com/TravisBumgarner/digi-physi"
+        },
+        {
+            "name": "Instagram Video",
+            "src": "https://www.instagram.com/p/B5bSfbdlIhx"
+        }
+    ],
+    "preview_img": {
+        "name": "Screenshot of playing pong",
+        "src": "digital-physical-pong/thumbnail.jpg"
+    }
+}

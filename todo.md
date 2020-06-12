@@ -1,17 +1,7 @@
-- [x] Convert minimally to TS
-- [x] Add types
-- [x] Set Sentry to only run in prod
-- [x] Get rid of classes
-- [x] Media queries and styled components
-- [x] use React router hooks
-- [x] Further refactorings
-- [ ] ~~All the hooks!~~
-- [ ] ~~What's new in styled-components?~~
-- [ ] ~~Sentry not firing~~
-- [x] Add Twitch Icon
-- [x] Finish writing script for generating new content
-- [x] Get media into folders
-- [x] Human readable urls (aka slugs)
-- [ ] Update content
-- [ ] Go to prod
-- [ ] Deleted unused images in buckets
+- [ ] update content
+    - [ ] Finish getting preview and project photos
+    - [ ] Finish project descriptions
+    - [ ] Add links
+    - [ ] Proofread all projects
+- [ ] Merge next and previous buttons in
+- [ ] Ship it & the images

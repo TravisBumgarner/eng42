@@ -263,5 +263,10 @@
         "id": 54,
         "name": "Google Cloud Storage",
         "category": "Software Engineering"
+    },
+    "55": {
+        "id": 55,
+        "name": "Marketing & Advertising",
+        "category": "Entrepreneurship"
     }
 }

@@ -3,8 +3,8 @@ import os
 import json
 
 # Update these values if switching local development machines
-root_media_dir = "/mnt/c/Users/Travis/Programming/eng41/media"
-content_dir = "/mnt/c/Users/Travis/Programming/eng41/src/content"
+root_media_dir = "/mnt/c/Users/Travis/Documents/Programming/eng40/media"
+content_dir = "/mnt/c/Users/Travis/Documents/Programming/eng40/src/content"
 
 
 class Project:
@@ -62,12 +62,12 @@ class Project:
         return []
 
     def get_preview_img(self, media_dir):
-        return {"name": "placeholder", "src": f"{media_dir}/placeholder"}
+        return {"name": "placeholder", "src": f"{media_dir}/thumbnail.png"}
 
     def get_images(self, media_dir):
         return [
-            {"name": "placeholder", "src": f"{media_dir}/placeholder"},
-            {"name": "placeholder", "src": f"{media_dir}/placeholder"},
+            {"name": "placeholder", "src": f"{media_dir}/1.jpg"},
+            {"name": "placeholder", "src": f"{media_dir}/2.jpg"},
         ]
 
     def get_links(self):

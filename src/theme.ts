@@ -13,13 +13,21 @@ const media = {
 }
 
 const GlobalStyle = createGlobalStyle`
+
     a {
         text-decoration: none;
         &: hover {
             color: ${ TERTIARY_COLOR};
         }
     }
+
     html {
+        font-family: Montserrat, sans-serif;
+        line-height: 1.5;
+        font-weight: 300;
+        font-size: 1rem;
+        color: ${PRIMARY_COLOR};
+
         overflow: -moz-scrollbars-vertical; 
         overflow-y: scroll;
         background-color: ${SECONDARY_COLOR};
