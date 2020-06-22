@@ -6,30 +6,42 @@ import { allCategories, Project } from 'Content'
 import { Title, Text } from 'SharedComponents'
 import { SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
 
-type TileWrapperProps = {
-    src: string
-}
+const TitleWrapper = styled.div`
+    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+`
 
-const TileWrapper = styled.div`
+const GridWrapper = styled.div`
+    position: relative;
+`
+
+const GridImage = styled.img`
+    width: 100%;
+`
+
+const GridImageWrapper = styled.div`
+    line-height: 0;
+`
+
+const StyledArticle = styled.article`
+    width: calc(33% - 6.5px);
     box-sizing: border-box;
-    border: 5px solid transparent;
-    background-image: url('${(props: TileWrapperProps) => props.src}');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 400px;
-    max-height: 400px;
-    width: calc(100vw / 3);
-    height: calc(100vw / 3);
+    margin: 5px;
+    border: 5px solid white;
+    display: inline-block;
     position: relative;
 
     ${media.desktop} {
-        width: calc(100vw / 3 - 2.5vw);
-        height: calc(100vw / 3 - 2.5vw);
+        width: calc(50% - 10px);
     }
 
     ${media.tablet} {
-        width: calc(100vw/2 - 2.5vw);
-        height: calc(100vw/2 - 2.5vw);
+        width: calc(100% - 10px);
+    }
+    
+    img {
+        line-height: 0;
     }
 `
 
@@ -37,25 +49,25 @@ const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: ${PRIMARY_COLOR};
 `
-
 const HoverContent = styled.div`
     &:hover {
         opacity: 0.9;
     }
-    padding: 25px;
-    box-sizing: border-box;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
     opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    padding: 25px;
+
     background-color: ${PRIMARY_COLOR};
     > * {
         color: ${SECONDARY_COLOR} !important;
@@ -67,46 +79,53 @@ type TileProps = {
 }
 
 const Tile = ({ project: { id, preview_img, name, categories, start_date, end_date } }: TileProps) => {
-    const CategoryList = categories.map(id => (
+    const CategoryList = categories.sort((a, b) => allCategories[a].name > allCategories[b].name ? 1 : -1).map(id => (
         <>
             <span>{allCategories[id].name}</span>
             <br />
         </>
     ))
     return (
-        <StyledLink to={`/project/${id}`}>
-            <TileWrapper src={preview_img && __API__ + preview_img.src}>
+        <StyledArticle>
+            <GridImageWrapper>
+                <GridImage src={preview_img && __API__ + preview_img.src} />
+            </GridImageWrapper>
+            <StyledLink to={`/project/${id}`}>
                 <HoverContent>
-                    <Title size="medium"> {name}</Title>
-                    <Title size="small"> {`${start_date.slice(0, -3)} to ${
+                    <Title size="small"> {name}</Title>
+                    <Text> {`${start_date.slice(0, -3)} to ${
                         end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
                         }`}
-                    </Title>
+                    </Text>
                     <Text>{CategoryList}</Text>
                 </HoverContent>
-            </TileWrapper>
-        </StyledLink>
+            </StyledLink>
+        </StyledArticle>
     )
 }
-
-const GridWrapper = styled.div`
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-`
 
 type PortfolioProps = {
     projects: Project[]
 }
 
-const Portfolio = ({ projects }: PortfolioProps) => {
-    const Projects = Object.values(projects).map(project => {
+const createTiles = (projects: Project[]) => {
+    return projects.map(project => {
         return <Tile key={project.id} project={project} />
     })
+}
 
-    return <GridWrapper>{Projects}</GridWrapper>
+const Portfolio = ({ projects }: PortfolioProps) => {
+    const ActiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date === "Ongoing"))
+    const InactiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date !== "Ongoing"))
+
+    return (
+        <>
+            <TitleWrapper><Title size="medium">Ongoing Projects</Title></TitleWrapper>
+            <GridWrapper>{ActiveProjects}</GridWrapper>
+            <TitleWrapper><Title size="medium">Finished Projects</Title></TitleWrapper>
+            <GridWrapper>{InactiveProjects}</GridWrapper>
+        </>
+    )
 }
 
 export default Portfolio

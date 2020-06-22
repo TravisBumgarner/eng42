@@ -55,11 +55,14 @@ const Image = styled.img`
     max-height: 100vh;
     box-sizing: border-box;
     align-self: center;
+    border: 5px solid white;
 `
 
 const SidebarImage = styled.img`
     height: auto;
     width: 100%;
+    border: 5px solid white;
+    box-sizing: border-box;
 `
 
 const SectionWrapper = styled.div`

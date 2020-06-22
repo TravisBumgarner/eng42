@@ -90,9 +90,11 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
     display: flex;
     margin-bottom: 40px;
-
+    margin-left: 5px;
+    margin-right: 5px;
     ${media.desktop} {
-        margin: 20px 4vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     ${media.tablet} {
