@@ -51,8 +51,7 @@ const Sidebar = styled.div`
 const Image = styled.img`
     display: block;
     margin: 20px 0;
-    max-width: 100%;
-    max-height: 100vh;
+    width: 100%;
     box-sizing: border-box;
     align-self: center;
     border: 5px solid white;
@@ -186,17 +185,35 @@ const ChangeProjectButtonWrapper = styled.div`
 
 const PrevProject = styled(FaArrowCircleLeft)`
     fill: ${PRIMARY_COLOR};
+    position: fixed;
+    top: calc(50vh - 1.5em/2);
+    left: 10px;
+    font-size: 1.25em;
 
     &:hover{
         fill: ${TERTIARY_COLOR};
     }
+
+    ${media.desktop} {
+        font-size: 1em;
+        left: 5px;
+    }
 `
 
 const NextProject = styled(FaArrowAltCircleRight)`
-fill: ${PRIMARY_COLOR};
+    fill: ${PRIMARY_COLOR};
+    position: fixed;
+    top: calc(50vh - 1.5em/2);
+    right: 10px;
+    font-size: 1.25em;
 
     &:hover{
         fill: ${TERTIARY_COLOR};
+    }
+
+    ${media.desktop} {
+        font-size: 1em;
+        right: 5px;
     }
 `
 
@@ -216,13 +233,10 @@ const SingleProject = ({
     return (
         <>
             <SingleProjectWrapper>
-                <ChangeProjectButtonWrapper>
-                    <PrevProject size="2em" onClick={() => history.push(`/project/${projects[previousId]['id']}`)} />
-                </ChangeProjectButtonWrapper>
+                <PrevProject size="2em" onClick={() => history.push(`/project/${projects[previousId]['id']}`)} />
                 <Details project={projects[projectId]} />
-                <ChangeProjectButtonWrapper>
-                    <NextProject onClick={() => history.push(`/project/${projects[nextId]['id']}`)} size="2em" />
-                </ChangeProjectButtonWrapper>
+
+                <NextProject onClick={() => history.push(`/project/${projects[nextId]['id']}`)} size="2em" />
             </SingleProjectWrapper >
         </>
     )

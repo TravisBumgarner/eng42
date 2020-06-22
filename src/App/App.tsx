@@ -10,7 +10,7 @@ import styled from 'styled-components'
 
 const AppWrapper = styled.div`
     max-width: 1200px;
-    width: 95%;
+    width: 90%;
     margin: 15px auto 30px;
     box-sizing: border-box;
 `
