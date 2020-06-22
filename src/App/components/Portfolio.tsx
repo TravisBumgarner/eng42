@@ -10,7 +10,36 @@ type TileWrapperProps = {
     src: string
 }
 
-const TileWrapper = styled.div`
+const GridWrapper2 = styled.div`
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
+const GridWrapper = styled.div`
+    line-height: 0;
+`
+
+const GridImage = styled.img`
+    width: calc(33% - 6.5px);
+    box-sizing: border-box;
+    margin: 5px;
+    border: 5px solid white;
+
+    ${media.desktop} {
+        width: calc(50% - 10px);
+    }
+
+    ${media.tablet} {
+        width: calc(100% - 10px);
+    }
+`
+
+// const TileWrapper = styled.div``
+
+const TileWrapper2 = styled.div`
     box-sizing: border-box;
     border: 5px solid transparent;
     background-image: url('${(props: TileWrapperProps) => props.src}');
@@ -74,28 +103,22 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
         </>
     ))
     return (
-        <StyledLink to={`/project/${id}`}>
-            <TileWrapper src={preview_img && __API__ + preview_img.src}>
-                <HoverContent>
-                    <Title size="medium"> {name}</Title>
-                    <Title size="small"> {`${start_date.slice(0, -3)} to ${
-                        end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
-                        }`}
-                    </Title>
-                    <Text>{CategoryList}</Text>
-                </HoverContent>
-            </TileWrapper>
-        </StyledLink>
+        <GridImage src={preview_img && __API__ + preview_img.src} />
+        // <TileWrapper src={preview_img && __API__ + preview_img.src}>
+        //     <StyledLink to={`/project/${id}`}>
+        //         <p>HI</p>
+        //         {/* <HoverContent>
+        //             <Title size="medium"> {name}</Title>
+        //             <Title size="small"> {`${start_date.slice(0, -3)} to ${
+        //                 end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
+        //                 }`}
+        //             </Title>
+        //             <Text>{CategoryList}</Text>
+        //         </HoverContent> */}
+        //     </StyledLink>
+        // </TileWrapper>
     )
 }
-
-const GridWrapper = styled.div`
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-`
 
 type PortfolioProps = {
     projects: Project[]
