@@ -10,23 +10,25 @@ type TileWrapperProps = {
     src: string
 }
 
-const GridWrapper2 = styled.div`
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-`
-
 const GridWrapper = styled.div`
-    line-height: 0;
+    position: relative;
 `
 
 const GridImage = styled.img`
+    width: 100%;
+`
+
+const GridImageWrapper = styled.div`
+    line-height: 0;
+`
+
+const StyledArticle = styled.article`
     width: calc(33% - 6.5px);
     box-sizing: border-box;
     margin: 5px;
     border: 5px solid white;
+    display: inline-block;
+    position: relative;
 
     ${media.desktop} {
         width: calc(50% - 10px);
@@ -35,56 +37,38 @@ const GridImage = styled.img`
     ${media.tablet} {
         width: calc(100% - 10px);
     }
-`
-
-// const TileWrapper = styled.div``
-
-const TileWrapper2 = styled.div`
-    box-sizing: border-box;
-    border: 5px solid transparent;
-    background-image: url('${(props: TileWrapperProps) => props.src}');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 400px;
-    max-height: 400px;
-    width: calc(100vw / 3);
-    height: calc(100vw / 3);
-    position: relative;
-
-    ${media.desktop} {
-        width: calc(100vw / 3 - 2.5vw);
-        height: calc(100vw / 3 - 2.5vw);
-    }
-
-    ${media.tablet} {
-        width: calc(100vw/2 - 2.5vw);
-        height: calc(100vw/2 - 2.5vw);
+    
+    img {
+        line-height: 0;
     }
 `
 
 const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: ${PRIMARY_COLOR};
+    // position: absolute;
+    // top: 0;
+    // left: 0;
 `
-
 const HoverContent = styled.div`
     &:hover {
         opacity: 0.9;
     }
-    padding: 25px;
-    box-sizing: border-box;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
     opacity: 0;
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    padding: 25px;
+
     background-color: ${PRIMARY_COLOR};
     > * {
         color: ${SECONDARY_COLOR} !important;
@@ -103,20 +87,21 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
         </>
     ))
     return (
-        <GridImage src={preview_img && __API__ + preview_img.src} />
-        // <TileWrapper src={preview_img && __API__ + preview_img.src}>
-        //     <StyledLink to={`/project/${id}`}>
-        //         <p>HI</p>
-        //         {/* <HoverContent>
-        //             <Title size="medium"> {name}</Title>
-        //             <Title size="small"> {`${start_date.slice(0, -3)} to ${
-        //                 end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
-        //                 }`}
-        //             </Title>
-        //             <Text>{CategoryList}</Text>
-        //         </HoverContent> */}
-        //     </StyledLink>
-        // </TileWrapper>
+        <StyledArticle>
+            <GridImageWrapper>
+                <GridImage src={preview_img && __API__ + preview_img.src} />
+            </GridImageWrapper>
+            <StyledLink to={`/project/${id}`}>
+                <HoverContent>
+                    <Title size="medium"> {name}</Title>
+                    <Title size="small"> {`${start_date.slice(0, -3)} to ${
+                        end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
+                        }`}
+                    </Title>
+                    <Text>{CategoryList}</Text>
+                </HoverContent>
+            </StyledLink>
+        </StyledArticle>
     )
 }
 
