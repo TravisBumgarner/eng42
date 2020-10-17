@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import projects from 'Content'
 
-import { ScrollToTop, Portfolio, NotFound, Header, SingleProject } from './components'
+import { ScrollToTop, Portfolio, NotFound, Header, SingleProject, Footer } from './components'
 import { GlobalStyle } from 'Theme'
 
 import styled from 'styled-components'
@@ -44,6 +44,7 @@ const App = () => {
                     />
                     <Route component={NotFound} />
                 </Switch>
+                <Footer />
             </AppWrapper>
         </>
     )
