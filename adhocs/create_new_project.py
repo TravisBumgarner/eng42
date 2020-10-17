@@ -3,8 +3,8 @@ import os
 import json
 
 # Update these values if switching local development machines
-root_media_dir = "/mnt/c/Users/Travis/Documents/Programming/eng40/media"
-content_dir = "/mnt/c/Users/Travis/Documents/Programming/eng40/src/content"
+root_media_dir = "Z:\Programming\eng42\media"
+content_dir = "Z:\Programming\eng42\src\content"
 
 
 class Project:
@@ -74,17 +74,15 @@ class Project:
         return [{"name": "placeholder", "src": f"/placeholder"}]
 
     def save_to_json(self):
-        max_filename = -1
-        for filename in os.listdir(content_dir):
-
-            name, ext = filename.split(".")
-            if name.isnumeric() and int(name) > max_filename and ext == "json":
-                max_filename = int(name)
-        new_file = max_filename + 1
-        with open(os.path.join(content_dir, f"{str(new_file)}.json"), "w") as f:
+        with open(os.path.join(content_dir, f"{self.data['id']}.json"), "w") as f:
             json.dump(self.data, f)
+
+    def create_media_dir(self):
+        os.mkdir(os.path.join(root_media_dir, self.data["id"]))
+
 
 
 project = Project()
 project.populate_data()
 project.save_to_json()
+project.create_media_dir()
