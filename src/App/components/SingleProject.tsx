@@ -117,12 +117,12 @@ const Details = ({
             </li>
         )
     })
-    const Images = images.map(i => <Image src={__API__ + i.src} />)
+    const Images = images.map(i => <Image src={__MEDIA__ + i.src} />)
     return (
         <DetailsWrapper>
             <Row>
                 <Sidebar>
-                    <SidebarImage src={__API__ + preview_img.src} />
+                    <SidebarImage src={__MEDIA__ + preview_img.src} />
                 </Sidebar>
 
                 <Content>
@@ -142,8 +142,7 @@ const Details = ({
                         <Section title="Meta">
                             <Text>
                                 When:{' '}
-                                {`${start_date.slice(0, -3)} to ${
-                                    end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
+                                {`${start_date.slice(0, -3)} to ${end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
                                     }`}
                             </Text>
                             <Text>Where: {Locations}</Text>

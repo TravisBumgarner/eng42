@@ -88,7 +88,7 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
     return (
         <StyledArticle>
             <GridImageWrapper>
-                <GridImage src={preview_img && __API__ + preview_img.src} />
+                <GridImage src={preview_img && __MEDIA__ + preview_img.src} />
             </GridImageWrapper>
             <StyledLink to={`/project/${id}`}>
                 <HoverContent>
@@ -119,41 +119,67 @@ const SectionWrapper = styled.p`
     margin-top: 20px;
 `
 
-const AboutButton = styled.button`
-    border: 0;
-    background-color: transparent;
-    display: inline;
+const WhaleHelloText = styled.p`
+    font-size: 3em;
+
+    ${media.tablet} {
+        font-size: 2em;
+    }
+`
+
+const AboutButton = styled(({ className, onClick, children }) => {
+    return <button onClick={onClick} className={className}>{children}</button>
+})`
+    cursor: pointer;
+    color: ${SECONDARY_COLOR};
+    font-weight: 700;
+    background-color: ${PRIMARY_COLOR};
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-size: 3em;
+
+    ${media.tablet} {
+        font-size: 2em;
+    }
 `
 
 const About = () => {
     const [isMoreShown, setIsMoreShown] = React.useState(false)
-    const AboutButton = <button
-        style={{
-            cursor: 'pointer',
-            color: SECONDARY_COLOR,
-            fontWeight: 700,
-            backgroundColor: PRIMARY_COLOR,
-            padding: '2px 5px',
-            borderRadius: '5px',
-            marginLeft: isMoreShown ? '0px' : '10px'
-        }}
-        onClick={() => { setIsMoreShown(!isMoreShown) }}
-    >
-        {isMoreShown ? "Good to know!" : "And what's that?"}
-    </button>
 
     return <SectionWrapper>
-        <Text>My name is Travis Bumgarner and I think I finally know what I want to be when I grow up. {isMoreShown ? null : AboutButton} </Text>
-        {isMoreShown ? (
-            <>
-                <Text>For the last seven years, I spent my time trying, failing, and succeeding at various careers, passion projects, and hobbies. I did a mechanical engineering internship with in China and landed my first patent. I served in Panama with the Peace Corps, teaching water safety and engineering water systems. In my free time I learned photography and software engineering.</Text>
-                <Text>After Peace Corps ended, I continued my software engineering journey by building websites for non-profits. I joined a makerspace, taught Arduino classes and was elected to the board. Forever curious about startups, I launched one, Painless Prototyping, and ran a succesful Kickstarter campaign. With the experience from my startup, I found myself mentoring others with the MIT Sandbox. I also got to lead a student group from MIT to Colombia for three weeks to teach electronics and learn about makerspaces.</Text>
-                <Text>Two and a half years ago I joined the search engine team for an online education platform doing full stack development and relevance tuning. Outside of my primary role, I've worn the hats of machine learning intern, researcher, and prototyper. I've given many programming talks, organized a book club, beer club, and hosted several social outings.</Text>
-                <Text><strong>So what do I want to be when I grow up? I want to be an engineer, a lifelong learner, an educator (blog, video tutorials, streaming, conference talks, meetups), a maker, and a consultant.</strong></Text>
-                <Text>Below you'll find a collection of the more long term things I have done or am doing. For more day to day adventures, you can connect with me on social media and via email at the links in the top right corner of this page.</Text>
-                <Text>{isMoreShown ? AboutButton : null}</Text>
-            </>
-        ) : null}
+        <div style={{ 'display': 'flex', 'flexDirection': 'row', justifyContent: 'space-between' }}>
+            <div style={{ width: '25%' }}>
+                <img style={{ boxSizing: 'border-box', width: '100%', border: `5px solid ${PRIMARY_COLOR}` }} src={__STATIC__ + 'me.jpg'} />
+            </div>
+            <div style={{ width: '70%' }}>
+                <WhaleHelloText>Hi! My name is Travis Bumgarner and I think I finally know what I want to be when I grow up. </WhaleHelloText>
+                {isMoreShown ? null : (
+                    < AboutButton
+                        onClick={() => { setIsMoreShown(!isMoreShown) }}
+                    >
+                        And what's that?
+                    </AboutButton >
+                )}
+                {isMoreShown ? (
+                    <>
+                        <Text>For the last seven years, I spent my time trying, failing, and succeeding at various careers, passion projects, and hobbies. I did a mechanical engineering internship with in China and landed my first patent. I served in Panama with the Peace Corps, teaching water safety and engineering water systems. In my free time I learned photography and software engineering.</Text>
+                        <Text>After Peace Corps ended, I continued my software engineering journey by building websites for non-profits. I joined a makerspace, taught Arduino classes and was elected to the board. Forever curious about startups, I launched one, Painless Prototyping, and ran a succesful Kickstarter campaign. With the experience from my startup, I found myself mentoring others with the MIT Sandbox. I also got to lead a student group from MIT to Colombia for three weeks to teach electronics and learn about makerspaces.</Text>
+                        <Text>Two and a half years ago I joined the search engine team for an online education platform doing full stack development and relevance tuning. Outside of my primary role, I've worn the hats of machine learning intern, researcher, and prototyper. I've given many programming talks, organized a book club, beer club, and hosted several social outings.</Text>
+                        <Text><strong>So what do I want to be when I grow up? I want to be an engineer, a lifelong learner, an educator (blog, video tutorials, streaming, conference talks, meetups), a maker, and a consultant.</strong></Text>
+                        <Text>Below you'll find a collection of the more long term things I have done or am doing. For more day to day adventures, you can connect with me on social media and via email at the links in the top right corner of this page.</Text>
+                        <Text>
+                            {!isMoreShown ? null : (
+                                < AboutButton
+                                    onClick={() => { setIsMoreShown(!isMoreShown) }}
+                                >
+                                    Good to know, thanks!
+                                </AboutButton >
+                            )}
+                        </Text>
+                    </>
+                ) : null}
+            </div>
+        </div>
     </SectionWrapper >
 }
 
@@ -163,7 +189,6 @@ const Portfolio = ({ projects }: PortfolioProps) => {
 
     return (
         <>
-            <TitleWrapper><Title size="medium">Hi - Thanks for stopping by!</Title></TitleWrapper>
             <About />
             <TitleWrapper><Title size="medium">Ongoing Projects</Title></TitleWrapper>
             <GridWrapper>{ActiveProjects}</GridWrapper>
