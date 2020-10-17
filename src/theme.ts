@@ -17,7 +17,10 @@ const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         &: hover {
-            color: ${ TERTIARY_COLOR};
+            color: ${TERTIARY_COLOR};
+        }
+        &: visited {
+            color: ${PRIMARY_COLOR};
         }
     }
 
@@ -35,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
         ${media.tablet} {
             font-size: 14px;
         }
+    }
+
+    strong {
+        font-weight: 700;
     }
 `
 

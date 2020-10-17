@@ -148,21 +148,13 @@ const About = () => {
             <>
                 <Text>For the last seven years, I spent my time trying, failing, and succeeding at various careers, passion projects, and hobbies. I did a mechanical engineering internship with in China and landed my first patent. I served in Panama with the Peace Corps, teaching water safety and engineering water systems. In my free time I learned photography and software engineering.</Text>
                 <Text>After Peace Corps ended, I continued my software engineering journey by building websites for non-profits. I joined a makerspace, taught Arduino classes and was elected to the board. Forever curious about startups, I launched one, Painless Prototyping, and ran a succesful Kickstarter campaign. With the experience from my startup, I found myself mentoring startups with the MIT Sandbox. I also got to lead a student group from MIT to Colombia for three weeks to teach electronics and learn about makerspaces.</Text>
-                <Text>So what do I want to be when I grow up? I want to be an engineer, a lifelong learner, an educator, a maker, and a consultant.</Text>
+                <Text><strong>So what do I want to be when I grow up?</strong> I want to be an engineer, a lifelong learner, an educator (blog, video tutorials, streaming, conference talks, meetups), a maker, and a consultant.</Text>
                 <Text>Below you'll find a collection of the more long term things I have done or am doing. For more day to day adventures, you can connect with me via Instagram, Twitter, LinkedIn, GitHub, and email. </Text>
                 <Text>{isMoreShown ? AboutButton : null}</Text>
             </>
         ) : null}
     </SectionWrapper >
 }
-
-const LetsChat = () => {
-    return <SectionWrapper>
-        Suh sude.
-    </SectionWrapper >
-}
-
-
 
 const Portfolio = ({ projects }: PortfolioProps) => {
     const ActiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date === "Ongoing"))
@@ -176,8 +168,6 @@ const Portfolio = ({ projects }: PortfolioProps) => {
             <GridWrapper>{ActiveProjects}</GridWrapper>
             <TitleWrapper><Title size="medium">Finished Projects</Title></TitleWrapper>
             <GridWrapper>{InactiveProjects}</GridWrapper>
-            <TitleWrapper><Title size="medium">Let's Chat</Title></TitleWrapper>
-            <LetsChat />
         </>
     )
 }
