@@ -1,0 +1,53 @@
+{
+    "name": "DIY Keyboard",
+    "id": "diy-keyboard",
+    "categories": [
+        9,
+        6,
+        5,
+        2
+    ],
+    "organizations": [
+        "Painless Prototyping"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
+    "headline": "",
+    "description": "I can't say I know what this will evolve into yet. But it'll be making it's way to Kickstarter eventually!",
+    "start_date": "2020-07-16",
+    "end_date": "Ongoing",
+    "skills": [
+        3,
+        8,
+        9,
+        10,
+        20,
+        23,
+        24
+    ],
+    "images": [
+        {
+            "name": "Components",
+            "src": "diy-keyboard/1.jpg"
+        },
+        {
+            "name": "Assembling board",
+            "src": "diy-keyboard/2.jpg"
+        },
+        {
+            "name": "First working prototype",
+            "src": "diy-keyboard/3.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "Working MVP",
+            "src": "https://www.youtube.com/watch?v=LUBRBuLBB54"
+        }
+    ],
+    "preview_img": {
+        "name": "First working prototype",
+        "src": "diy-keyboard/thumbnail.jpg"
+    }
+}

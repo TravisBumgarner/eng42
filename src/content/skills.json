@@ -268,5 +268,10 @@
         "id": 55,
         "name": "Marketing & Advertising",
         "category": "Entrepreneurship"
+    },
+    "56": {
+        "id": 56,
+        "name": "Videography",
+        "category": "Photography"
     }
 }

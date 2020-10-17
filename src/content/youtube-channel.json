@@ -1,0 +1,57 @@
+{
+    "name": "YouTube Channel",
+    "id": "youtube-channel",
+    "categories": [
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "organizations": [
+        "Travis the Maker"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
+    "headline": "",
+    "description": "This is the continued exploration into online education which started with Twitch. I have found that using videos to share my knowledge with others is the best way to do so. Thus far I have produced one video and have plans for two more.",
+    "start_date": "2020-04-30",
+    "end_date": "Ongoing",
+    "skills": [
+        15,
+        19,
+        25,
+        22,
+        56
+    ],
+    "images": [
+        {
+            "name": "First video, building a prototype",
+            "src": "youtube-channel/1.jpg"
+        },
+        {
+            "name": "First video, building a prototype",
+            "src": "youtube-channel/2.jpg"
+        },
+        {
+            "name": "First video, building a prototype",
+            "src": "youtube-channel/3.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "YouTube Channel",
+            "src": "https://www.youtube.com/channel/UCFgIg95KzVg97KAeXdWbeXg"
+        },
+        {
+            "name": "First Video",
+            "src": "https://www.youtube.com/watch?v=RjBEjiBoUyk"
+        }
+    ],
+    "preview_img": {
+        "name": "First video, building a prototype",
+        "src": "youtube-channel/thumbnail.jpg"
+    }
+}
