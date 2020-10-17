@@ -1,7 +1,0 @@
-- [ ] update content
-    - [ ] Finish getting preview and project photos
-    - [ ] Finish project descriptions
-    - [ ] Add links
-    - [ ] Proofread all projects
-- [ ] Merge next and previous buttons in
-- [ ] Ship it & the images

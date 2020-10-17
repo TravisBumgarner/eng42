@@ -14,9 +14,9 @@
         "Massachusetts"
     ],
     "headline": "",
-    "description": "A Raspberry Pi display that shows relevant information. Pre-Covid 19 it showed weather and bus times. New use to be decided.",
+    "description": "A Raspberry Pi display that shows relevant information. Pre-Covid 19 it showed weather and bus times. Now it tracks stats about my life.",
     "start_date": "2019-12-15",
-    "end_date": "Ongoing",
+    "end_date": "2020-09-01",
     "skills": [
         1,
         3,
@@ -47,11 +47,23 @@
         {
             "name": "Temporary case donne",
             "src": "smart-display/4.jpg"
+        },
+        {
+            "name": "Finished case front",
+            "src": "smart-display/5.jpg"
+        },
+        {
+            "name": "Finished case back",
+            "src": "smart-display/6.jpg"
         }
     ],
     "links": [
         {
-            "name": "GitHub",
+            "name": "GitHub V2.0 (Stats tracker for exercise, coffee drinking etc.)",
+            "src": "https://github.com/TravisBumgarner/stats_tracker"
+        },
+        {
+            "name": "GitHub V1.0 (Originally designed for weather / bus times)",
             "src": "https://github.com/TravisBumgarner/smart_display"
         },
         {

@@ -93,8 +93,7 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
             <StyledLink to={`/project/${id}`}>
                 <HoverContent>
                     <Title size="small"> {name}</Title>
-                    <Text> {`${start_date.slice(0, -3)} to ${
-                        end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
+                    <Text> {`${start_date.slice(0, -3)} to ${end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
                         }`}
                     </Text>
                     <Text>{CategoryList}</Text>
@@ -120,6 +119,7 @@ const Portfolio = ({ projects }: PortfolioProps) => {
 
     return (
         <>
+            {/* <TitleWrapper><Title size="medium">About</Title></TitleWrapper> */}
             <TitleWrapper><Title size="medium">Ongoing Projects</Title></TitleWrapper>
             <GridWrapper>{ActiveProjects}</GridWrapper>
             <TitleWrapper><Title size="medium">Finished Projects</Title></TitleWrapper>
