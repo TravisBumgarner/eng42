@@ -156,6 +156,15 @@ const AboutButton = styled(({ className, onClick, children }) => {
     }
 `
 
+const AboutLink = styled(({ href, className, children }) => {
+    return <a target="_blank" href={href} className={className}>{children}</a>
+})`
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+`
+
+
 const About = () => {
     const [isMoreShown, setIsMoreShown] = React.useState(false)
 
@@ -167,7 +176,7 @@ const About = () => {
             <div style={{ width: '70%' }}>
                 <WhaleHelloText><strong>Hi!</strong> My name is Travis Bumgarner and I think I finally know what I want to be when I grow up. </WhaleHelloText>
                 <WhaleHelloText>I want to be an engineer, a lifelong learner, an educator, a maker, and a consultant.</WhaleHelloText>
-                <WhaleHelloText>Below you'll a collection of activities I am pursuing in hopes of achieving my goals.</WhaleHelloText>
+                <WhaleHelloText>Below you'll a collection of activities I am pursuing in hopes of achieving these goals.</WhaleHelloText>
 
                 {isMoreShown ? null : (
                     < AboutButton
