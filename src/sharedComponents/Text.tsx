@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { PRIMARY_COLOR } from 'Theme'
 
 const TextWrapper = styled.p`
-    margin: 5px 0;
+    margin: 15px 0;
 `
 
 type TextProps = {
