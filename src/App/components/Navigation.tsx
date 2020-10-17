@@ -65,11 +65,7 @@ const EXTERNAL_LINKS = [
     {
         href: 'https://blog.travisbumgarner.com',
         content: 'Blog'
-    },
-    {
-        href: 'https://travisbumgarner.photography',
-        content: 'Photography'
-    },
+    }
 ]
 
 const Navigation = () => {

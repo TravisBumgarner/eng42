@@ -125,6 +125,10 @@ const WhaleHelloText = styled.p`
     ${media.tablet} {
         font-size: 2em;
     }
+
+    ${media.phone} {
+        font-size: 1.5em;
+    }
 `
 
 const AboutButton = styled(({ className, onClick, children }) => {
@@ -140,6 +144,10 @@ const AboutButton = styled(({ className, onClick, children }) => {
 
     ${media.tablet} {
         font-size: 2em;
+    }
+
+    ${media.phone} {
+        font-size: 1.5em;
     }
 `
 
