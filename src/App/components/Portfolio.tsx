@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import { allCategories, Project } from 'Content'
 import { Title, Text } from 'SharedComponents'
-import { SECONDARY_COLOR, PRIMARY_COLOR, media } from 'Theme'
+import { SECONDARY_COLOR, PRIMARY_COLOR, TERTIARY_COLOR, media } from 'Theme'
 
 const TitleWrapper = styled.div`
     margin-left: 5px;
@@ -142,6 +142,9 @@ const AboutButton = styled(({ className, onClick, children }) => {
     border-radius: 5px;
     font-size: 2em;
     
+    &:hover {
+        background-color: ${TERTIARY_COLOR};
+    }
     ${media.desktop} {
         font-size: 1.5em;
         margin-bottom: 0.5em;
@@ -159,6 +162,15 @@ const AboutLink = styled(({ href, className, children }) => {
     text-decoration: underline;
     font-weight: 700;
     cursor: pointer;
+    color: ${TERTIARY_COLOR};
+
+    &:visited {
+        color: ${TERTIARY_COLOR};
+    }
+    &:hover {
+        color: ${PRIMARY_COLOR};
+    }
+
 `
 
 const About = () => {
