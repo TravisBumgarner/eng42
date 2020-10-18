@@ -161,7 +161,6 @@ const AboutLink = styled(({ href, className, children }) => {
     cursor: pointer;
 `
 
-
 const About = () => {
     const [isMoreShown, setIsMoreShown] = React.useState(false)
 
@@ -172,7 +171,7 @@ const About = () => {
             </div>
             <div style={{ width: '70%' }}>
                 <WhaleHelloText><strong>Hi!</strong> My name is Travis Bumgarner and I think I finally know what I want to be when I grow up. </WhaleHelloText>
-                <WhaleHelloText>I want to be an engineer, a lifelong learner, an educator, a maker, and a consultant.</WhaleHelloText>
+                <WhaleHelloText>I want to be a <AboutLink href="https://www.linkedin.com/in/travisbumgarner/">Software Engineer</AboutLink>, a <AboutLink href="http://github.com/travisbumgarner/learning">lifelong learner</AboutLink>, an educator(<AboutLink href="https://www.youtube.com/c/TravistheMaker">YouTube</AboutLink>, <AboutLink href="https://www.twitch.tv/travis_the_maker">Twitch</AboutLink>, <AboutLink href="https://blog.travisbumgarner.com/">Blog</AboutLink>), a <AboutLink href="https://painlessprototyping.com/buttonboardv2">maker</AboutLink>, and a <AboutLink href="https://painlessprototyping.com/prototyping">consultant</AboutLink>.</WhaleHelloText>
                 <WhaleHelloText>Below you'll a collection of activities I am pursuing in hopes of achieving these goals.</WhaleHelloText>
 
                 {isMoreShown ? null : (
