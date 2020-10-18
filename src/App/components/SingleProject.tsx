@@ -7,8 +7,8 @@ import {
     FaArrowAltCircleRight
 } from 'react-icons/fa'
 
-import { media, PRIMARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from 'Theme'
-import { allSkills, Project, Skills } from 'Content'
+import { media, PRIMARY_COLOR, TERTIARY_COLOR } from 'Theme'
+import { allSkills, Project } from 'Content'
 import { Text, ExternalLink, Title } from 'SharedComponents'
 
 const DetailsWrapper = styled.div``
@@ -78,7 +78,7 @@ const Section = ({ children, title }: SectionProps) => {
     return (
         <SectionWrapper>
             <Title size="small">{title}</Title>
-            <Text>{children}</Text>
+            {children}
         </SectionWrapper>
     )
 }
@@ -117,7 +117,7 @@ const Details = ({
             </li>
         )
     })
-    const Images = images.map(i => <Image src={__MEDIA__ + i.src} />)
+    const Images = images.map((i, index) => <Image key={index} src={__MEDIA__ + i.src} />)
     return (
         <DetailsWrapper>
             <Row>

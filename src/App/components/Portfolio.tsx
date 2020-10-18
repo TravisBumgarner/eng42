@@ -80,10 +80,7 @@ type TileProps = {
 
 const Tile = ({ project: { id, preview_img, name, categories, start_date, end_date } }: TileProps) => {
     const CategoryList = categories.sort((a, b) => allCategories[a].name > allCategories[b].name ? 1 : -1).map(id => (
-        <>
-            <span>{allCategories[id].name}</span>
-            <br />
-        </>
+        <li key={id}>{allCategories[id].name}</li>
     ))
     return (
         <StyledArticle>
@@ -96,7 +93,7 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
                     <Text> {`${start_date.slice(0, -3)} to ${end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
                         }`}
                     </Text>
-                    <Text>{CategoryList}</Text>
+                    <ul>{CategoryList}</ul>
                 </HoverContent>
             </StyledLink>
         </StyledArticle>
@@ -113,7 +110,7 @@ const createTiles = (projects: Project[]) => {
     })
 }
 
-const SectionWrapper = styled.p`
+const SectionWrapper = styled.div`
     margin-left: 5px;
     margin-bottom: 20px;
     margin-top: 20px;
