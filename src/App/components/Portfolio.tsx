@@ -9,7 +9,7 @@ import { SECONDARY_COLOR, PRIMARY_COLOR, TERTIARY_COLOR, media } from 'Theme'
 const TitleWrapper = styled.div`
     margin-left: 5px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
 `
 
 const GridWrapper = styled.div`
