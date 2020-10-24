@@ -27,8 +27,8 @@ const SubContent = styled.div`
     display: flex;
     justify-content: space-between;
 
-    & div {
-        width: 48%;
+    & > div {
+        width: 32%;
     }
     ${media.tablet} {
         flex-direction: column;
@@ -43,7 +43,12 @@ const Sidebar = styled.div`
     min-width: 400px;
     margin-right: 20px;
 
-    ${media.desktop} {
+    ${media.desktop}{
+        width: 30%;
+        min-width: 200px;
+    }
+
+    ${media.phone} {
         display: none;
     }
 `
@@ -66,7 +71,7 @@ const SidebarImage = styled.img`
 
 const SectionWrapper = styled.div`
     width: 100%;
-    margin: 20px 0;
+    margin-bottom: 20px;
 `
 
 type SectionProps = {
@@ -134,22 +139,27 @@ const Details = ({
                     )}
                     <Section title="Description">{Description}</Section>
 
-                    <SubContent>
-                        <Section title="Skills">
-                            <Text>{Skills}</Text>
-                        </Section>
+                    <Section title="Skills">
+                        <Text>{Skills}</Text>
+                    </Section>
 
-                        <Section title="Meta">
+                    {images.length ? <Section title="Photos">{Images}</Section> : null}
+
+                    <SubContent>
+                        <Section title="When">
                             <Text>
-                                When:{' '}
+                                {' '}
                                 {`${start_date.slice(0, -3)} to ${end_date === 'Ongoing' ? 'Ongoing' : end_date.slice(0, -3)
                                     }`}
                             </Text>
-                            <Text>Where: {Locations}</Text>
-                            <Text>Who: {Organizations}</Text>
+                        </Section>
+                        <Section title="Where">
+                            <Text>{Locations}</Text>
+                        </Section>
+                        <Section title="Who">
+                            <Text>{Organizations}</Text>
                         </Section>
                     </SubContent>
-                    {images.length ? <Section title="Photos">{Images}</Section> : null}
                 </Content>
             </Row>
         </DetailsWrapper>
