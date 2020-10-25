@@ -38,9 +38,10 @@ const GridText = styled.p`
     width: 100%;
     background: rgba(50, 57, 76, 0.8);
     text-align: center;
-    padding: 10px;
+    padding: 10px 5px;
     line-height: initial;
-    font-size: 1.5em;
+    font-size: 1em;
+
 `
 
 const GridImageWrapper = styled.div`

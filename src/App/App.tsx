@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import projects, { Project } from 'Content'
 
 import { ScrollToTop, Portfolio, NotFound, Header, SingleProject, Footer } from './components'
-import { GlobalStyle } from 'Theme'
+import { GlobalStyle, media } from 'Theme'
 
 import styled from 'styled-components'
 
@@ -23,6 +23,10 @@ const AppWrapper = styled.div`
     width: 90%;
     margin: 15px auto 30px;
     box-sizing: border-box;
+
+    ${media.tablet}{
+        width: 100%;
+    }
 `
 
 const App = () => {
