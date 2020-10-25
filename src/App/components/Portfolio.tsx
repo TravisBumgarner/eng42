@@ -125,7 +125,8 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
 }
 
 type PortfolioProps = {
-    projects: Project[]
+    highlightedProjects: Project[],
+    unhighlightedProjects: Project[],
 }
 
 const createTiles = (projects: Project[]) => {
@@ -235,17 +236,17 @@ const About = () => {
     </SectionWrapper >
 }
 
-const Portfolio = ({ projects }: PortfolioProps) => {
-    const ActiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date === "Ongoing"))
-    const InactiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date !== "Ongoing"))
+const Portfolio = ({ highlightedProjects, unhighlightedProjects }: PortfolioProps) => {
+    // const ActiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date === "Ongoing"))
+    // const InactiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date !== "Ongoing"))
 
     return (
         <>
             <About />
-            <TitleWrapper><Title size="medium">Ongoing Projects</Title></TitleWrapper>
-            <GridWrapper>{ActiveProjects}</GridWrapper>
-            <TitleWrapper><Title size="medium">Finished Projects</Title></TitleWrapper>
-            <GridWrapper>{InactiveProjects}</GridWrapper>
+            <TitleWrapper><Title size="medium">Highlighted Projects</Title></TitleWrapper>
+            <GridWrapper>{createTiles(highlightedProjects)}</GridWrapper>
+            <TitleWrapper><Title size="medium">All Projects</Title></TitleWrapper>
+            <GridWrapper>{createTiles(unhighlightedProjects)}</GridWrapper>
         </>
     )
 }
