@@ -12,7 +12,7 @@
         "Massachusetts"
     ],
     "headline": "",
-    "description": "I saw someone create a cross stich of a TV show character, entirely with CSS. This was a tool I built to do the same, but programmatically. Click the link and try it out!",
+    "description": "Takes in an image and converts it to CSS.",
     "start_date": "2020-02-25",
     "end_date": "2020-03-16",
     "skills": [

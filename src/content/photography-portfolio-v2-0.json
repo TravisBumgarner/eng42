@@ -13,7 +13,7 @@
         "Massachusetts"
     ],
     "headline": "",
-    "description": "As a software engineer, it was only so long I could keep my portfolio hosted on WordPress; so I rewrote it.",
+    "description": "Custom built website to host my photos.",
     "start_date": "2018-09-01",
     "end_date": "2018-10-31",
     "skills": [
@@ -37,6 +37,10 @@
         {
             "name": "Portfolio",
             "src": "https://travisbumgarner.photography"
+        },
+        {
+            "name": "GitHub",
+            "src": "https://github.com/travisbumgarner/photo20"
         }
     ],
     "preview_img": {

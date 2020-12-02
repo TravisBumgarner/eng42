@@ -1,5 +1,5 @@
 {
-    "name": "DIY Keyboard",
+    "name": "Build Your Own Mechanical Keyboard Kit",
     "id": "diy-keyboard",
     "categories": [
         9,
@@ -14,7 +14,7 @@
         "Massachusetts"
     ],
     "headline": "",
-    "description": "I can't say I know what this will evolve into yet. But it'll be making it's way to Kickstarter eventually!",
+    "description": "Kit for learning how to solder and write code. Users create their own mechanical keyboard that does exactly what they want it to do.",
     "start_date": "2020-07-16",
     "end_date": "Ongoing",
     "skills": [
@@ -44,6 +44,10 @@
         {
             "name": "Working MVP",
             "src": "https://www.youtube.com/watch?v=LUBRBuLBB54"
+        },
+        {
+            "name": "Product Page",
+            "src": "https://painlessprototyping.com/buttonboardv2"
         }
     ],
     "preview_img": {
