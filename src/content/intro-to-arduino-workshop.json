@@ -1,1 +1,81 @@
-{"id": "intro-to-arduino-workshop", "name": "Intro to Arduino Workshop", "categories": [4, 5, 6], "organizations": ["Cambridge Hackspace"], "locations": ["Massachusetts"], "headline": "Class aimed at teaching beginners about electronics", "description": "In February 2016 I moved to Boston and started checking out some local Meetups. I found a workshop on Intro to Soldering at the Cambridge Hackspace and decided to check it out. Six months later I was helping teach the class and a few months after, I was teaching my own Introduction to Arduino workshop.", "start_date": "2017-02-01", "end_date": "2017-07-01", "skills": [3, 6, 8, 9], "images": [{"name": "SAM_1920.jpg", "src": "intro-to-arduino-workshop/SAM_1920.jpg"}, {"name": "SAM_1918.jpg", "src": "intro-to-arduino-workshop/SAM_1918.jpg"}, {"name": "DSC04014.jpg", "src": "intro-to-arduino-workshop/DSC04014.jpg"}, {"name": "DSC08016.jpg", "src": "intro-to-arduino-workshop/DSC08016.jpg"}, {"name": "SAM_1932.jpg", "src": "intro-to-arduino-workshop/SAM_1932.jpg"}, {"name": "SAM_2043.jpg", "src": "intro-to-arduino-workshop/SAM_2043.jpg"}, {"name": "IMG_20170223_180839.jpg", "src": "intro-to-arduino-workshop/IMG_20170223_180839_LtZBg7r.jpg"}, {"name": "SAM_1929.jpg", "src": "intro-to-arduino-workshop/SAM_1929.jpg"}, {"name": "SAM_1939.jpg", "src": "intro-to-arduino-workshop/SAM_1939.jpg"}], "links": [{"name": "Class Description", "src": "https://www.meetup.com/Cambridge-Hackspace/events/240894580/"}, {"name": "Cambridge Hackspace Website", "src": "https://www.cambridgehackspace.com/"}, {"name": "Class PowerPoint", "src": "https://github.com/Cambridge-Hackspace/Arduino_Workshop"}], "preview_img": {"name": "intro to arduino workshop preview", "src": "intro-to-arduino-workshop/IMG_20170223_180839.jpg"}}
+{
+    "id": "intro-to-arduino-workshop",
+    "name": "Intro to Arduino Workshop",
+    "categories": [
+        4,
+        5,
+        6
+    ],
+    "organizations": [
+        "Cambridge Hackspace"
+    ],
+    "locations": [
+        "Massachusetts"
+    ],
+    "headline": "Class aimed at teaching beginners about electronics",
+    "description": "In February 2016 I moved to Boston and started checking out some local Meetups. I found a workshop on Intro to Soldering at the Cambridge Hackspace and decided to check it out. Six months later I was helping teach the class and a few months after, I was teaching my own Introduction to Arduino workshop.",
+    "start_date": "2017-02-01",
+    "end_date": "2017-07-01",
+    "skills": [
+        3,
+        6,
+        8,
+        9
+    ],
+    "images": [
+        {
+            "name": "SAM_1920.jpg",
+            "src": "intro-to-arduino-workshop/SAM_1920.jpg"
+        },
+        {
+            "name": "SAM_1918.jpg",
+            "src": "intro-to-arduino-workshop/SAM_1918.jpg"
+        },
+        {
+            "name": "DSC04014.jpg",
+            "src": "intro-to-arduino-workshop/DSC04014.jpg"
+        },
+        {
+            "name": "DSC08016.jpg",
+            "src": "intro-to-arduino-workshop/DSC08016.jpg"
+        },
+        {
+            "name": "SAM_1932.jpg",
+            "src": "intro-to-arduino-workshop/SAM_1932.jpg"
+        },
+        {
+            "name": "SAM_2043.jpg",
+            "src": "intro-to-arduino-workshop/SAM_2043.jpg"
+        },
+        {
+            "name": "IMG_20170223_180839.jpg",
+            "src": "intro-to-arduino-workshop/IMG_20170223_180839_LtZBg7r.jpg"
+        },
+        {
+            "name": "SAM_1929.jpg",
+            "src": "intro-to-arduino-workshop/SAM_1929.jpg"
+        },
+        {
+            "name": "SAM_1939.jpg",
+            "src": "intro-to-arduino-workshop/SAM_1939.jpg"
+        }
+    ],
+    "links": [
+        {
+            "name": "Class Description",
+            "src": "https://www.meetup.com/Cambridge-Hackspace/events/240894580/"
+        },
+        {
+            "name": "Cambridge Hackspace Website",
+            "src": "https://www.cambridgehackspace.com/"
+        },
+        {
+            "name": "Class PowerPoint",
+            "src": "https://github.com/Cambridge-Hackspace/Arduino_Workshop"
+        }
+    ],
+    "preview_img": {
+        "name": "intro to arduino workshop preview",
+        "src": "intro-to-arduino-workshop/IMG_20170223_180839.jpg"
+    }
+}
