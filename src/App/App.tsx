@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import projects, { Project } from 'Content'
+import projects, { allCategories, Project } from 'Content'
 
 import { ScrollToTop, Portfolio, NotFound, Header, SingleProject, Footer } from './components'
 import { GlobalStyle, media } from 'Theme'
@@ -30,23 +30,25 @@ const AppWrapper = styled.div`
 `
 
 const App = () => {
+    const [activeCategory, setActiveCategory] = React.useState(0)
+
     const highlightedProjectIds = [
-        'automated-film-scanner',
-        'cribbage-board',
-        'painless-prototyping',
+        'diy-keyboard',
+        'search-engine',
+        '2d-plotter-the-final-attempts',
         'photography-portfolio-v2-0',
-        'intro-to-arduino-workshop',
-        'youtube-channel'
+        'youtube-channel',
+        'cribbage-board',
     ]
 
     const highlightedProjects = projects
         .filter(p => highlightedProjectIds.includes(p.id))
-        .sort((a, b) => sortByDate(a, b))
+        .sort((a, b) => highlightedProjectIds.indexOf(a.id) - highlightedProjectIds.indexOf(b.id))
 
-    const unhighlightedProjects = projects
+    const filteredProjects = projects
         .filter(p => !highlightedProjectIds.includes(p.id))
+        .filter(p => activeCategory === 0 || p.categories.includes(activeCategory))
         .sort((a, b) => sortByDate(a, b))
-
 
     return (
         <>
@@ -58,11 +60,11 @@ const App = () => {
                     <Route
                         exact
                         path="/"
-                        render={props => <Portfolio {...props} unhighlightedProjects={unhighlightedProjects} highlightedProjects={highlightedProjects} />}
+                        render={props => <Portfolio setActiveCategory={setActiveCategory} {...props} filteredProjects={filteredProjects} highlightedProjects={highlightedProjects} />}
                     />
                     <Route
                         path="/project/:id"
-                        render={props => <SingleProject {...props} projects={[...highlightedProjects, ...unhighlightedProjects]} />}
+                        render={props => <SingleProject {...props} projects={[...highlightedProjects, ...filteredProjects]} />}
                     />
                     <Route component={NotFound} />
                 </Switch>

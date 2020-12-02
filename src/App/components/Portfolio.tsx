@@ -127,7 +127,8 @@ const Tile = ({ project: { id, preview_img, name, categories, start_date, end_da
 
 type PortfolioProps = {
     highlightedProjects: Project[],
-    unhighlightedProjects: Project[],
+    filteredProjects: Project[],
+    setActiveCategory: (id: number) => void
 }
 
 const createTiles = (projects: Project[]) => {
@@ -237,9 +238,51 @@ const About = () => {
     </SectionWrapper >
 }
 
-const Portfolio = ({ highlightedProjects, unhighlightedProjects }: PortfolioProps) => {
+const FilterButtonsWrapper = styled.div`
+    margin-left: 5px;
+    margin-bottom: 20px;
+`
+
+const FilterButton = styled(({ className, onClick, children }) => {
+    return <button onClick={onClick} className={className}>{children}</button>
+})`
+    cursor: pointer;
+    color: ${SECONDARY_COLOR};
+    font-weight: 700;
+    background-color: ${PRIMARY_COLOR};
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    &:hover {
+        background-color: ${TERTIARY_COLOR};
+    }
+    ${media.tablet} {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    ${media.phone} {
+
+    }
+`
+
+const CATEGORIES_TO_FILTER_BY = [
+    6,
+    5,
+    2,
+    10
+]
+
+const Portfolio = ({ highlightedProjects, filteredProjects, setActiveCategory }: PortfolioProps) => {
     // const ActiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date === "Ongoing"))
     // const InactiveProjects = createTiles(Object.values(projects).filter(({ end_date }) => end_date !== "Ongoing"))
+
+    const FilterButtons = CATEGORIES_TO_FILTER_BY
+        .map(id => {
+            return <FilterButton onClick={() => setActiveCategory(id)}>{allCategories[id].name}</FilterButton>
+        })
 
     return (
         <>
@@ -247,7 +290,9 @@ const Portfolio = ({ highlightedProjects, unhighlightedProjects }: PortfolioProp
             <TitleWrapper><Title size="medium">Highlighted Projects</Title></TitleWrapper>
             <GridWrapper>{createTiles(highlightedProjects)}</GridWrapper>
             <TitleWrapper><Title size="medium">All Projects</Title></TitleWrapper>
-            <GridWrapper>{createTiles(unhighlightedProjects)}</GridWrapper>
+            <FilterButtonsWrapper><strong>Filter:</strong> <FilterButton onClick={() => setActiveCategory(0)}>See All</FilterButton>{FilterButtons}</FilterButtonsWrapper>
+            {/* <TitleWrapper><Title size="medium">All Projects</Title></TitleWrapper> */}
+            <GridWrapper>{createTiles(filteredProjects)}</GridWrapper>
         </>
     )
 }
